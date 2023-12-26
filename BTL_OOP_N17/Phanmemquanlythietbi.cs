@@ -16,5 +16,10 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
