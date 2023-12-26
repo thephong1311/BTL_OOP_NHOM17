@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class Form1 : Form
+    public partial class fDevicemanage : Form
     {
-        public Form1()
+        public fDevicemanage()
         {
             InitializeComponent();
         }
