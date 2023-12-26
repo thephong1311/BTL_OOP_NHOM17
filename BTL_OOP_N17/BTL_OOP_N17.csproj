@@ -64,6 +64,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoUser.Designer.cs">
+      <DependentUpon>InfoUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phanmemquanlythietbi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoUser.resx">
+      <DependentUpon>InfoUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
