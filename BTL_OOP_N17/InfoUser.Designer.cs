@@ -97,7 +97,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(280, 201);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 23);
+            this.button2.Size = new System.Drawing.Size(106, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "  Đổi mật khẩu";
             this.button2.UseVisualStyleBackColor = true;
