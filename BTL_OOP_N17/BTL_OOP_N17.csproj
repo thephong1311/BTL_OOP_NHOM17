@@ -64,6 +64,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLTTGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTTGV.Designer.cs">
+      <DependentUpon>QLTTGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phanmemquanlythietbi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLTTGV.resx">
+      <DependentUpon>QLTTGV.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
