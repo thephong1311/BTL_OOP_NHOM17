@@ -138,7 +138,7 @@
             this.btn_Find1.Name = "btn_Find1";
             this.btn_Find1.Size = new System.Drawing.Size(75, 23);
             this.btn_Find1.TabIndex = 9;
-            this.btn_Find1.Text = "button1";
+            this.btn_Find1.Text = "Find";
             this.btn_Find1.UseVisualStyleBackColor = true;
             // 
             // btn_Clear
