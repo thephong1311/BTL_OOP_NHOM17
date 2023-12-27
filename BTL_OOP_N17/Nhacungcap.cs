@@ -10,23 +10,16 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class fDevicemanage : Form
+    public partial class Nhacungcap : Form
     {
-        public fDevicemanage()
+        public Nhacungcap()
         {
             InitializeComponent();
         }
 
-        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

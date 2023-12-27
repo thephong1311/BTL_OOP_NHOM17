@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class fDevicemanage : Form
+    public partial class FollowDevice : Form
     {
-        public fDevicemanage()
+        public FollowDevice()
         {
             InitializeComponent();
         }
-
-        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

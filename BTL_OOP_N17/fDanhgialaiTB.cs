@@ -10,23 +10,16 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class fDevicemanage : Form
+    public partial class fDanhgialaiTB : Form
     {
-        public fDevicemanage()
+        public fDanhgialaiTB()
         {
             InitializeComponent();
         }
 
-        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
