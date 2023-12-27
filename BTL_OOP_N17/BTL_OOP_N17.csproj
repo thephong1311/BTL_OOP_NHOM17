@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,12 +65,28 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLTS2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YCmua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YCmua.Designer.cs">
+      <DependentUpon>YCmua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTS2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
     </Compile>
-	  <Compile Include="QLTTGV.Designer.cs">
-		  <DependentUpon>QLTTGV.cs</DependentUpon>
-	  </Compile>
+    <Compile Include="QLTTGV.Designer.cs">
+      <DependentUpon>QLTTGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +123,9 @@
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YCmua.resx">
+      <DependentUpon>YCmua.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,6 +135,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLTS2DataSet.xsc">
+      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTS2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTS2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTS2DataSet.xss">
+      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTS2DataSet1.xsc">
+      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLTS2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTS2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTS2DataSet1.xss">
+      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
