@@ -67,9 +67,9 @@
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
     </Compile>
-	  <Compile Include="QLTTGV.Designer.cs">
-		  <DependentUpon>QLTTGV.cs</DependentUpon>
-	  </Compile>
+    <Compile Include="QLTTGV.Designer.cs">
+      <DependentUpon>QLTTGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLTTPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTTPTN.Designer.cs">
+      <DependentUpon>QLTTPTN.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTTPTN.resx">
+      <DependentUpon>QLTTPTN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
