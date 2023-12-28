@@ -75,6 +75,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="LuanChuyenTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuanChuyenTS.Designer.cs">
+      <DependentUpon>LuanChuyenTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuanChuyenTS.resx">
+      <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>

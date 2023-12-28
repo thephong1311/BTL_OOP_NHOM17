@@ -200,6 +200,7 @@
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaLinePanel1);
+            this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Name = "DoiMK";
             this.Text = "DoiMK";
             this.gunaLinePanel1.ResumeLayout(false);

@@ -80,7 +80,7 @@
             this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Delete.Location = new System.Drawing.Point(440, 12);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.Size = new System.Drawing.Size(69, 23);
             this.btn_Delete.TabIndex = 4;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.btn_Load.Name = "btn_Load";
             this.btn_Load.Size = new System.Drawing.Size(84, 23);
             this.btn_Load.TabIndex = 5;
-            this.btn_Load.Text = "Load lại";
+            this.btn_Load.Text = "Load ";
             this.btn_Load.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
