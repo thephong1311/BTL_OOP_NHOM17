@@ -43,6 +43,7 @@
             this.gbDanhsachTL = new Guna.UI.WinForms.GunaGroupBox();
             this.txtFind_TL = new Guna.UI.WinForms.GunaLineTextBox();
             this.dgvTSTL = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gbDanhsachTL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).BeginInit();
             this.SuspendLayout();
@@ -206,6 +207,7 @@
             this.gbDanhsachTL.BackColor = System.Drawing.Color.Transparent;
             this.gbDanhsachTL.BaseColor = System.Drawing.Color.White;
             this.gbDanhsachTL.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gbDanhsachTL.Controls.Add(this.gunaButton1);
             this.gbDanhsachTL.Controls.Add(this.dgvTSTL);
             this.gbDanhsachTL.Controls.Add(this.txtFind_TL);
             this.gbDanhsachTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,6 +293,30 @@
             this.dgvTSTL.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTSTL.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.BorderSize = 1;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(533, 44);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Size = new System.Drawing.Size(120, 23);
+            this.gunaButton1.TabIndex = 11;
+            this.gunaButton1.Text = "Tìm kiếm";
+            // 
             // ThanhLyTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,5 +353,6 @@
         private Guna.UI.WinForms.GunaGroupBox gbDanhsachTL;
         private Guna.UI.WinForms.GunaDataGridView dgvTSTL;
         private Guna.UI.WinForms.GunaLineTextBox txtFind_TL;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
     }
 }
