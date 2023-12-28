@@ -70,6 +70,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThanhLyTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhLyTS.Designer.cs">
+      <DependentUpon>ThanhLyTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="TonghopYCmua.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </Compile>
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhLyTS.resx">
+      <DependentUpon>ThanhLyTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TonghopYCmua.resx">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>

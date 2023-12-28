@@ -16,5 +16,40 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        private void TonghopYCmua_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
