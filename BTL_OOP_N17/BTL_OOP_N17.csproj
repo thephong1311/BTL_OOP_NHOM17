@@ -40,17 +40,25 @@
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+<<<<<<< HEAD
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+=======
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+>>>>>>> 3b42326ff132f946863c5ee9f9c5ee030ca20512
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+<<<<<<< HEAD
     <Reference Include="System.Design" />
+=======
+>>>>>>> 3b42326ff132f946863c5ee9f9c5ee030ca20512
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
@@ -66,7 +74,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="fAddDanhgialaiTB.cs">
+=======
+    <Compile Include="DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMK.Designer.cs">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+>>>>>>> 3b42326ff132f946863c5ee9f9c5ee030ca20512
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fAddDanhgialaiTB.Designer.cs">
@@ -114,6 +132,18 @@
     <Compile Include="Nhacungcap.Designer.cs">
       <DependentUpon>Nhacungcap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLuanChuyen2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuanChuyen2.Designer.cs">
+      <DependentUpon>frmLuanChuyen2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuanChuyenTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuanChuyenTS.Designer.cs">
+      <DependentUpon>LuanChuyenTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +164,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="fAddDanhgialaiTB.resx">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,9 +188,28 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>
+=======
+    <Compile Include="QLTTPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTTPTN.Designer.cs">
+      <DependentUpon>QLTTPTN.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoiMK.resx">
+      <DependentUpon>DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+>>>>>>> 3b42326ff132f946863c5ee9f9c5ee030ca20512
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuanChuyen2.resx">
+      <DependentUpon>frmLuanChuyen2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuanChuyenTS.resx">
+      <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
@@ -177,6 +227,9 @@
     </Compile>
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTTPTN.resx">
+      <DependentUpon>QLTTPTN.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
