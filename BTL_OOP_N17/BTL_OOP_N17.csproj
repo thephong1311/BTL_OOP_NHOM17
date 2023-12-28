@@ -40,11 +40,16 @@
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Downloads\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,6 +69,12 @@
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TonghopYCmua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TonghopYCmua.Designer.cs">
+      <DependentUpon>TonghopYCmua.cs</DependentUpon>
     </Compile>
     <Compile Include="QLTS2DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -122,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TonghopYCmua.resx">
+      <DependentUpon>TonghopYCmua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCmua.resx">
       <DependentUpon>YCmua.cs</DependentUpon>
