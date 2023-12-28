@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class Device : Form
+    public partial class fDanhmucthietbi : Form
     {
-        public Device()
+        public fDanhmucthietbi()
         {
             InitializeComponent();
-        }
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

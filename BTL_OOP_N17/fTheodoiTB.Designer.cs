@@ -1,6 +1,6 @@
 ﻿namespace BTL_OOP_N17
 {
-    partial class FollowDevice
+    partial class fTheodoiTB
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FollowDevice";
+            this.Text = "fTheodoiTB";
         }
 
         #endregion

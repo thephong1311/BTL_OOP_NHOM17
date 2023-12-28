@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class FollowDevice : Form
+    public partial class InfoUser : Form
     {
-        public FollowDevice()
+        public InfoUser()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
