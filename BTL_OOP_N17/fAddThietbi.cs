@@ -16,5 +16,10 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
