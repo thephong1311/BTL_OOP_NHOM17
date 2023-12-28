@@ -70,6 +70,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="KiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemKe.Designer.cs">
+      <DependentUpon>KiemKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThanhLyTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemKe.resx">
+      <DependentUpon>KiemKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
