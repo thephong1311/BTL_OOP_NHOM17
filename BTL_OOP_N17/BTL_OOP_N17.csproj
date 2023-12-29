@@ -94,6 +94,12 @@
     <Compile Include="ReportKiemKeTS.Designer.cs">
       <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportThanhLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportThanhLy.Designer.cs">
+      <DependentUpon>ReportThanhLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThanhLyTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportKiemKeTS.resx">
       <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportThanhLy.resx">
+      <DependentUpon>ReportThanhLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhLyTS.resx">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>

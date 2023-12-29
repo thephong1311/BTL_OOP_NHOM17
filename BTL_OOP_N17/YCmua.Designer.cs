@@ -49,8 +49,8 @@
             this.gpbThongtinchitiet = new System.Windows.Forms.GroupBox();
             this.dgvThongtinchitiet = new System.Windows.Forms.DataGridView();
             this.btnDong = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.btnXemlai = new Guna.UI.WinForms.GunaButton();
+            this.btnLuu = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGTHINGHIEMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet1)).BeginInit();
             this.gpbThongtinchitiet.SuspendLayout();
@@ -227,62 +227,62 @@
             this.btnDong.TabIndex = 14;
             this.btnDong.Text = "Đóng lại ";
             // 
-            // gunaButton1
+            // btnXemlai
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.SystemColors.Desktop;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.BorderSize = 1;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(308, 441);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(197, 23);
-            this.gunaButton1.TabIndex = 15;
-            this.gunaButton1.Text = "Xem lại danh sách YC";
+            this.btnXemlai.AnimationHoverSpeed = 0.07F;
+            this.btnXemlai.AnimationSpeed = 0.03F;
+            this.btnXemlai.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.btnXemlai.BorderColor = System.Drawing.Color.Black;
+            this.btnXemlai.BorderSize = 1;
+            this.btnXemlai.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXemlai.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXemlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemlai.ForeColor = System.Drawing.Color.Black;
+            this.btnXemlai.Image = ((System.Drawing.Image)(resources.GetObject("btnXemlai.Image")));
+            this.btnXemlai.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXemlai.Location = new System.Drawing.Point(308, 441);
+            this.btnXemlai.Name = "btnXemlai";
+            this.btnXemlai.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXemlai.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXemlai.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXemlai.OnHoverImage = null;
+            this.btnXemlai.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXemlai.Size = new System.Drawing.Size(197, 23);
+            this.btnXemlai.TabIndex = 15;
+            this.btnXemlai.Text = "Xem lại danh sách YC";
             // 
-            // gunaButton2
+            // btnLuu
             // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.SystemColors.Desktop;
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.BorderSize = 1;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
-            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(82, 441);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(113, 23);
-            this.gunaButton2.TabIndex = 16;
-            this.gunaButton2.Text = "Lưu lại";
-            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
+            this.btnLuu.AnimationHoverSpeed = 0.07F;
+            this.btnLuu.AnimationSpeed = 0.03F;
+            this.btnLuu.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.btnLuu.BorderColor = System.Drawing.Color.Black;
+            this.btnLuu.BorderSize = 1;
+            this.btnLuu.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.Black;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLuu.Location = new System.Drawing.Point(82, 441);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLuu.OnHoverImage = null;
+            this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLuu.Size = new System.Drawing.Size(113, 23);
+            this.btnLuu.TabIndex = 16;
+            this.btnLuu.Text = "Lưu lại";
+            this.btnLuu.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // YCmua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 476);
-            this.Controls.Add(this.gunaButton2);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnXemlai);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.gpbThongtinchitiet);
             this.Controls.Add(this.txtTrangthai);
@@ -331,7 +331,7 @@
         private System.Windows.Forms.GroupBox gpbThongtinchitiet;
         private System.Windows.Forms.DataGridView dgvThongtinchitiet;
         private Guna.UI.WinForms.GunaButton btnDong;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton btnXemlai;
+        private Guna.UI.WinForms.GunaButton btnLuu;
     }
 }
