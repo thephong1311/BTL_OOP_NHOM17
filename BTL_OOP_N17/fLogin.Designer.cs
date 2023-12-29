@@ -60,26 +60,29 @@
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(29, 27);
+            this.panel1.Location = new System.Drawing.Point(22, 22);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(495, 209);
+            this.panel1.Size = new System.Drawing.Size(371, 170);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txbPassWord);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(15, 93);
+            this.panel3.Location = new System.Drawing.Point(11, 76);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(462, 79);
+            this.panel3.Size = new System.Drawing.Size(346, 64);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // txbPassWord
             // 
-            this.txbPassWord.Location = new System.Drawing.Point(213, 30);
+            this.txbPassWord.Location = new System.Drawing.Point(160, 24);
+            this.txbPassWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.Size = new System.Drawing.Size(233, 22);
+            this.txbPassWord.Size = new System.Drawing.Size(176, 20);
             this.txbPassWord.TabIndex = 1;
             this.txbPassWord.UseSystemPasswordChar = true;
             // 
@@ -87,9 +90,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(24, 28);
+            this.label2.Location = new System.Drawing.Point(18, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(78, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu";
             // 
@@ -97,35 +101,39 @@
             // 
             this.panel2.Controls.Add(this.txbUserName);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(15, 17);
+            this.panel2.Location = new System.Drawing.Point(11, 14);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(462, 60);
+            this.panel2.Size = new System.Drawing.Size(346, 49);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txbUserName
             // 
-            this.txbUserName.Location = new System.Drawing.Point(213, 19);
+            this.txbUserName.Location = new System.Drawing.Point(160, 15);
+            this.txbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(233, 22);
+            this.txbUserName.Size = new System.Drawing.Size(176, 20);
             this.txbUserName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(24, 17);
+            this.label1.Location = new System.Drawing.Point(18, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 24);
+            this.label1.Size = new System.Drawing.Size(124, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(246, 256);
+            this.btnLogin.Location = new System.Drawing.Point(184, 208);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(134, 42);
+            this.btnLogin.Size = new System.Drawing.Size(100, 34);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -133,9 +141,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(390, 256);
+            this.btnExit.Location = new System.Drawing.Point(292, 208);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(134, 42);
+            this.btnExit.Size = new System.Drawing.Size(100, 34);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -143,12 +152,13 @@
             // 
             // fLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 316);
+            this.ClientSize = new System.Drawing.Size(412, 257);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

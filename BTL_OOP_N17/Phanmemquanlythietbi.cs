@@ -21,5 +21,20 @@ namespace BTL_OOP_N17
         {
 
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yêuCầuMuaThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

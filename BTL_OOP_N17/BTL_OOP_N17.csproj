@@ -48,11 +48,18 @@
       <HintPath>..\..\..\..\Downloads\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Web" />
@@ -76,64 +83,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KiemKe.Designer.cs">
-      <DependentUpon>KiemKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LapDSThietBi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LapDSThietBi.Designer.cs">
-      <DependentUpon>LapDSThietBi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportKiemKeTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportKiemKeTS.Designer.cs">
-      <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportThanhLy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportThanhLy.Designer.cs">
-      <DependentUpon>ReportThanhLy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThanhLyTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThanhLyTS.Designer.cs">
-      <DependentUpon>ThanhLyTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TonghopYCmua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TonghopYCmua.Designer.cs">
-      <DependentUpon>TonghopYCmua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLTS2DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="YCmua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="YCmua.Designer.cs">
-      <DependentUpon>YCmua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLTS2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLTTGV.Designer.cs">
-      <DependentUpon>QLTTGV.cs</DependentUpon>
-    </Compile>
+	  <Compile Include="QLTTGV.Designer.cs">
+		  <DependentUpon>QLTTGV.cs</DependentUpon>
+	  </Compile>
     <Compile Include="InfoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,12 +109,6 @@
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemKe.resx">
-      <DependentUpon>KiemKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LapDSThietBi.resx">
-      <DependentUpon>LapDSThietBi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,21 +125,6 @@
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportKiemKeTS.resx">
-      <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportThanhLy.resx">
-      <DependentUpon>ReportThanhLy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThanhLyTS.resx">
-      <DependentUpon>ThanhLyTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TonghopYCmua.resx">
-      <DependentUpon>TonghopYCmua.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YCmua.resx">
-      <DependentUpon>YCmua.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,28 +134,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLTS2DataSet.xsc">
-      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLTS2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLTS2DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLTS2DataSet.xss">
-      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLTS2DataSet1.xsc">
-      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLTS2DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLTS2DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLTS2DataSet1.xss">
-      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
