@@ -23,5 +23,10 @@ namespace BTL_OOP_N17
             this.pHONGTHINGHIEMTableAdapter.Fill(this.qLTS2DataSet1.PHONGTHINGHIEM);
 
         }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

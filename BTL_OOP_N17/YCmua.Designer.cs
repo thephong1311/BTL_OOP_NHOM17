@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YCmua));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,9 +37,9 @@
             this.txtMaYC = new System.Windows.Forms.TextBox();
             this.cbbGV = new System.Windows.Forms.ComboBox();
             this.cbbPTN = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.qLTS2DataSet1 = new BTL_OOP_N17.QLTS2DataSet1();
             this.pHONGTHINGHIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTS2DataSet1 = new BTL_OOP_N17.QLTS2DataSet1();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pHONGTHINGHIEMTableAdapter = new BTL_OOP_N17.QLTS2DataSet1TableAdapters.PHONGTHINGHIEMTableAdapter();
             this.label5 = new System.Windows.Forms.Label();
             this.lstMota = new System.Windows.Forms.ListBox();
@@ -47,8 +48,11 @@
             this.txtTrangthai = new System.Windows.Forms.TextBox();
             this.gpbThongtinchitiet = new System.Windows.Forms.GroupBox();
             this.dgvThongtinchitiet = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet1)).BeginInit();
+            this.btnDong = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGTHINGHIEMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet1)).BeginInit();
             this.gpbThongtinchitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinchitiet)).BeginInit();
             this.SuspendLayout();
@@ -104,6 +108,7 @@
             this.cbbGV.Size = new System.Drawing.Size(280, 24);
             this.cbbGV.TabIndex = 5;
             this.cbbGV.Tag = "";
+            this.cbbGV.Text = "Thêm giáo viên";
             // 
             // cbbPTN
             // 
@@ -113,6 +118,17 @@
             this.cbbPTN.Name = "cbbPTN";
             this.cbbPTN.Size = new System.Drawing.Size(280, 24);
             this.cbbPTN.TabIndex = 6;
+            this.cbbPTN.Text = "Thêm đơn vị yêu cầu...";
+            // 
+            // pHONGTHINGHIEMBindingSource
+            // 
+            this.pHONGTHINGHIEMBindingSource.DataMember = "PHONGTHINGHIEM";
+            this.pHONGTHINGHIEMBindingSource.DataSource = this.qLTS2DataSet1;
+            // 
+            // qLTS2DataSet1
+            // 
+            this.qLTS2DataSet1.DataSetName = "QLTS2DataSet1";
+            this.qLTS2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dateTimePicker1
             // 
@@ -121,16 +137,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(175, 22);
             this.dateTimePicker1.TabIndex = 7;
-            // 
-            // qLTS2DataSet1
-            // 
-            this.qLTS2DataSet1.DataSetName = "QLTS2DataSet1";
-            this.qLTS2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pHONGTHINGHIEMBindingSource
-            // 
-            this.pHONGTHINGHIEMBindingSource.DataMember = "PHONGTHINGHIEM";
-            this.pHONGTHINGHIEMBindingSource.DataSource = this.qLTS2DataSet1;
             // 
             // pHONGTHINGHIEMTableAdapter
             // 
@@ -194,14 +200,90 @@
             this.dgvThongtinchitiet.Name = "dgvThongtinchitiet";
             this.dgvThongtinchitiet.RowHeadersWidth = 51;
             this.dgvThongtinchitiet.RowTemplate.Height = 24;
-            this.dgvThongtinchitiet.Size = new System.Drawing.Size(447, 150);
+            this.dgvThongtinchitiet.Size = new System.Drawing.Size(708, 150);
             this.dgvThongtinchitiet.TabIndex = 0;
+            // 
+            // btnDong
+            // 
+            this.btnDong.AnimationHoverSpeed = 0.07F;
+            this.btnDong.AnimationSpeed = 0.03F;
+            this.btnDong.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.btnDong.BorderColor = System.Drawing.Color.Black;
+            this.btnDong.BorderSize = 1;
+            this.btnDong.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDong.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.Black;
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDong.Location = new System.Drawing.Point(591, 441);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnDong.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDong.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDong.OnHoverImage = null;
+            this.btnDong.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDong.Size = new System.Drawing.Size(110, 23);
+            this.btnDong.TabIndex = 14;
+            this.btnDong.Text = "Đóng lại ";
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.BorderSize = 1;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(308, 441);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Size = new System.Drawing.Size(197, 23);
+            this.gunaButton1.TabIndex = 15;
+            this.gunaButton1.Text = "Xem lại danh sách YC";
+            // 
+            // gunaButton2
+            // 
+            this.gunaButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaButton2.AnimationSpeed = 0.03F;
+            this.gunaButton2.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.BorderSize = 1;
+            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
+            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton2.Location = new System.Drawing.Point(82, 441);
+            this.gunaButton2.Name = "gunaButton2";
+            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton2.OnHoverImage = null;
+            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton2.Size = new System.Drawing.Size(113, 23);
+            this.gunaButton2.TabIndex = 16;
+            this.gunaButton2.Text = "Lưu lại";
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // YCmua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 476);
+            this.Controls.Add(this.gunaButton2);
+            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.btnDong);
             this.Controls.Add(this.gpbThongtinchitiet);
             this.Controls.Add(this.txtTrangthai);
             this.Controls.Add(this.label6);
@@ -219,8 +301,8 @@
             this.Name = "YCmua";
             this.Text = "Yêu cầu mua tài sản ";
             this.Load += new System.EventHandler(this.YCmua_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGTHINGHIEMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet1)).EndInit();
             this.gpbThongtinchitiet.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinchitiet)).EndInit();
             this.ResumeLayout(false);
@@ -248,5 +330,8 @@
         private System.Windows.Forms.TextBox txtTrangthai;
         private System.Windows.Forms.GroupBox gpbThongtinchitiet;
         private System.Windows.Forms.DataGridView dgvThongtinchitiet;
+        private Guna.UI.WinForms.GunaButton btnDong;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton gunaButton2;
     }
 }
