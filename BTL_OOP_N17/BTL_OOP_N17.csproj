@@ -68,18 +68,22 @@
     <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="fAddDanhgialaiTB.cs">
+<ItemGroup>
 		<Compile Include="DoiMK.cs">
 			<SubType>Form</SubType>
 		</Compile>
-    </Compile>
     <Compile Include="DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+	<Compile Include="fLogin.Designer.cs">
+		<DependentUpon>fLogin.cs</DependentUpon>
+	</Compile>
+	<Compile Include="fAddDanhgialaiTB.cs">
+		<SubType>Form</SubType>
+	</Compile>
     <Compile Include="fAddDanhgialaiTB.Designer.cs">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
     </Compile>
