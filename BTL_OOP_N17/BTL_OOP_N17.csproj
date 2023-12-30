@@ -41,16 +41,11 @@
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
- HEAD
-	  <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
-		  <SpecificVersion>False</SpecificVersion>
-		  <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
-	  </Reference>
-
-	  
-
+    <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
- 
       <HintPath>..\..\..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
@@ -73,14 +68,14 @@
     <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
- HEAD
   <ItemGroup>
-	  <Compile Include="fAddDanhgialaiTB.cs">
-	  </Compile>
-	  <Compile Include="DoiMK.cs">
-	  </Compile>
-
-	  <Compile Include="fLogin.cs">
+    <Compile Include="fAddDanhgialaiTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fAddDanhgialaiTB.Designer.cs">
@@ -181,9 +176,9 @@
     <EmbeddedResource Include="fTheodoiTB.resx">
       <DependentUpon>fTheodoiTB.cs</DependentUpon>
     </EmbeddedResource>
-	  <EmbeddedResource Include="Nhacungcap.resx">
-		  <DependentUpon>Nhacungcap.cs</DependentUpon>
-	  </EmbeddedResource>
+    <EmbeddedResource Include="Nhacungcap.resx">
+      <DependentUpon>Nhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="QLTTPTN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,7 +271,3 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
-
- 
-
