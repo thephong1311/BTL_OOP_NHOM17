@@ -173,6 +173,11 @@
     <Compile Include="LapDSThietBi.Designer.cs">
       <DependentUpon>LapDSThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLTS2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTS2DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportKiemKeTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +404,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLTS2DataSet2.xsc">
+      <DependentUpon>QLTS2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLTS2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTS2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTS2DataSet2.xss">
+      <DependentUpon>QLTS2DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
