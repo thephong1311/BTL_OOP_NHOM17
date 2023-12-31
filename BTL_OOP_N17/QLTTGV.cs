@@ -16,5 +16,17 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        private void QLTTGV_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLTS2DataSet.GIAOVIEN' table. You can move, or remove it, as needed.
+            this.gIAOVIENTableAdapter.Fill(this.qLTS2DataSet.GIAOVIEN);
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
