@@ -29,51 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TiepNhanTaiSan));
-            this.btn_Close = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox2 = new Guna.UI.WinForms.GunaGroupBox();
+            this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.txt_TimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton8 = new Guna.UI.WinForms.GunaButton();
+            this.btn_Find = new Guna.UI.WinForms.GunaButton();
+            this.txt_Input = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_Close = new Guna.UI.WinForms.GunaButton();
             this.btn_Excel = new Guna.UI.WinForms.GunaButton();
             this.btn_Load = new Guna.UI.WinForms.GunaButton();
-            this.btx_Delete = new Guna.UI.WinForms.GunaButton();
+            this.btn_Delete = new Guna.UI.WinForms.GunaButton();
             this.btn_Edit = new Guna.UI.WinForms.GunaButton();
             this.btn_Add = new Guna.UI.WinForms.GunaButton();
-            this.txt_Find = new Guna.UI.WinForms.GunaButton();
-            this.txt_Input = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Close
-            // 
-            this.btn_Close.AnimationHoverSpeed = 0.07F;
-            this.btn_Close.AnimationSpeed = 0.03F;
-            this.btn_Close.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btn_Close.BorderColor = System.Drawing.Color.Black;
-            this.btn_Close.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Close.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Close.ForeColor = System.Drawing.Color.White;
-            this.btn_Close.Image = null;
-            this.btn_Close.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Close.Location = new System.Drawing.Point(692, 13);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Close.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Close.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Close.OnHoverImage = null;
-            this.btn_Close.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Close.Size = new System.Drawing.Size(96, 29);
-            this.btn_Close.TabIndex = 15;
-            this.btn_Close.Text = "Đóng lại";
-            // 
             // gunaGroupBox2
             // 
             this.gunaGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox2.BaseColor = System.Drawing.Color.Silver;
+            this.gunaGroupBox2.BaseColor = System.Drawing.Color.LightGray;
             this.gunaGroupBox2.BorderColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox2.Controls.Add(this.btn_TimKiem);
             this.gunaGroupBox2.Controls.Add(this.dataGridView2);
@@ -85,6 +61,29 @@
             this.gunaGroupBox2.Size = new System.Drawing.Size(776, 313);
             this.gunaGroupBox2.TabIndex = 17;
             this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.AnimationHoverSpeed = 0.07F;
+            this.btn_TimKiem.AnimationSpeed = 0.03F;
+            this.btn_TimKiem.BaseColor = System.Drawing.Color.Silver;
+            this.btn_TimKiem.BorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_TimKiem.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_TimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_TimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btn_TimKiem.Image = null;
+            this.btn_TimKiem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_TimKiem.Location = new System.Drawing.Point(278, 39);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem.OnHoverImage = null;
+            this.btn_TimKiem.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_TimKiem.Size = new System.Drawing.Size(43, 29);
+            this.btn_TimKiem.TabIndex = 20;
+            this.btn_TimKiem.Text = "Find";
             // 
             // dataGridView2
             // 
@@ -134,28 +133,67 @@
             this.gunaButton7.TabIndex = 19;
             this.gunaButton7.Text = "Tìm kiếm";
             // 
-            // gunaButton8
+            // btn_Find
             // 
-            this.gunaButton8.AnimationHoverSpeed = 0.07F;
-            this.gunaButton8.AnimationSpeed = 0.03F;
-            this.gunaButton8.BaseColor = System.Drawing.Color.Silver;
-            this.gunaButton8.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton8.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton8.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton8.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton8.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton8.Image")));
-            this.gunaButton8.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton8.Location = new System.Drawing.Point(683, 13);
-            this.gunaButton8.Name = "gunaButton8";
-            this.gunaButton8.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton8.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton8.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton8.OnHoverImage = null;
-            this.gunaButton8.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton8.Size = new System.Drawing.Size(96, 29);
-            this.gunaButton8.TabIndex = 33;
-            this.gunaButton8.Text = "Đóng lại";
+            this.btn_Find.AnimationHoverSpeed = 0.07F;
+            this.btn_Find.AnimationSpeed = 0.03F;
+            this.btn_Find.BaseColor = System.Drawing.Color.Silver;
+            this.btn_Find.BorderColor = System.Drawing.Color.Black;
+            this.btn_Find.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Find.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Find.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Find.ForeColor = System.Drawing.Color.Black;
+            this.btn_Find.Image = null;
+            this.btn_Find.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Find.Location = new System.Drawing.Point(182, 12);
+            this.btn_Find.Name = "btn_Find";
+            this.btn_Find.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Find.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Find.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Find.OnHoverImage = null;
+            this.btn_Find.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Find.Size = new System.Drawing.Size(61, 28);
+            this.btn_Find.TabIndex = 27;
+            this.btn_Find.Text = "Tìm kiếm";
+            // 
+            // txt_Input
+            // 
+            this.txt_Input.BaseColor = System.Drawing.Color.White;
+            this.txt_Input.BorderColor = System.Drawing.Color.Silver;
+            this.txt_Input.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Input.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_Input.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_Input.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_Input.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Input.Location = new System.Drawing.Point(3, 12);
+            this.txt_Input.Name = "txt_Input";
+            this.txt_Input.PasswordChar = '\0';
+            this.txt_Input.SelectedText = "";
+            this.txt_Input.Size = new System.Drawing.Size(160, 30);
+            this.txt_Input.TabIndex = 26;
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.AnimationHoverSpeed = 0.07F;
+            this.btn_Close.AnimationSpeed = 0.03F;
+            this.btn_Close.BaseColor = System.Drawing.Color.Silver;
+            this.btn_Close.BorderColor = System.Drawing.Color.Black;
+            this.btn_Close.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Close.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Close.ForeColor = System.Drawing.Color.Black;
+            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
+            this.btn_Close.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Close.Location = new System.Drawing.Point(683, 15);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Close.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Close.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Close.OnHoverImage = null;
+            this.btn_Close.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Close.Size = new System.Drawing.Size(96, 27);
+            this.btn_Close.TabIndex = 33;
+            this.btn_Close.Text = "Đóng lại";
             // 
             // btn_Excel
             // 
@@ -169,14 +207,14 @@
             this.btn_Excel.ForeColor = System.Drawing.Color.Black;
             this.btn_Excel.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.Image")));
             this.btn_Excel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Excel.Location = new System.Drawing.Point(581, 13);
+            this.btn_Excel.Location = new System.Drawing.Point(581, 14);
             this.btn_Excel.Name = "btn_Excel";
             this.btn_Excel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Excel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Excel.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Excel.OnHoverImage = null;
             this.btn_Excel.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Excel.Size = new System.Drawing.Size(96, 29);
+            this.btn_Excel.Size = new System.Drawing.Size(96, 27);
             this.btn_Excel.TabIndex = 32;
             this.btn_Excel.Text = "Xuất Excel";
             // 
@@ -199,32 +237,32 @@
             this.btn_Load.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Load.OnHoverImage = null;
             this.btn_Load.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Load.Size = new System.Drawing.Size(73, 29);
+            this.btn_Load.Size = new System.Drawing.Size(73, 27);
             this.btn_Load.TabIndex = 31;
             this.btn_Load.Text = "Load";
             // 
-            // btx_Delete
+            // btn_Delete
             // 
-            this.btx_Delete.AnimationHoverSpeed = 0.07F;
-            this.btx_Delete.AnimationSpeed = 0.03F;
-            this.btx_Delete.BaseColor = System.Drawing.Color.Silver;
-            this.btx_Delete.BorderColor = System.Drawing.Color.Black;
-            this.btx_Delete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btx_Delete.FocusedColor = System.Drawing.Color.Empty;
-            this.btx_Delete.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btx_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btx_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btx_Delete.Image")));
-            this.btx_Delete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btx_Delete.Location = new System.Drawing.Point(431, 13);
-            this.btx_Delete.Name = "btx_Delete";
-            this.btx_Delete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btx_Delete.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btx_Delete.OnHoverForeColor = System.Drawing.Color.White;
-            this.btx_Delete.OnHoverImage = null;
-            this.btx_Delete.OnPressedColor = System.Drawing.Color.Black;
-            this.btx_Delete.Size = new System.Drawing.Size(65, 29);
-            this.btx_Delete.TabIndex = 30;
-            this.btx_Delete.Text = "Xóa";
+            this.btn_Delete.AnimationHoverSpeed = 0.07F;
+            this.btn_Delete.AnimationSpeed = 0.03F;
+            this.btn_Delete.BaseColor = System.Drawing.Color.Silver;
+            this.btn_Delete.BorderColor = System.Drawing.Color.Black;
+            this.btn_Delete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Delete.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Delete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Delete.ForeColor = System.Drawing.Color.Black;
+            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
+            this.btn_Delete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Delete.Location = new System.Drawing.Point(431, 13);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Delete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Delete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Delete.OnHoverImage = null;
+            this.btn_Delete.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Delete.Size = new System.Drawing.Size(65, 27);
+            this.btn_Delete.TabIndex = 30;
+            this.btn_Delete.Text = "Xóa";
             // 
             // btn_Edit
             // 
@@ -245,7 +283,7 @@
             this.btn_Edit.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Edit.OnHoverImage = null;
             this.btn_Edit.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Edit.Size = new System.Drawing.Size(96, 29);
+            this.btn_Edit.Size = new System.Drawing.Size(96, 27);
             this.btn_Edit.TabIndex = 29;
             this.btn_Edit.Text = "Chỉnh sửa";
             // 
@@ -272,83 +310,20 @@
             this.btn_Add.TabIndex = 28;
             this.btn_Add.Text = "Thêm";
             // 
-            // txt_Find
-            // 
-            this.txt_Find.AnimationHoverSpeed = 0.07F;
-            this.txt_Find.AnimationSpeed = 0.03F;
-            this.txt_Find.BaseColor = System.Drawing.Color.Silver;
-            this.txt_Find.BorderColor = System.Drawing.Color.Black;
-            this.txt_Find.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.txt_Find.FocusedColor = System.Drawing.Color.Empty;
-            this.txt_Find.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Find.ForeColor = System.Drawing.Color.Black;
-            this.txt_Find.Image = null;
-            this.txt_Find.ImageSize = new System.Drawing.Size(20, 20);
-            this.txt_Find.Location = new System.Drawing.Point(182, 13);
-            this.txt_Find.Name = "txt_Find";
-            this.txt_Find.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.txt_Find.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.txt_Find.OnHoverForeColor = System.Drawing.Color.White;
-            this.txt_Find.OnHoverImage = null;
-            this.txt_Find.OnPressedColor = System.Drawing.Color.Black;
-            this.txt_Find.Size = new System.Drawing.Size(61, 29);
-            this.txt_Find.TabIndex = 27;
-            this.txt_Find.Text = "Tìm kiếm";
-            // 
-            // txt_Input
-            // 
-            this.txt_Input.BaseColor = System.Drawing.Color.White;
-            this.txt_Input.BorderColor = System.Drawing.Color.Silver;
-            this.txt_Input.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Input.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_Input.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_Input.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_Input.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Input.Location = new System.Drawing.Point(3, 12);
-            this.txt_Input.Name = "txt_Input";
-            this.txt_Input.PasswordChar = '\0';
-            this.txt_Input.SelectedText = "";
-            this.txt_Input.Size = new System.Drawing.Size(160, 30);
-            this.txt_Input.TabIndex = 26;
-            // 
-            // btn_TimKiem
-            // 
-            this.btn_TimKiem.AnimationHoverSpeed = 0.07F;
-            this.btn_TimKiem.AnimationSpeed = 0.03F;
-            this.btn_TimKiem.BaseColor = System.Drawing.Color.Silver;
-            this.btn_TimKiem.BorderColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_TimKiem.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_TimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_TimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.Image = null;
-            this.btn_TimKiem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_TimKiem.Location = new System.Drawing.Point(278, 39);
-            this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_TimKiem.OnHoverImage = null;
-            this.btn_TimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.Size = new System.Drawing.Size(43, 29);
-            this.btn_TimKiem.TabIndex = 20;
-            this.btn_TimKiem.Text = "Find";
-            // 
             // TiepNhanTaiSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 406);
-            this.Controls.Add(this.gunaButton8);
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Load);
-            this.Controls.Add(this.btx_Delete);
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.txt_Find);
+            this.Controls.Add(this.btn_Find);
             this.Controls.Add(this.txt_Input);
             this.Controls.Add(this.gunaGroupBox2);
-            this.Controls.Add(this.btn_Close);
             this.Name = "TiepNhanTaiSan";
             this.Text = "Tiếp nhận tài sản";
             this.gunaGroupBox2.ResumeLayout(false);
@@ -358,19 +333,17 @@
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaButton btn_Close;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private Guna.UI.WinForms.GunaTextBox txt_TimKiem;
         private Guna.UI.WinForms.GunaButton gunaButton7;
-        private Guna.UI.WinForms.GunaButton gunaButton8;
+        private Guna.UI.WinForms.GunaButton btn_Close;
         private Guna.UI.WinForms.GunaButton btn_Excel;
         private Guna.UI.WinForms.GunaButton btn_Load;
-        private Guna.UI.WinForms.GunaButton btx_Delete;
+        private Guna.UI.WinForms.GunaButton btn_Delete;
         private Guna.UI.WinForms.GunaButton btn_Edit;
         private Guna.UI.WinForms.GunaButton btn_Add;
-        private Guna.UI.WinForms.GunaButton txt_Find;
+        private Guna.UI.WinForms.GunaButton btn_Find;
         private Guna.UI.WinForms.GunaTextBox txt_Input;
         private Guna.UI.WinForms.GunaButton btn_TimKiem;
     }

@@ -47,6 +47,24 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -155,6 +173,37 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportLuanChuyenTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportLuanChuyenTS.Designer.cs">
+      <DependentUpon>ReportLuanChuyenTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportMuonTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportMuonTS.Designer.cs">
+      <DependentUpon>ReportMuonTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSuaChuaTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSuaChuaTS.Designer.cs">
+      <DependentUpon>ReportSuaChuaTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportTinhTrangTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportTinhTrangTS.Designer.cs">
+      <DependentUpon>ReportTinhTrangTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportYCmua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportYCmua.Designer.cs">
+      <DependentUpon>ReportYCmua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TiepNhanTaiSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +272,21 @@
     <EmbeddedResource Include="QLTTPTN.resx">
       <DependentUpon>QLTTPTN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportLuanChuyenTS.resx">
+      <DependentUpon>ReportLuanChuyenTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportMuonTS.resx">
+      <DependentUpon>ReportMuonTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSuaChuaTS.resx">
+      <DependentUpon>ReportSuaChuaTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTinhTrangTS.resx">
+      <DependentUpon>ReportTinhTrangTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportYCmua.resx">
+      <DependentUpon>ReportYCmua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanTaiSan.resx">
       <DependentUpon>TiepNhanTaiSan.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +339,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diskette %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
