@@ -160,6 +160,58 @@
     <Compile Include="LuanChuyenTS.Designer.cs">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </Compile>
+	  <Compile Include="KiemKe.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="KiemKe.Designer.cs">
+		  <DependentUpon>KiemKe.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="LapDSThietBi.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="LapDSThietBi.Designer.cs">
+		  <DependentUpon>LapDSThietBi.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="ReportKiemKeTS.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="ReportKiemKeTS.Designer.cs">
+		  <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="ReportThanhLy.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="ReportThanhLy.Designer.cs">
+		  <DependentUpon>ReportThanhLy.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="ThanhLyTS.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="ThanhLyTS.Designer.cs">
+		  <DependentUpon>ThanhLyTS.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="TonghopYCmua.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="TonghopYCmua.Designer.cs">
+		  <DependentUpon>TonghopYCmua.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="QLTS2DataSet1.Designer.cs">
+		  <AutoGen>True</AutoGen>
+		  <DesignTime>True</DesignTime>
+		  <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
+	  </Compile>
+	  <Compile Include="YCmua.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="YCmua.Designer.cs">
+		  <DependentUpon>YCmua.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="QLTS2DataSet.Designer.cs">
+		  <AutoGen>True</AutoGen>
+		  <DesignTime>True</DesignTime>
+		  <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
+	  </Compile>
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +308,43 @@
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
     </EmbeddedResource>
+	  <EmbeddedResource Include="KiemKe.resx">
+		  <DependentUpon>KiemKe.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="LapDSThietBi.resx">
+		  <DependentUpon>LapDSThietBi.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Phanmemquanlythietbi.resx">
+		  <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Properties\licenses.licx" />
+	  <EmbeddedResource Include="Properties\Resources.resx">
+		  <Generator>ResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		  <SubType>Designer</SubType>
+	  </EmbeddedResource>
+	  <Compile Include="Properties\Resources.Designer.cs">
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	  <EmbeddedResource Include="QLTTGV.resx">
+		  <DependentUpon>QLTTGV.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="ReportKiemKeTS.resx">
+		  <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="ReportThanhLy.resx">
+		  <DependentUpon>ReportThanhLy.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="ThanhLyTS.resx">
+		  <DependentUpon>ThanhLyTS.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="TonghopYCmua.resx">
+		  <DependentUpon>TonghopYCmua.cs</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="YCmua.resx">
+		  <DependentUpon>YCmua.cs</DependentUpon>
+	  </EmbeddedResource>
     <EmbeddedResource Include="LuanChuyenTS.resx">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </EmbeddedResource>
