@@ -124,22 +124,22 @@
             // 
             this.gunaButton1.AnimationHoverSpeed = 0.07F;
             this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton1.BaseColor = System.Drawing.Color.Gainsboro;
             this.gunaButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
             this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(107, 241);
+            this.gunaButton1.Location = new System.Drawing.Point(59, 203);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.Silver;
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(87, 37);
+            this.gunaButton1.Size = new System.Drawing.Size(83, 26);
             this.gunaButton1.TabIndex = 7;
             this.gunaButton1.Text = "Thoát";
             // 
@@ -147,28 +147,30 @@
             // 
             this.gunaButton2.AnimationHoverSpeed = 0.07F;
             this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton2.BaseColor = System.Drawing.Color.LightGray;
             this.gunaButton2.BorderColor = System.Drawing.Color.Black;
             this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
+            this.gunaButton2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(268, 241);
+            this.gunaButton2.Location = new System.Drawing.Point(213, 203);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.Silver;
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(93, 37);
+            this.gunaButton2.Size = new System.Drawing.Size(100, 26);
             this.gunaButton2.TabIndex = 8;
             this.gunaButton2.Text = "Cập nhật";
             // 
             // gunaLinePanel1
             // 
+            this.gunaLinePanel1.Controls.Add(this.gunaButton2);
             this.gunaLinePanel1.Controls.Add(this.gunaLabel2);
+            this.gunaLinePanel1.Controls.Add(this.gunaButton1);
             this.gunaLinePanel1.Controls.Add(this.txtOldPass);
             this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
@@ -192,8 +194,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 305);
-            this.Controls.Add(this.gunaButton2);
-            this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.txtNewPass);
             this.Controls.Add(this.txtAccount);
             this.Controls.Add(this.gunaLabel4);
