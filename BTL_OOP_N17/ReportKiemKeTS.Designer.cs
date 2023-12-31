@@ -225,7 +225,7 @@
             this.btnBaocaotheotgian.Size = new System.Drawing.Size(163, 25);
             this.btnBaocaotheotgian.TabIndex = 2;
             this.btnBaocaotheotgian.Text = "Báo cáo theo thời gian ";
-            this.btnBaocaotheotgian.Click += new System.EventHandler(this.btnBaocaotheotgian_Click);
+            this.btnBaocaotheotgian.Click += new System.EventHandler(this.BtnBaocaotheotgian_Click);
             // 
             // gunaAdvenceButton1
             // 

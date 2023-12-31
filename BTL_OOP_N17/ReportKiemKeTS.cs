@@ -17,7 +17,7 @@ namespace BTL_OOP_N17
             InitializeComponent();
         }
 
-        private void btnBaocaotheotgian_Click(object sender, EventArgs e)
+        private void BtnBaocaotheotgian_Click(object sender, EventArgs e)
         {
 
         }
