@@ -49,14 +49,10 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
- HEAD
 	  <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
 		  <SpecificVersion>False</SpecificVersion>
 		  <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
 	  </Reference>
-
-	  
-
     <Reference Include="Guna.UI">
  
       <HintPath>..\..\..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
@@ -85,7 +81,6 @@
     <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
- HEAD
   <ItemGroup>
 	  <Compile Include="fAddDanhgialaiTB.cs">
 	  </Compile>
