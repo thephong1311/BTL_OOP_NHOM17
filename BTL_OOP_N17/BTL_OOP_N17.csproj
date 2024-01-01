@@ -173,6 +173,11 @@
     <Compile Include="LapDSThietBi.Designer.cs">
       <DependentUpon>LapDSThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phanmemquanlythietbi1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Phanmemquanlythietbi.resx</DependentUpon>
+    </Compile>
     <Compile Include="QLTS2DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +200,12 @@
     </Compile>
     <Compile Include="ThanhLyTS.Designer.cs">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemTLyTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTLyTS.Designer.cs">
+      <DependentUpon>ThemTLyTS.cs</DependentUpon>
     </Compile>
     <Compile Include="TonghopYCmua.cs">
       <SubType>Form</SubType>
@@ -345,6 +356,9 @@
     <EmbeddedResource Include="ThanhLyTS.resx">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemTLyTS.resx">
+      <DependentUpon>ThemTLyTS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TonghopYCmua.resx">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +370,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Phanmemquanlythietbi1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

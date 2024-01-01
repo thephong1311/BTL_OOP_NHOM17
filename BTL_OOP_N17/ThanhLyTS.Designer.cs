@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhLyTS));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFInd = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
@@ -44,8 +47,15 @@
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.dgvTSTL = new Guna.UI.WinForms.GunaDataGridView();
             this.txtFind_TL = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDSThanhLy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDsTs = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInDS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.gbDanhsachTL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).BeginInit();
+            this.gbThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFInd
@@ -59,9 +69,9 @@
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(23, 18);
+            this.txtFind.Location = new System.Drawing.Point(175, 18);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(306, 22);
+            this.txtFind.Size = new System.Drawing.Size(154, 22);
             this.txtFind.TabIndex = 2;
             // 
             // btnThem
@@ -212,9 +222,9 @@
             this.gbDanhsachTL.Controls.Add(this.txtFind_TL);
             this.gbDanhsachTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDanhsachTL.LineColor = System.Drawing.Color.DarkGray;
-            this.gbDanhsachTL.Location = new System.Drawing.Point(23, 77);
+            this.gbDanhsachTL.Location = new System.Drawing.Point(175, 77);
             this.gbDanhsachTL.Name = "gbDanhsachTL";
-            this.gbDanhsachTL.Size = new System.Drawing.Size(1088, 277);
+            this.gbDanhsachTL.Size = new System.Drawing.Size(936, 335);
             this.gbDanhsachTL.TabIndex = 10;
             this.gbDanhsachTL.Text = "Danh sách các tài sản thanh lí ";
             this.gbDanhsachTL.TextLocation = new System.Drawing.Point(10, 8);
@@ -245,30 +255,30 @@
             // 
             // dgvTSTL
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvTSTL.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvTSTL.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTSTL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTSTL.BackgroundColor = System.Drawing.Color.White;
             this.dgvTSTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTSTL.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTSTL.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTSTL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTSTL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTSTL.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTSTL.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTSTL.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTSTL.EnableHeadersVisualStyles = false;
             this.dgvTSTL.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTSTL.Location = new System.Drawing.Point(16, 85);
@@ -317,11 +327,130 @@
             this.txtFind_TL.Size = new System.Drawing.Size(482, 30);
             this.txtFind_TL.TabIndex = 0;
             // 
+            // gbThongTin
+            // 
+            this.gbThongTin.BorderColor = System.Drawing.Color.DimGray;
+            this.gbThongTin.Controls.Add(this.btnInDS);
+            this.gbThongTin.Controls.Add(this.btnDsTs);
+            this.gbThongTin.Controls.Add(this.btnDSThanhLy);
+            this.gbThongTin.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbThongTin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbThongTin.Location = new System.Drawing.Point(-1, 77);
+            this.gbThongTin.Name = "gbThongTin";
+            this.gbThongTin.Size = new System.Drawing.Size(170, 335);
+            this.gbThongTin.TabIndex = 11;
+            this.gbThongTin.Text = "Thông tin ";
+            // 
+            // btnDSThanhLy
+            // 
+            this.btnDSThanhLy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDSThanhLy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDSThanhLy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDSThanhLy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDSThanhLy.FillColor = System.Drawing.Color.White;
+            this.btnDSThanhLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSThanhLy.ForeColor = System.Drawing.Color.Black;
+            this.btnDSThanhLy.Image = global::BTL_OOP_N17.Properties.Resources.search;
+            this.btnDSThanhLy.Location = new System.Drawing.Point(3, 53);
+            this.btnDSThanhLy.Name = "btnDSThanhLy";
+            this.btnDSThanhLy.Size = new System.Drawing.Size(164, 67);
+            this.btnDSThanhLy.TabIndex = 0;
+            this.btnDSThanhLy.Text = "DS tài sản đã thanh lý";
+            // 
+            // btnDsTs
+            // 
+            this.btnDsTs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDsTs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDsTs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDsTs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDsTs.FillColor = System.Drawing.Color.White;
+            this.btnDsTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDsTs.ForeColor = System.Drawing.Color.Black;
+            this.btnDsTs.Image = ((System.Drawing.Image)(resources.GetObject("btnDsTs.Image")));
+            this.btnDsTs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDsTs.Location = new System.Drawing.Point(3, 134);
+            this.btnDsTs.Name = "btnDsTs";
+            this.btnDsTs.Size = new System.Drawing.Size(164, 67);
+            this.btnDsTs.TabIndex = 1;
+            this.btnDsTs.Text = "DS tài sản";
+            // 
+            // btnInDS
+            // 
+            this.btnInDS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInDS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInDS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInDS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInDS.FillColor = System.Drawing.Color.White;
+            this.btnInDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInDS.ForeColor = System.Drawing.Color.Black;
+            this.btnInDS.Image = ((System.Drawing.Image)(resources.GetObject("btnInDS.Image")));
+            this.btnInDS.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInDS.Location = new System.Drawing.Point(0, 207);
+            this.btnInDS.Name = "btnInDS";
+            this.btnInDS.Size = new System.Drawing.Size(164, 67);
+            this.btnInDS.TabIndex = 2;
+            this.btnInDS.Text = "In DS Thanh lý";
+            this.btnInDS.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2DataGridView1
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(175, 418);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.RowTemplate.Height = 24;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(936, 92);
+            this.guna2DataGridView1.TabIndex = 12;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // ThanhLyTS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 450);
+            this.ClientSize = new System.Drawing.Size(1164, 522);
+            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.gbThongTin);
             this.Controls.Add(this.gbDanhsachTL);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.btnDong);
@@ -335,6 +464,8 @@
             this.Text = "Thanh lý tài sản ";
             this.gbDanhsachTL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).EndInit();
+            this.gbThongTin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +485,10 @@
         private Guna.UI.WinForms.GunaDataGridView dgvTSTL;
         private Guna.UI.WinForms.GunaLineTextBox txtFind_TL;
         private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI2.WinForms.Guna2GroupBox gbThongTin;
+        private Guna.UI2.WinForms.Guna2Button btnDSThanhLy;
+        private Guna.UI2.WinForms.Guna2Button btnInDS;
+        private Guna.UI2.WinForms.Guna2Button btnDsTs;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

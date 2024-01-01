@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTTGV));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnFind = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
-            this.btnXuat = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.txtSDTGV = new System.Windows.Forms.TextBox();
             this.txtTenGV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,23 +43,27 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnXuat = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnXuat);
+            this.groupBox1.Controls.Add(this.gunaButton1);
+            this.groupBox1.Controls.Add(this.gunaButton2);
+            this.groupBox1.Controls.Add(this.gunaButton5);
+            this.groupBox1.Controls.Add(this.gunaButton3);
+            this.groupBox1.Controls.Add(this.gunaButton4);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.btnFind);
             this.groupBox1.Controls.Add(this.txtFind);
-            this.groupBox1.Controls.Add(this.btnXuat);
-            this.groupBox1.Controls.Add(this.btnHuy);
-            this.groupBox1.Controls.Add(this.btnLuu);
-            this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.btnSua);
-            this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.txtSDTGV);
             this.groupBox1.Controls.Add(this.txtTenGV);
             this.groupBox1.Controls.Add(this.label5);
@@ -85,16 +83,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mAGVDataGridViewTextBoxColumn,
-            this.tENGVDataGridViewTextBoxColumn,
-            this.dIACHIGVDataGridViewTextBoxColumn,
-            this.sDTGVDataGridViewTextBoxColumn,
-            this.cHUCVUGVDataGridViewTextBoxColumn,
-            this.mAPTNDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.gIAOVIENBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(25, 234);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -118,60 +107,6 @@
             this.txtFind.Name = "txtFind";
             this.txtFind.Size = new System.Drawing.Size(434, 22);
             this.txtFind.TabIndex = 16;
-            // 
-            // btnXuat
-            // 
-            this.btnXuat.Location = new System.Drawing.Point(528, 128);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(86, 23);
-            this.btnXuat.TabIndex = 15;
-            this.btnXuat.Text = "Xuất Excel";
-            this.btnXuat.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(415, 128);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 23);
-            this.btnHuy.TabIndex = 14;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(314, 128);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 13;
-            this.btnLuu.Text = "Lưu lại\r\n";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(212, 128);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 12;
-            this.btnXoa.Text = "Xóa bỏ ";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(116, 128);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 11;
-            this.btnSua.Text = "Chỉnh sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(25, 129);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 10;
-            this.btnThem.Text = "Thêm mới";
-            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // txtSDTGV
             // 
@@ -253,67 +188,143 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã giáo viên ";
             // 
-            // qLTS2DataSet
+            // btnXuat
             // 
-            this.qLTS2DataSet.DataSetName = "QLTS2DataSet";
-            this.qLTS2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnXuat.AnimationHoverSpeed = 0.07F;
+            this.btnXuat.AnimationSpeed = 0.03F;
+            this.btnXuat.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnXuat.BorderColor = System.Drawing.Color.Black;
+            this.btnXuat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXuat.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
+            this.btnXuat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXuat.Location = new System.Drawing.Point(623, 137);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXuat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXuat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXuat.OnHoverImage = null;
+            this.btnXuat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXuat.Size = new System.Drawing.Size(116, 23);
+            this.btnXuat.TabIndex = 24;
+            this.btnXuat.Text = "Xuất Excel";
             // 
-            // gIAOVIENBindingSource
+            // gunaButton1
             // 
-            this.gIAOVIENBindingSource.DataMember = "GIAOVIEN";
-            this.gIAOVIENBindingSource.DataSource = this.qLTS2DataSet;
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(507, 137);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Size = new System.Drawing.Size(110, 23);
+            this.gunaButton1.TabIndex = 23;
+            this.gunaButton1.Text = "Đóng lại ";
             // 
-            // gIAOVIENTableAdapter
+            // gunaButton2
             // 
-            this.gIAOVIENTableAdapter.ClearBeforeFill = true;
+            this.gunaButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaButton2.AnimationSpeed = 0.03F;
+            this.gunaButton2.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
+            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton2.Location = new System.Drawing.Point(405, 137);
+            this.gunaButton2.Name = "gunaButton2";
+            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton2.OnHoverImage = null;
+            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton2.Size = new System.Drawing.Size(96, 23);
+            this.gunaButton2.TabIndex = 22;
+            this.gunaButton2.Text = "Load";
             // 
-            // mAGVDataGridViewTextBoxColumn
+            // gunaButton5
             // 
-            this.mAGVDataGridViewTextBoxColumn.DataPropertyName = "MAGV";
-            this.mAGVDataGridViewTextBoxColumn.HeaderText = "MAGV";
-            this.mAGVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mAGVDataGridViewTextBoxColumn.Name = "mAGVDataGridViewTextBoxColumn";
-            this.mAGVDataGridViewTextBoxColumn.Width = 125;
+            this.gunaButton5.AnimationHoverSpeed = 0.07F;
+            this.gunaButton5.AnimationSpeed = 0.03F;
+            this.gunaButton5.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton5.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton5.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton5.Image")));
+            this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton5.Location = new System.Drawing.Point(47, 137);
+            this.gunaButton5.Name = "gunaButton5";
+            this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton5.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton5.OnHoverImage = null;
+            this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton5.Size = new System.Drawing.Size(122, 23);
+            this.gunaButton5.TabIndex = 19;
+            this.gunaButton5.Text = "Thêm mới";
             // 
-            // tENGVDataGridViewTextBoxColumn
+            // gunaButton3
             // 
-            this.tENGVDataGridViewTextBoxColumn.DataPropertyName = "TENGV";
-            this.tENGVDataGridViewTextBoxColumn.HeaderText = "TENGV";
-            this.tENGVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tENGVDataGridViewTextBoxColumn.Name = "tENGVDataGridViewTextBoxColumn";
-            this.tENGVDataGridViewTextBoxColumn.Width = 125;
+            this.gunaButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaButton3.AnimationSpeed = 0.03F;
+            this.gunaButton3.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton3.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
+            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton3.Location = new System.Drawing.Point(292, 137);
+            this.gunaButton3.Name = "gunaButton3";
+            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton3.OnHoverImage = null;
+            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton3.Size = new System.Drawing.Size(96, 23);
+            this.gunaButton3.TabIndex = 21;
+            this.gunaButton3.Text = "Xóa bỏ";
             // 
-            // dIACHIGVDataGridViewTextBoxColumn
+            // gunaButton4
             // 
-            this.dIACHIGVDataGridViewTextBoxColumn.DataPropertyName = "DIACHIGV";
-            this.dIACHIGVDataGridViewTextBoxColumn.HeaderText = "DIACHIGV";
-            this.dIACHIGVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dIACHIGVDataGridViewTextBoxColumn.Name = "dIACHIGVDataGridViewTextBoxColumn";
-            this.dIACHIGVDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sDTGVDataGridViewTextBoxColumn
-            // 
-            this.sDTGVDataGridViewTextBoxColumn.DataPropertyName = "SDTGV";
-            this.sDTGVDataGridViewTextBoxColumn.HeaderText = "SDTGV";
-            this.sDTGVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sDTGVDataGridViewTextBoxColumn.Name = "sDTGVDataGridViewTextBoxColumn";
-            this.sDTGVDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cHUCVUGVDataGridViewTextBoxColumn
-            // 
-            this.cHUCVUGVDataGridViewTextBoxColumn.DataPropertyName = "CHUCVUGV";
-            this.cHUCVUGVDataGridViewTextBoxColumn.HeaderText = "CHUCVUGV";
-            this.cHUCVUGVDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cHUCVUGVDataGridViewTextBoxColumn.Name = "cHUCVUGVDataGridViewTextBoxColumn";
-            this.cHUCVUGVDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // mAPTNDataGridViewTextBoxColumn
-            // 
-            this.mAPTNDataGridViewTextBoxColumn.DataPropertyName = "MAPTN";
-            this.mAPTNDataGridViewTextBoxColumn.HeaderText = "MAPTN";
-            this.mAPTNDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.mAPTNDataGridViewTextBoxColumn.Name = "mAPTNDataGridViewTextBoxColumn";
-            this.mAPTNDataGridViewTextBoxColumn.Width = 125;
+            this.gunaButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaButton4.AnimationSpeed = 0.03F;
+            this.gunaButton4.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton4.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton4.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
+            this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton4.Location = new System.Drawing.Point(164, 136);
+            this.gunaButton4.Name = "gunaButton4";
+            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton4.OnHoverImage = null;
+            this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton4.Size = new System.Drawing.Size(122, 23);
+            this.gunaButton4.TabIndex = 20;
+            this.gunaButton4.Text = "Chỉnh sửa";
             // 
             // QLTTGV
             // 
@@ -327,8 +338,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTS2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gIAOVIENBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,8 +348,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtSDTGV;
         private System.Windows.Forms.TextBox txtTenGV;
         private System.Windows.Forms.Label label5;
@@ -351,18 +358,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TextBox txtFind;
-        private System.Windows.Forms.Button btnXuat;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
-        private QLTS2DataSet qLTS2DataSet;
-        private System.Windows.Forms.BindingSource gIAOVIENBindingSource;
-        private QLTS2DataSetTableAdapters.GIAOVIENTableAdapter gIAOVIENTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mAGVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tENGVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dIACHIGVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDTGVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cHUCVUGVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mAPTNDataGridViewTextBoxColumn;
+        private Guna.UI.WinForms.GunaButton btnXuat;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton gunaButton5;
+        private Guna.UI.WinForms.GunaButton gunaButton3;
+        private Guna.UI.WinForms.GunaButton gunaButton4;
     }
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class ThanhLyTS : Form
+    public partial class ThemTLyTS : Form
     {
-        public ThanhLyTS()
+        public ThemTLyTS()
         {
             InitializeComponent();
-        }
-
-        private void dgvTSTL_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
