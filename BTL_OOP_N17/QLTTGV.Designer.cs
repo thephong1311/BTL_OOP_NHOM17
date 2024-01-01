@@ -1,4 +1,5 @@
 ﻿namespace BTL_OOP_N17
+
 {
     partial class QLTTGV
     {
@@ -19,6 +20,8 @@
             }
             base.Dispose(disposing);
         }
+
+
 
         #region Windows Form Designer generated code
 

@@ -17,17 +17,7 @@ namespace BTL_OOP_N17
             InitializeComponent();
         }
 
-        private void txt_Find_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void LuanChuyenTS_Load(object sender, EventArgs e)
         {
 
         }
