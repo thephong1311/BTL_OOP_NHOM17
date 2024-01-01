@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLTS2DataSet1" targetNamespace="http://tempuri.org/QLTS2DataSet1.xsd" xmlns:mstns="http://tempuri.org/QLTS2DataSet1.xsd" xmlns="http://tempuri.org/QLTS2DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLTS2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLTS2ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BTL_OOP_N17.Properties.Settings.GlobalReference.Default.QLTS2ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PHONGTHINGHIEMTableAdapter" GeneratorDataComponentClassName="PHONGTHINGHIEMTableAdapter" Name="PHONGTHINGHIEM" UserDataComponentName="PHONGTHINGHIEMTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLTS2ConnectionString (Settings)" DbObjectName="QLTS2.dbo.PHONGTHINGHIEM" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TENPTN FROM dbo.PHONGTHINGHIEM</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TENPTN" DataSetColumn="TENPTN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLTS2DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLTS2DataSet1" msprop:Generator_DataSetName="QLTS2DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PHONGTHINGHIEM" msprop:Generator_RowEvHandlerName="PHONGTHINGHIEMRowChangeEventHandler" msprop:Generator_RowDeletedName="PHONGTHINGHIEMRowDeleted" msprop:Generator_RowDeletingName="PHONGTHINGHIEMRowDeleting" msprop:Generator_RowEvArgName="PHONGTHINGHIEMRowChangeEvent" msprop:Generator_TablePropName="PHONGTHINGHIEM" msprop:Generator_RowChangedName="PHONGTHINGHIEMRowChanged" msprop:Generator_RowChangingName="PHONGTHINGHIEMRowChanging" msprop:Generator_TableClassName="PHONGTHINGHIEMDataTable" msprop:Generator_RowClassName="PHONGTHINGHIEMRow" msprop:Generator_TableVarName="tablePHONGTHINGHIEM" msprop:Generator_UserTableName="PHONGTHINGHIEM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TENPTN" msprop:Generator_ColumnPropNameInRow="TENPTN" msprop:Generator_ColumnPropNameInTable="TENPTNColumn" msprop:Generator_ColumnVarNameInTable="columnTENPTN" msprop:Generator_UserColumnName="TENPTN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
