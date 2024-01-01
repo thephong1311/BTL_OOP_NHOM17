@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class ReportKiemKeTS : Form
+    public partial class Form2 : Form
     {
-        public ReportKiemKeTS()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void BtnBaocaotheotgian_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

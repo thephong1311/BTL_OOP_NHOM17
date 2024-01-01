@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class DoiMK : Form
+    public partial class DoiMK: Form
     {
         public DoiMK()
         {
