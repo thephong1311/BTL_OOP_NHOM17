@@ -16,5 +16,10 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        private void dgvTSTL_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

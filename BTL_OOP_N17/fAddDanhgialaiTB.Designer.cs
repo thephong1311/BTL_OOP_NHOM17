@@ -577,7 +577,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+       private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox5;
     }
