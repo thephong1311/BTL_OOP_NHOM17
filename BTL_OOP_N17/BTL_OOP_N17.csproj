@@ -217,6 +217,12 @@
     <Compile Include="fDanhmucthietbi.Designer.cs">
       <DependentUpon>fDanhmucthietbi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTheodoiTB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDanhmucthietbi.resx">
       <DependentUpon>fDanhmucthietbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTheodoiTB.resx">
       <DependentUpon>fTheodoiTB.cs</DependentUpon>

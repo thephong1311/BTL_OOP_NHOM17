@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhLyTS));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhLyTS));
             this.txtFind = new System.Windows.Forms.TextBox();
             this.gbDanhsachTL = new Guna.UI.WinForms.GunaGroupBox();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.dgvTSTL = new Guna.UI.WinForms.GunaDataGridView();
             this.txtFind_TL = new Guna.UI.WinForms.GunaLineTextBox();
             this.gbThongTin = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.btnInDS = new Guna.UI2.WinForms.Guna2Button();
             this.btnDsTs = new Guna.UI2.WinForms.Guna2Button();
             this.btnDSThanhLy = new Guna.UI2.WinForms.Guna2Button();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.btnDong = new Guna.UI.WinForms.GunaButton();
             this.btnLoad = new Guna.UI.WinForms.GunaButton();
@@ -60,10 +60,10 @@
             // 
             // txtFind
             // 
-            this.txtFind.Location = new System.Drawing.Point(59, 15);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFind.Location = new System.Drawing.Point(79, 18);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(116, 20);
+            this.txtFind.Size = new System.Drawing.Size(153, 22);
             this.txtFind.TabIndex = 2;
             // 
             // gbDanhsachTL
@@ -76,13 +76,38 @@
             this.gbDanhsachTL.Controls.Add(this.txtFind_TL);
             this.gbDanhsachTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDanhsachTL.LineColor = System.Drawing.Color.DarkGray;
-            this.gbDanhsachTL.Location = new System.Drawing.Point(131, 63);
-            this.gbDanhsachTL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDanhsachTL.Location = new System.Drawing.Point(175, 78);
+            this.gbDanhsachTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbDanhsachTL.Name = "gbDanhsachTL";
-            this.gbDanhsachTL.Size = new System.Drawing.Size(702, 272);
+            this.gbDanhsachTL.Size = new System.Drawing.Size(936, 335);
             this.gbDanhsachTL.TabIndex = 10;
             this.gbDanhsachTL.Text = "Danh sách các tài sản thanh lí ";
             this.gbDanhsachTL.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BaseColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.BorderSize = 1;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(533, 44);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Size = new System.Drawing.Size(137, 23);
+            this.gunaButton1.TabIndex = 11;
+            this.gunaButton1.Text = "Tìm kiếm";
             // 
             // dgvTSTL
             // 
@@ -112,14 +137,14 @@
             this.dgvTSTL.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTSTL.EnableHeadersVisualStyles = false;
             this.dgvTSTL.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTSTL.Location = new System.Drawing.Point(12, 69);
-            this.dgvTSTL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTSTL.Location = new System.Drawing.Point(16, 85);
+            this.dgvTSTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTSTL.Name = "dgvTSTL";
             this.dgvTSTL.RowHeadersVisible = false;
             this.dgvTSTL.RowHeadersWidth = 51;
             this.dgvTSTL.RowTemplate.Height = 24;
             this.dgvTSTL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTSTL.Size = new System.Drawing.Size(772, 122);
+            this.dgvTSTL.Size = new System.Drawing.Size(1029, 150);
             this.dgvTSTL.TabIndex = 1;
             this.dgvTSTL.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvTSTL.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -152,12 +177,12 @@
             this.txtFind_TL.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFind_TL.LineColor = System.Drawing.Color.Black;
             this.txtFind_TL.LineSize = 1;
-            this.txtFind_TL.Location = new System.Drawing.Point(12, 30);
-            this.txtFind_TL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFind_TL.Location = new System.Drawing.Point(16, 37);
+            this.txtFind_TL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFind_TL.Name = "txtFind_TL";
             this.txtFind_TL.PasswordChar = '\0';
             this.txtFind_TL.SelectedText = "";
-            this.txtFind_TL.Size = new System.Drawing.Size(362, 26);
+            this.txtFind_TL.Size = new System.Drawing.Size(483, 37);
             this.txtFind_TL.TabIndex = 0;
             // 
             // gbThongTin
@@ -169,12 +194,66 @@
             this.gbThongTin.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.gbThongTin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbThongTin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gbThongTin.Location = new System.Drawing.Point(-1, 63);
-            this.gbThongTin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTin.Location = new System.Drawing.Point(-1, 78);
+            this.gbThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbThongTin.Name = "gbThongTin";
-            this.gbThongTin.Size = new System.Drawing.Size(128, 272);
+            this.gbThongTin.Size = new System.Drawing.Size(171, 335);
             this.gbThongTin.TabIndex = 11;
             this.gbThongTin.Text = "Thông tin ";
+            // 
+            // btnInDS
+            // 
+            this.btnInDS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInDS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInDS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInDS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInDS.FillColor = System.Drawing.Color.White;
+            this.btnInDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInDS.ForeColor = System.Drawing.Color.Black;
+            this.btnInDS.Image = ((System.Drawing.Image)(resources.GetObject("btnInDS.Image")));
+            this.btnInDS.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInDS.Location = new System.Drawing.Point(0, 207);
+            this.btnInDS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInDS.Name = "btnInDS";
+            this.btnInDS.Size = new System.Drawing.Size(164, 66);
+            this.btnInDS.TabIndex = 2;
+            this.btnInDS.Text = "In DS Thanh lý";
+            this.btnInDS.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // btnDsTs
+            // 
+            this.btnDsTs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDsTs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDsTs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDsTs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDsTs.FillColor = System.Drawing.Color.White;
+            this.btnDsTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDsTs.ForeColor = System.Drawing.Color.Black;
+            this.btnDsTs.Image = ((System.Drawing.Image)(resources.GetObject("btnDsTs.Image")));
+            this.btnDsTs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDsTs.Location = new System.Drawing.Point(3, 134);
+            this.btnDsTs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDsTs.Name = "btnDsTs";
+            this.btnDsTs.Size = new System.Drawing.Size(164, 66);
+            this.btnDsTs.TabIndex = 1;
+            this.btnDsTs.Text = "DS tài sản";
+            // 
+            // btnDSThanhLy
+            // 
+            this.btnDSThanhLy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDSThanhLy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDSThanhLy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDSThanhLy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDSThanhLy.FillColor = System.Drawing.Color.White;
+            this.btnDSThanhLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSThanhLy.ForeColor = System.Drawing.Color.Black;
+            this.btnDSThanhLy.Image = global::BTL_OOP_N17.Properties.Resources.search;
+            this.btnDSThanhLy.Location = new System.Drawing.Point(3, 53);
+            this.btnDSThanhLy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDSThanhLy.Name = "btnDSThanhLy";
+            this.btnDSThanhLy.Size = new System.Drawing.Size(164, 66);
+            this.btnDSThanhLy.TabIndex = 0;
+            this.btnDSThanhLy.Text = "DS tài sản đã thanh lý";
             // 
             // guna2DataGridView1
             // 
@@ -199,13 +278,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(131, 340);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(175, 418);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(702, 75);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(936, 92);
             this.guna2DataGridView1.TabIndex = 12;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -241,96 +320,17 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.Black;
             this.gunaButton2.Image = null;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(199, 16);
-            this.gunaButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.gunaButton2.Location = new System.Drawing.Point(265, 20);
+            this.gunaButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(92, 19);
+            this.gunaButton2.Size = new System.Drawing.Size(123, 23);
             this.gunaButton2.TabIndex = 13;
             this.gunaButton2.Text = "Tìm kiếm";
-            // 
-            // btnInDS
-            // 
-            this.btnInDS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInDS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInDS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInDS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInDS.FillColor = System.Drawing.Color.White;
-            this.btnInDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInDS.ForeColor = System.Drawing.Color.Black;
-            this.btnInDS.Image = ((System.Drawing.Image)(resources.GetObject("btnInDS.Image")));
-            this.btnInDS.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInDS.Location = new System.Drawing.Point(0, 168);
-            this.btnInDS.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInDS.Name = "btnInDS";
-            this.btnInDS.Size = new System.Drawing.Size(123, 54);
-            this.btnInDS.TabIndex = 2;
-            this.btnInDS.Text = "In DS Thanh lý";
-            this.btnInDS.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // btnDsTs
-            // 
-            this.btnDsTs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDsTs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDsTs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDsTs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDsTs.FillColor = System.Drawing.Color.White;
-            this.btnDsTs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDsTs.ForeColor = System.Drawing.Color.Black;
-            this.btnDsTs.Image = ((System.Drawing.Image)(resources.GetObject("btnDsTs.Image")));
-            this.btnDsTs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDsTs.Location = new System.Drawing.Point(2, 109);
-            this.btnDsTs.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDsTs.Name = "btnDsTs";
-            this.btnDsTs.Size = new System.Drawing.Size(123, 54);
-            this.btnDsTs.TabIndex = 1;
-            this.btnDsTs.Text = "DS tài sản";
-            // 
-            // btnDSThanhLy
-            // 
-            this.btnDSThanhLy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDSThanhLy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDSThanhLy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDSThanhLy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDSThanhLy.FillColor = System.Drawing.Color.White;
-            this.btnDSThanhLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSThanhLy.ForeColor = System.Drawing.Color.Black;
-            this.btnDSThanhLy.Image = global::BTL_OOP_N17.Properties.Resources.search;
-            this.btnDSThanhLy.Location = new System.Drawing.Point(2, 43);
-            this.btnDSThanhLy.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDSThanhLy.Name = "btnDSThanhLy";
-            this.btnDSThanhLy.Size = new System.Drawing.Size(123, 54);
-            this.btnDSThanhLy.TabIndex = 0;
-            this.btnDSThanhLy.Text = "DS tài sản đã thanh lý";
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.BorderSize = 1;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(400, 36);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(103, 19);
-            this.gunaButton1.TabIndex = 11;
-            this.gunaButton1.Text = "Tìm kiếm";
             // 
             // btnXuat
             // 
@@ -344,15 +344,15 @@
             this.btnXuat.ForeColor = System.Drawing.Color.Black;
             this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
             this.btnXuat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXuat.Location = new System.Drawing.Point(751, 15);
-            this.btnXuat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXuat.Location = new System.Drawing.Point(1001, 18);
+            this.btnXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnXuat.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnXuat.OnHoverForeColor = System.Drawing.Color.White;
             this.btnXuat.OnHoverImage = null;
             this.btnXuat.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXuat.Size = new System.Drawing.Size(100, 19);
+            this.btnXuat.Size = new System.Drawing.Size(133, 23);
             this.btnXuat.TabIndex = 9;
             this.btnXuat.Text = "Xuất Excel";
             // 
@@ -368,15 +368,15 @@
             this.btnDong.ForeColor = System.Drawing.Color.Black;
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDong.Location = new System.Drawing.Point(656, 15);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Location = new System.Drawing.Point(875, 18);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDong.Name = "btnDong";
             this.btnDong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnDong.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnDong.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDong.OnHoverImage = null;
             this.btnDong.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDong.Size = new System.Drawing.Size(101, 19);
+            this.btnDong.Size = new System.Drawing.Size(135, 23);
             this.btnDong.TabIndex = 8;
             this.btnDong.Text = "Đóng lại ";
             // 
@@ -392,15 +392,15 @@
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
             this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
             this.btnLoad.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLoad.Location = new System.Drawing.Point(579, 15);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoad.Location = new System.Drawing.Point(772, 18);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnLoad.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnLoad.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLoad.OnHoverImage = null;
             this.btnLoad.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLoad.Size = new System.Drawing.Size(72, 19);
+            this.btnLoad.Size = new System.Drawing.Size(96, 23);
             this.btnLoad.TabIndex = 7;
             this.btnLoad.Text = "Load";
             // 
@@ -416,15 +416,15 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(494, 11);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Location = new System.Drawing.Point(659, 14);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
             this.btnXoa.OnHoverImage = null;
             this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXoa.Size = new System.Drawing.Size(89, 19);
+            this.btnXoa.Size = new System.Drawing.Size(119, 23);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa bỏ";
             // 
@@ -440,15 +440,15 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(391, 11);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Location = new System.Drawing.Point(521, 14);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSua.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
             this.btnSua.OnHoverImage = null;
             this.btnSua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(99, 19);
+            this.btnSua.Size = new System.Drawing.Size(132, 23);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Chỉnh sửa";
             // 
@@ -464,23 +464,23 @@
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(281, 16);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Location = new System.Drawing.Point(369, 20);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
             this.btnThem.OnHoverImage = null;
             this.btnThem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThem.Size = new System.Drawing.Size(101, 19);
+            this.btnThem.Size = new System.Drawing.Size(141, 23);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm mới";
             // 
             // ThanhLyTS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 424);
+            this.ClientSize = new System.Drawing.Size(1164, 522);
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.gbThongTin);
@@ -492,7 +492,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtFind);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ThanhLyTS";
             this.Text = "Thanh lý tài sản ";
             this.gbDanhsachTL.ResumeLayout(false);
