@@ -167,6 +167,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPTN.Designer.cs">
+      <DependentUpon>AddPTN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +366,8 @@
     </Compile>
     <EmbeddedResource Include="AddPTN.resx">
       <DependentUpon>AddPTN.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddPTN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
