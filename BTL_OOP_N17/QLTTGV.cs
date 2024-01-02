@@ -28,5 +28,10 @@ namespace BTL_OOP_N17
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

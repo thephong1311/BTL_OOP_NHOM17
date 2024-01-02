@@ -175,12 +175,6 @@
     <Compile Include="AddPTN.Designer.cs">
       <DependentUpon>AddPTN.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoiMatKhau.Designer.cs">
-      <DependentUpon>DoiMatKhau.cs</DependentUpon>
-    </Compile>
     <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +222,11 @@
     </Compile>
     <Compile Include="fTheodoiTB.Designer.cs">
       <DependentUpon>fTheodoiTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoUser1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InfoUser.resx</DependentUpon>
     </Compile>
     <Compile Include="LuanChuyenTS.cs">
       <SubType>Form</SubType>
@@ -409,6 +408,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InfoUser1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemKe.resx">
       <DependentUpon>KiemKe.cs</DependentUpon>
