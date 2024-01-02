@@ -53,7 +53,7 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 130);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1278, 502);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1326, 502);
             this.crystalReportViewer1.TabIndex = 7;
             // 
             // gbIntatca
@@ -63,11 +63,11 @@
             this.gbIntatca.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.gbIntatca.Controls.Add(this.gunaAdvenceButton2);
             this.gbIntatca.Controls.Add(this.gunaAdvenceButton1);
-            this.gbIntatca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbIntatca.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbIntatca.LineColor = System.Drawing.Color.DarkGray;
-            this.gbIntatca.Location = new System.Drawing.Point(908, 16);
+            this.gbIntatca.Location = new System.Drawing.Point(963, 16);
             this.gbIntatca.Name = "gbIntatca";
-            this.gbIntatca.Size = new System.Drawing.Size(382, 107);
+            this.gbIntatca.Size = new System.Drawing.Size(434, 107);
             this.gbIntatca.TabIndex = 6;
             this.gbIntatca.Text = "In tất cả";
             this.gbIntatca.TextLocation = new System.Drawing.Point(10, 8);
@@ -86,12 +86,12 @@
             this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
             this.gunaAdvenceButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaAdvenceButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton2.Image = null;
             this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton2.Location = new System.Drawing.Point(244, 54);
+            this.gunaAdvenceButton2.Location = new System.Drawing.Point(296, 55);
             this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
             this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -117,7 +117,7 @@
             this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
             this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.Image = null;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
@@ -130,7 +130,7 @@
             this.gunaAdvenceButton1.OnHoverImage = null;
             this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(223, 25);
+            this.gunaAdvenceButton1.Size = new System.Drawing.Size(257, 25);
             this.gunaAdvenceButton1.TabIndex = 3;
             this.gunaAdvenceButton1.Text = "Báo cáo theo thời gian và PTN";
             // 
@@ -143,11 +143,11 @@
             this.gbBaocaoTgian.Controls.Add(this.gunaDateTimePicker2);
             this.gbBaocaoTgian.Controls.Add(this.label1);
             this.gbBaocaoTgian.Controls.Add(this.gunaDateTimePicker1);
-            this.gbBaocaoTgian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBaocaoTgian.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBaocaoTgian.LineColor = System.Drawing.Color.DarkGray;
             this.gbBaocaoTgian.Location = new System.Drawing.Point(390, 15);
             this.gbBaocaoTgian.Name = "gbBaocaoTgian";
-            this.gbBaocaoTgian.Size = new System.Drawing.Size(512, 107);
+            this.gbBaocaoTgian.Size = new System.Drawing.Size(567, 107);
             this.gbBaocaoTgian.TabIndex = 5;
             this.gbBaocaoTgian.Text = "Báo cáo theo thời gian";
             this.gbBaocaoTgian.TextLocation = new System.Drawing.Point(10, 8);
@@ -166,12 +166,12 @@
             this.btnBaocaotheotgian.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnBaocaotheotgian.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBaocaotheotgian.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBaocaotheotgian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaocaotheotgian.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaocaotheotgian.ForeColor = System.Drawing.Color.Black;
             this.btnBaocaotheotgian.Image = null;
             this.btnBaocaotheotgian.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBaocaotheotgian.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnBaocaotheotgian.Location = new System.Drawing.Point(334, 55);
+            this.btnBaocaotheotgian.Location = new System.Drawing.Point(364, 53);
             this.btnBaocaotheotgian.Name = "btnBaocaotheotgian";
             this.btnBaocaotheotgian.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBaocaotheotgian.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -179,7 +179,7 @@
             this.btnBaocaotheotgian.OnHoverImage = null;
             this.btnBaocaotheotgian.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btnBaocaotheotgian.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBaocaotheotgian.Size = new System.Drawing.Size(163, 25);
+            this.btnBaocaotheotgian.Size = new System.Drawing.Size(191, 27);
             this.btnBaocaotheotgian.TabIndex = 2;
             this.btnBaocaotheotgian.Text = "Báo cáo theo thời gian ";
             // 
@@ -191,10 +191,10 @@
             this.gunaDateTimePicker2.CustomFormat = null;
             this.gunaDateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.gunaDateTimePicker2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaDateTimePicker2.ForeColor = System.Drawing.Color.Black;
             this.gunaDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.gunaDateTimePicker2.Location = new System.Drawing.Point(193, 55);
+            this.gunaDateTimePicker2.Location = new System.Drawing.Point(209, 53);
             this.gunaDateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.gunaDateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.gunaDateTimePicker2.Name = "gunaDateTimePicker2";
@@ -202,7 +202,7 @@
             this.gunaDateTimePicker2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker2.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker2.Size = new System.Drawing.Size(135, 26);
+            this.gunaDateTimePicker2.Size = new System.Drawing.Size(149, 26);
             this.gunaDateTimePicker2.TabIndex = 2;
             this.gunaDateTimePicker2.Text = "29/12/2023";
             this.gunaDateTimePicker2.Value = new System.DateTime(2023, 12, 29, 17, 13, 41, 300);
@@ -210,12 +210,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(159, 55);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(159, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 18);
+            this.label1.Size = new System.Drawing.Size(44, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "đến ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // gunaDateTimePicker1
             // 
@@ -225,10 +226,10 @@
             this.gunaDateTimePicker1.CustomFormat = null;
             this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Black;
             this.gunaDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.gunaDateTimePicker1.Location = new System.Drawing.Point(19, 55);
+            this.gunaDateTimePicker1.Location = new System.Drawing.Point(3, 55);
             this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
@@ -236,7 +237,7 @@
             this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Size = new System.Drawing.Size(134, 25);
+            this.gunaDateTimePicker1.Size = new System.Drawing.Size(150, 25);
             this.gunaDateTimePicker1.TabIndex = 0;
             this.gunaDateTimePicker1.Text = "29/12/2023";
             this.gunaDateTimePicker1.Value = new System.DateTime(2023, 12, 29, 17, 13, 41, 300);
@@ -248,7 +249,7 @@
             this.gbBaocaoPTN.BorderColor = System.Drawing.SystemColors.ActiveBorder;
             this.gbBaocaoPTN.Controls.Add(this.btnBaocaotheoPTN);
             this.gbBaocaoPTN.Controls.Add(this.cbbPTN);
-            this.gbBaocaoPTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBaocaoPTN.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBaocaoPTN.LineColor = System.Drawing.Color.DarkGray;
             this.gbBaocaoPTN.Location = new System.Drawing.Point(12, 16);
             this.gbBaocaoPTN.Name = "gbBaocaoPTN";
@@ -271,7 +272,7 @@
             this.btnBaocaotheoPTN.CheckedLineColor = System.Drawing.Color.DimGray;
             this.btnBaocaotheoPTN.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBaocaotheoPTN.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBaocaotheoPTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaocaotheoPTN.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaocaotheoPTN.ForeColor = System.Drawing.Color.Black;
             this.btnBaocaotheoPTN.Image = null;
             this.btnBaocaotheoPTN.ImageSize = new System.Drawing.Size(20, 20);
@@ -290,11 +291,11 @@
             // 
             // cbbPTN
             // 
-            this.cbbPTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPTN.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbPTN.FormattingEnabled = true;
-            this.cbbPTN.Location = new System.Drawing.Point(17, 54);
+            this.cbbPTN.Location = new System.Drawing.Point(3, 54);
             this.cbbPTN.Name = "cbbPTN";
-            this.cbbPTN.Size = new System.Drawing.Size(189, 26);
+            this.cbbPTN.Size = new System.Drawing.Size(203, 31);
             this.cbbPTN.TabIndex = 0;
             this.cbbPTN.Text = "Chọn phòng thí nghiệm...";
             // 
@@ -302,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 648);
+            this.ClientSize = new System.Drawing.Size(1409, 648);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.gbIntatca);
             this.Controls.Add(this.gbBaocaoTgian);

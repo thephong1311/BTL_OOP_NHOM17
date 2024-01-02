@@ -257,11 +257,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Phanmemquanlythietbi.resx</DependentUpon>
     </Compile>
-    <Compile Include="QLTS2DataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLTS2DataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ReportKiemKeTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,21 +287,11 @@
     <Compile Include="TonghopYCmua.Designer.cs">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLTS2DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLTS2DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="YCmua.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="YCmua.Designer.cs">
       <DependentUpon>YCmua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLTS2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLTS2DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="QLTTGV.cs">
       <SubType>Form</SubType>
@@ -505,17 +490,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLTS2DataSet2.xsc">
-      <DependentUpon>QLTS2DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QLTS2DataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLTS2DataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLTS2DataSet2.xss">
-      <DependentUpon>QLTS2DataSet2.xsd</DependentUpon>
-    </None>
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>

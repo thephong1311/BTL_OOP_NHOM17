@@ -20,7 +20,7 @@ namespace BTL_OOP_N17
         private void YCmua_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLTS2DataSet1.PHONGTHINGHIEM' table. You can move, or remove it, as needed.
-            this.pHONGTHINGHIEMTableAdapter.Fill(this.qLTS2DataSet1.PHONGTHINGHIEM);
+           
 
         }
 
