@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class ThanhLyTS : Form
+    public partial class AddPTN : Form
     {
-        public ThanhLyTS()
+        public AddPTN()
         {
             InitializeComponent();
         }
 
-        private void dgvTSTL_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTTPTN));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_Find = new System.Windows.Forms.Button();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_Edit = new System.Windows.Forms.Button();
-            this.btn_Excel = new System.Windows.Forms.Button();
-            this.btn_Load = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btn_Find1 = new System.Windows.Forms.Button();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_Close = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_Close = new Guna.UI.WinForms.GunaButton();
+            this.btn_Excel = new Guna.UI.WinForms.GunaButton();
+            this.btn_Load = new Guna.UI.WinForms.GunaButton();
+            this.btn_Delete = new Guna.UI.WinForms.GunaButton();
+            this.btn_Edit = new Guna.UI.WinForms.GunaButton();
+            this.btn_Add = new Guna.UI.WinForms.GunaButton();
+            this.btn_Find = new Guna.UI.WinForms.GunaButton();
+            this.txt_Input = new Guna.UI.WinForms.GunaTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,8 +170,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(999, 398);
             this.dataGridView1.TabIndex = 11;
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 79);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(794, 397);
+            this.flowLayoutPanel2.TabIndex = 13;
+            // 
             // btn_Close
             // 
+            this.btn_Close.AnimationHoverSpeed = 0.07F;
+            this.btn_Close.AnimationSpeed = 0.03F;
+            this.btn_Close.BaseColor = System.Drawing.Color.Silver;
+            this.btn_Close.BorderColor = System.Drawing.Color.Black;
+            this.btn_Close.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Close.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Close.ForeColor = System.Drawing.Color.Black;
             this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
             this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Close.Location = new System.Drawing.Point(936, 15);
@@ -183,7 +197,7 @@
             this.btn_Close.Text = "    Đóng lại";
             this.btn_Close.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel2
+            // txt_Input
             // 
             this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 97);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -197,18 +211,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Clear);
-            this.Controls.Add(this.btn_Find1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Find);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.txt_Input);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_Clear);
+            this.Controls.Add(this.btn_Find1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QLTTPTN";
@@ -221,20 +234,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_Find;
-        private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.Button btn_Edit;
-        private System.Windows.Forms.Button btn_Excel;
-        private System.Windows.Forms.Button btn_Load;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btn_Find1;
         private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private Guna.UI.WinForms.GunaButton btn_Close;
+        private Guna.UI.WinForms.GunaButton btn_Excel;
+        private Guna.UI.WinForms.GunaButton btn_Load;
+        private Guna.UI.WinForms.GunaButton btn_Delete;
+        private Guna.UI.WinForms.GunaButton btn_Edit;
+        private Guna.UI.WinForms.GunaButton btn_Add;
+        private Guna.UI.WinForms.GunaButton btn_Find;
+        private Guna.UI.WinForms.GunaTextBox txt_Input;
     }
 }

@@ -118,7 +118,6 @@
             this.cbbPTN.Name = "cbbPTN";
             this.cbbPTN.Size = new System.Drawing.Size(280, 24);
             this.cbbPTN.TabIndex = 6;
-            this.cbbPTN.Text = "Thêm đơn vị yêu cầu...";
             // 
             // pHONGTHINGHIEMBindingSource
             // 
@@ -207,7 +206,7 @@
             // 
             this.btnDong.AnimationHoverSpeed = 0.07F;
             this.btnDong.AnimationSpeed = 0.03F;
-            this.btnDong.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.btnDong.BaseColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDong.BorderColor = System.Drawing.Color.Black;
             this.btnDong.BorderSize = 1;
             this.btnDong.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -231,7 +230,7 @@
             // 
             this.btnXemlai.AnimationHoverSpeed = 0.07F;
             this.btnXemlai.AnimationSpeed = 0.03F;
-            this.btnXemlai.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.btnXemlai.BaseColor = System.Drawing.SystemColors.ButtonFace;
             this.btnXemlai.BorderColor = System.Drawing.Color.Black;
             this.btnXemlai.BorderSize = 1;
             this.btnXemlai.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -255,7 +254,7 @@
             // 
             this.btnLuu.AnimationHoverSpeed = 0.07F;
             this.btnLuu.AnimationSpeed = 0.03F;
-            this.btnLuu.BaseColor = System.Drawing.SystemColors.Desktop;
+            this.btnLuu.BaseColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLuu.BorderColor = System.Drawing.Color.Black;
             this.btnLuu.BorderSize = 1;
             this.btnLuu.DialogResult = System.Windows.Forms.DialogResult.None;

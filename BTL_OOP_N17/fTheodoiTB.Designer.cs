@@ -33,7 +33,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.licensing1 = new Guna.UI.Licensing.Licensing();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
@@ -63,6 +62,7 @@
             this.panel1.Controls.Add(this.guna2Button6);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(872, 70);
             this.panel1.TabIndex = 0;
@@ -81,9 +81,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(242, 15);
+            this.comboBox1.Location = new System.Drawing.Point(182, 12);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 24);
+            this.comboBox1.Size = new System.Drawing.Size(103, 21);
             this.comboBox1.TabIndex = 15;
             // 
             // guna2Button2
@@ -122,13 +123,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.licensing1);
             this.panel2.Controls.Add(this.guna2Button5);
             this.panel2.Controls.Add(this.guna2Button4);
             this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Location = new System.Drawing.Point(2, 70);
+            this.panel2.Location = new System.Drawing.Point(2, 57);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 377);
+            this.panel2.Size = new System.Drawing.Size(206, 306);
             this.panel2.TabIndex = 1;
             // 
             // licensing1
@@ -149,9 +150,10 @@
             this.guna2Button5.FillColor = System.Drawing.Color.Silver;
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(3, 256);
+            this.guna2Button5.Location = new System.Drawing.Point(2, 208);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(263, 53);
+            this.guna2Button5.Size = new System.Drawing.Size(197, 43);
             this.guna2Button5.TabIndex = 2;
             this.guna2Button5.Text = "Thêm phiếu sửa chữa";
             // 
@@ -160,9 +162,10 @@
             this.guna2Button4.FillColor = System.Drawing.Color.Silver;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(3, 315);
+            this.guna2Button4.Location = new System.Drawing.Point(2, 256);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(263, 53);
+            this.guna2Button4.Size = new System.Drawing.Size(197, 43);
             this.guna2Button4.TabIndex = 1;
             this.guna2Button4.Text = "Thêm phiếu luân chuyển";
             // 
@@ -171,9 +174,10 @@
             this.guna2Button3.FillColor = System.Drawing.Color.Silver;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(3, 197);
+            this.guna2Button3.Location = new System.Drawing.Point(2, 160);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(263, 53);
+            this.guna2Button3.Size = new System.Drawing.Size(197, 43);
             this.guna2Button3.TabIndex = 0;
             this.guna2Button3.Text = "Thêm phiếu yêu cầu mượn";
             // 
@@ -184,7 +188,8 @@
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.comboBox2);
             this.panel3.Controls.Add(this.menuStrip1);
-            this.panel3.Location = new System.Drawing.Point(274, 70);
+            this.panel3.Location = new System.Drawing.Point(206, 57);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 430);
             this.panel3.TabIndex = 2;
@@ -193,7 +198,8 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 61);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -223,9 +229,10 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(30, 44);
+            this.comboBox2.Location = new System.Drawing.Point(22, 36);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(264, 24);
+            this.comboBox2.Size = new System.Drawing.Size(199, 21);
             this.comboBox2.TabIndex = 1;
             // 
             // menuStrip1
@@ -264,13 +271,14 @@
             // 
             // fTheodoiTB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 499);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fTheodoiTB";
             this.Text = "fTheodoiTB";
             this.panel1.ResumeLayout(false);
@@ -306,6 +314,5 @@
         private System.Windows.Forms.ToolStripMenuItem thốngKêTBCóTạiPTNToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemCácYCMuaTBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemCácYCSửaChữaToolStripMenuItem;
-        private Guna.UI.Licensing.Licensing licensing1;
     }
 }
