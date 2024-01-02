@@ -36,10 +36,10 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,54 +60,60 @@
             // 
             // btnXuat
             // 
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnXuat.Location = new System.Drawing.Point(607, 46);
             this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(99, 23);
+            this.btnXuat.Size = new System.Drawing.Size(99, 34);
             this.btnXuat.TabIndex = 21;
             this.btnXuat.Text = "Xuất Excel";
             this.btnXuat.UseVisualStyleBackColor = true;
             // 
             // btnHuy
             // 
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnHuy.Location = new System.Drawing.Point(494, 46);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(89, 23);
+            this.btnHuy.Size = new System.Drawing.Size(89, 34);
             this.btnHuy.TabIndex = 20;
             this.btnHuy.Text = "Import Excel";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
             // 
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnLuu.Location = new System.Drawing.Point(393, 46);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(85, 23);
+            this.btnLuu.Size = new System.Drawing.Size(85, 34);
             this.btnLuu.TabIndex = 19;
             this.btnLuu.Text = "Load";
             this.btnLuu.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnXoa.Location = new System.Drawing.Point(291, 46);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(81, 23);
+            this.btnXoa.Size = new System.Drawing.Size(81, 34);
             this.btnXoa.TabIndex = 18;
             this.btnXoa.Text = "Xóa bỏ ";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSua.Location = new System.Drawing.Point(195, 46);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(78, 23);
+            this.btnSua.Size = new System.Drawing.Size(78, 34);
             this.btnSua.TabIndex = 17;
             this.btnSua.Text = "Chỉnh sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
             // btnThem
             // 
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnThem.Location = new System.Drawing.Point(104, 47);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.Size = new System.Drawing.Size(75, 34);
             this.btnThem.TabIndex = 16;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -123,42 +129,44 @@
             this.panel2.Size = new System.Drawing.Size(796, 347);
             this.panel2.TabIndex = 1;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(790, 297);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(41, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(320, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 24);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(425, 17);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 24);
+            this.button2.Size = new System.Drawing.Size(89, 41);
             this.button2.TabIndex = 3;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(320, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 41);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Find";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(46, 28);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(257, 24);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 64);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(790, 269);
+            this.dataGridView1.TabIndex = 0;
             // 
             // fDanhmucthietbi
             // 

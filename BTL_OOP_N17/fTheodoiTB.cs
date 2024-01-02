@@ -21,5 +21,10 @@ namespace BTL_OOP_N17
         {
 
         }
+
+        private void licensing1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
