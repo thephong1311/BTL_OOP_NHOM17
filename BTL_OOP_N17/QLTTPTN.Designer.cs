@@ -29,204 +29,205 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTTPTN));
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btn_Find1 = new System.Windows.Forms.Button();
-            this.btn_Clear = new System.Windows.Forms.Button();
+            this.btnXuat = new Guna.UI.WinForms.GunaButton();
+            this.btnDong = new Guna.UI.WinForms.GunaButton();
+            this.btnLoad = new Guna.UI.WinForms.GunaButton();
+            this.btnXoa = new Guna.UI.WinForms.GunaButton();
+            this.btnSua = new Guna.UI.WinForms.GunaButton();
+            this.btnThem = new Guna.UI.WinForms.GunaButton();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_Close = new Guna.UI.WinForms.GunaButton();
-            this.btn_Excel = new Guna.UI.WinForms.GunaButton();
-            this.btn_Load = new Guna.UI.WinForms.GunaButton();
-            this.btn_Delete = new Guna.UI.WinForms.GunaButton();
-            this.btn_Edit = new Guna.UI.WinForms.GunaButton();
-            this.btn_Add = new Guna.UI.WinForms.GunaButton();
-            this.btn_Find = new Guna.UI.WinForms.GunaButton();
-            this.txt_Input = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_Input = new System.Windows.Forms.TextBox();
+            this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // btnXuat
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 22);
-            this.textBox1.TabIndex = 0;
+            this.btnXuat.AnimationHoverSpeed = 0.07F;
+            this.btnXuat.AnimationSpeed = 0.03F;
+            this.btnXuat.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnXuat.BorderColor = System.Drawing.Color.Black;
+            this.btnXuat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXuat.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
+            this.btnXuat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXuat.Location = new System.Drawing.Point(659, 20);
+            this.btnXuat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXuat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXuat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXuat.OnHoverImage = null;
+            this.btnXuat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXuat.Size = new System.Drawing.Size(100, 19);
+            this.btnXuat.TabIndex = 30;
+            this.btnXuat.Text = "Xuất Excel";
             // 
-            // btn_Find
+            // btnDong
             // 
-            this.btn_Find.Location = new System.Drawing.Point(252, 15);
-            this.btn_Find.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Find.Name = "btn_Find";
-            this.btn_Find.Size = new System.Drawing.Size(100, 28);
-            this.btn_Find.TabIndex = 1;
-            this.btn_Find.Text = "Tìm kiếm";
-            this.btn_Find.UseVisualStyleBackColor = true;
-            this.btn_Find.Click += new System.EventHandler(this.button1_Click);
+            this.btnDong.AnimationHoverSpeed = 0.07F;
+            this.btnDong.AnimationSpeed = 0.03F;
+            this.btnDong.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnDong.BorderColor = System.Drawing.Color.Black;
+            this.btnDong.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDong.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.Color.Black;
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
+            this.btnDong.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDong.Location = new System.Drawing.Point(564, 20);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnDong.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDong.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDong.OnHoverImage = null;
+            this.btnDong.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDong.Size = new System.Drawing.Size(101, 19);
+            this.btnDong.TabIndex = 29;
+            this.btnDong.Text = "Đóng lại ";
             // 
-            // btn_Add
+            // btnLoad
             // 
-            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
-            this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Add.Location = new System.Drawing.Point(360, 15);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(112, 28);
-            this.btn_Add.TabIndex = 2;
-            this.btn_Add.Text = "Thêm mới";
-            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btnLoad.AnimationHoverSpeed = 0.07F;
+            this.btnLoad.AnimationSpeed = 0.03F;
+            this.btnLoad.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnLoad.BorderColor = System.Drawing.Color.Black;
+            this.btnLoad.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLoad.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad.ForeColor = System.Drawing.Color.Black;
+            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
+            this.btnLoad.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLoad.Location = new System.Drawing.Point(487, 20);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnLoad.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLoad.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLoad.OnHoverImage = null;
+            this.btnLoad.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLoad.Size = new System.Drawing.Size(72, 19);
+            this.btnLoad.TabIndex = 28;
+            this.btnLoad.Text = "Load";
             // 
-            // btn_Delete
+            // btnXoa
             // 
-            this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
-            this.btn_Delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Delete.Location = new System.Drawing.Point(587, 15);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(92, 28);
-            this.btn_Delete.TabIndex = 4;
-            this.btn_Delete.Text = "Xóa";
-            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btnXoa.AnimationHoverSpeed = 0.07F;
+            this.btnXoa.AnimationSpeed = 0.03F;
+            this.btnXoa.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXoa.Location = new System.Drawing.Point(402, 21);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXoa.OnHoverImage = null;
+            this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXoa.Size = new System.Drawing.Size(89, 19);
+            this.btnXoa.TabIndex = 27;
+            this.btnXoa.Text = "Xóa bỏ";
             // 
-            // btn_Edit
+            // btnSua
             // 
-            this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
-            this.btn_Edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Edit.Location = new System.Drawing.Point(468, 15);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(111, 28);
-            this.btn_Edit.TabIndex = 3;
-            this.btn_Edit.Text = "   Chỉnh sửa";
-            this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btnSua.AnimationHoverSpeed = 0.07F;
+            this.btnSua.AnimationSpeed = 0.03F;
+            this.btnSua.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnSua.BorderColor = System.Drawing.Color.Black;
+            this.btnSua.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSua.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.Black;
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSua.Location = new System.Drawing.Point(294, 20);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSua.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSua.OnHoverImage = null;
+            this.btnSua.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSua.Size = new System.Drawing.Size(99, 19);
+            this.btnSua.TabIndex = 26;
+            this.btnSua.Text = "Chỉnh sửa";
             // 
-            // btn_Excel
+            // btnThem
             // 
-            this.btn_Excel.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.Image")));
-            this.btn_Excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Excel.Location = new System.Drawing.Point(807, 15);
-            this.btn_Excel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Excel.Name = "btn_Excel";
-            this.btn_Excel.Size = new System.Drawing.Size(121, 28);
-            this.btn_Excel.TabIndex = 6;
-            this.btn_Excel.Text = "  Xuất Excel";
-            this.btn_Excel.UseVisualStyleBackColor = true;
+            this.btnThem.AnimationHoverSpeed = 0.07F;
+            this.btnThem.AnimationSpeed = 0.03F;
+            this.btnThem.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnThem.BorderColor = System.Drawing.Color.Black;
+            this.btnThem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnThem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThem.Location = new System.Drawing.Point(189, 20);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThem.OnHoverImage = null;
+            this.btnThem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThem.Size = new System.Drawing.Size(101, 19);
+            this.btnThem.TabIndex = 25;
+            this.btnThem.Text = "Thêm mới";
             // 
-            // btn_Load
+            // guna2GroupBox1
             // 
-            this.btn_Load.Image = ((System.Drawing.Image)(resources.GetObject("btn_Load.Image")));
-            this.btn_Load.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Load.Location = new System.Drawing.Point(687, 15);
-            this.btn_Load.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Load.Name = "btn_Load";
-            this.btn_Load.Size = new System.Drawing.Size(112, 28);
-            this.btn_Load.TabIndex = 5;
-            this.btn_Load.Text = "Load ";
-            this.btn_Load.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 2);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1047, 59);
-            this.flowLayoutPanel1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(32, 123);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 22);
-            this.textBox2.TabIndex = 8;
-            // 
-            // btn_Find1
-            // 
-            this.btn_Find1.Location = new System.Drawing.Point(336, 123);
-            this.btn_Find1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Find1.Name = "btn_Find1";
-            this.btn_Find1.Size = new System.Drawing.Size(100, 28);
-            this.btn_Find1.TabIndex = 9;
-            this.btn_Find1.Text = "Find";
-            this.btn_Find1.UseVisualStyleBackColor = true;
-            // 
-            // btn_Clear
-            // 
-            this.btn_Clear.Location = new System.Drawing.Point(468, 123);
-            this.btn_Clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(100, 28);
-            this.btn_Clear.TabIndex = 10;
-            this.btn_Clear.Text = "Clear";
-            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.guna2GroupBox1.Controls.Add(this.dataGridView1);
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 95);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(776, 268);
+            this.guna2GroupBox1.TabIndex = 32;
+            this.guna2GroupBox1.Text = "Thông tin chi tiết";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 159);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 68);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(999, 398);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 79);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(794, 397);
-            this.flowLayoutPanel2.TabIndex = 13;
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.AnimationHoverSpeed = 0.07F;
-            this.btn_Close.AnimationSpeed = 0.03F;
-            this.btn_Close.BaseColor = System.Drawing.Color.Silver;
-            this.btn_Close.BorderColor = System.Drawing.Color.Black;
-            this.btn_Close.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Close.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Close.ForeColor = System.Drawing.Color.Black;
-            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
-            this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Close.Location = new System.Drawing.Point(936, 15);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(96, 28);
-            this.btn_Close.TabIndex = 12;
-            this.btn_Close.Text = "    Đóng lại";
-            this.btn_Close.UseVisualStyleBackColor = true;
+            this.dataGridView1.Size = new System.Drawing.Size(732, 171);
+            this.dataGridView1.TabIndex = 0;
             // 
             // txt_Input
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 97);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1059, 489);
-            this.flowLayoutPanel2.TabIndex = 13;
+            this.txt_Input.Location = new System.Drawing.Point(36, 19);
+            this.txt_Input.Name = "txt_Input";
+            this.txt_Input.Size = new System.Drawing.Size(148, 20);
+            this.txt_Input.TabIndex = 33;
             // 
             // QLTTPTN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.btn_Excel);
-            this.Controls.Add(this.btn_Load);
-            this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.btn_Edit);
-            this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.btn_Find);
+            this.ClientSize = new System.Drawing.Size(800, 513);
             this.Controls.Add(this.txt_Input);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_Clear);
-            this.Controls.Add(this.btn_Find1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.btnXuat);
+            this.Controls.Add(this.btnDong);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
             this.Name = "QLTTPTN";
-            this.Text = "QLTTPTN";
-            this.Load += new System.EventHandler(this.QLTTPTN_Load);
+            this.Text = "Phòng thí nghiệm";
+            this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,18 +235,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btn_Find1;
-        private System.Windows.Forms.Button btn_Clear;
+        private Guna.UI.WinForms.GunaButton btnXuat;
+        private Guna.UI.WinForms.GunaButton btnDong;
+        private Guna.UI.WinForms.GunaButton btnLoad;
+        private Guna.UI.WinForms.GunaButton btnXoa;
+        private Guna.UI.WinForms.GunaButton btnSua;
+        private Guna.UI.WinForms.GunaButton btnThem;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI.WinForms.GunaButton btn_Close;
-        private Guna.UI.WinForms.GunaButton btn_Excel;
-        private Guna.UI.WinForms.GunaButton btn_Load;
-        private Guna.UI.WinForms.GunaButton btn_Delete;
-        private Guna.UI.WinForms.GunaButton btn_Edit;
-        private Guna.UI.WinForms.GunaButton btn_Add;
-        private Guna.UI.WinForms.GunaButton btn_Find;
-        private Guna.UI.WinForms.GunaTextBox txt_Input;
+        private System.Windows.Forms.TextBox txt_Input;
     }
 }
+

@@ -167,14 +167,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPTN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddPTN.Designer.cs">
-      <DependentUpon>AddPTN.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +184,12 @@
     </Compile>
     <Compile Include="fAddNhacungcap.Designer.cs">
       <DependentUpon>fAddNhacungcap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddPTN.Designer.cs">
+      <DependentUpon>fAddPTN.cs</DependentUpon>
     </Compile>
     <Compile Include="fAddThietbi.cs">
       <SubType>Form</SubType>
@@ -268,6 +266,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Phanmemquanlythietbi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLTTPTN.Designer.cs">
+      <DependentUpon>QLTTPTN.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportKiemKeTS.cs">
       <SubType>Form</SubType>
@@ -367,11 +371,6 @@
     <Compile Include="TiepNhanTaiSan.Designer.cs">
       <DependentUpon>TiepNhanTaiSan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddPTN.resx">
-      <DependentUpon>AddPTN.cs</DependentUpon>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AddPTN.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAddNhacungcap.resx">
       <DependentUpon>fAddNhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddPTN.resx">
+      <DependentUpon>fAddPTN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddThietbi.resx">
       <DependentUpon>fAddThietbi.cs</DependentUpon>
@@ -408,12 +410,6 @@
     <EmbeddedResource Include="Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="QLTTPTN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLTTPTN.Designer.cs">
-      <DependentUpon>QLTTPTN.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="InfoUser.resx">
       <DependentUpon>InfoUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -443,6 +439,9 @@
     </Compile>
     <EmbeddedResource Include="QLTTGV.resx">
       <DependentUpon>QLTTGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLTTPTN.resx">
+      <DependentUpon>QLTTPTN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportKiemKeTS.resx">
       <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
@@ -481,9 +480,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="QLTTPTN.resx">
-      <DependentUpon>QLTTPTN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ReportLuanChuyenTS.resx">
       <DependentUpon>ReportLuanChuyenTS.cs</DependentUpon>
     </EmbeddedResource>

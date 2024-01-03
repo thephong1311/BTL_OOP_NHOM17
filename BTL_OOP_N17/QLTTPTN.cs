@@ -16,15 +16,5 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void QLTTPTN_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

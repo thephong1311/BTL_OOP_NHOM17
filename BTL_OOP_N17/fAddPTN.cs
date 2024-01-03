@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class AddPTN : Form
+    public partial class fAddPTN : Form
     {
-        public AddPTN()
+        public fAddPTN()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
