@@ -28,267 +28,262 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.licensing1 = new Guna.UI.Licensing.Licensing();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.thốngKêTBCóTạiPTNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemCácYCMuaTBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemCácYCSửaChữaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemCácYCMượnTBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemCácYCThanhLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cácYCKiểmKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đánhGiáTBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button8 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.guna2Button6);
-            this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(872, 70);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Location = new System.Drawing.Point(3, 71);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(270, 393);
+            this.panel4.TabIndex = 0;
             // 
-            // label1
+            // panel5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 23);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Phòng thí nghiệm";
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.button10);
+            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.comboBox4);
+            this.panel5.Controls.Add(this.button9);
+            this.panel5.Location = new System.Drawing.Point(279, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1105, 71);
+            this.panel5.TabIndex = 1;
             // 
-            // comboBox1
+            // panel6
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(182, 12);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 21);
-            this.comboBox1.TabIndex = 15;
+            this.panel6.Controls.Add(this.dataGridView2);
+            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.comboBox3);
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.menuStrip2);
+            this.panel6.Location = new System.Drawing.Point(279, 79);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1105, 385);
+            this.panel6.TabIndex = 2;
             // 
-            // guna2Button2
+            // button3
             // 
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(556, 15);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(117, 29);
-            this.guna2Button2.TabIndex = 14;
-            this.guna2Button2.Text = "In báo cáo";
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(9, 205);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(249, 36);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Thêm phiếu yêu cầu mượn";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // guna2Button6
+            // button4
             // 
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.Location = new System.Drawing.Point(697, 15);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(117, 29);
-            this.guna2Button6.TabIndex = 13;
-            this.guna2Button6.Text = "Đóng";
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(9, 257);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(249, 36);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Thêm phiếu sửa chữa";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // guna2Button1
+            // button5
             // 
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Image = global::BTL_OOP_N17.Properties.Resources.search_interface_symbol;
-            this.guna2Button1.Location = new System.Drawing.Point(433, 15);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(117, 29);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Tìm kiếm";
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(9, 308);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(249, 36);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Thêm phiếu luân chuyển";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.Controls.Add(this.guna2Button5);
-            this.panel2.Controls.Add(this.guna2Button4);
-            this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Location = new System.Drawing.Point(2, 57);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 306);
-            this.panel2.TabIndex = 1;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(370, 42);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(97, 33);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Find";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // licensing1
+            // button7
             // 
-            this.licensing1.BackColor = System.Drawing.Color.White;
-            this.licensing1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.licensing1.Location = new System.Drawing.Point(73, 7);
-            this.licensing1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.licensing1.MaximumSize = new System.Drawing.Size(464, 597);
-            this.licensing1.MinimumSize = new System.Drawing.Size(464, 597);
-            this.licensing1.Name = "licensing1";
-            this.licensing1.Size = new System.Drawing.Size(464, 597);
-            this.licensing1.TabIndex = 5;
-            this.licensing1.Load += new System.EventHandler(this.licensing1_Load);
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(484, 42);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 33);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Clear";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // guna2Button5
+            // comboBox3
             // 
-            this.guna2Button5.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(2, 208);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(197, 43);
-            this.guna2Button5.TabIndex = 2;
-            this.guna2Button5.Text = "Thêm phiếu sửa chữa";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(78, 49);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(254, 24);
+            this.comboBox3.TabIndex = 2;
             // 
-            // guna2Button4
+            // menuStrip2
             // 
-            this.guna2Button4.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(2, 256);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(197, 43);
-            this.guna2Button4.TabIndex = 1;
-            this.guna2Button4.Text = "Thêm phiếu luân chuyển";
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.xemCácYCMượnTBToolStripMenuItem,
+            this.xToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.xemCácYCThanhLýToolStripMenuItem,
+            this.cácYCKiểmKêToolStripMenuItem,
+            this.đánhGiáTBToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1105, 28);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // guna2Button3
+            // toolStripMenuItem1
             // 
-            this.guna2Button3.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(2, 160);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(197, 43);
-            this.guna2Button3.TabIndex = 0;
-            this.guna2Button3.Text = "Thêm phiếu yêu cầu mượn";
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.toolStripMenuItem1.Text = "Thống kê TB có tại PTN";
             // 
-            // panel3
+            // xemCácYCMượnTBToolStripMenuItem
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Controls.Add(this.menuStrip1);
-            this.panel3.Location = new System.Drawing.Point(206, 57);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(600, 430);
-            this.panel3.TabIndex = 2;
+            this.xemCácYCMượnTBToolStripMenuItem.Name = "xemCácYCMượnTBToolStripMenuItem";
+            this.xemCácYCMượnTBToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.xemCácYCMượnTBToolStripMenuItem.Text = "Xem các YC mượn TB";
             // 
-            // dataGridView1
+            // xToolStripMenuItem
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 61);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 342);
-            this.dataGridView1.TabIndex = 4;
+            this.xToolStripMenuItem.Name = "xToolStripMenuItem";
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.xToolStripMenuItem.Text = "Xem các YC Mua TB";
             // 
-            // button2
+            // toolStripMenuItem2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(425, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 35);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(164, 24);
+            this.toolStripMenuItem2.Text = "Xem các YC Sửa chữa";
             // 
-            // button1
+            // xemCácYCThanhLýToolStripMenuItem
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(314, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
+            this.xemCácYCThanhLýToolStripMenuItem.Name = "xemCácYCThanhLýToolStripMenuItem";
+            this.xemCácYCThanhLýToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.xemCácYCThanhLýToolStripMenuItem.Text = "Xem các YC thanh lý";
             // 
-            // comboBox2
+            // cácYCKiểmKêToolStripMenuItem
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(22, 36);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cácYCKiểmKêToolStripMenuItem.Name = "cácYCKiểmKêToolStripMenuItem";
+            this.cácYCKiểmKêToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.cácYCKiểmKêToolStripMenuItem.Text = "Các YC Kiểm kê";
             // 
-            // menuStrip1
+            // đánhGiáTBToolStripMenuItem
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thốngKêTBCóTạiPTNToolStripMenuItem,
-            this.xemCácYCMuaTBToolStripMenuItem,
-            this.xemCácYCSửaChữaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(600, 31);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.đánhGiáTBToolStripMenuItem.Name = "đánhGiáTBToolStripMenuItem";
+            this.đánhGiáTBToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.đánhGiáTBToolStripMenuItem.Text = "Đánh giá TB";
             // 
-            // thốngKêTBCóTạiPTNToolStripMenuItem
+            // button8
             // 
-            this.thốngKêTBCóTạiPTNToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.thốngKêTBCóTạiPTNToolStripMenuItem.Name = "thốngKêTBCóTạiPTNToolStripMenuItem";
-            this.thốngKêTBCóTạiPTNToolStripMenuItem.Size = new System.Drawing.Size(203, 27);
-            this.thốngKêTBCóTạiPTNToolStripMenuItem.Text = "Thống kê TB có tại PTN";
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(708, 19);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(125, 33);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "In báo cáo";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // xemCácYCMuaTBToolStripMenuItem
+            // comboBox4
             // 
-            this.xemCácYCMuaTBToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.xemCácYCMuaTBToolStripMenuItem.Name = "xemCácYCMuaTBToolStripMenuItem";
-            this.xemCácYCMuaTBToolStripMenuItem.Size = new System.Drawing.Size(175, 27);
-            this.xemCácYCMuaTBToolStripMenuItem.Text = "Xem các YC Mua TB";
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(302, 26);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(254, 24);
+            this.comboBox4.TabIndex = 5;
             // 
-            // xemCácYCSửaChữaToolStripMenuItem
+            // button9
             // 
-            this.xemCácYCSửaChữaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.xemCácYCSửaChữaToolStripMenuItem.Name = "xemCácYCSửaChữaToolStripMenuItem";
-            this.xemCácYCSửaChữaToolStripMenuItem.Size = new System.Drawing.Size(187, 27);
-            this.xemCácYCSửaChữaToolStripMenuItem.Text = "Xem các YC Sửa chữa";
+            this.button9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(594, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(97, 33);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Tìm kiếm";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(850, 19);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(94, 33);
+            this.button10.TabIndex = 6;
+            this.button10.Text = "Đóng lại";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(103, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 23);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Phòng thí nghiệm";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(8, 85);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1086, 292);
+            this.dataGridView2.TabIndex = 3;
             // 
             // fTheodoiTB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 499);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(1385, 468);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.MainMenuStrip = this.menuStrip2;
             this.Name = "fTheodoiTB";
-            this.Text = "fTheodoiTB";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,5 +309,28 @@
         private System.Windows.Forms.ToolStripMenuItem thốngKêTBCóTạiPTNToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemCácYCMuaTBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemCácYCSửaChữaToolStripMenuItem;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem xemCácYCMượnTBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem xemCácYCThanhLýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cácYCKiểmKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đánhGiáTBToolStripMenuItem;
     }
 }

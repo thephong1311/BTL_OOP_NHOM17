@@ -229,6 +229,12 @@
     <Compile Include="fTheodoiTB.Designer.cs">
       <DependentUpon>fTheodoiTB.cs</DependentUpon>
     </Compile>
+    <Compile Include="GVControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GVControl.Designer.cs">
+      <DependentUpon>GVControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoUser1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -286,6 +292,12 @@
     </Compile>
     <Compile Include="ThemTLyTS.Designer.cs">
       <DependentUpon>ThemTLyTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongtintaikhoanAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongtintaikhoanAdmin.Designer.cs">
+      <DependentUpon>ThongtintaikhoanAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="TonghopYCmua.cs">
       <SubType>Form</SubType>
@@ -387,6 +399,9 @@
     <EmbeddedResource Include="fTheodoiTB.resx">
       <DependentUpon>fTheodoiTB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GVControl.resx">
+      <DependentUpon>GVControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LuanChuyenTS.resx">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,6 +455,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTLyTS.resx">
       <DependentUpon>ThemTLyTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongtintaikhoanAdmin.resx">
+      <DependentUpon>ThongtintaikhoanAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TonghopYCmua.resx">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
