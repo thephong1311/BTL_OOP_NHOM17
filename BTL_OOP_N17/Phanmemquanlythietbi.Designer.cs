@@ -56,6 +56,7 @@
             this.báoCáoTổngHợpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêTàiSảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_Body = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(957, 467);
+            this.panel1.Size = new System.Drawing.Size(957, 32);
             this.panel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -99,6 +100,7 @@
             this.thôngTinTàiKhoảnToolStripMenuItem1.Name = "thôngTinTàiKhoảnToolStripMenuItem1";
             this.thôngTinTàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(244, 28);
             this.thôngTinTàiKhoảnToolStripMenuItem1.Text = "Thông tin tài khoản";
+            this.thôngTinTàiKhoảnToolStripMenuItem1.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
@@ -112,6 +114,7 @@
             this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
             this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(244, 28);
             this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem1.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
@@ -286,11 +289,19 @@
             this.thốngKêTàiSảnToolStripMenuItem.Size = new System.Drawing.Size(220, 28);
             this.thốngKêTàiSảnToolStripMenuItem.Text = "Thống kê tài sản";
             // 
+            // panel_Body
+            // 
+            this.panel_Body.Location = new System.Drawing.Point(0, 37);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(957, 435);
+            this.panel_Body.TabIndex = 1;
+            // 
             // fDevicemanage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 471);
+            this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fDevicemanage";
@@ -333,5 +344,6 @@
         private System.Windows.Forms.ToolStripMenuItem báoCáoTổngHợpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêTàiSảnToolStripMenuItem;
+        private System.Windows.Forms.Panel panel_Body;
     }
 }

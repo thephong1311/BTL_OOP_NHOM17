@@ -16,7 +16,6 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
-        Panel panel_Body = new Panel();
         private Form currentFormchild;
 
         private void OpenChildForm(Form childForm)
