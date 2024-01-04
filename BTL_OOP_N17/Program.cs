@@ -16,7 +16,7 @@ namespace BTL_OOP_N17
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fDevicemanage());
+            Application.Run(new FormLogin());
         }
     }
 }
