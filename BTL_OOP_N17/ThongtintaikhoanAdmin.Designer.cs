@@ -31,23 +31,32 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtQuyen = new System.Windows.Forms.TextBox();
+            this.txtTK = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMaGV = new System.Windows.Forms.TextBox();
+            this.txtTenGv = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtChucvu = new System.Windows.Forms.TextBox();
+            this.txtMaPTN = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,9 +71,19 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.txtMaPTN);
+            this.panel4.Controls.Add(this.txtChucvu);
+            this.panel4.Controls.Add(this.txtSDT);
+            this.panel4.Controls.Add(this.txtDiachi);
+            this.panel4.Controls.Add(this.txtTenGv);
+            this.panel4.Controls.Add(this.txtMaGV);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(176, 111);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(619, 322);
@@ -80,10 +99,40 @@
             this.panel3.Size = new System.Drawing.Size(170, 322);
             this.panel3.TabIndex = 1;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(28, 249);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 40);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Xóa";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(28, 203);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(107, 40);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Sửa";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(28, 157);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 40);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Thêm";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtQuyen);
+            this.panel2.Controls.Add(this.txtTK);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -92,15 +141,29 @@
             this.panel2.Size = new System.Drawing.Size(620, 105);
             this.panel2.TabIndex = 0;
             // 
+            // txtQuyen
+            // 
+            this.txtQuyen.Location = new System.Drawing.Point(304, 68);
+            this.txtQuyen.Name = "txtQuyen";
+            this.txtQuyen.Size = new System.Drawing.Size(279, 22);
+            this.txtQuyen.TabIndex = 4;
+            // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(304, 26);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(279, 22);
+            this.txtTK.TabIndex = 3;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(187, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 23);
+            this.label3.Size = new System.Drawing.Size(60, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nơi làm việc";
+            this.label3.Text = "Quyền";
             // 
             // label2
             // 
@@ -123,77 +186,117 @@
             this.label1.Text = "Thông tin tài khoản";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // label4
             // 
-            this.textBox1.Location = new System.Drawing.Point(304, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 22);
-            this.textBox1.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(183, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 23);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Mã giáo viên ";
             // 
-            // textBox2
+            // label5
             // 
-            this.textBox2.Location = new System.Drawing.Point(304, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 22);
-            this.textBox2.TabIndex = 4;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(183, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 23);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Tên giáo viên ";
             // 
-            // textBox3
+            // label6
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(320, 22);
-            this.textBox3.TabIndex = 0;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(183, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 23);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Địa chỉ";
             // 
-            // button1
+            // label7
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(41, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(183, 148);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 23);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Số điện thoại";
             // 
-            // button2
+            // label8
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(28, 157);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(183, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 23);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Chức vụ";
             // 
-            // button3
+            // label9
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(28, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(183, 237);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 23);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Mã PTN";
             // 
-            // button4
+            // txtMaGV
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(28, 249);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 40);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.txtMaGV.Location = new System.Drawing.Point(300, 27);
+            this.txtMaGV.Name = "txtMaGV";
+            this.txtMaGV.Size = new System.Drawing.Size(279, 22);
+            this.txtMaGV.TabIndex = 8;
             // 
-            // dataGridView1
+            // txtTenGv
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 256);
-            this.dataGridView1.TabIndex = 2;
+            this.txtTenGv.Location = new System.Drawing.Point(300, 70);
+            this.txtTenGv.Name = "txtTenGv";
+            this.txtTenGv.Size = new System.Drawing.Size(279, 22);
+            this.txtTenGv.TabIndex = 9;
+            // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(300, 111);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(279, 22);
+            this.txtDiachi.TabIndex = 10;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(300, 150);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(279, 22);
+            this.txtSDT.TabIndex = 11;
+            // 
+            // txtChucvu
+            // 
+            this.txtChucvu.Location = new System.Drawing.Point(300, 192);
+            this.txtChucvu.Name = "txtChucvu";
+            this.txtChucvu.Size = new System.Drawing.Size(279, 22);
+            this.txtChucvu.TabIndex = 12;
+            // 
+            // txtMaPTN
+            // 
+            this.txtMaPTN.Location = new System.Drawing.Point(300, 237);
+            this.txtMaPTN.Name = "txtMaPTN";
+            this.txtMaPTN.Size = new System.Drawing.Size(279, 22);
+            this.txtMaPTN.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 1);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(155, 23);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Thông tin cá nhân ";
             // 
             // ThongtintaikhoanAdmin
             // 
@@ -209,7 +312,6 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,13 +325,23 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtQuyen;
+        private System.Windows.Forms.TextBox txtTK;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtMaPTN;
+        private System.Windows.Forms.TextBox txtChucvu;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.TextBox txtTenGv;
+        private System.Windows.Forms.TextBox txtMaGV;
+        private System.Windows.Forms.Label label10;
     }
 }
