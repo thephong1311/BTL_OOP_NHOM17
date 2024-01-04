@@ -73,7 +73,7 @@
             this.txtTenTL.Location = new System.Drawing.Point(523, 71);
             this.txtTenTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenTL.Name = "txtTenTL";
-            this.txtTenTL.Size = new System.Drawing.Size(195, 29);
+            this.txtTenTL.Size = new System.Drawing.Size(200, 29);
             this.txtTenTL.TabIndex = 9;
             // 
             // cbbMaGV
@@ -110,7 +110,7 @@
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(517, 23);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(523, 32);
             this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -228,7 +228,7 @@
             this.Controls.Add(this.gbTTchung);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ThemTLyTS";
-            this.Text = "Thanh lý tài sản";
+            this.Text = "Thanh lý thiết bị";
             this.gbTTchung.ResumeLayout(false);
             this.gbTTchung.PerformLayout();
             this.ResumeLayout(false);

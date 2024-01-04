@@ -57,9 +57,10 @@
             this.gunaGroupBox1.Controls.Add(this.dataGridView1);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(591, 75);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(788, 92);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(327, 275);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(475, 379);
             this.gunaGroupBox1.TabIndex = 11;
             this.gunaGroupBox1.Text = "Thông tin chi tiết";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -68,9 +69,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 45);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(268, 205);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 330);
             this.dataGridView1.TabIndex = 1;
             // 
             // txt_TimKiem
@@ -82,11 +85,12 @@
             this.txt_TimKiem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem.Location = new System.Drawing.Point(19, 38);
+            this.txt_TimKiem.Location = new System.Drawing.Point(6, 47);
+            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.PasswordChar = '\0';
             this.txt_TimKiem.SelectedText = "";
-            this.txt_TimKiem.Size = new System.Drawing.Size(243, 30);
+            this.txt_TimKiem.Size = new System.Drawing.Size(343, 37);
             this.txt_TimKiem.TabIndex = 11;
             // 
             // btn_TimKiem
@@ -101,24 +105,28 @@
             this.btn_TimKiem.ForeColor = System.Drawing.Color.Black;
             this.btn_TimKiem.Image = null;
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_TimKiem.Location = new System.Drawing.Point(268, 39);
+            this.btn_TimKiem.Location = new System.Drawing.Point(377, 47);
+            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_TimKiem.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.OnHoverImage = null;
             this.btn_TimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.Size = new System.Drawing.Size(43, 29);
+            this.btn_TimKiem.Size = new System.Drawing.Size(95, 36);
             this.btn_TimKiem.TabIndex = 12;
             this.btn_TimKiem.Text = "Find";
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(9, 91);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 92);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(563, 165);
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(774, 309);
             this.dataGridView2.TabIndex = 1;
             // 
             // gunaGroupBox2
@@ -130,9 +138,10 @@
             this.gunaGroupBox2.Controls.Add(this.btn_TimKiem);
             this.gunaGroupBox2.Controls.Add(this.txt_TimKiem);
             this.gunaGroupBox2.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox2.Location = new System.Drawing.Point(-3, 57);
+            this.gunaGroupBox2.Location = new System.Drawing.Point(7, 70);
+            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaGroupBox2.Name = "gunaGroupBox2";
-            this.gunaGroupBox2.Size = new System.Drawing.Size(588, 279);
+            this.gunaGroupBox2.Size = new System.Drawing.Size(773, 407);
             this.gunaGroupBox2.TabIndex = 16;
             this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
             // 
@@ -148,14 +157,15 @@
             this.btn_Close.ForeColor = System.Drawing.Color.Black;
             this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
             this.btn_Close.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Close.Location = new System.Drawing.Point(702, 24);
+            this.btn_Close.Location = new System.Drawing.Point(1111, 26);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Close.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Close.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Close.OnHoverImage = null;
             this.btn_Close.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Close.Size = new System.Drawing.Size(96, 27);
+            this.btn_Close.Size = new System.Drawing.Size(128, 33);
             this.btn_Close.TabIndex = 41;
             this.btn_Close.Text = "Đóng lại";
             // 
@@ -171,14 +181,15 @@
             this.btn_Excel.ForeColor = System.Drawing.Color.Black;
             this.btn_Excel.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.Image")));
             this.btn_Excel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Excel.Location = new System.Drawing.Point(589, 24);
+            this.btn_Excel.Location = new System.Drawing.Point(952, 26);
+            this.btn_Excel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Excel.Name = "btn_Excel";
             this.btn_Excel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Excel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Excel.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Excel.OnHoverImage = null;
             this.btn_Excel.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Excel.Size = new System.Drawing.Size(105, 27);
+            this.btn_Excel.Size = new System.Drawing.Size(140, 33);
             this.btn_Excel.TabIndex = 40;
             this.btn_Excel.Text = "Xuất Excel";
             // 
@@ -194,14 +205,15 @@
             this.btn_Load.ForeColor = System.Drawing.Color.Black;
             this.btn_Load.Image = ((System.Drawing.Image)(resources.GetObject("btn_Load.Image")));
             this.btn_Load.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Load.Location = new System.Drawing.Point(509, 23);
+            this.btn_Load.Location = new System.Drawing.Point(809, 26);
+            this.btn_Load.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Load.Name = "btn_Load";
             this.btn_Load.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Load.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Load.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Load.OnHoverImage = null;
             this.btn_Load.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Load.Size = new System.Drawing.Size(73, 27);
+            this.btn_Load.Size = new System.Drawing.Size(112, 33);
             this.btn_Load.TabIndex = 39;
             this.btn_Load.Text = "Load";
             // 
@@ -217,14 +229,15 @@
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
             this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
             this.btn_Delete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Delete.Location = new System.Drawing.Point(439, 23);
+            this.btn_Delete.Location = new System.Drawing.Point(680, 26);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Delete.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Delete.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Delete.OnHoverImage = null;
             this.btn_Delete.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Delete.Size = new System.Drawing.Size(65, 27);
+            this.btn_Delete.Size = new System.Drawing.Size(100, 33);
             this.btn_Delete.TabIndex = 38;
             this.btn_Delete.Text = "Xóa";
             // 
@@ -240,14 +253,15 @@
             this.btn_Edit.ForeColor = System.Drawing.Color.Black;
             this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
             this.btn_Edit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Edit.Location = new System.Drawing.Point(331, 23);
+            this.btn_Edit.Location = new System.Drawing.Point(521, 26);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Edit.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Edit.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Edit.OnHoverImage = null;
             this.btn_Edit.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Edit.Size = new System.Drawing.Size(103, 27);
+            this.btn_Edit.Size = new System.Drawing.Size(137, 34);
             this.btn_Edit.TabIndex = 37;
             this.btn_Edit.Text = "Chỉnh sửa";
             // 
@@ -263,14 +277,15 @@
             this.btn_Add.ForeColor = System.Drawing.Color.Black;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(251, 23);
+            this.btn_Add.Location = new System.Drawing.Point(393, 26);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Add.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Add.OnHoverImage = null;
             this.btn_Add.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Add.Size = new System.Drawing.Size(74, 28);
+            this.btn_Add.Size = new System.Drawing.Size(99, 34);
             this.btn_Add.TabIndex = 36;
             this.btn_Add.Text = "Thêm";
             // 
@@ -286,14 +301,15 @@
             this.btn_Find.ForeColor = System.Drawing.Color.Black;
             this.btn_Find.Image = null;
             this.btn_Find.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Find.Location = new System.Drawing.Point(171, 23);
+            this.btn_Find.Location = new System.Drawing.Point(239, 26);
+            this.btn_Find.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Find.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Find.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Find.OnHoverImage = null;
             this.btn_Find.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Find.Size = new System.Drawing.Size(74, 28);
+            this.btn_Find.Size = new System.Drawing.Size(132, 34);
             this.btn_Find.TabIndex = 35;
             this.btn_Find.Text = "Tìm kiếm";
             // 
@@ -306,18 +322,19 @@
             this.txt_Input.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_Input.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_Input.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Input.Location = new System.Drawing.Point(5, 22);
+            this.txt_Input.Location = new System.Drawing.Point(7, 27);
+            this.txt_Input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Input.Name = "txt_Input";
             this.txt_Input.PasswordChar = '\0';
             this.txt_Input.SelectedText = "";
-            this.txt_Input.Size = new System.Drawing.Size(160, 30);
+            this.txt_Input.Size = new System.Drawing.Size(213, 37);
             this.txt_Input.TabIndex = 34;
             // 
             // LuanChuyenTS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 393);
+            this.ClientSize = new System.Drawing.Size(1276, 484);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Load);
@@ -328,8 +345,9 @@
             this.Controls.Add(this.txt_Input);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaGroupBox2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LuanChuyenTS";
-            this.Text = "LuanChuyenTS";
+            this.Text = "Luân chuyển thiết bị";
             this.Load += new System.EventHandler(this.LuanChuyenTS_Load);
             this.gunaGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

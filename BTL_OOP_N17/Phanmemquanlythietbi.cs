@@ -81,7 +81,7 @@ namespace BTL_OOP_N17
 
         private void theoDõiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fTheodoiTB f = new fTheodoiTB();
+            TheodoiTB f = new TheodoiTB();
             f.ShowDialog();
         }
 
@@ -110,7 +110,7 @@ namespace BTL_OOP_N17
 
         private void thanhLýThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThanhLyTS f = new ThanhLyTS();
+            ThanhLyTB f = new ThanhLyTB();
             f.ShowDialog();
         }
 
@@ -124,6 +124,11 @@ namespace BTL_OOP_N17
         {
             KiemKe f = new KiemKe();
             f.ShowDialog();
+        }
+
+        private void thiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

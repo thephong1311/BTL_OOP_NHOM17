@@ -298,7 +298,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "YCmua";
-            this.Text = "Yêu cầu mua tài sản ";
+            this.Text = "Yêu cầu mua thiết bị";
             this.Load += new System.EventHandler(this.YCmua_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pHONGTHINGHIEMBindingSource)).EndInit();
             this.gpbThongtinchitiet.ResumeLayout(false);

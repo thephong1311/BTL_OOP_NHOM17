@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class ThanhLyTS : Form
+    public partial class ThanhLyTB : Form
     {
-        public ThanhLyTS()
+        public ThanhLyTB()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace BTL_OOP_N17
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDsTs_Click(object sender, EventArgs e)
         {
 
         }

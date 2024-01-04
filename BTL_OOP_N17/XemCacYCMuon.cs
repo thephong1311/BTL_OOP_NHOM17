@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class fTheodoiTB : Form
+    public partial class XemCacYCMuon : UserControl
     {
-        public fTheodoiTB()
+        public XemCacYCMuon()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void licensing1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class LuanChuyenTS : Form
+    public partial class TheodoiTB : Form
     {
-        public LuanChuyenTS()
+        public TheodoiTB()
         {
             InitializeComponent();
+            thongkeTBcotaiPTN1.Visible = false;
         }
-
-        private void LuanChuyenTS_Load(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_TimKiem_Click(object sender, EventArgs e)
-        {
-
+            thongkeTBcotaiPTN1.Visible=true;
         }
     }
 }

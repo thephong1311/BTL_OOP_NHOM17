@@ -135,6 +135,7 @@
             this.thiếtBịToolStripMenuItem.Name = "thiếtBịToolStripMenuItem";
             this.thiếtBịToolStripMenuItem.Size = new System.Drawing.Size(316, 28);
             this.thiếtBịToolStripMenuItem.Text = "Thiết bị";
+            this.thiếtBịToolStripMenuItem.Click += new System.EventHandler(this.thiếtBịToolStripMenuItem_Click);
             // 
             // theoDõiThiếtBịToolStripMenuItem
             // 

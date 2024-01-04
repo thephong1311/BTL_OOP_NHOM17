@@ -154,7 +154,7 @@
             this.btnFind_KK.ForeColor = System.Drawing.Color.Black;
             this.btnFind_KK.Image = ((System.Drawing.Image)(resources.GetObject("btnFind_KK.Image")));
             this.btnFind_KK.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFind_KK.Location = new System.Drawing.Point(533, 46);
+            this.btnFind_KK.Location = new System.Drawing.Point(568, 39);
             this.btnFind_KK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind_KK.Name = "btnFind_KK";
             this.btnFind_KK.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -162,9 +162,10 @@
             this.btnFind_KK.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFind_KK.OnHoverImage = null;
             this.btnFind_KK.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind_KK.Size = new System.Drawing.Size(120, 23);
+            this.btnFind_KK.Size = new System.Drawing.Size(142, 30);
             this.btnFind_KK.TabIndex = 12;
             this.btnFind_KK.Text = "Tìm kiếm";
+            this.btnFind_KK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtFind_KK
             // 

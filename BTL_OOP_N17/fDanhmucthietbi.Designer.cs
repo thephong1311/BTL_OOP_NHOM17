@@ -176,7 +176,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fDanhmucthietbi";
-            this.Text = "fDanhmucthietbi";
+            this.Text = "Danh mục thiết bị";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

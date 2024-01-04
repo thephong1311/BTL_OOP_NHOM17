@@ -167,6 +167,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ConnectionString.cs" />
     <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,12 +221,6 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fTheodoiTB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fTheodoiTB.Designer.cs">
-      <DependentUpon>fTheodoiTB.cs</DependentUpon>
     </Compile>
     <Compile Include="GVControl.cs">
       <SubType>Form</SubType>
@@ -287,6 +282,18 @@
     <Compile Include="ThemTLyTS.Designer.cs">
       <DependentUpon>ThemTLyTS.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheodoiTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheodoiTB.Designer.cs">
+      <DependentUpon>TheodoiTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongkeTBcotaiPTN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongkeTBcotaiPTN.Designer.cs">
+      <DependentUpon>ThongkeTBcotaiPTN.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongtintaikhoanAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +305,12 @@
     </Compile>
     <Compile Include="TonghopYCmua.Designer.cs">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemCacYCMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemCacYCMuon.Designer.cs">
+      <DependentUpon>XemCacYCMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="YCmua.cs">
       <SubType>Form</SubType>
@@ -388,9 +401,6 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTheodoiTB.resx">
-      <DependentUpon>fTheodoiTB.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GVControl.resx">
       <DependentUpon>GVControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,11 +450,20 @@
     <EmbeddedResource Include="ThemTLyTS.resx">
       <DependentUpon>ThemTLyTS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TheodoiTB.resx">
+      <DependentUpon>TheodoiTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongkeTBcotaiPTN.resx">
+      <DependentUpon>ThongkeTBcotaiPTN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongtintaikhoanAdmin.resx">
       <DependentUpon>ThongtintaikhoanAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TonghopYCmua.resx">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemCacYCMuon.resx">
+      <DependentUpon>XemCacYCMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCmua.resx">
       <DependentUpon>YCmua.cs</DependentUpon>
