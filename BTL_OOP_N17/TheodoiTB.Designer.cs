@@ -48,10 +48,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.danhgiaTB1 = new BTL_OOP_N17.DanhgiaTB();
+            this.yckk1 = new BTL_OOP_N17.YCKK();
+            this.ycThanhly1 = new BTL_OOP_N17.YCThanhly();
+            this.xemCacYCMua1 = new BTL_OOP_N17.XemCacYCMua();
+            this.xemCacYCsuachua1 = new BTL_OOP_N17.XemCacYCsuachua();
             this.xemCacYCMuon1 = new BTL_OOP_N17.XemCacYCMuon();
             this.thongkeTBcotaiPTN1 = new BTL_OOP_N17.ThongkeTBcotaiPTN();
-            this.xemCacYCsuachua1 = new BTL_OOP_N17.XemCacYCsuachua();
-            this.xemCacYCMua1 = new BTL_OOP_N17.XemCacYCMua();
             this.panel7.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -61,52 +64,65 @@
             // 
             // đánhGiáTBToolStripMenuItem
             // 
+            this.đánhGiáTBToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.đánhGiáTBToolStripMenuItem.Name = "đánhGiáTBToolStripMenuItem";
-            this.đánhGiáTBToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
+            this.đánhGiáTBToolStripMenuItem.Size = new System.Drawing.Size(117, 27);
             this.đánhGiáTBToolStripMenuItem.Text = "Đánh giá TB";
+            this.đánhGiáTBToolStripMenuItem.Click += new System.EventHandler(this.đánhGiáTBToolStripMenuItem_Click);
             // 
             // cácYCKiểmKêToolStripMenuItem
             // 
+            this.cácYCKiểmKêToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cácYCKiểmKêToolStripMenuItem.Name = "cácYCKiểmKêToolStripMenuItem";
-            this.cácYCKiểmKêToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
+            this.cácYCKiểmKêToolStripMenuItem.Size = new System.Drawing.Size(141, 27);
             this.cácYCKiểmKêToolStripMenuItem.Text = "Các YC Kiểm kê";
+            this.cácYCKiểmKêToolStripMenuItem.Click += new System.EventHandler(this.cácYCKiểmKêToolStripMenuItem_Click);
             // 
             // xemCácYCThanhLýToolStripMenuItem
             // 
+            this.xemCácYCThanhLýToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.xemCácYCThanhLýToolStripMenuItem.Name = "xemCácYCThanhLýToolStripMenuItem";
-            this.xemCácYCThanhLýToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.xemCácYCThanhLýToolStripMenuItem.Size = new System.Drawing.Size(179, 27);
             this.xemCácYCThanhLýToolStripMenuItem.Text = "Xem các YC thanh lý";
+            this.xemCácYCThanhLýToolStripMenuItem.Click += new System.EventHandler(this.xemCácYCThanhLýToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(164, 24);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(187, 27);
             this.toolStripMenuItem2.Text = "Xem các YC Sửa chữa";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // xToolStripMenuItem
             // 
+            this.xToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(175, 27);
             this.xToolStripMenuItem.Text = "Xem các YC Mua TB";
             this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
             // xemCácYCMượnTBToolStripMenuItem
             // 
+            this.xemCácYCMượnTBToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.xemCácYCMượnTBToolStripMenuItem.Name = "xemCácYCMượnTBToolStripMenuItem";
-            this.xemCácYCMượnTBToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.xemCácYCMượnTBToolStripMenuItem.Size = new System.Drawing.Size(186, 27);
             this.xemCácYCMượnTBToolStripMenuItem.Text = "Xem các YC mượn TB";
             this.xemCácYCMượnTBToolStripMenuItem.Click += new System.EventHandler(this.xemCácYCMượnTBToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(203, 27);
             this.toolStripMenuItem1.Text = "Thống kê TB có tại PTN";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.danhgiaTB1);
+            this.panel7.Controls.Add(this.yckk1);
+            this.panel7.Controls.Add(this.ycThanhly1);
             this.panel7.Controls.Add(this.xemCacYCMua1);
             this.panel7.Controls.Add(this.xemCacYCsuachua1);
             this.panel7.Controls.Add(this.xemCacYCMuon1);
@@ -122,14 +138,14 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.xemCácYCMượnTBToolStripMenuItem,
-            this.xToolStripMenuItem,
             this.toolStripMenuItem2,
             this.xemCácYCThanhLýToolStripMenuItem,
+            this.xToolStripMenuItem,
             this.cácYCKiểmKêToolStripMenuItem,
             this.đánhGiáTBToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1261, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1261, 31);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -261,6 +277,41 @@
             this.panel4.Size = new System.Drawing.Size(269, 169);
             this.panel4.TabIndex = 3;
             // 
+            // danhgiaTB1
+            // 
+            this.danhgiaTB1.Location = new System.Drawing.Point(-3, -17);
+            this.danhgiaTB1.Name = "danhgiaTB1";
+            this.danhgiaTB1.Size = new System.Drawing.Size(1215, 362);
+            this.danhgiaTB1.TabIndex = 2;
+            // 
+            // yckk1
+            // 
+            this.yckk1.Location = new System.Drawing.Point(0, -19);
+            this.yckk1.Name = "yckk1";
+            this.yckk1.Size = new System.Drawing.Size(1213, 374);
+            this.yckk1.TabIndex = 5;
+            // 
+            // ycThanhly1
+            // 
+            this.ycThanhly1.Location = new System.Drawing.Point(8, 0);
+            this.ycThanhly1.Name = "ycThanhly1";
+            this.ycThanhly1.Size = new System.Drawing.Size(1209, 355);
+            this.ycThanhly1.TabIndex = 4;
+            // 
+            // xemCacYCMua1
+            // 
+            this.xemCacYCMua1.Location = new System.Drawing.Point(1, 4);
+            this.xemCacYCMua1.Name = "xemCacYCMua1";
+            this.xemCacYCMua1.Size = new System.Drawing.Size(1225, 361);
+            this.xemCacYCMua1.TabIndex = 3;
+            // 
+            // xemCacYCsuachua1
+            // 
+            this.xemCacYCsuachua1.Location = new System.Drawing.Point(-3, 0);
+            this.xemCacYCsuachua1.Name = "xemCacYCsuachua1";
+            this.xemCacYCsuachua1.Size = new System.Drawing.Size(1238, 370);
+            this.xemCacYCsuachua1.TabIndex = 2;
+            // 
             // xemCacYCMuon1
             // 
             this.xemCacYCMuon1.Location = new System.Drawing.Point(3, 3);
@@ -274,20 +325,6 @@
             this.thongkeTBcotaiPTN1.Name = "thongkeTBcotaiPTN1";
             this.thongkeTBcotaiPTN1.Size = new System.Drawing.Size(1236, 331);
             this.thongkeTBcotaiPTN1.TabIndex = 0;
-            // 
-            // xemCacYCsuachua1
-            // 
-            this.xemCacYCsuachua1.Location = new System.Drawing.Point(-3, 0);
-            this.xemCacYCsuachua1.Name = "xemCacYCsuachua1";
-            this.xemCacYCsuachua1.Size = new System.Drawing.Size(1238, 370);
-            this.xemCacYCsuachua1.TabIndex = 2;
-            // 
-            // xemCacYCMua1
-            // 
-            this.xemCacYCMua1.Location = new System.Drawing.Point(1, 4);
-            this.xemCacYCMua1.Name = "xemCacYCMua1";
-            this.xemCacYCMua1.Size = new System.Drawing.Size(1225, 361);
-            this.xemCacYCMua1.TabIndex = 3;
             // 
             // TheodoiTB
             // 
@@ -337,5 +374,8 @@
         private XemCacYCMuon xemCacYCMuon1;
         private XemCacYCMua xemCacYCMua1;
         private XemCacYCsuachua xemCacYCsuachua1;
+        private DanhgiaTB danhgiaTB1;
+        private YCKK yckk1;
+        private YCThanhly ycThanhly1;
     }
 }
