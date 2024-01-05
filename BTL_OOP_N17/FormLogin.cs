@@ -21,40 +21,69 @@ namespace BTL_OOP_N17
             Application.Exit();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            try
+      
+        
+            private void btnLuu_Click(object sender, EventArgs e)
             {
-                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+                try
                 {
-                    connection.Open();
-                    string query = "SELECT * FROM ACCOUNT";
-
-                    SqlDataAdapter da = new SqlDataAdapter();
-                    da.SelectCommand = new SqlCommand(query, connection);
-
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    if (dt.Rows.Count > 0)
+                    using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                     {
-                        MessageBox.Show("Dang nhap thanh cong!", "Thong bao!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        fDevicemanage f = new fDevicemanage();
-                        f.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui long dien thong tin dang nhap");
-                    }
+                        connection.Open();
 
-                    // Bây giờ bạn có dữ liệu trong DataTable (dt), và bạn có thể làm điều gì đó với nó.
+                        // Sử dụng tham số trong truy vấn SQL để tránh SQL Injection
+                        string query = "SELECT * FROM ACCOUNT WHERE TAIKHOAN = @TAIKHOAN AND MATKHAU = @MATKHAU";
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            // Sét các giá trị tham số
+                            command.Parameters.AddWithValue("@TAIKHOAN", txtMaTL.Text);
+                            command.Parameters.AddWithValue("@MATKHAU", textBox1.Text);
+
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    // Lấy quyền và lưu vào biến tĩnh
+                                    UserRole = reader["QUYEN"].ToString();
+
+                                    // Kiểm tra quyền và mở form tương ứng
+                                    if (UserRole == "Admin")
+                                    {
+                                        fDevicemanage f = new fDevicemanage();
+                                        f.Show();
+                                        this.Hide();
+                                    }
+                                    else if (UserRole == "Nhân viên")
+                                    {
+                                        GVControl giaoVienForm = new GVControl();
+                                         giaoVienForm.Show();
+                                         this.Hide();
+                                    }
+                                    else
+                                    {
+                                        // Hiển thị thông báo nếu có quyền khác mà bạn chưa xử lý
+                                        MessageBox.Show("Không có quyền truy cập.");
+                                    }
+                                }
+                                else
+                                {
+                                    // Hiển thị thông báo đăng nhập không thành công
+                                    MessageBox.Show("Đăng nhập không thành công. Tên đăng nhập hoặc mật khẩu không đúng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có lỗi xảy ra
+                    MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
-            }
+
         }
-    }
+
+    
 }
 

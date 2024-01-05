@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.gunaGroupBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(582, 346);
             this.panel1.TabIndex = 0;
@@ -93,7 +93,7 @@
             this.gunaGroupBox1.Controls.Add(this.panel2);
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Location = new System.Drawing.Point(34, 54);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(520, 233);
             this.gunaGroupBox1.TabIndex = 1;
@@ -112,10 +112,18 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(152, 28);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 198);
             this.panel3.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(101, 113);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(232, 26);
+            this.textBox2.TabIndex = 13;
             // 
             // btnDong
             // 
@@ -129,7 +137,7 @@
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDong.Location = new System.Drawing.Point(193, 150);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(94, 24);
             this.btnDong.TabIndex = 12;
@@ -147,16 +155,16 @@
             this.btnLuu.Image = global::BTL_OOP_N17.Properties.Resources.diskette;
             this.btnLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLuu.Location = new System.Drawing.Point(49, 150);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(116, 24);
+            this.btnLuu.Size = new System.Drawing.Size(128, 24);
             this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Đăng nhập";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(101, 72);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(232, 26);
             this.textBox1.TabIndex = 10;
@@ -164,7 +172,7 @@
             // txtMaTL
             // 
             this.txtMaTL.Location = new System.Drawing.Point(101, 35);
-            this.txtMaTL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaTL.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaTL.Name = "txtMaTL";
             this.txtMaTL.Size = new System.Drawing.Size(232, 26);
             this.txtMaTL.TabIndex = 8;
@@ -216,7 +224,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(3, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 198);
             this.panel2.TabIndex = 0;
@@ -232,21 +240,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP VÀO HỆ THỐNG";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(101, 120);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 26);
-            this.textBox2.TabIndex = 13;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
             this.panel1.ResumeLayout(false);
