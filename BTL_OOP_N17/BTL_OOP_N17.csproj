@@ -306,11 +306,23 @@
     <Compile Include="TonghopYCmua.Designer.cs">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemCacYCMua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemCacYCMua.Designer.cs">
+      <DependentUpon>XemCacYCMua.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemCacYCMuon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="XemCacYCMuon.Designer.cs">
       <DependentUpon>XemCacYCMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemCacYCsuachua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemCacYCsuachua.Designer.cs">
+      <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
     </Compile>
     <Compile Include="YCmua.cs">
       <SubType>Form</SubType>
@@ -462,8 +474,14 @@
     <EmbeddedResource Include="TonghopYCmua.resx">
       <DependentUpon>TonghopYCmua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XemCacYCMua.resx">
+      <DependentUpon>XemCacYCMua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XemCacYCMuon.resx">
       <DependentUpon>XemCacYCMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemCacYCsuachua.resx">
+      <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCmua.resx">
       <DependentUpon>YCmua.cs</DependentUpon>

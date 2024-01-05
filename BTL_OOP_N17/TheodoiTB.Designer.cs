@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.thongkeTBcotaiPTN1 = new BTL_OOP_N17.ThongkeTBcotaiPTN();
             this.đánhGiáTBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cácYCKiểmKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemCácYCThanhLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.xemCacYCMuon1 = new BTL_OOP_N17.XemCacYCMuon();
+            this.thongkeTBcotaiPTN1 = new BTL_OOP_N17.ThongkeTBcotaiPTN();
+            this.xemCacYCsuachua1 = new BTL_OOP_N17.XemCacYCsuachua();
+            this.xemCacYCMua1 = new BTL_OOP_N17.XemCacYCMua();
             this.panel7.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -56,29 +59,22 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // thongkeTBcotaiPTN1
-            // 
-            this.thongkeTBcotaiPTN1.Location = new System.Drawing.Point(16, 3);
-            this.thongkeTBcotaiPTN1.Name = "thongkeTBcotaiPTN1";
-            this.thongkeTBcotaiPTN1.Size = new System.Drawing.Size(1086, 331);
-            this.thongkeTBcotaiPTN1.TabIndex = 0;
-            // 
             // đánhGiáTBToolStripMenuItem
             // 
             this.đánhGiáTBToolStripMenuItem.Name = "đánhGiáTBToolStripMenuItem";
-            this.đánhGiáTBToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.đánhGiáTBToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
             this.đánhGiáTBToolStripMenuItem.Text = "Đánh giá TB";
             // 
             // cácYCKiểmKêToolStripMenuItem
             // 
             this.cácYCKiểmKêToolStripMenuItem.Name = "cácYCKiểmKêToolStripMenuItem";
-            this.cácYCKiểmKêToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.cácYCKiểmKêToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
             this.cácYCKiểmKêToolStripMenuItem.Text = "Các YC Kiểm kê";
             // 
             // xemCácYCThanhLýToolStripMenuItem
             // 
             this.xemCácYCThanhLýToolStripMenuItem.Name = "xemCácYCThanhLýToolStripMenuItem";
-            this.xemCácYCThanhLýToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.xemCácYCThanhLýToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.xemCácYCThanhLýToolStripMenuItem.Text = "Xem các YC thanh lý";
             // 
             // toolStripMenuItem2
@@ -86,32 +82,38 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(164, 24);
             this.toolStripMenuItem2.Text = "Xem các YC Sửa chữa";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // xToolStripMenuItem
             // 
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
             this.xToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.xToolStripMenuItem.Text = "Xem các YC Mua TB";
+            this.xToolStripMenuItem.Click += new System.EventHandler(this.xToolStripMenuItem_Click);
             // 
             // xemCácYCMượnTBToolStripMenuItem
             // 
             this.xemCácYCMượnTBToolStripMenuItem.Name = "xemCácYCMượnTBToolStripMenuItem";
-            this.xemCácYCMượnTBToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.xemCácYCMượnTBToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.xemCácYCMượnTBToolStripMenuItem.Text = "Xem các YC mượn TB";
+            this.xemCácYCMượnTBToolStripMenuItem.Click += new System.EventHandler(this.xemCácYCMượnTBToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 26);
             this.toolStripMenuItem1.Text = "Thống kê TB có tại PTN";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.xemCacYCMua1);
+            this.panel7.Controls.Add(this.xemCacYCsuachua1);
+            this.panel7.Controls.Add(this.xemCacYCMuon1);
             this.panel7.Controls.Add(this.thongkeTBcotaiPTN1);
             this.panel7.Location = new System.Drawing.Point(3, 48);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1105, 363);
+            this.panel7.Size = new System.Drawing.Size(1255, 363);
             this.panel7.TabIndex = 1;
             // 
             // menuStrip2
@@ -127,7 +129,7 @@
             this.đánhGiáTBToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1117, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1261, 28);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -137,7 +139,7 @@
             this.panel6.Controls.Add(this.menuStrip2);
             this.panel6.Location = new System.Drawing.Point(276, 121);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1117, 417);
+            this.panel6.Size = new System.Drawing.Size(1261, 417);
             this.panel6.TabIndex = 5;
             // 
             // guna2Button7
@@ -259,11 +261,39 @@
             this.panel4.Size = new System.Drawing.Size(269, 169);
             this.panel4.TabIndex = 3;
             // 
+            // xemCacYCMuon1
+            // 
+            this.xemCacYCMuon1.Location = new System.Drawing.Point(3, 3);
+            this.xemCacYCMuon1.Name = "xemCacYCMuon1";
+            this.xemCacYCMuon1.Size = new System.Drawing.Size(1249, 356);
+            this.xemCacYCMuon1.TabIndex = 1;
+            // 
+            // thongkeTBcotaiPTN1
+            // 
+            this.thongkeTBcotaiPTN1.Location = new System.Drawing.Point(16, 3);
+            this.thongkeTBcotaiPTN1.Name = "thongkeTBcotaiPTN1";
+            this.thongkeTBcotaiPTN1.Size = new System.Drawing.Size(1236, 331);
+            this.thongkeTBcotaiPTN1.TabIndex = 0;
+            // 
+            // xemCacYCsuachua1
+            // 
+            this.xemCacYCsuachua1.Location = new System.Drawing.Point(-3, 0);
+            this.xemCacYCsuachua1.Name = "xemCacYCsuachua1";
+            this.xemCacYCsuachua1.Size = new System.Drawing.Size(1238, 370);
+            this.xemCacYCsuachua1.TabIndex = 2;
+            // 
+            // xemCacYCMua1
+            // 
+            this.xemCacYCMua1.Location = new System.Drawing.Point(1, 4);
+            this.xemCacYCMua1.Name = "xemCacYCMua1";
+            this.xemCacYCMua1.Size = new System.Drawing.Size(1225, 361);
+            this.xemCacYCMua1.TabIndex = 3;
+            // 
             // TheodoiTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1396, 544);
+            this.ClientSize = new System.Drawing.Size(1549, 544);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -304,5 +334,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel4;
+        private XemCacYCMuon xemCacYCMuon1;
+        private XemCacYCMua xemCacYCMua1;
+        private XemCacYCsuachua xemCacYCsuachua1;
     }
 }

@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class YCmua : Form
+    public partial class XemCacYCMua : UserControl
     {
         private SqlConnection con = new SqlConnection(ConnectionString.connectionString);
-        public YCmua()
+        public XemCacYCMua()
         {
             InitializeComponent();
-            dgvThongtinchitiet.DataSource = infoYCMuaGridView();
+            dataGridView1.DataSource = infoYCMuaGridView();
         }
         public DataTable infoYCMuaGridView()
         {
@@ -26,18 +26,6 @@ namespace BTL_OOP_N17
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
-        }
-
-        private void YCmua_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'qLTS2DataSet1.PHONGTHINGHIEM' table. You can move, or remove it, as needed.
-           
-
-        }
-
-        private void gunaButton2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

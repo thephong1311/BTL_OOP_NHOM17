@@ -28,5 +28,10 @@ namespace BTL_OOP_N17
             sda.Fill(dt);
             return dt;
         }
+        public void ResetState()
+        {
+            textBox1.Text = "";
+            dataGridView1.DataSource = infoTKGridView();
+        }
     }
 }

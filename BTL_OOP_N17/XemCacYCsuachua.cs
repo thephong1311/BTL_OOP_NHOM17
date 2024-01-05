@@ -12,19 +12,17 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    
-    public partial class XemCacYCMuon : UserControl
+    public partial class XemCacYCsuachua : UserControl
     {
         private SqlConnection con = new SqlConnection(ConnectionString.connectionString);
-        public XemCacYCMuon()
+        public XemCacYCsuachua()
         {
             InitializeComponent();
-            dataGridView1.DataSource = infoYCMuonGridView();
-
+            dataGridView1.DataSource = infoYCsuachuaGridView();
         }
-        public DataTable infoYCMuonGridView()
+        public DataTable infoYCsuachuaGridView()
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from CHITIET_MUON", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from SUACHUATS", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
