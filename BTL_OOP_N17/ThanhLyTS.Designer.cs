@@ -52,10 +52,12 @@
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.btnSua = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbDanhsachTL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).BeginInit();
             this.gbThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFind
@@ -71,6 +73,7 @@
             this.gbDanhsachTL.BackColor = System.Drawing.Color.Transparent;
             this.gbDanhsachTL.BaseColor = System.Drawing.Color.White;
             this.gbDanhsachTL.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gbDanhsachTL.Controls.Add(this.dataGridView1);
             this.gbDanhsachTL.Controls.Add(this.gunaButton1);
             this.gbDanhsachTL.Controls.Add(this.dgvTSTL);
             this.gbDanhsachTL.Controls.Add(this.txtFind_TL);
@@ -81,7 +84,7 @@
             this.gbDanhsachTL.Name = "gbDanhsachTL";
             this.gbDanhsachTL.Size = new System.Drawing.Size(907, 335);
             this.gbDanhsachTL.TabIndex = 10;
-            this.gbDanhsachTL.Text = "Danh sách các tài sản thanh lí ";
+            this.gbDanhsachTL.Text = "Danh sách các thiết bị thanh lí ";
             this.gbDanhsachTL.TextLocation = new System.Drawing.Point(10, 8);
             // 
             // gunaButton1
@@ -137,14 +140,14 @@
             this.dgvTSTL.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTSTL.EnableHeadersVisualStyles = false;
             this.dgvTSTL.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTSTL.Location = new System.Drawing.Point(67, 78);
+            this.dgvTSTL.Location = new System.Drawing.Point(3, 78);
             this.dgvTSTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTSTL.Name = "dgvTSTL";
             this.dgvTSTL.RowHeadersVisible = false;
             this.dgvTSTL.RowHeadersWidth = 51;
             this.dgvTSTL.RowTemplate.Height = 24;
             this.dgvTSTL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTSTL.Size = new System.Drawing.Size(907, 239);
+            this.dgvTSTL.Size = new System.Drawing.Size(904, 255);
             this.dgvTSTL.TabIndex = 1;
             this.dgvTSTL.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvTSTL.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -236,7 +239,7 @@
             this.btnDsTs.Name = "btnDsTs";
             this.btnDsTs.Size = new System.Drawing.Size(211, 66);
             this.btnDsTs.TabIndex = 1;
-            this.btnDsTs.Text = "DS tài sản";
+            this.btnDsTs.Text = "DS thiết bị";
             this.btnDsTs.Click += new System.EventHandler(this.btnDsTs_Click);
             // 
             // btnDSThanhLy
@@ -254,7 +257,7 @@
             this.btnDSThanhLy.Name = "btnDSThanhLy";
             this.btnDSThanhLy.Size = new System.Drawing.Size(234, 66);
             this.btnDSThanhLy.TabIndex = 0;
-            this.btnDSThanhLy.Text = "DS tài sản đã thanh lý";
+            this.btnDSThanhLy.Text = "DS thiết bị đã thanh lý";
             // 
             // guna2DataGridView1
             // 
@@ -477,6 +480,17 @@
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm mới";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 79);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(877, 253);
+            this.dataGridView1.TabIndex = 12;
+            // 
             // ThanhLyTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -500,6 +514,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).EndInit();
             this.gbThongTin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,5 +538,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDsTs;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI.WinForms.GunaButton gunaButton2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
