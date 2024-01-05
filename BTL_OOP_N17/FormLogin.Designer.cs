@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -101,7 +101,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.btnDong);
             this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Controls.Add(this.textBox1);
@@ -116,14 +116,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 198);
             this.panel3.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(101, 113);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 26);
-            this.textBox2.TabIndex = 13;
             // 
             // btnDong
             // 
@@ -240,6 +232,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP VÀO HỆ THỐNG";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Admin",
+            "Nhân viên"});
+            this.comboBox1.Location = new System.Drawing.Point(101, 104);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(232, 27);
+            this.comboBox1.TabIndex = 13;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +278,6 @@
         private System.Windows.Forms.TextBox txtMaTL;
         private Guna.UI2.WinForms.Guna2Button btnDong;
         private Guna.UI2.WinForms.Guna2Button btnLuu;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
