@@ -8,6 +8,7 @@ namespace BTL_OOP_N17
 {
     public partial class FormLogin : Form
     {
+        public static string user;
         public static string UserRole;
         public FormLogin()
         {
@@ -15,15 +16,11 @@ namespace BTL_OOP_N17
             btnDong.Click += new EventHandler(btnDong_Click);
             btnLuu.Click += new EventHandler(btnLuu_Click);
         }
-
         private void btnDong_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-      
-        
-            private void btnLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
             {
                 try
                 {
@@ -42,7 +39,8 @@ namespace BTL_OOP_N17
 
                             using (SqlDataReader reader = command.ExecuteReader())
                             {
-                                if (reader.Read())
+                            user = reader["TAIKHOAN"].ToString();   
+                            if (reader.Read())
                                 {
                                     // Lấy quyền và lưu vào biến tĩnh
                                     UserRole = reader["QUYEN"].ToString();
