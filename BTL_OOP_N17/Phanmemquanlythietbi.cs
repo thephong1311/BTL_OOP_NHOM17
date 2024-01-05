@@ -16,7 +16,6 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
-        Panel panel_Body = new Panel();
         private Form currentFormchild;
 
         private void OpenChildForm(Form childForm)
@@ -38,12 +37,13 @@ namespace BTL_OOP_N17
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new ThongtintaikhoanAdmin());
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Bạn muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void yêuCầuMuaThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,6 +129,11 @@ namespace BTL_OOP_N17
         private void thiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DoiMK());
         }
     }
 }

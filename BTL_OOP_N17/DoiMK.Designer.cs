@@ -49,7 +49,7 @@
             this.gunaLabel1.Location = new System.Drawing.Point(161, 38);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(159, 31);
+            this.gunaLabel1.Size = new System.Drawing.Size(151, 30);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Đổi mật khẩu";
             this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
@@ -86,7 +86,7 @@
             this.txtAccount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtAccount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAccount.Location = new System.Drawing.Point(220, 94);
-            this.txtAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAccount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.PasswordChar = '\0';
             this.txtAccount.SelectedText = "";
@@ -103,7 +103,7 @@
             this.txtOldPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtOldPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtOldPass.Location = new System.Drawing.Point(220, 133);
-            this.txtOldPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOldPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.PasswordChar = '\0';
             this.txtOldPass.SelectedText = "";
@@ -120,7 +120,7 @@
             this.txtNewPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPass.Location = new System.Drawing.Point(220, 171);
-            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.PasswordChar = '\0';
             this.txtNewPass.SelectedText = "";
@@ -140,7 +140,7 @@
             this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.Location = new System.Drawing.Point(79, 250);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.Silver;
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -150,6 +150,7 @@
             this.gunaButton1.Size = new System.Drawing.Size(111, 32);
             this.gunaButton1.TabIndex = 7;
             this.gunaButton1.Text = "Thoát";
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // gunaButton2
             // 
@@ -164,7 +165,7 @@
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton2.Location = new System.Drawing.Point(284, 250);
-            this.gunaButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaButton2.Margin = new System.Windows.Forms.Padding(4);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.Silver;
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -174,6 +175,7 @@
             this.gunaButton2.Size = new System.Drawing.Size(133, 32);
             this.gunaButton2.TabIndex = 8;
             this.gunaButton2.Text = "Cập nhật";
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // gunaLinePanel1
             // 
@@ -189,7 +191,7 @@
             this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
             this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaLinePanel1.Location = new System.Drawing.Point(79, 47);
-            this.gunaLinePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaLinePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
             this.gunaLinePanel1.Size = new System.Drawing.Size(477, 314);
             this.gunaLinePanel1.TabIndex = 9;
@@ -212,9 +214,10 @@
             this.ClientSize = new System.Drawing.Size(639, 375);
             this.Controls.Add(this.gunaLinePanel1);
             this.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DoiMK";
             this.Text = "DoiMK";
+            this.Load += new System.EventHandler(this.DoiMK_Load);
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
             this.ResumeLayout(false);
