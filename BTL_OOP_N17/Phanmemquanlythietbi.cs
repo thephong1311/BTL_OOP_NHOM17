@@ -135,5 +135,47 @@ namespace BTL_OOP_N17
         {
             OpenChildForm(new DoiMK());
         }
+
+        private void báoCáoTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportKiemKeTS f = new ReportKiemKeTS();
+            f.ShowDialog();
+        }
+
+        private void báoCáoLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportLuanChuyenTS f = new ReportLuanChuyenTS();
+            f.ShowDialog();
+        }
+
+        private void báoCáoMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportMuonTS f = new ReportMuonTS();    
+            f.ShowDialog();
+        }
+
+        private void báoCáoSửaChữaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportSuaChuaTS f = new ReportSuaChuaTS();
+            f.ShowDialog();
+        }
+
+        private void báoCáoThanhLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportThanhLy f = new ReportThanhLy();
+            f.ShowDialog();
+        }
+
+        private void báoCáoTìnhTrạngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportTinhTrangTS f = new ReportTinhTrangTS();
+            f.ShowDialog();
+        }
+
+        private void báoCáoYêuCầuMuaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportYCmua f = new ReportYCmua();
+            f.ShowDialog();
+        }
     }
 }
