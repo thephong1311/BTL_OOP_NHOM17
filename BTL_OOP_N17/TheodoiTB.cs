@@ -107,5 +107,10 @@ namespace BTL_OOP_N17
             xemCacYCMua1.Visible = false;
             xemCacYCsuachua1.Visible = false;
         }
+
+        private void ycThanhly1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
