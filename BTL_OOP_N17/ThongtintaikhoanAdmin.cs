@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_OOP_N17.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,13 @@ namespace BTL_OOP_N17
 {
     public partial class ThongtintaikhoanAdmin : Form 
     {
+        string username = FormLogin.user;
         public ThongtintaikhoanAdmin()
         {
             InitializeComponent();
             LoadAccountInfo(username);
         }
-        string username = FormLogin.user;
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -28,13 +30,13 @@ namespace BTL_OOP_N17
             try
             {
                 //Kết nối đến csdl
-                using (SqlConnection connection = new SqlConnection("YourConnectionString"))
+                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
                     connection.Open();
-                    string sqlSelect = "SELECT * FROM ACCOUNT JOIN GIAOVIEN ON ACCOUNT.TAIKHOAN = GIAOVIEN.MAGV WHERE TAIKHOAN ='{username}'";
+                    string sqlSelect = "SELECT * FROM ACCOUNT JOIN GIAOVIEN ON ACCOUNT.TAIKHOAN = GIAOVIEN.MAGV WHERE TAIKHOAN =@TAIKHOAN";
                     using (SqlCommand command = new SqlCommand(sqlSelect, connection))
                     {
-                        command.Parameters.AddWithValue("@TAIKHOAN",username);
+                        command.Parameters.AddWithValue("@TAIKHOAN", username);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if(reader.Read())
@@ -60,6 +62,11 @@ namespace BTL_OOP_N17
             {
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
