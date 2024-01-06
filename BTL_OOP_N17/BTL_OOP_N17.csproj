@@ -210,6 +210,12 @@
     <Compile Include="fAddThietbi.Designer.cs">
       <DependentUpon>fAddThietbi.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddYCmua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddYCmua.Designer.cs">
+      <DependentUpon>fAddYCmua.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddYeucausuachuaTB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -436,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAddThietbi.resx">
       <DependentUpon>fAddThietbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddYCmua.resx">
+      <DependentUpon>fAddYCmua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddYeucausuachuaTB.resx">
       <DependentUpon>fAddYeucausuachuaTB.cs</DependentUpon>

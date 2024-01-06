@@ -32,12 +32,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbb_TrangThai = new System.Windows.Forms.ComboBox();
+            this.txt_ViTri = new System.Windows.Forms.TextBox();
+            this.txt_Dientich = new System.Windows.Forms.TextBox();
+            this.txt_SoPhong = new System.Windows.Forms.TextBox();
+            this.txt_TenPTN = new System.Windows.Forms.TextBox();
+            this.txt_MaPTN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,12 +51,12 @@
             // 
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.comboBox2);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.cbb_TrangThai);
+            this.groupBox4.Controls.Add(this.txt_ViTri);
+            this.groupBox4.Controls.Add(this.txt_Dientich);
+            this.groupBox4.Controls.Add(this.txt_SoPhong);
+            this.groupBox4.Controls.Add(this.txt_TenPTN);
+            this.groupBox4.Controls.Add(this.txt_MaPTN);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.label1);
@@ -93,54 +93,54 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Vị trí";
             // 
-            // comboBox2
+            // cbb_TrangThai
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(95, 208);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 27);
-            this.comboBox2.TabIndex = 8;
+            this.cbb_TrangThai.FormattingEnabled = true;
+            this.cbb_TrangThai.Location = new System.Drawing.Point(95, 208);
+            this.cbb_TrangThai.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_TrangThai.Name = "cbb_TrangThai";
+            this.cbb_TrangThai.Size = new System.Drawing.Size(190, 27);
+            this.cbb_TrangThai.TabIndex = 8;
             // 
-            // textBox5
+            // txt_ViTri
             // 
-            this.textBox5.Location = new System.Drawing.Point(95, 175);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 26);
-            this.textBox5.TabIndex = 13;
+            this.txt_ViTri.Location = new System.Drawing.Point(95, 175);
+            this.txt_ViTri.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_ViTri.Name = "txt_ViTri";
+            this.txt_ViTri.Size = new System.Drawing.Size(190, 26);
+            this.txt_ViTri.TabIndex = 13;
             // 
-            // textBox4
+            // txt_Dientich
             // 
-            this.textBox4.Location = new System.Drawing.Point(95, 143);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 26);
-            this.textBox4.TabIndex = 12;
+            this.txt_Dientich.Location = new System.Drawing.Point(95, 143);
+            this.txt_Dientich.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_Dientich.Name = "txt_Dientich";
+            this.txt_Dientich.Size = new System.Drawing.Size(190, 26);
+            this.txt_Dientich.TabIndex = 12;
             // 
-            // textBox3
+            // txt_SoPhong
             // 
-            this.textBox3.Location = new System.Drawing.Point(95, 110);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 26);
-            this.textBox3.TabIndex = 11;
+            this.txt_SoPhong.Location = new System.Drawing.Point(95, 110);
+            this.txt_SoPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SoPhong.Name = "txt_SoPhong";
+            this.txt_SoPhong.Size = new System.Drawing.Size(190, 26);
+            this.txt_SoPhong.TabIndex = 11;
             // 
-            // textBox2
+            // txt_TenPTN
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 76);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 26);
-            this.textBox2.TabIndex = 10;
+            this.txt_TenPTN.Location = new System.Drawing.Point(95, 76);
+            this.txt_TenPTN.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_TenPTN.Name = "txt_TenPTN";
+            this.txt_TenPTN.Size = new System.Drawing.Size(190, 26);
+            this.txt_TenPTN.TabIndex = 10;
             // 
-            // textBox1
+            // txt_MaPTN
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 41);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 26);
-            this.textBox1.TabIndex = 9;
+            this.txt_MaPTN.Location = new System.Drawing.Point(95, 41);
+            this.txt_MaPTN.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_MaPTN.Name = "txt_MaPTN";
+            this.txt_MaPTN.Size = new System.Drawing.Size(190, 26);
+            this.txt_MaPTN.TabIndex = 9;
             // 
             // label4
             // 
@@ -233,12 +233,12 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbb_TrangThai;
+        private System.Windows.Forms.TextBox txt_ViTri;
+        private System.Windows.Forms.TextBox txt_Dientich;
+        private System.Windows.Forms.TextBox txt_SoPhong;
+        private System.Windows.Forms.TextBox txt_TenPTN;
+        private System.Windows.Forms.TextBox txt_MaPTN;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
