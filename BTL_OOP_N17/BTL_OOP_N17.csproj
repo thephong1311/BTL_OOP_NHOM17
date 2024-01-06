@@ -186,6 +186,12 @@
     <Compile Include="fAddDanhgialaiTB.Designer.cs">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddLuanChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddLuanChuyen.Designer.cs">
+      <DependentUpon>fAddLuanChuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddNhacungcap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -412,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAddDanhgialaiTB.resx">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddLuanChuyen.resx">
+      <DependentUpon>fAddLuanChuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddNhacungcap.resx">
       <DependentUpon>fAddNhacungcap.cs</DependentUpon>
