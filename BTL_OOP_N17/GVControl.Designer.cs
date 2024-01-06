@@ -210,6 +210,7 @@
             this.mượnThiếtBịToolStripMenuItem.Name = "mượnThiếtBịToolStripMenuItem";
             this.mượnThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mượnThiếtBịToolStripMenuItem.Text = "Mượn thiết bị";
+            this.mượnThiếtBịToolStripMenuItem.Click += new System.EventHandler(this.mượnThiếtBịToolStripMenuItem_Click_1);
             // 
             // danhMụcPhòngThíNghiệmToolStripMenuItem
             // 
@@ -243,7 +244,7 @@
             this.báoCáoTìnhTrạngToolStripMenuItem,
             this.báoCáoYêuCầuMuaToolStripMenuItem});
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // báoCáoKiểmKêToolStripMenuItem
@@ -295,7 +296,7 @@
             this.ClientSize = new System.Drawing.Size(729, 366);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GVControl";
             this.Text = "GVControl";
             this.panel1.ResumeLayout(false);

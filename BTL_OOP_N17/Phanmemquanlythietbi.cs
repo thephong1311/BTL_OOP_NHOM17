@@ -105,7 +105,8 @@ namespace BTL_OOP_N17
 
         private void mượnThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MuonTS f = new MuonTS();
+            f.ShowDialog();
         }
 
         private void thanhLýThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)

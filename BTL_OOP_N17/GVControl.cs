@@ -173,5 +173,11 @@ namespace BTL_OOP_N17
             ReportYCmua f = new ReportYCmua();
             f.ShowDialog();
         }
+
+        private void mượnThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MuonTS f = new MuonTS();
+            f.ShowDialog();
+        }
     }
 }
