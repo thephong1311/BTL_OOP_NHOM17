@@ -150,11 +150,11 @@
             this.btnFind_KK.BorderSize = 1;
             this.btnFind_KK.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFind_KK.FocusedColor = System.Drawing.Color.Empty;
-            this.btnFind_KK.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind_KK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFind_KK.ForeColor = System.Drawing.Color.Black;
             this.btnFind_KK.Image = ((System.Drawing.Image)(resources.GetObject("btnFind_KK.Image")));
             this.btnFind_KK.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFind_KK.Location = new System.Drawing.Point(568, 39);
+            this.btnFind_KK.Location = new System.Drawing.Point(534, 39);
             this.btnFind_KK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind_KK.Name = "btnFind_KK";
             this.btnFind_KK.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -162,7 +162,7 @@
             this.btnFind_KK.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFind_KK.OnHoverImage = null;
             this.btnFind_KK.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind_KK.Size = new System.Drawing.Size(138, 30);
+            this.btnFind_KK.Size = new System.Drawing.Size(149, 30);
             this.btnFind_KK.TabIndex = 12;
             this.btnFind_KK.Text = "Tìm kiếm";
             this.btnFind_KK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -263,7 +263,7 @@
             // 
             this.gunaButton2.AnimationHoverSpeed = 0.07F;
             this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton2.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.gunaButton2.BorderColor = System.Drawing.Color.Black;
             this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
@@ -287,7 +287,7 @@
             // 
             this.gunaButton1.AnimationHoverSpeed = 0.07F;
             this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.SystemColors.Menu;
+            this.gunaButton1.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.gunaButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
@@ -311,7 +311,7 @@
             // 
             this.btnDong.AnimationHoverSpeed = 0.07F;
             this.btnDong.AnimationSpeed = 0.03F;
-            this.btnDong.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnDong.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.btnDong.BorderColor = System.Drawing.Color.Black;
             this.btnDong.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnDong.FocusedColor = System.Drawing.Color.Empty;
@@ -335,7 +335,7 @@
             // 
             this.btnLoad.AnimationHoverSpeed = 0.07F;
             this.btnLoad.AnimationSpeed = 0.03F;
-            this.btnLoad.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnLoad.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.btnLoad.BorderColor = System.Drawing.Color.Black;
             this.btnLoad.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLoad.FocusedColor = System.Drawing.Color.Empty;
@@ -359,7 +359,7 @@
             // 
             this.btnXoa.AnimationHoverSpeed = 0.07F;
             this.btnXoa.AnimationSpeed = 0.03F;
-            this.btnXoa.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnXoa.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.btnXoa.BorderColor = System.Drawing.Color.Black;
             this.btnXoa.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
@@ -367,7 +367,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(695, 10);
+            this.btnXoa.Location = new System.Drawing.Point(686, 10);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -383,7 +383,7 @@
             // 
             this.btnSua.AnimationHoverSpeed = 0.07F;
             this.btnSua.AnimationSpeed = 0.03F;
-            this.btnSua.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnSua.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.btnSua.BorderColor = System.Drawing.Color.Black;
             this.btnSua.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSua.FocusedColor = System.Drawing.Color.Empty;
@@ -391,7 +391,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(567, 10);
+            this.btnSua.Location = new System.Drawing.Point(553, 10);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -407,7 +407,7 @@
             // 
             this.btnThem.AnimationHoverSpeed = 0.07F;
             this.btnThem.AnimationSpeed = 0.03F;
-            this.btnThem.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnThem.BaseColor = System.Drawing.SystemColors.ScrollBar;
             this.btnThem.BorderColor = System.Drawing.Color.Black;
             this.btnThem.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnThem.FocusedColor = System.Drawing.Color.Empty;
@@ -415,7 +415,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(441, 11);
+            this.btnThem.Location = new System.Drawing.Point(427, 10);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));

@@ -27,5 +27,10 @@ namespace BTL_OOP_N17
             sda.Fill(dt);
             return dt;
         }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
