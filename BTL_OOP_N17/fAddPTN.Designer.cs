@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAddPTN));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +71,61 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin chính";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 216);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 19);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Trạng thái";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 178);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 19);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Vị trí";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(95, 208);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(190, 27);
+            this.comboBox2.TabIndex = 8;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(95, 175);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(190, 26);
+            this.textBox5.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(95, 143);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(190, 26);
+            this.textBox4.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(95, 110);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(190, 26);
+            this.textBox3.TabIndex = 11;
+            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(95, 76);
@@ -85,15 +141,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 26);
             this.textBox1.TabIndex = 9;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(95, 208);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 27);
-            this.comboBox2.TabIndex = 8;
             // 
             // label4
             // 
@@ -139,85 +186,39 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên PTN";
             // 
-            // textBox3
+            // btn_Save
             // 
-            this.textBox3.Location = new System.Drawing.Point(95, 110);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 26);
-            this.textBox3.TabIndex = 11;
+            this.btn_Save.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_Save.Image")));
+            this.btn_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Save.Location = new System.Drawing.Point(91, 282);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(86, 27);
+            this.btn_Save.TabIndex = 8;
+            this.btn_Save.Text = "Lưu";
+            this.btn_Save.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // btn_Close
             // 
-            this.textBox4.Location = new System.Drawing.Point(95, 143);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 26);
-            this.textBox4.TabIndex = 12;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(95, 175);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 26);
-            this.textBox5.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 178);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Vị trí";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 216);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 19);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Trạng thái";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::BTL_OOP_N17.Properties.Resources.button__3_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(91, 282);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 27);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Lưu";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::BTL_OOP_N17.Properties.Resources.button__3_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(185, 282);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 27);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Đóng";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Close.Image = global::BTL_OOP_N17.Properties.Resources.button__3_;
+            this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Close.Location = new System.Drawing.Point(185, 282);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(86, 27);
+            this.btn_Close.TabIndex = 7;
+            this.btn_Close.Text = "Đóng";
+            this.btn_Close.UseVisualStyleBackColor = true;
             // 
             // fAddPTN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 328);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Save);
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.groupBox4);
             this.Name = "fAddPTN";
             this.Text = "fAddPTN";
@@ -242,7 +243,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Save;
+        private System.Windows.Forms.Button btn_Close;
     }
 }
