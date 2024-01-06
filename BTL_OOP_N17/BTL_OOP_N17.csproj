@@ -288,6 +288,12 @@
     <Compile Include="ThanhLyTS.Designer.cs">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemMuonTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemMuonTS.Designer.cs">
+      <DependentUpon>ThemMuonTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemTLyTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhLyTS.resx">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemMuonTS.resx">
+      <DependentUpon>ThemMuonTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTLyTS.resx">
       <DependentUpon>ThemTLyTS.cs</DependentUpon>
