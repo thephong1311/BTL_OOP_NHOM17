@@ -52,7 +52,7 @@ namespace BTL_OOP_N17
                             }
                             else
                             {
-                                MessageBox.Show("Không tìm thấy thông tin tài khoản.");
+                                MessageBox.Show("Không tìm thấy thông tin tài khoản.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error );
                             }
                         }
                     }

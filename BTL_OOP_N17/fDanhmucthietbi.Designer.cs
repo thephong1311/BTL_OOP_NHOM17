@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnXuat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.btnXuat);
             this.panel1.Controls.Add(this.btnHuy);
-            this.panel1.Controls.Add(this.btnLuu);
+            this.panel1.Controls.Add(this.btnLoad);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThem);
@@ -60,6 +60,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(796, 98);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(22, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(156, 22);
+            this.textBox1.TabIndex = 22;
             // 
             // btnXuat
             // 
@@ -81,15 +88,15 @@
             this.btnHuy.Text = "Import Excel";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
-            // btnLuu
+            // btnLoad
             // 
-            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnLuu.Location = new System.Drawing.Point(473, 31);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(85, 34);
-            this.btnLuu.TabIndex = 19;
-            this.btnLuu.Text = "Load";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnLoad.Location = new System.Drawing.Point(473, 31);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(85, 34);
+            this.btnLoad.TabIndex = 19;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
@@ -133,6 +140,23 @@
             this.panel2.Size = new System.Drawing.Size(796, 347);
             this.panel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(136, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mã TB";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(225, 28);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(216, 22);
+            this.textBox2.TabIndex = 4;
+            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,30 +189,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(790, 269);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(22, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 22);
-            this.textBox1.TabIndex = 22;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(225, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 22);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Mã TB";
-            // 
             // fDanhmucthietbi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,7 +212,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
