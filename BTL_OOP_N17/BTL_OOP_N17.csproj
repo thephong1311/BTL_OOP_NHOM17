@@ -246,6 +246,12 @@
     <Compile Include="LuanChuyenTS.Designer.cs">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuonTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuonTS.Designer.cs">
+      <DependentUpon>MuonTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nhacungcap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LuanChuyenTS.resx">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuonTS.resx">
+      <DependentUpon>MuonTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>
