@@ -16,5 +16,10 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
