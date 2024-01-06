@@ -348,6 +348,12 @@
     <Compile Include="XemCacYCsuachua.Designer.cs">
       <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemPTN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemPTN.Designer.cs">
+      <DependentUpon>XemPTN.cs</DependentUpon>
+    </Compile>
     <Compile Include="YCKK.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -531,6 +537,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XemCacYCsuachua.resx">
       <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemPTN.resx">
+      <DependentUpon>XemPTN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCKK.resx">
       <DependentUpon>YCKK.cs</DependentUpon>
