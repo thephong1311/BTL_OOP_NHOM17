@@ -210,6 +210,12 @@
     <Compile Include="fAddThietbi.Designer.cs">
       <DependentUpon>fAddThietbi.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddYCmua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddYCmua.Designer.cs">
+      <DependentUpon>fAddYCmua.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddYeucausuachuaTB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,12 @@
     </Compile>
     <Compile Include="LuanChuyenTS.Designer.cs">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuonTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuonTS.Designer.cs">
+      <DependentUpon>MuonTS.cs</DependentUpon>
     </Compile>
     <Compile Include="Nhacungcap.cs">
       <SubType>Form</SubType>
@@ -342,6 +354,12 @@
     <Compile Include="XemCacYCsuachua.Designer.cs">
       <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemPTN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemPTN.Designer.cs">
+      <DependentUpon>XemPTN.cs</DependentUpon>
+    </Compile>
     <Compile Include="YCKK.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -437,6 +455,9 @@
     <EmbeddedResource Include="fAddThietbi.resx">
       <DependentUpon>fAddThietbi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fAddYCmua.resx">
+      <DependentUpon>fAddYCmua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fAddYeucausuachuaTB.resx">
       <DependentUpon>fAddYeucausuachuaTB.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,6 +475,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LuanChuyenTS.resx">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuonTS.resx">
+      <DependentUpon>MuonTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>
@@ -522,6 +546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XemCacYCsuachua.resx">
       <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemPTN.resx">
+      <DependentUpon>XemPTN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCKK.resx">
       <DependentUpon>YCKK.cs</DependentUpon>

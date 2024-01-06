@@ -314,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 406);
+            this.ClientSize = new System.Drawing.Size(852, 406);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Load);

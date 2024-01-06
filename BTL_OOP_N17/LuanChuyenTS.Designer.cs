@@ -33,6 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txt_TimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.btn_TimKiem = new Guna.UI.WinForms.GunaButton();
+            this.txt_Input = new Guna.UI.WinForms.GunaTextBox();
             this.btn_Close = new Guna.UI.WinForms.GunaButton();
             this.btn_Excel = new Guna.UI.WinForms.GunaButton();
             this.btn_Load = new Guna.UI.WinForms.GunaButton();
@@ -40,7 +41,6 @@
             this.btn_Edit = new Guna.UI.WinForms.GunaButton();
             this.btn_Add = new Guna.UI.WinForms.GunaButton();
             this.btn_Find = new Guna.UI.WinForms.GunaButton();
-            this.txt_Input = new Guna.UI.WinForms.GunaTextBox();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -55,10 +55,9 @@
             this.gunaGroupBox1.Controls.Add(this.btn_TimKiem);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(13, 68);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(10, 55);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(1008, 403);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(789, 327);
             this.gunaGroupBox1.TabIndex = 11;
             this.gunaGroupBox1.Text = "Thông tin chi tiết";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -67,11 +66,10 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 84);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 68);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(996, 305);
+            this.dataGridView1.Size = new System.Drawing.Size(747, 248);
             this.dataGridView1.TabIndex = 1;
             // 
             // txt_TimKiem
@@ -83,12 +81,11 @@
             this.txt_TimKiem.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem.Location = new System.Drawing.Point(92, 40);
-            this.txt_TimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem.Location = new System.Drawing.Point(13, 32);
             this.txt_TimKiem.Name = "txt_TimKiem";
             this.txt_TimKiem.PasswordChar = '\0';
             this.txt_TimKiem.SelectedText = "";
-            this.txt_TimKiem.Size = new System.Drawing.Size(343, 37);
+            this.txt_TimKiem.Size = new System.Drawing.Size(257, 30);
             this.txt_TimKiem.TabIndex = 11;
             // 
             // btn_TimKiem
@@ -103,18 +100,33 @@
             this.btn_TimKiem.ForeColor = System.Drawing.Color.Black;
             this.btn_TimKiem.Image = null;
             this.btn_TimKiem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_TimKiem.Location = new System.Drawing.Point(457, 40);
-            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TimKiem.Location = new System.Drawing.Point(289, 33);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_TimKiem.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_TimKiem.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem.OnHoverImage = null;
             this.btn_TimKiem.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem.Size = new System.Drawing.Size(96, 36);
+            this.btn_TimKiem.Size = new System.Drawing.Size(72, 29);
             this.btn_TimKiem.TabIndex = 12;
             this.btn_TimKiem.Text = "Find";
             this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
+            // txt_Input
+            // 
+            this.txt_Input.BaseColor = System.Drawing.Color.White;
+            this.txt_Input.BorderColor = System.Drawing.Color.Silver;
+            this.txt_Input.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Input.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_Input.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_Input.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_Input.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Input.Location = new System.Drawing.Point(10, 21);
+            this.txt_Input.Name = "txt_Input";
+            this.txt_Input.PasswordChar = '\0';
+            this.txt_Input.SelectedText = "";
+            this.txt_Input.Size = new System.Drawing.Size(160, 28);
+            this.txt_Input.TabIndex = 34;
             // 
             // btn_Close
             // 
@@ -128,15 +140,14 @@
             this.btn_Close.ForeColor = System.Drawing.Color.Black;
             this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
             this.btn_Close.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Close.Location = new System.Drawing.Point(888, 26);
-            this.btn_Close.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Close.Location = new System.Drawing.Point(705, 21);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Close.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Close.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Close.OnHoverImage = null;
             this.btn_Close.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Close.Size = new System.Drawing.Size(111, 34);
+            this.btn_Close.Size = new System.Drawing.Size(94, 28);
             this.btn_Close.TabIndex = 41;
             this.btn_Close.Text = "Đóng lại";
             // 
@@ -152,15 +163,14 @@
             this.btn_Excel.ForeColor = System.Drawing.Color.Black;
             this.btn_Excel.Image = ((System.Drawing.Image)(resources.GetObject("btn_Excel.Image")));
             this.btn_Excel.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Excel.Location = new System.Drawing.Point(765, 26);
-            this.btn_Excel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Excel.Location = new System.Drawing.Point(594, 21);
             this.btn_Excel.Name = "btn_Excel";
             this.btn_Excel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Excel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Excel.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Excel.OnHoverImage = null;
             this.btn_Excel.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Excel.Size = new System.Drawing.Size(115, 34);
+            this.btn_Excel.Size = new System.Drawing.Size(105, 28);
             this.btn_Excel.TabIndex = 40;
             this.btn_Excel.Text = "Xuất Excel";
             // 
@@ -176,15 +186,14 @@
             this.btn_Load.ForeColor = System.Drawing.Color.Black;
             this.btn_Load.Image = ((System.Drawing.Image)(resources.GetObject("btn_Load.Image")));
             this.btn_Load.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Load.Location = new System.Drawing.Point(671, 26);
-            this.btn_Load.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Load.Location = new System.Drawing.Point(515, 21);
             this.btn_Load.Name = "btn_Load";
             this.btn_Load.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Load.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Load.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Load.OnHoverImage = null;
             this.btn_Load.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Load.Size = new System.Drawing.Size(86, 34);
+            this.btn_Load.Size = new System.Drawing.Size(73, 28);
             this.btn_Load.TabIndex = 39;
             this.btn_Load.Text = "Load";
             // 
@@ -200,15 +209,14 @@
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
             this.btn_Delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_Delete.Image")));
             this.btn_Delete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Delete.Location = new System.Drawing.Point(564, 26);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Delete.Location = new System.Drawing.Point(436, 21);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Delete.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Delete.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Delete.OnHoverImage = null;
             this.btn_Delete.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Delete.Size = new System.Drawing.Size(86, 34);
+            this.btn_Delete.Size = new System.Drawing.Size(64, 28);
             this.btn_Delete.TabIndex = 38;
             this.btn_Delete.Text = "Xóa";
             // 
@@ -224,15 +232,14 @@
             this.btn_Edit.ForeColor = System.Drawing.Color.Black;
             this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
             this.btn_Edit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Edit.Location = new System.Drawing.Point(423, 26);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Edit.Location = new System.Drawing.Point(331, 21);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Edit.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Edit.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Edit.OnHoverImage = null;
             this.btn_Edit.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Edit.Size = new System.Drawing.Size(124, 34);
+            this.btn_Edit.Size = new System.Drawing.Size(99, 28);
             this.btn_Edit.TabIndex = 37;
             this.btn_Edit.Text = "Chỉnh sửa";
             // 
@@ -248,15 +255,14 @@
             this.btn_Add.ForeColor = System.Drawing.Color.Black;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(324, 26);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Add.Location = new System.Drawing.Point(243, 21);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Add.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Add.OnHoverImage = null;
             this.btn_Add.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Add.Size = new System.Drawing.Size(91, 34);
+            this.btn_Add.Size = new System.Drawing.Size(82, 28);
             this.btn_Add.TabIndex = 36;
             this.btn_Add.Text = "Thêm";
             // 
@@ -272,40 +278,22 @@
             this.btn_Find.ForeColor = System.Drawing.Color.Black;
             this.btn_Find.Image = null;
             this.btn_Find.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Find.Location = new System.Drawing.Point(239, 26);
-            this.btn_Find.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Find.Location = new System.Drawing.Point(179, 21);
             this.btn_Find.Name = "btn_Find";
             this.btn_Find.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Find.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Find.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Find.OnHoverImage = null;
             this.btn_Find.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Find.Size = new System.Drawing.Size(77, 34);
+            this.btn_Find.Size = new System.Drawing.Size(58, 28);
             this.btn_Find.TabIndex = 35;
             this.btn_Find.Text = "Tìm kiếm";
             // 
-            // txt_Input
-            // 
-            this.txt_Input.BaseColor = System.Drawing.Color.White;
-            this.txt_Input.BorderColor = System.Drawing.Color.Silver;
-            this.txt_Input.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Input.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_Input.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_Input.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_Input.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Input.Location = new System.Drawing.Point(13, 26);
-            this.txt_Input.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Input.Name = "txt_Input";
-            this.txt_Input.PasswordChar = '\0';
-            this.txt_Input.SelectedText = "";
-            this.txt_Input.Size = new System.Drawing.Size(213, 34);
-            this.txt_Input.TabIndex = 34;
-            // 
             // LuanChuyenTS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 484);
+            this.ClientSize = new System.Drawing.Size(811, 393);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_Excel);
             this.Controls.Add(this.btn_Load);
@@ -315,7 +303,6 @@
             this.Controls.Add(this.btn_Find);
             this.Controls.Add(this.txt_Input);
             this.Controls.Add(this.gunaGroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LuanChuyenTS";
             this.Text = "Luân chuyển thiết bị";
             this.Load += new System.EventHandler(this.LuanChuyenTS_Load);
@@ -336,7 +323,7 @@
         private Guna.UI.WinForms.GunaButton btn_Delete;
         private Guna.UI.WinForms.GunaButton btn_Edit;
         private Guna.UI.WinForms.GunaButton btn_Add;
-        private Guna.UI.WinForms.GunaButton btn_Find;
         private Guna.UI.WinForms.GunaTextBox txt_Input;
+        private Guna.UI.WinForms.GunaButton btn_Find;
     }
 }
