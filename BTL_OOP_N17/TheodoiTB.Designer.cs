@@ -145,7 +145,6 @@
             this.ycThanhly1.Name = "ycThanhly1";
             this.ycThanhly1.Size = new System.Drawing.Size(1209, 355);
             this.ycThanhly1.TabIndex = 4;
-            this.ycThanhly1.Load += new System.EventHandler(this.ycThanhly1_Load);
             // 
             // xemCacYCMua1
             // 
@@ -210,6 +209,7 @@
             this.btnThemLC.TabIndex = 2;
             this.btnThemLC.Text = "Thêm phiếu luân chuyển";
             this.btnThemLC.UseVisualStyleBackColor = true;
+            this.btnThemLC.Click += new System.EventHandler(this.btnThemLC_Click);
             // 
             // btnThemSC
             // 

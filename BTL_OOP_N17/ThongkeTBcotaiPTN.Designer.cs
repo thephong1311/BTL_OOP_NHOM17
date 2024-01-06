@@ -30,7 +30,7 @@
         {
             this.btnFind = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFind = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,6 +45,7 @@
             this.btnFind.TabIndex = 0;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // button1
             // 
@@ -55,13 +56,14 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtFind
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtFind.Location = new System.Drawing.Point(207, 22);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(285, 22);
+            this.txtFind.TabIndex = 2;
             // 
             // dataGridView1
             // 
@@ -90,7 +92,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFind);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnFind);
             this.Name = "ThongkeTBcotaiPTN";
@@ -105,7 +107,7 @@
 
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
     }
