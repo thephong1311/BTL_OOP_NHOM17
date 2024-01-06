@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btn_BCtheoTG = new Guna.UI.WinForms.GunaButton();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btn_bcPTN = new Guna.UI.WinForms.GunaButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -116,7 +116,7 @@
             this.guna2GroupBox2.Controls.Add(this.label2);
             this.guna2GroupBox2.Controls.Add(this.dateTimePicker2);
             this.guna2GroupBox2.Controls.Add(this.dateTimePicker1);
-            this.guna2GroupBox2.Controls.Add(this.gunaButton1);
+            this.guna2GroupBox2.Controls.Add(this.btn_BCtheoTG);
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox2.Location = new System.Drawing.Point(252, 24);
@@ -149,28 +149,28 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(212, 25);
             this.dateTimePicker1.TabIndex = 29;
             // 
-            // gunaButton1
+            // btn_BCtheoTG
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.Silver;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(516, 49);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(78, 23);
-            this.gunaButton1.TabIndex = 28;
-            this.gunaButton1.Text = "BC theo TG";
+            this.btn_BCtheoTG.AnimationHoverSpeed = 0.07F;
+            this.btn_BCtheoTG.AnimationSpeed = 0.03F;
+            this.btn_BCtheoTG.BaseColor = System.Drawing.Color.Silver;
+            this.btn_BCtheoTG.BorderColor = System.Drawing.Color.Black;
+            this.btn_BCtheoTG.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_BCtheoTG.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_BCtheoTG.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BCtheoTG.ForeColor = System.Drawing.Color.Black;
+            this.btn_BCtheoTG.Image = null;
+            this.btn_BCtheoTG.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_BCtheoTG.Location = new System.Drawing.Point(516, 49);
+            this.btn_BCtheoTG.Name = "btn_BCtheoTG";
+            this.btn_BCtheoTG.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_BCtheoTG.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_BCtheoTG.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_BCtheoTG.OnHoverImage = null;
+            this.btn_BCtheoTG.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_BCtheoTG.Size = new System.Drawing.Size(78, 23);
+            this.btn_BCtheoTG.TabIndex = 28;
+            this.btn_BCtheoTG.Text = "BC theo TG";
             // 
             // guna2GroupBox1
             // 
@@ -254,7 +254,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btn_BCtheoTG;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI.WinForms.GunaButton btn_bcPTN;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
