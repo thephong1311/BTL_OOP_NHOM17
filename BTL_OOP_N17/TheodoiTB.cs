@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BTL_OOP_N17.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +18,7 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
             thongkeTBcotaiPTN1.Visible = false;
-            xemCacYCMuon1.Visible = false;  
+            xemCacYCMuon1.Visible = false;
             xemCacYCMua1.Visible = false;
             xemCacYCsuachua1.Visible = false;
             ycThanhly1.Visible = false;
@@ -26,7 +28,7 @@ namespace BTL_OOP_N17
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             thongkeTBcotaiPTN1.ResetState();
-            thongkeTBcotaiPTN1.Visible=true;
+            thongkeTBcotaiPTN1.Visible = true;
             xemCacYCMua1.Visible = false;
             xemCacYCMuon1.Visible = false;
             xemCacYCsuachua1.Visible = false;
@@ -38,7 +40,7 @@ namespace BTL_OOP_N17
         private void xemCácYCMượnTBToolStripMenuItem_Click(object sender, EventArgs e)
         {
             xemCacYCMuon1.ResetText();
-            xemCacYCMuon1.Visible=true;
+            xemCacYCMuon1.Visible = true;
             xemCacYCMua1.Visible = false;
             xemCacYCsuachua1.Visible = false;
             thongkeTBcotaiPTN1.Visible = false;
@@ -50,7 +52,7 @@ namespace BTL_OOP_N17
         private void xToolStripMenuItem_Click(object sender, EventArgs e)
         {
             xemCacYCMua1.ResetText();
-            xemCacYCMua1.Visible=true;
+            xemCacYCMua1.Visible = true;
             xemCacYCsuachua1.Visible = false;
             thongkeTBcotaiPTN1.Visible = false;
             xemCacYCMuon1.Visible = false;
@@ -62,7 +64,7 @@ namespace BTL_OOP_N17
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             xemCacYCsuachua1.ResetText();
-            xemCacYCsuachua1.Visible=true;
+            xemCacYCsuachua1.Visible = true;
             thongkeTBcotaiPTN1.Visible = false;
             xemCacYCMuon1.Visible = false;
             xemCacYCMua1.Visible = false;
@@ -109,6 +111,17 @@ namespace BTL_OOP_N17
         }
 
         private void ycThanhly1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemYCmuon_Click(object sender, EventArgs e)
+        {
+            YCmua f = new YCmua();
+            f.ShowDialog();
+        }
+
+        private void btnThemSC_Click(object sender, EventArgs e)
         {
 
         }

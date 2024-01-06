@@ -1,4 +1,5 @@
 ﻿using BTL_OOP_N17.DAO;
+using DevExpress.XtraPrinting.Native;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,23 @@ namespace BTL_OOP_N17
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
+        }
+        public DataTable findYCmua()
+        {
+            SqlDataAdapter find = new SqlDataAdapter("SELECT * from YEUCAUMUATS WHERE MAPTN = " + txtFind.Text, con);
+            DataTable dt_find = new DataTable();
+            find.Fill(dt_find);
+            return dt_find; 
+        }
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = findYCmua();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFind.Text = "";
+            dataGridView1.DataSource=null;
         }
     }
 }

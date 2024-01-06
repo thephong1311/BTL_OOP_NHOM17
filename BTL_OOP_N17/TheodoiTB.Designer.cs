@@ -45,9 +45,9 @@
             this.thongkeTBcotaiPTN1 = new BTL_OOP_N17.ThongkeTBcotaiPTN();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnThemLC = new System.Windows.Forms.Button();
+            this.btnThemSC = new System.Windows.Forms.Button();
+            this.btnThemYCmuon = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             // danhgiaTB1
             // 
-            this.danhgiaTB1.Location = new System.Drawing.Point(20, 0);
+            this.danhgiaTB1.Location = new System.Drawing.Point(24, 13);
             this.danhgiaTB1.Name = "danhgiaTB1";
             this.danhgiaTB1.Size = new System.Drawing.Size(1215, 342);
             this.danhgiaTB1.TabIndex = 2;
@@ -201,42 +201,44 @@
             this.panel6.Size = new System.Drawing.Size(1246, 393);
             this.panel6.TabIndex = 5;
             // 
-            // button5
+            // btnThemLC
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(12, 123);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(249, 36);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Thêm phiếu luân chuyển";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnThemLC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLC.Location = new System.Drawing.Point(12, 123);
+            this.btnThemLC.Name = "btnThemLC";
+            this.btnThemLC.Size = new System.Drawing.Size(249, 36);
+            this.btnThemLC.TabIndex = 2;
+            this.btnThemLC.Text = "Thêm phiếu luân chuyển";
+            this.btnThemLC.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnThemSC
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(12, 72);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(249, 36);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Thêm phiếu sửa chữa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnThemSC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemSC.Location = new System.Drawing.Point(12, 72);
+            this.btnThemSC.Name = "btnThemSC";
+            this.btnThemSC.Size = new System.Drawing.Size(249, 36);
+            this.btnThemSC.TabIndex = 1;
+            this.btnThemSC.Text = "Thêm phiếu sửa chữa";
+            this.btnThemSC.UseVisualStyleBackColor = true;
+            this.btnThemSC.Click += new System.EventHandler(this.btnThemSC_Click);
             // 
-            // button3
+            // btnThemYCmuon
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(249, 36);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Thêm phiếu yêu cầu mượn";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnThemYCmuon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemYCmuon.Location = new System.Drawing.Point(12, 19);
+            this.btnThemYCmuon.Name = "btnThemYCmuon";
+            this.btnThemYCmuon.Size = new System.Drawing.Size(249, 36);
+            this.btnThemYCmuon.TabIndex = 0;
+            this.btnThemYCmuon.Text = "Thêm phiếu yêu cầu mượn";
+            this.btnThemYCmuon.UseVisualStyleBackColor = true;
+            this.btnThemYCmuon.Click += new System.EventHandler(this.btnThemYCmuon_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.btnThemLC);
+            this.panel4.Controls.Add(this.btnThemSC);
+            this.panel4.Controls.Add(this.btnThemYCmuon);
             this.panel4.Location = new System.Drawing.Point(5, 225);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(269, 169);
@@ -274,9 +276,9 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnThemLC;
+        private System.Windows.Forms.Button btnThemSC;
+        private System.Windows.Forms.Button btnThemYCmuon;
         private System.Windows.Forms.Panel panel4;
         private XemCacYCMuon xemCacYCMuon1;
         private XemCacYCMua xemCacYCMua1;
