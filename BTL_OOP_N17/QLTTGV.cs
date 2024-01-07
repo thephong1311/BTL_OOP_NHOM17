@@ -38,7 +38,6 @@ namespace BTL_OOP_N17
             // TODO: This line of code loads data into the 'qLTS2DataSet.GIAOVIEN' table. You can move, or remove it, as needed.
             InitializeDataGridView();
             dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
-
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,7 +69,7 @@ namespace BTL_OOP_N17
 
         private void DisplayStudentInfo(string magv, string username, string diachi, string sdt, string chucvu)
         {
-            // Hiển thị thông tin sinh viên trong GroupBox
+            // Hiển thị thông tin giáo viên trong GroupBox
             txtMaGV.Text = magv;
             txtTenGV.Text = username;
             txtDiaChi.Text = diachi;
@@ -228,5 +227,123 @@ namespace BTL_OOP_N17
                 con.Close();
             }
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            string magv = txtMaGV.Text;
+            string username = txtTenGV.Text;
+            string diachi = txtDiaChi.Text;
+            string sdt = txtSDTGV.Text;
+            string chucvu = txtChucvu.Text;
+
+                // Gọi phương thức ThemGVmoi để thêm giáo viên mới vào cơ sở dữ liệu
+                ThemGVmoi(magv, username, diachi, sdt, chucvu);
+
+                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+                InitializeDataGridView();
+
+                MessageBox.Show("Đã thêm giáo viên mới thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    // Lấy mã giáo viên từ hàng được chọn
+                    string magv = dataGridView1.SelectedRows[0].Cells["MaGV"].Value.ToString();
+
+                    // Hiển thị hộp thoại xác nhận
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa giáo viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                    if (result == DialogResult.Yes)
+                    {
+                        // Gọi hàm DeleteGV để xóa giáo viên
+                        DeleteGV(magv);
+
+                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                        InitializeDataGridView();
+
+                        MessageBox.Show("Đã xóa giáo viên thành công!");
+                    }
+                    // Nếu người dùng chọn No, không thực hiện xóa
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một giáo viên để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            // Hiển thị hộp thoại xác nhận sửa
+            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Kiểm tra xem người dùng đã đồng ý sửa hay không
+            if (result == DialogResult.Yes)
+            {
+                // Lấy dữ liệu từ TextBox
+                string magv = txtMaGV.Text;
+                string username = txtTenGV.Text;
+                string diachi = txtDiaChi.Text;
+                string sdt = txtSDTGV.Text;
+                string chucvu = txtChucvu.Text;
+
+                // Cập nhật dữ liệu trong DataGridView
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                selectedRow.Cells["MaGV"].Value = magv;
+                selectedRow.Cells["TENGV"].Value = username;
+                selectedRow.Cells["DIACHIGV"].Value = diachi;
+                selectedRow.Cells["SDTGV"].Value = sdt;
+                selectedRow.Cells["CHUCVUGV"].Value = chucvu;
+
+                // Hiển thị thông tin trong GroupBox (nếu cần)
+                DisplayStudentInfo(magv, username, diachi, sdt, chucvu);
+
+                // Đặt lại TextBox sau khi cập nhật
+                ClearTextBoxes();
+            }
+        }
+
+        private void ClearTextBoxes()
+        {
+            // Xóa nội dung trong TextBox
+            txtMaGV.Text = "";
+            txtTenGV.Text = "";
+            txtDiaChi.Text = "";
+            txtSDTGV.Text = "";
+            txtChucvu.Text = "";
+            // ...Xóa các TextBox khác tương ứng
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {  
+                // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+                InitializeDataGridView();
+                // Xóa nội dung trong các ô TextBox
+                ClearTextBoxes();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
+

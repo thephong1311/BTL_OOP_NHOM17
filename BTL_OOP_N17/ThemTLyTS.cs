@@ -16,5 +16,7 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
         }
+
+        
     }
 }

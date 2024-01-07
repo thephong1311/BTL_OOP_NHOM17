@@ -33,7 +33,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTTGV));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.btnDong = new Guna.UI.WinForms.GunaButton();
             this.btnLoad = new Guna.UI.WinForms.GunaButton();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
@@ -41,7 +40,6 @@
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnFind = new System.Windows.Forms.Button();
-            this.txtFind = new System.Windows.Forms.TextBox();
             this.txtSDTGV = new System.Windows.Forms.TextBox();
             this.txtTenGV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,7 +56,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnXuat);
             this.groupBox1.Controls.Add(this.btnDong);
             this.groupBox1.Controls.Add(this.btnLoad);
             this.groupBox1.Controls.Add(this.btnXoa);
@@ -66,7 +63,6 @@
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.btnFind);
-            this.groupBox1.Controls.Add(this.txtFind);
             this.groupBox1.Controls.Add(this.txtSDTGV);
             this.groupBox1.Controls.Add(this.txtTenGV);
             this.groupBox1.Controls.Add(this.label5);
@@ -88,30 +84,6 @@
             this.groupBox1.Text = "Thông tin giáo viên ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnXuat
-            // 
-            this.btnXuat.AnimationHoverSpeed = 0.07F;
-            this.btnXuat.AnimationSpeed = 0.03F;
-            this.btnXuat.BaseColor = System.Drawing.SystemColors.Menu;
-            this.btnXuat.BorderColor = System.Drawing.Color.Black;
-            this.btnXuat.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnXuat.FocusedColor = System.Drawing.Color.Empty;
-            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
-            this.btnXuat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXuat.Location = new System.Drawing.Point(708, 134);
-            this.btnXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnXuat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnXuat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnXuat.OnHoverImage = null;
-            this.btnXuat.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXuat.Size = new System.Drawing.Size(133, 35);
-            this.btnXuat.TabIndex = 24;
-            this.btnXuat.Text = "Xuất Excel";
-            // 
             // btnDong
             // 
             this.btnDong.AnimationHoverSpeed = 0.07F;
@@ -124,7 +96,7 @@
             this.btnDong.ForeColor = System.Drawing.Color.Black;
             this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDong.Location = new System.Drawing.Point(579, 134);
+            this.btnDong.Location = new System.Drawing.Point(745, 134);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDong.Name = "btnDong";
             this.btnDong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -135,6 +107,7 @@
             this.btnDong.Size = new System.Drawing.Size(135, 35);
             this.btnDong.TabIndex = 23;
             this.btnDong.Text = "Đóng lại ";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnLoad
             // 
@@ -148,7 +121,7 @@
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
             this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
             this.btnLoad.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLoad.Location = new System.Drawing.Point(467, 134);
+            this.btnLoad.Location = new System.Drawing.Point(618, 134);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -159,6 +132,7 @@
             this.btnLoad.Size = new System.Drawing.Size(96, 35);
             this.btnLoad.TabIndex = 22;
             this.btnLoad.Text = "Load";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnXoa
             // 
@@ -172,7 +146,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(353, 134);
+            this.btnXoa.Location = new System.Drawing.Point(468, 134);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -183,6 +157,7 @@
             this.btnXoa.Size = new System.Drawing.Size(119, 35);
             this.btnXoa.TabIndex = 21;
             this.btnXoa.Text = "Xóa bỏ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -196,7 +171,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(223, 134);
+            this.btnSua.Location = new System.Drawing.Point(313, 134);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -207,6 +182,7 @@
             this.btnSua.Size = new System.Drawing.Size(132, 35);
             this.btnSua.TabIndex = 20;
             this.btnSua.Text = "Chỉnh sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -220,7 +196,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(75, 134);
+            this.btnThem.Location = new System.Drawing.Point(144, 134);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -231,58 +207,51 @@
             this.btnThem.Size = new System.Drawing.Size(135, 35);
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 234);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 183);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(865, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(879, 241);
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(485, 183);
+            this.btnFind.Location = new System.Drawing.Point(25, 134);
             this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 32);
+            this.btnFind.Size = new System.Drawing.Size(79, 35);
             this.btnFind.TabIndex = 17;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // txtFind
-            // 
-            this.txtFind.Location = new System.Drawing.Point(25, 185);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(433, 29);
-            this.txtFind.TabIndex = 16;
-            // 
             // txtSDTGV
             // 
-            this.txtSDTGV.Location = new System.Drawing.Point(489, 65);
+            this.txtSDTGV.Location = new System.Drawing.Point(557, 65);
             this.txtSDTGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSDTGV.Name = "txtSDTGV";
-            this.txtSDTGV.Size = new System.Drawing.Size(225, 29);
+            this.txtSDTGV.Size = new System.Drawing.Size(310, 29);
             this.txtSDTGV.TabIndex = 9;
             // 
             // txtTenGV
             // 
-            this.txtTenGV.Location = new System.Drawing.Point(489, 33);
+            this.txtTenGV.Location = new System.Drawing.Point(557, 28);
             this.txtTenGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenGV.Name = "txtTenGV";
-            this.txtTenGV.Size = new System.Drawing.Size(225, 29);
+            this.txtTenGV.Size = new System.Drawing.Size(310, 29);
             this.txtTenGV.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(373, 65);
+            this.label5.Location = new System.Drawing.Point(441, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 23);
             this.label5.TabIndex = 7;
@@ -291,7 +260,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(371, 37);
+            this.label4.Location = new System.Drawing.Point(441, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 23);
             this.label4.TabIndex = 6;
@@ -302,7 +271,7 @@
             this.txtChucvu.Location = new System.Drawing.Point(144, 89);
             this.txtChucvu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChucvu.Name = "txtChucvu";
-            this.txtChucvu.Size = new System.Drawing.Size(211, 29);
+            this.txtChucvu.Size = new System.Drawing.Size(291, 29);
             this.txtChucvu.TabIndex = 5;
             // 
             // txtDiaChi
@@ -310,7 +279,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(144, 55);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(211, 29);
+            this.txtDiaChi.Size = new System.Drawing.Size(291, 29);
             this.txtDiaChi.TabIndex = 4;
             // 
             // txtMaGV
@@ -318,7 +287,7 @@
             this.txtMaGV.Location = new System.Drawing.Point(144, 23);
             this.txtMaGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(211, 29);
+            this.txtMaGV.Size = new System.Drawing.Size(291, 29);
             this.txtMaGV.TabIndex = 3;
             // 
             // label3
@@ -380,8 +349,6 @@
         private System.Windows.Forms.TextBox txtMaGV;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.TextBox txtFind;
-        private Guna.UI.WinForms.GunaButton btnXuat;
         private Guna.UI.WinForms.GunaButton btnDong;
         private Guna.UI.WinForms.GunaButton btnLoad;
         private Guna.UI.WinForms.GunaButton btnXoa;
