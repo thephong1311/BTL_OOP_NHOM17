@@ -98,9 +98,10 @@
             this.btnDong.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDong.OnHoverImage = null;
             this.btnDong.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDong.Size = new System.Drawing.Size(88, 19);
+            this.btnDong.Size = new System.Drawing.Size(88, 28);
             this.btnDong.TabIndex = 46;
             this.btnDong.Text = "Đóng lại ";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnLoad
             // 
@@ -122,7 +123,7 @@
             this.btnLoad.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLoad.OnHoverImage = null;
             this.btnLoad.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLoad.Size = new System.Drawing.Size(72, 19);
+            this.btnLoad.Size = new System.Drawing.Size(72, 28);
             this.btnLoad.TabIndex = 45;
             this.btnLoad.Text = "Load";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
@@ -147,7 +148,7 @@
             this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
             this.btnXoa.OnHoverImage = null;
             this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXoa.Size = new System.Drawing.Size(83, 19);
+            this.btnXoa.Size = new System.Drawing.Size(83, 28);
             this.btnXoa.TabIndex = 44;
             this.btnXoa.Text = "Xóa bỏ";
             // 
@@ -171,7 +172,7 @@
             this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
             this.btnSua.OnHoverImage = null;
             this.btnSua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(105, 19);
+            this.btnSua.Size = new System.Drawing.Size(105, 29);
             this.btnSua.TabIndex = 43;
             this.btnSua.Text = "Chỉnh sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -196,7 +197,7 @@
             this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
             this.btnThem.OnHoverImage = null;
             this.btnThem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThem.Size = new System.Drawing.Size(98, 19);
+            this.btnThem.Size = new System.Drawing.Size(98, 28);
             this.btnThem.TabIndex = 42;
             this.btnThem.Text = "Thêm mới";
             // 
@@ -220,7 +221,7 @@
             this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFind.OnHoverImage = null;
             this.btnFind.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind.Size = new System.Drawing.Size(98, 19);
+            this.btnFind.Size = new System.Drawing.Size(110, 28);
             this.btnFind.TabIndex = 48;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);

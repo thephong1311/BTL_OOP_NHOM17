@@ -59,7 +59,7 @@ namespace BTL_OOP_N17
         }
         private void ShowInfo(string malc, string lcdi, string lcden, string magv, string ngaylc, string lydo)
         {
-            // Hiển thị thông tin giáo viên trong GroupBox
+           
             txtMP.Text = malc;
             txtLCdi.Text = lcdi;
             txtLCden.Text = lcden;
@@ -213,7 +213,7 @@ namespace BTL_OOP_N17
 
                 InitializeDataGridView();
 
-                MessageBox.Show("Đã thêm thông tin thanh lý mới thành công!");
+                MessageBox.Show("Đã thêm thông tin luân chuyển mới thành công!");
             }
             catch (Exception ex)
             {
@@ -243,13 +243,13 @@ namespace BTL_OOP_N17
                         // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
 
-                        MessageBox.Show("Đã xóa luân chuyển thành công!");
+                        MessageBox.Show("Đã xóa thông tin luân chuyển thành công!");
                     }
                     // Nếu người dùng chọn No, không thực hiện xóa
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn một luân chuyển  để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Vui lòng chọn một luân chuyển để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -307,6 +307,11 @@ namespace BTL_OOP_N17
             InitializeDataGridView();
             // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

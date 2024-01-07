@@ -42,7 +42,7 @@ namespace BTL_OOP_N17
         }
         private void ShowInfo(string makk, string magv, string maptn, string ngaykk, string mota)
         {
-            // Hiển thị thông tin giáo viên trong GroupBox
+            
             txtMAKK.Text = makk;
             txtMAGV.Text = magv;
             txtMAPTN.Text = maptn;
@@ -132,7 +132,7 @@ namespace BTL_OOP_N17
         }
         public void ThemKKmoi(string makk, string magv, string maptn, string ngaykk, string mota)
         {
-            // Thêm một tài khoản mới vào cơ sở dữ liệu
+           
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
             try
             {
@@ -205,7 +205,7 @@ namespace BTL_OOP_N17
                     string makk = (dgvThongTinKK.SelectedRows[0].Cells["MAKK"].Value.ToString());
 
                     // Hiển thị hộp thoại xác nhận
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thanh lý này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin kiểm kê này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result == DialogResult.Yes)
@@ -222,7 +222,7 @@ namespace BTL_OOP_N17
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn một kiểm kê để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Vui lòng chọn một thông tin kiểm kê để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -299,6 +299,11 @@ namespace BTL_OOP_N17
             txtMAPTN.Text = "";
             txtMOTA.Text = "";
             dtKK.Format = DateTimePickerFormat.Custom; ;
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
