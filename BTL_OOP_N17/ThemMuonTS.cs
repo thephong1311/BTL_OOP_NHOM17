@@ -80,7 +80,7 @@ namespace BTL_OOP_N17
                     cmd.Parameters.AddWithValue("@dungtich", txtDungtich.Text);
                     cmd.Parameters.AddWithValue("@slmuon", txtSoluongMuon.Text);
                     cmd.Parameters.AddWithValue("@tgian", txtTgianMuon.Text);
-                    cmd.Parameters.AddWithValue("@slmuontt", txtTgianMuon.Text);
+                    cmd.Parameters.AddWithValue("@slmuontt", txtSLMuonTT.Text);
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
