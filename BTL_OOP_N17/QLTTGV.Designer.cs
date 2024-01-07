@@ -107,6 +107,7 @@
             this.btnDong.Size = new System.Drawing.Size(135, 35);
             this.btnDong.TabIndex = 23;
             this.btnDong.Text = "Đóng lại ";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnLoad
             // 
@@ -131,6 +132,7 @@
             this.btnLoad.Size = new System.Drawing.Size(96, 35);
             this.btnLoad.TabIndex = 22;
             this.btnLoad.Text = "Load";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnXoa
             // 

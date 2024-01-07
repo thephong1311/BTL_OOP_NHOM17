@@ -332,7 +332,18 @@ namespace BTL_OOP_N17
             // ...Xóa các TextBox khác tương ứng
         }
 
+        private void btnLoad_Click(object sender, EventArgs e)
+        {  
+                // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+                InitializeDataGridView();
+                // Xóa nội dung trong các ô TextBox
+                ClearTextBoxes();
+        }
 
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 
