@@ -21,15 +21,9 @@ namespace BTL_OOP_N17
             dataGridView1.DataSource = infoCHITIETTHANHLYGridView();
         }
 
-        private void dgvTSTL_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnDsTs_Click(object sender, EventArgs e)
         {
