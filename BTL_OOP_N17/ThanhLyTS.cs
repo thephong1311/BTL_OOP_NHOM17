@@ -18,26 +18,11 @@ namespace BTL_OOP_N17
         public ThanhLyTB()
         {
             InitializeComponent();
-            dataGridView1.DataSource = infoCHITIETTHANHLYGridView();
+            dataGridView1.DataSource = infoYCCHITIETTHANHLYGridView();
         }
-
-        private void dgvTSTL_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public DataTable infoYCCHITIETTHANHLYGridView()
         {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDsTs_Click(object sender, EventArgs e)
-        {
-
-        }
-        public DataTable infoCHITIETTHANHLYGridView()
-        {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from CHITIET_TL", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from THANHLYTS", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
