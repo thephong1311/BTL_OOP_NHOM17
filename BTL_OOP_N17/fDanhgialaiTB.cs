@@ -41,5 +41,149 @@ namespace BTL_OOP_N17
             sda.Fill(dt);
             return dt;
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            fAddDanhgialaiTB f=new fAddDanhgialaiTB();
+            f.ShowDialog();
+        }
+        public void DeleteDGTS(string mats)
+        {
+            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM DANHGIATS WHERE MADGKTS = @madglts", con))
+            {
+                cmd.Parameters.AddWithValue("@madglts", mats);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+        public void DeleteCTDGTS(string mats)
+        {
+            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM CHITIET_DGTS WHERE MADGKTS = @madglts", con))
+            {
+                cmd.Parameters.AddWithValue("@madglts", mats);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+        private void InitializeDataGridView()
+        {
+            dataGridView1.DataSource = infoDGTBGridView();
+            dataGridView2.DataSource = infoCHITIETDGTBGridView();
+        }
+
+        private void bthXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                    string mats = dataGridView1.SelectedRows[0].Cells["MADGLTS"].Value.ToString();
+
+                    // Hiển thị hộp thoại xác nhận
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                    if (result == DialogResult.Yes)
+                    {
+                        // Gọi hàm DeleteGV để xóa DMTB
+                        DeleteDGTS(mats);
+
+                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                        InitializeDataGridView();
+
+                        MessageBox.Show("Đã xóa thành công!");
+                    }
+                    // Nếu người dùng chọn No, không thực hiện xóa
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một hàng để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (dataGridView2.SelectedRows.Count > 0)
+                {
+                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                    string mats = dataGridView2.SelectedRows[0].Cells["MADGLTS"].Value.ToString();
+
+                    // Hiển thị hộp thoại xác nhận
+                    DialogResult result1 = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                    if (result1 == DialogResult.Yes)
+                    {
+                        // Gọi hàm DeleteGV để xóa DMTB
+                        DeleteCTDGTS(mats);
+
+                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                        InitializeDataGridView();
+
+                        MessageBox.Show("Đã xóa thành công!");
+                    }
+                    // Nếu người dùng chọn No, không thực hiện xóa
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một hàng để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            txtFind.Text = string.Empty;
+            dataGridView1.DataSource = infoDGTBGridView();
+            dataGridView2.DataSource = infoCHITIETDGTBGridView();
+        }
+        public DataTable findDANHGIATS()
+        {
+            SqlDataAdapter find = new SqlDataAdapter("SELECT * from DANHGIATS WHERE MADGLTS = " + txtFind.Text, con);
+            DataTable dt_find = new DataTable();
+            find.Fill(dt_find);
+            return dt_find;
+        }
+        public DataTable findCTDGLTS()
+        {
+            SqlDataAdapter find = new SqlDataAdapter("SELECT * from CHITIET_DGTS WHERE MADGLTS = " + txtFind.Text, con);
+            DataTable dt_find = new DataTable();
+            find.Fill(dt_find);
+            return dt_find;
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtFind.Text))
+            {
+                dataGridView1.DataSource = findDANHGIATS();
+                dataGridView2.DataSource = findCTDGLTS();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập mã đánh giá lại tài sản để thực hiện tìm kiếm !");
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+                fAddDanhgialaiTB f=new fAddDanhgialaiTB();
+                f.ShowDialog();
+
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
