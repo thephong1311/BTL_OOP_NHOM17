@@ -125,6 +125,7 @@
             this.btnLoad.Size = new System.Drawing.Size(72, 19);
             this.btnLoad.TabIndex = 45;
             this.btnLoad.Text = "Load";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnXoa
             // 

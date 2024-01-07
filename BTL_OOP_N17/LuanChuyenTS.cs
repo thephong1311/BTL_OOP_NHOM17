@@ -300,6 +300,14 @@ namespace BTL_OOP_N17
             txtLydo.Text = "";
             dt_NgayLC.Format = DateTimePickerFormat.Custom; ;
         }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+            InitializeDataGridView();
+            // Xóa nội dung trong các ô TextBox
+            ClearTextBoxes();
+        }
     }
 }
    
