@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BTL_OOP_N17
 {
@@ -21,9 +22,9 @@ namespace BTL_OOP_N17
             dataGridView1.DataSource = infoTHANHLYTSGridView();
         }
 
-       
 
-      
+
+
 
         private void btnDsTs_Click(object sender, EventArgs e)
         {
@@ -37,149 +38,247 @@ namespace BTL_OOP_N17
             return dt;
         }
 
-  
-
-        private void btnThem_Click(object sender, EventArgs e)
+        private void InitializeDataGridView()
         {
-            if (string.IsNullOrEmpty(txt_MaTL.Text) || string.IsNullOrEmpty(txt_TenTL.Text) || string.IsNullOrEmpty(DateTime_NgayTL.Text) || string.IsNullOrEmpty(txt_MaGV.Text) || string.IsNullOrEmpty(txt_MaPTN.Text))
+            dataGridView1.DataSource = infoTHANHLYTSGridView();
+        }
+        private void DataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có hàng được chọn hay không
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
-                return;
+                // Lấy dữ liệu từ hàng được chọn
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string magv = selectedRow.Cells["MaGV"].Value.ToString();
+                string matl = selectedRow.Cells["MATL"].Value.ToString();
+                string tentl = selectedRow.Cells["TENTL"].Value.ToString();
+                string maptn = selectedRow.Cells["MAPTN"].Value.ToString();
+                string ngaytl = selectedRow.Cells["NGAYTL"].Value.ToString();
+
+                // Hiển thị thông tin trong GroupBox
+                ShowInfo(magv, matl, tentl, maptn, ngaytl);
+            }
+        }
+        private void ShowInfo(string magv, string matl, string tentl, string maptn, string ngaytl)
+        {
+            // Hiển thị thông tin giáo viên trong GroupBox
+            txt_TenTL.Text = magv;
+            txt_MaTL.Text = matl;
+            txt_MaPTN.Text = maptn;
+            txt_MaGV.Text = magv;
+            DateTime_NgayTL.Value = DateTime.Parse(ngaytl);
+            // ...Thêm các thuộc tính khác tương ứng
+        }
+        private void ThanhLyTS_Load()
+        {
+            InitializeDataGridView();
+            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
+
+        }
+        public DataTable SearchTLTS(string magv, string tentl, string matl, string maptn, string ngaytl)
+        {
+            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
+            string query = "SELECT * FROM THANHLYTS WHERE ";
+            bool isFirstCondition = true;
+
+            if (!string.IsNullOrEmpty(magv))
+            {
+                query += $"MAGV LIKE '%{magv}%'";
+                isFirstCondition = false;
             }
 
+            if (!string.IsNullOrEmpty(tentl))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"TENTL LIKE '%{tentl}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(matl))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"DIACHIGV LIKE '%{matl}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(maptn))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"SDTGV LIKE '%{maptn}%'";
+            }
+
+            if (!string.IsNullOrEmpty(ngaytl))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"CHUCVUGV LIKE '%{ngaytl}%'";
+            }
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            return dataTable;
+        }
+        private void btn_Find_Click(object sender, EventArgs e)
+        {
+
+            string magv = txt_MaGV.Text;
+            string tentl = txt_TenTL.Text;
+            string matl = txt_MaTL.Text;
+            string maptn = txt_MaPTN.Text;
+            string ngaytl = DateTime_NgayTL.Value.ToString("yyyy-MM-dd");
+            dataGridView1.DataSource = SearchTLTS(magv, tentl, matl, maptn, ngaytl);
+        }
+        public void UpdateInfo(string magv, string tentl, string matl, string maptn, string ngaytl)
+        {
             try
             {
-               
-                con.Open();
-
-                
-                string insertQuery = "INSERT INTO THANHLYTS (MATL, TENTHANHLY, NGAYTL, MAGV, MAPTN) VALUES (@MATL, @TENTHANHLY, @NGAYTL, @MAGV, @MAPTN)";
-
-              
-                using (SqlCommand cmd = new SqlCommand(insertQuery, con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE THANHLYTS SET MAPTN = @MAGV , TENTL = @TENTL , MAPTN = @MAPTN , NGAYTL = @NGAYTL WHERE MATL = @MATL", con))
                 {
-               
-                    cmd.Parameters.AddWithValue("@MATL", txt_MaTL.Text);
-                    cmd.Parameters.AddWithValue("@TENTHANHLY", txt_TenTL.Text);
-                    cmd.Parameters.AddWithValue("@NGAYTL",DateTime_NgayTL.Value); 
-                    cmd.Parameters.AddWithValue("@MAGV", txt_MaGV.Text);
-                    cmd.Parameters.AddWithValue("@MAPTN", txt_MaPTN.Text);
+                    cmd.Parameters.AddWithValue("@MAPTN", maptn);
+                    cmd.Parameters.AddWithValue("@TenTL", tentl);
+                    cmd.Parameters.AddWithValue("@MAGV", magv);
+                    cmd.Parameters.AddWithValue("@NGAYTL", ngaytl);
 
-                
+                    con.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
-
+                    con.Close();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Thêm thông tin thành công!");
+                        MessageBox.Show("Đã cập nhật thông tin thanh lý thành công!");
                     }
                     else
                     {
-                        MessageBox.Show("Thêm thông tin thất bại!");
+                        MessageBox.Show("Không có thông tin thanh lý được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void ThemTLmoi(string magv, string tentl, string matl, string maptn, string ngaytl)
+        {
+            // Thêm một tài khoản mới vào cơ sở dữ liệu
+            // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO THANHLYTS (MAGV, TENTL, MATL, NGAYTL, MAPTN) VALUES (@magv, @tentl, @matl, @ngaytl, @maptn)", con))
+                {
+                    cmd.Parameters.AddWithValue("@magv", magv);
+                    cmd.Parameters.AddWithValue("@tentl", tentl);
+                    cmd.Parameters.AddWithValue("@maptn", maptn);
+                    cmd.Parameters.AddWithValue("@ngaytl", ngaytl);
+                    cmd.Parameters.AddWithValue("@maptn", maptn);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+
+                }
+
+
+                MessageBox.Show("Đã thêm tài khoản mới thành công!");
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                {
+                    MessageBox.Show($"Mã '{matl}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                // Xử lý lỗi khác (nếu có)
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
+                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+        public void DeleteTL(string matl)
+        {
+            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM THANHLYTS WHERE MATL = @matl", con))
+            {
+                cmd.Parameters.AddWithValue("@matl", matl);
 
+                con.Open();
+                cmd.ExecuteNonQuery();
                 con.Close();
             }
         }
-
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-                
-                if (string.IsNullOrEmpty(txt_MaTL.Text) || string.IsNullOrEmpty(txt_TenTL.Text) || string.IsNullOrEmpty(DateTime_NgayTL.Text) || string.IsNullOrEmpty(txt_MaGV.Text) || string.IsNullOrEmpty(txt_MaPTN.Text))
-                {
-                    MessageBox.Show("Vui lòng điền đầy đủ thông tin để sửa");
-                    return;
-                }
+            try
+            {
+                string magv = txt_MaGV.Text;
+                string matl = txt_MaTL.Text;
+                string tentl = txt_TenTL.Text;
+                string maptn = txt_MaPTN.Text;
+                string ngaytl = DateTime_NgayTL.Value.ToString("yyyy-MM-dd");
 
-                try
-                {
-                  
-                    con.Open();
 
-             
-                    string updateQuery = "UPDATE THANHLYTS SET TENTHANHLY = @TENTHANHLY, NGAYTL = @NGAYTL, MAGV = @MAGV, MAPTN = @MAPTN WHERE MATL = @MATL";
+                // Gọi phương thức ThemGVmoi để thêm giáo viên mới vào cơ sở dữ liệu
+                ThemTLmoi(magv, tentl, matl, maptn, ngaytl);
 
-                 
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, con))
-                    {
-                      
-                        cmd.Parameters.AddWithValue("@MATL", txt_MaTL.Text);
-                        cmd.Parameters.AddWithValue("@TENTHANHLY", txt_TenTL.Text);
-                        cmd.Parameters.AddWithValue("@NGAYTL", DateTime_NgayTL.Value);
-                        cmd.Parameters.AddWithValue("@MAGV", txt_MaGV.Text);
-                        cmd.Parameters.AddWithValue("@MAPTN", txt_MaPTN.Text);
+                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+                InitializeDataGridView();
 
-                      
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                     
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Cập nhật thông tin thành công!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Cập nhật thông tin thất bại. Hãy kiểm tra lại thông tin!");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi: " + ex.Message);
-                }
-                finally
-                {
-                  
-                    con.Close();
-                }
-            
-
+                MessageBox.Show("Đã thêm thông tin thanh lý mới thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
-            if (string.IsNullOrEmpty(txt_MaTL.Text) || string.IsNullOrEmpty(txt_TenTL.Text) || string.IsNullOrEmpty(DateTime_NgayTL.Text) || string.IsNullOrEmpty(txt_MaGV.Text) || string.IsNullOrEmpty(txt_MaPTN.Text))
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin để xóa");
-                return;
-            }
 
             try
             {
-                con.Open();
-
-               
-                string deleteQuery = "DELETE FROM THANHLYTS WHERE MATL = @MATL AND TENTHANHLY = @TENTHANHLY AND NGAYTL = @NGAYTL AND MAGV = @MAGV AND MAPTN = @MAPTN";
-
-                using (SqlCommand cmd = new SqlCommand(deleteQuery, con))
+                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
-                 
-                    cmd.Parameters.AddWithValue("@MATL", txt_MaTL.Text);
-                    cmd.Parameters.AddWithValue("@TENTHANHLY", txt_TenTL.Text);
-                    cmd.Parameters.AddWithValue("@NGAYTL", DateTime_NgayTL.Value); 
-                    cmd.Parameters.AddWithValue("@MAGV", txt_MaGV.Text);
-                    cmd.Parameters.AddWithValue("@MAPTN", txt_MaPTN.Text);
+                    // Lấy mã giáo viên từ hàng được chọn
+                    string matl = dataGridView1.SelectedRows[0].Cells["MATL"].Value.ToString();
 
-                    
-                    int rowsAffected = cmd.ExecuteNonQuery();
+                    // Hiển thị hộp thoại xác nhận
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thanh lý này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                    if (result == DialogResult.Yes)
+                    {
+                        // Gọi hàm DeleteGV để xóa giáo viên
+                        DeleteTL(matl);
 
                         // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
-                    
+
                         MessageBox.Show("Đã xóa thanh lý thành công!");
                     }
                     // Nếu người dùng chọn No, không thực hiện xóa
-                    }
-                    else
-                    {
+                }
+                else
+                {
                     MessageBox.Show("Vui lòng chọn một thanh lý để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -187,13 +286,13 @@ namespace BTL_OOP_N17
             {
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
+        }
 
         private void btnSua_Click(object sender, EventArgs e)
-            {
+        {
             // Hiển thị hộp thoại xác nhận sửa
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-             
+
             // Kiểm tra xem người dùng đã đồng ý sửa hay không
             if (result == DialogResult.Yes)
             {
@@ -204,7 +303,7 @@ namespace BTL_OOP_N17
                 string tentl = txt_TenTL.Text;
                 string maptn = txt_MaPTN.Text;
                 string ngaytl = DateTime_NgayTL.Value.ToString("yyyy-MM-dd");
-    
+
                 // Cập nhật dữ liệu trong DataGridView
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedRow.Cells["MAGV"].Value = magv;
