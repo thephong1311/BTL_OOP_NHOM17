@@ -143,9 +143,9 @@
             this.btnFind.FocusedColor = System.Drawing.Color.Empty;
             this.btnFind.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFind.ForeColor = System.Drawing.Color.Black;
-            this.btnFind.Image = null;
+            this.btnFind.Image = global::BTL_OOP_N17.Properties.Resources.search_interface_symbol;
             this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFind.Location = new System.Drawing.Point(81, 133);
+            this.btnFind.Location = new System.Drawing.Point(50, 122);
             this.btnFind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFind.Name = "btnFind";
             this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -153,7 +153,7 @@
             this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFind.OnHoverImage = null;
             this.btnFind.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFind.Size = new System.Drawing.Size(63, 19);
+            this.btnFind.Size = new System.Drawing.Size(103, 30);
             this.btnFind.TabIndex = 44;
             this.btnFind.Text = "Tìm kiếm";
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
@@ -170,7 +170,7 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.Black;
             this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(549, 133);
+            this.gunaButton2.Location = new System.Drawing.Point(549, 122);
             this.gunaButton2.Margin = new System.Windows.Forms.Padding(2);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -178,9 +178,10 @@
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(97, 19);
+            this.gunaButton2.Size = new System.Drawing.Size(97, 30);
             this.gunaButton2.TabIndex = 43;
             this.gunaButton2.Text = "Đóng lại ";
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
             // btnLoad
             // 
@@ -194,7 +195,7 @@
             this.btnLoad.ForeColor = System.Drawing.Color.Black;
             this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
             this.btnLoad.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLoad.Location = new System.Drawing.Point(459, 133);
+            this.btnLoad.Location = new System.Drawing.Point(459, 122);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -202,7 +203,7 @@
             this.btnLoad.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLoad.OnHoverImage = null;
             this.btnLoad.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLoad.Size = new System.Drawing.Size(72, 19);
+            this.btnLoad.Size = new System.Drawing.Size(72, 30);
             this.btnLoad.TabIndex = 42;
             this.btnLoad.Text = "Load";
             // 
@@ -218,7 +219,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(363, 133);
+            this.btnXoa.Location = new System.Drawing.Point(363, 122);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -226,7 +227,7 @@
             this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
             this.btnXoa.OnHoverImage = null;
             this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXoa.Size = new System.Drawing.Size(89, 19);
+            this.btnXoa.Size = new System.Drawing.Size(89, 30);
             this.btnXoa.TabIndex = 41;
             this.btnXoa.Text = "Xóa bỏ";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -243,7 +244,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.Black;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSua.Location = new System.Drawing.Point(254, 133);
+            this.btnSua.Location = new System.Drawing.Point(254, 122);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -251,7 +252,7 @@
             this.btnSua.OnHoverForeColor = System.Drawing.Color.White;
             this.btnSua.OnHoverImage = null;
             this.btnSua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSua.Size = new System.Drawing.Size(102, 19);
+            this.btnSua.Size = new System.Drawing.Size(102, 30);
             this.btnSua.TabIndex = 40;
             this.btnSua.Text = "Chỉnh sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -268,7 +269,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(148, 133);
+            this.btnThem.Location = new System.Drawing.Point(148, 122);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -276,7 +277,7 @@
             this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
             this.btnThem.OnHoverImage = null;
             this.btnThem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThem.Size = new System.Drawing.Size(102, 19);
+            this.btnThem.Size = new System.Drawing.Size(102, 30);
             this.btnThem.TabIndex = 39;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -386,7 +387,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.gbTTKiemKe);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KiemKe";
             this.Text = "Kiểm kê";
             this.Load += new System.EventHandler(this.KiemKe_Load);

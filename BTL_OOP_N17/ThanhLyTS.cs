@@ -343,5 +343,10 @@ namespace BTL_OOP_N17
             // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
         }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
