@@ -171,50 +171,77 @@ namespace BTL_OOP_N17
                     
                     int rowsAffected = cmd.ExecuteNonQuery();
 
+                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                        InitializeDataGridView();
                     
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Xóa thông tin thành công!");
+                        MessageBox.Show("Đã xóa thanh lý thành công!");
+                    }
+                    // Nếu người dùng chọn No, không thực hiện xóa
                     }
                     else
                     {
-                        MessageBox.Show("Xóa thông tin thất bại. Hãy kiểm tra lại thông tin!");
-                    }
+                    MessageBox.Show("Vui lòng chọn một thanh lý để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
+            }
+
+        private void btnSua_Click(object sender, EventArgs e)
             {
+            // Hiển thị hộp thoại xác nhận sửa
+            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
              
-                con.Close();
+            // Kiểm tra xem người dùng đã đồng ý sửa hay không
+            if (result == DialogResult.Yes)
+            {
+                // Lấy dữ liệu từ TextBox
+
+                string magv = txt_MaGV.Text;
+                string matl = txt_MaTL.Text;
+                string tentl = txt_TenTL.Text;
+                string maptn = txt_MaPTN.Text;
+                string ngaytl = DateTime_NgayTL.Value.ToString("yyyy-MM-dd");
+    
+                // Cập nhật dữ liệu trong DataGridView
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                selectedRow.Cells["MAGV"].Value = magv;
+                selectedRow.Cells["TENTL"].Value = tentl;
+                selectedRow.Cells["MAPTN"].Value = maptn;
+                selectedRow.Cells["NGAYTL"].Value = ngaytl;
+                selectedRow.Cells["MATL"].Value = matl;
+
+
+                // Hiển thị thông tin trong GroupBox (nếu cần)
+                ShowInfo(magv, matl, tentl, maptn, ngaytl);
+
+                // Đặt lại TextBox sau khi cập nhật
+                ClearTextBoxes();
+
+
             }
+
+
         }
 
-    
-
-        private void btn_Find_Click(object sender, EventArgs e)
+        private void ClearTextBoxes()
         {
 
-
-            string query = "SELECT * FROM THANHLYTS WHERE";
-
-            string searchKeyword = txtFind_TL.Text.Trim();
-
-            if (!string.IsNullOrEmpty(searchKeyword))
-            {
-                query += $" MATL LIKE '%{searchKeyword}%' OR NGAYTL LIKE '%{searchKeyword}%' OR TENTHANHLY LIKE N'%{searchKeyword}%' OR MAGV LIKE N'%{searchKeyword}%' OR NGAYTL LIKE '%{searchKeyword}%'";
-            }
-
-            SqlDataAdapter searchAdapter = new SqlDataAdapter(query, con);
-            DataTable searchResult = new DataTable();
-            searchAdapter.Fill(searchResult);
-            dataGridView1.DataSource = searchResult;
-
+            txt_MaGV.Text = "";
+            txt_TenTL.Text = "";
+            txt_MaTL.Text = "";
+            txt_MaPTN.Text = "";
+            DateTime_NgayTL.Format = DateTimePickerFormat.Custom; ;
         }
 
-
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+            InitializeDataGridView();
+            // Xóa nội dung trong các ô TextBox
+            ClearTextBoxes();
+        }
     }
 }

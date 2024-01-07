@@ -64,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).BeginInit();
             this.gbThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDanhsachTL
@@ -84,7 +83,7 @@
             this.gbDanhsachTL.Name = "gbDanhsachTL";
             this.gbDanhsachTL.Size = new System.Drawing.Size(680, 272);
             this.gbDanhsachTL.TabIndex = 10;
-            this.gbDanhsachTL.Text = "Danh sách các thiết bị thanh lí ";
+            this.gbDanhsachTL.Text = "Danh sách các yêu cầu thanh lí ";
             this.gbDanhsachTL.TextLocation = new System.Drawing.Point(10, 8);
             // 
             // dataGridView1
@@ -192,7 +191,6 @@
             this.btnDsTs.Size = new System.Drawing.Size(158, 38);
             this.btnDsTs.TabIndex = 1;
             this.btnDsTs.Text = "DS thiết bị";
-            this.btnDsTs.Click += new System.EventHandler(this.btnDsTs_Click);
             // 
             // btnDSThanhLy
             // 
@@ -565,9 +563,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTSTL)).EndInit();
             this.gbThongTin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

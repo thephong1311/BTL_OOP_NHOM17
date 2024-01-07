@@ -11,6 +11,7 @@ namespace BTL_OOP_N17.DAO
     internal class ConnectionString
     {
         public static string connectionString = @"Data Source=.;Initial Catalog=QLTS2;Integrated Security=True";
+        
     }
 }
 
