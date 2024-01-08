@@ -32,6 +32,7 @@ namespace BTL_OOP_N17
             panel_Body.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
         }
 
 
@@ -63,68 +64,58 @@ namespace BTL_OOP_N17
 
         private void danhMụcGiáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QLTTGV f = new QLTTGV();
-            f.ShowDialog(); 
+            OpenChildForm(new QLTTGV());
         }
 
         private void danhMụcPhòngThíNghiệmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QLTTPTN f = new QLTTPTN();
-            f.ShowDialog();
+            OpenChildForm(new QLTTPTN());
+           
         }
 
         private void danhMụcNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nhacungcap f = new Nhacungcap();
-            f.ShowDialog();
+            OpenChildForm(new Nhacungcap());
         }
 
         private void theoDõiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TheodoiTB f = new TheodoiTB();
-            f.ShowDialog();
+            OpenChildForm(new TheodoiTB());
         }
 
         private void danhMụcThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fDanhmucthietbi f = new fDanhmucthietbi();
-            f.ShowDialog();
+            OpenChildForm(new fDanhmucthietbi());
         }
 
         private void yêuCầuMuaThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            YCmua f = new YCmua();
-            f.ShowDialog();
+            OpenChildForm(new YCmua());
         }
 
         private void đánhGiáLạiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fDanhgialaiTB f = new fDanhgialaiTB();
-            f.ShowDialog();
+            OpenChildForm(new fDanhgialaiTB());
         }
 
         private void mượnThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MuonTS f = new MuonTS();
-            f.ShowDialog();
+            OpenChildForm(new MuonTS());
         }
 
         private void thanhLýThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThanhLyTB f = new ThanhLyTB();
-            f.ShowDialog();
+            OpenChildForm(new ThanhLyTB());
         }
 
         private void luânChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LuanChuyenTS f = new LuanChuyenTS();
-            f.ShowDialog();
+            OpenChildForm(new LuanChuyenTS());
         }
 
         private void kiểmKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KiemKe f = new KiemKe();
-            f.ShowDialog();
+            OpenChildForm(new KiemKe());
         }
 
         private void thiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
@@ -139,52 +130,44 @@ namespace BTL_OOP_N17
 
         private void báoCáoTổngHợpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportKiemKeTS f = new ReportKiemKeTS();
-            f.ShowDialog();
+            OpenChildForm(new ReportKiemKeTS());
         }
 
         private void báoCáoLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportLuanChuyenTS f = new ReportLuanChuyenTS();
-            f.ShowDialog();
+            OpenChildForm(new ReportLuanChuyenTS());
         }
 
         private void báoCáoMượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportMuonTS f = new ReportMuonTS();    
-            f.ShowDialog();
+            OpenChildForm(new ReportMuonTS());
         }
 
         private void báoCáoSửaChữaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportSuaChuaTS f = new ReportSuaChuaTS();
-            f.ShowDialog();
+            OpenChildForm(new ReportSuaChuaTS());
         }
 
         private void báoCáoThanhLýToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportThanhLy f = new ReportThanhLy();
-            f.ShowDialog();
+            OpenChildForm(new ReportThanhLy());
         }
 
         private void báoCáoTìnhTrạngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportTinhTrangTS f = new ReportTinhTrangTS();
-            f.ShowDialog();
+            OpenChildForm(new ReportTinhTrangTS());
         }
 
         private void báoCáoYêuCầuMuaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportYCmua f = new ReportYCmua();
-            f.ShowDialog();
+            OpenChildForm(new ReportYCmua());
         }
 
         
 
         private void sửaChữaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            SuaChuaTS s = new SuaChuaTS();
-            s.ShowDialog();
+            OpenChildForm(new SuaChuaTS());
         }
     }
 }
