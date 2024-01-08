@@ -146,27 +146,46 @@ namespace BTL_OOP_N17
             dataGridView1.DataSource = infoDGTBGridView();
             dataGridView2.DataSource = infoCHITIETDGTBGridView();
         }
-        public DataTable findDANHGIATS()
+        public DataTable findDGTS()
         {
-            SqlDataAdapter find = new SqlDataAdapter("SELECT * from DANHGIATS WHERE MADGLTS = " + txtFind.Text, con);
-            DataTable dt_find = new DataTable();
-            find.Fill(dt_find);
-            return dt_find;
-        }
-        public DataTable findCTDGLTS()
-        {
-            SqlDataAdapter find = new SqlDataAdapter("SELECT * from CHITIET_DGTS WHERE MADGLTS = " + txtFind.Text, con);
-            DataTable dt_find = new DataTable();
-            find.Fill(dt_find);
-            return dt_find;
-        }
+            string query = "SELECT * FROM DANHGIATS WHERE MADGLTS = @MADGLTS ";
 
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                // Thêm tham số và đặt giá trị
+                command.Parameters.AddWithValue("@MADGLTS", txtFind.Text);
+
+                // Thực hiện truy vấn
+                SqlDataAdapter find = new SqlDataAdapter(command);
+                DataTable dt_find = new DataTable();
+                find.Fill(dt_find);
+
+                return dt_find;
+            }
+        }
+        public DataTable findCTDGTS()
+        {
+            string query = "SELECT * FROM CHITIET_DGTS WHERE MADGLTS = @MADGLTS ";
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                // Thêm tham số và đặt giá trị
+                command.Parameters.AddWithValue("@MADGLTS", txtFind.Text);
+
+                // Thực hiện truy vấn
+                SqlDataAdapter find = new SqlDataAdapter(command);
+                DataTable dt_find = new DataTable();
+                find.Fill(dt_find);
+
+                return dt_find;
+            }
+        }
         private void btnFind_Click(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(txtFind.Text))
             {
-                dataGridView1.DataSource = findDANHGIATS();
-                dataGridView2.DataSource = findCTDGLTS();
+                dataGridView1.DataSource = findDGTS();
+                dataGridView2.DataSource = findCTDGTS();
             }
             else
             {

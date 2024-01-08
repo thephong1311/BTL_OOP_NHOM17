@@ -136,31 +136,39 @@ namespace BTL_OOP_N17
 
         private void btnCapnhat_phieu_Click(object sender, EventArgs e)
         {
+            
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE PHIEUMUONTS SET MAPM=@mapm,MAGV=@magv,TENNM=@tennm,DVMUON=@dvmuon,EMAIL=@email,SDT=@sdt,NGAYMUON=@ngaymuon,TRANGTHAIMUON=@trangthai WHERE MAPM = @mapm", connection))
+                if (!string.IsNullOrEmpty(txtMaMTS.Text) && !string.IsNullOrEmpty(txtMAGV.Text) && !string.IsNullOrEmpty(txtNguoimuon.Text) && !string.IsNullOrEmpty(txtMaPTN.Text) && !string.IsNullOrEmpty(txtEmail.Text)
+                    && !string.IsNullOrEmpty(txtSDT.Text) && !string.IsNullOrEmpty(cbbTrangthai.Text))
                 {
-                    cmd.Parameters.AddWithValue("@mapm", txtMaMTS.Text);
-                    cmd.Parameters.AddWithValue("@magv", txtMAGV.Text);
-                    cmd.Parameters.AddWithValue("@tennm", txtNguoimuon.Text);
-                    cmd.Parameters.AddWithValue("@dvmuon", txtMaPTN.Text);
-                    cmd.Parameters.AddWithValue("@email", txtEmail.Text);
-                    cmd.Parameters.AddWithValue("@sdt", txtSDT.Text);
-                    cmd.Parameters.AddWithValue("@ngaymuon", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-                    cmd.Parameters.AddWithValue("@trangthai", cbbTrangthai.Text);
-
-                    connection.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    connection.Close();
-                    if (rowsAffected > 0)
+                    using (SqlCommand cmd = new SqlCommand("UPDATE PHIEUMUONTS SET MAPM=@mapm,MAGV=@magv,TENNM=@tennm,DVMUON=@dvmuon,EMAIL=@email,SDT=@sdt,NGAYMUON=@ngaymuon,TRANGTHAIMUON=@trangthai WHERE MAPM = @mapm", connection))
                     {
-                        MessageBox.Show("Đã cập nhật thông tin phiếu mượn thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không có thông tin nào được cập nhật. Có thể không tồn tại Mã TS tương ứng hoặc Mã TS không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        cmd.Parameters.AddWithValue("@mapm", txtMaMTS.Text);
+                        cmd.Parameters.AddWithValue("@magv", txtMAGV.Text);
+                        cmd.Parameters.AddWithValue("@tennm", txtNguoimuon.Text);
+                        cmd.Parameters.AddWithValue("@dvmuon", txtMaPTN.Text);
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@sdt", txtSDT.Text);
+                        cmd.Parameters.AddWithValue("@ngaymuon", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@trangthai", cbbTrangthai.Text);
 
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        connection.Close();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Đã cập nhật thông tin phiếu mượn thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có thông tin nào được cập nhật. Có thể không tồn tại Mã TS tương ứng hoặc Mã TS không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Hãy nhập đủ thông tin !");
                 }
             }
             catch (SqlException ex)
@@ -179,26 +187,33 @@ namespace BTL_OOP_N17
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE CHITIET_MUON SET MAPM=@mapm,MATS=@mats,DUNGTICH=@dungtich,SOLUON_MUON=@slmuon,THOIGIANSD=@tgian,SOLUONG_MUONTT=@slmuontt WHERE MAPM = @mapm", connection))
+                if (!string.IsNullOrEmpty(txtMaTS.Text) && !string.IsNullOrEmpty(txtDungtich.Text) && !string.IsNullOrEmpty(txtSoluongMuon.Text) && !string.IsNullOrEmpty(txtTgianMuon.Text) && !string.IsNullOrEmpty(txtSLMuonTT.Text))
                 {
-                    cmd.Parameters.AddWithValue("@mapm", txtMaMTS.Text);
-                    cmd.Parameters.AddWithValue("@mats", txtMaTS.Text);
-                    cmd.Parameters.AddWithValue("@dungtich", txtDungtich.Text);
-                    cmd.Parameters.AddWithValue("@slmuon", txtSoluongMuon.Text);
-                    cmd.Parameters.AddWithValue("@tgian", txtTgianMuon.Text);
-                    cmd.Parameters.AddWithValue("@slmuontt", txtSLMuonTT.Text);
+                    using (SqlCommand cmd = new SqlCommand("UPDATE CHITIET_MUON SET MAPM=@mapm,MATS=@mats,DUNGTICH=@dungtich,SOLUON_MUON=@slmuon,THOIGIANSD=@tgian,SOLUONG_MUONTT=@slmuontt WHERE MAPM = @mapm", connection))
+                    {
+                        cmd.Parameters.AddWithValue("@mapm", txtMaMTS.Text);
+                        cmd.Parameters.AddWithValue("@mats", txtMaTS.Text);
+                        cmd.Parameters.AddWithValue("@dungtich", txtDungtich.Text);
+                        cmd.Parameters.AddWithValue("@slmuon", txtSoluongMuon.Text);
+                        cmd.Parameters.AddWithValue("@tgian", txtTgianMuon.Text);
+                        cmd.Parameters.AddWithValue("@slmuontt", txtSLMuonTT.Text);
 
-                    connection.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    connection.Close();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Đã cập nhật thông tin chi tiết phiếu mượn thành công!");
+                        connection.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        connection.Close();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Đã cập nhật thông tin chi tiết phiếu mượn thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có thông tin chi tiết nào được cập nhật. Có thể không tồn tại Mã TS tương ứng hoặc Mã TS không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Không có thông tin chi tiết nào được cập nhật. Có thể không tồn tại Mã TS tương ứng hoặc Mã TS không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Hãy nhập đủ thông tin !");
 
                 }
             }
