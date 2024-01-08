@@ -42,20 +42,20 @@ namespace BTL_OOP_N17
                 string magv = selectedRow.Cells["MAGV"].Value.ToString();
                 string masc = selectedRow.Cells["MASC"].Value.ToString();
                 string maptn = selectedRow.Cells["MAPTN"].Value.ToString();
-                string ttsc = selectedRow.Cells["TRANGTHAISC"].Value.ToString();
+              
                 string ngaysc = selectedRow.Cells["NGAYSC"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
-                ShowInfo(magv, masc, maptn, ttsc, ngaysc);
+                ShowInfo(magv, masc, maptn,  ngaysc);
             }
         }
-        private void ShowInfo(string magv, string masc, string maptn, string ttsc, string ngaysc)
+        private void ShowInfo(string magv, string masc, string maptn, string ngaysc)
         {
 
             txtMAGV.Text = magv;
             txtMSC.Text = masc;
             txtMAPTN.Text = maptn;
-            txtTTSC.Text = ttsc;
+           
             dtSC.Value = DateTime.Parse(ngaysc);
 
         }
@@ -65,7 +65,7 @@ namespace BTL_OOP_N17
             dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
 
         }
-        public DataTable SearchSCTS(string magv, string masc, string maptn, string ttsc, string ngaysc)
+        public DataTable SearchSCTS(string magv, string masc, string maptn, string ngaysc)
         {
 
             string query = "SELECT * FROM SUACHUATS WHERE ";
@@ -93,13 +93,6 @@ namespace BTL_OOP_N17
                 isFirstCondition = false;
             }
 
-            if (!string.IsNullOrEmpty(ttsc))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"TRANGTHAISC LIKE '%{ttsc}%'";
-            }
-
             if (!string.IsNullOrEmpty(ngaysc))
             {
                 if (!isFirstCondition)
@@ -119,23 +112,23 @@ namespace BTL_OOP_N17
             string magv = txtMAGV.Text;
             string masc = txtMSC.Text;
             string maptn = txtMAPTN.Text;
-            string ttsc = txtTTSC.Text;
+          
             string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ttsc, ngaysc);
+            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ngaysc);
 
         }
-        public void ThemSCmoi(string magv, string masc, string maptn, string ttsc, string ngaysc)
+        public void ThemSCmoi(string magv, string masc, string maptn, string ngaysc)
         {
 
 
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO SUACHUATS (MAGV, MASC, TRANGTHAISC, NGAYSC, MAPTN) VALUES (@magv, @masc, @ttsc, @ngaysc, @maptn)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO SUACHUATS (MAGV, MASC,  NGAYSC, MAPTN) VALUES (@magv, @masc, @ngaysc, @maptn)", con))
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@masc", masc);
                     cmd.Parameters.AddWithValue("@maptn", maptn);
-                    cmd.Parameters.AddWithValue("@ttsc", ttsc);
+                  
                     cmd.Parameters.AddWithValue("@ngaysc", ngaysc);
 
                     con.Open();
@@ -193,13 +186,13 @@ namespace BTL_OOP_N17
             {
                 string magv = txtMAGV.Text;
                 string masc = txtMSC.Text;
-                string ttsc = txtTTSC.Text;
+               
                 string maptn = txtMAPTN.Text;
                 string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
 
 
 
-                ThemSCmoi(magv, masc, maptn, ttsc, ngaysc);
+                ThemSCmoi(magv, masc, maptn ngaysc);
 
                 // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
                 InitializeDataGridView();
@@ -220,7 +213,7 @@ namespace BTL_OOP_N17
 
             txtMAGV.Text = "";
             txtMSC.Text = "";
-            txtTTSC.Text = "";
+         
             txtMAPTN.Text = "";
             dtSC.Format = DateTimePickerFormat.Custom; ;
         }
@@ -239,9 +232,9 @@ namespace BTL_OOP_N17
             string magv = txtMAGV.Text;
             string masc = txtMSC.Text;
             string maptn = txtMAPTN.Text;
-            string ttsc = txtTTSC.Text;
+          
             string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ttsc, ngaysc);
+            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ngaysc);
         }
 
         private void btnThem_Click_1(object sender, EventArgs e)
@@ -250,13 +243,13 @@ namespace BTL_OOP_N17
             {
                 string magv = txtMAGV.Text;
                 string masc = txtMSC.Text;
-                string ttsc = txtTTSC.Text;
+               
                 string maptn = txtMAPTN.Text;
                 string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
 
 
 
-                ThemSCmoi(magv, masc, maptn, ttsc, ngaysc);
+                ThemSCmoi(magv, masc, maptn, ngaysc);
 
                 // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
                 InitializeDataGridView();
@@ -279,7 +272,7 @@ namespace BTL_OOP_N17
                 // Lấy dữ liệu từ TextBox
                 string magv = txtMAGV.Text;
                 string masc = txtMSC.Text;
-                string ttsc = txtTTSC.Text;
+         
                 string maptn = txtMAPTN.Text;
                 string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
                 // Cập nhật dữ liệu trong DataGridView
@@ -288,10 +281,10 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["MASC"].Value = masc;
                 selectedRow.Cells["MAPTN"].Value = maptn;
                 selectedRow.Cells["NGAYSC"].Value = ngaysc;
-                selectedRow.Cells["TRANGTHAISC"].Value = ttsc;
 
 
-                ShowInfo(magv, masc, maptn, ttsc, ngaysc);
+
+                ShowInfo(magv, masc, maptn, ngaysc);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();

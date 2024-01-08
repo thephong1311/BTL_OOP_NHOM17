@@ -114,7 +114,7 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"LYDO LIKE '%{lydo}%'";
+                query += $"LYDOLC LIKE '%{lydo}%'";
             }
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
             DataTable dataTable = new DataTable();
@@ -281,7 +281,7 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["NOILCDEN"].Value = lcden;
                 selectedRow.Cells["NGAYLC"].Value = ngaylc;
                 selectedRow.Cells["MAPHIEULC"].Value = malc;
-                selectedRow.Cells["LYDO"].Value = lydo;
+                selectedRow.Cells["LYDOLC"].Value = lydo;
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 ShowInfo(malc, lcdi, lcden, magv, ngaylc, lydo);

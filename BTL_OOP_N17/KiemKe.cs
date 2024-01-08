@@ -18,14 +18,14 @@ namespace BTL_OOP_N17
         public KiemKe()
         {
             InitializeComponent();
-            dgvThongTinKK.DataSource = infoKKGridView();
+           dataGridView1.DataSource = infoKKGridView();
 
         }
 
         private void KiemKe_Load(object sender, EventArgs e)
         {
             InitializeDataGridView();
-            dgvThongTinKK.SelectionChanged += DataGridView_SelectionChanged;
+            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
         }
 
         public DataTable infoKKGridView()
@@ -38,7 +38,7 @@ namespace BTL_OOP_N17
 
         private void InitializeDataGridView()
         {
-            dgvThongTinKK.DataSource = infoKKGridView();
+            dataGridView1.DataSource = infoKKGridView();
         }
         private void ShowInfo(string makk, string magv, string maptn, string ngaykk, string mota)
         {
@@ -54,10 +54,10 @@ namespace BTL_OOP_N17
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
             // Kiểm tra xem có hàng được chọn hay không
-            if (dgvThongTinKK.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 // Lấy dữ liệu từ hàng được chọn
-                DataGridViewRow selectedRow = dgvThongTinKK.SelectedRows[0];
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string magv = selectedRow.Cells["MAGV"].Value.ToString();
                 string makk = selectedRow.Cells["MAKK"].Value.ToString();
                 string maptn = selectedRow.Cells["MAPTN"].Value.ToString();
@@ -127,7 +127,7 @@ namespace BTL_OOP_N17
             string maptn = txtMAPTN.Text;
             string mota = txtMOTA.Text;
             string ngaykk = dtKK.Value.ToString("yyyy-MM-dd");
-            dgvThongTinKK.DataSource = SearchKK(makk, magv, maptn, ngaykk, mota);
+            dataGridView1.DataSource = SearchKK(makk, magv, maptn, ngaykk, mota);
 
         }
         public void ThemKKmoi(string makk, string magv, string maptn, string ngaykk, string mota)
@@ -199,10 +199,10 @@ namespace BTL_OOP_N17
             try
             {
                 // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
-                if (dgvThongTinKK.SelectedRows.Count > 0)
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
 
-                    string makk = (dgvThongTinKK.SelectedRows[0].Cells["MAKK"].Value.ToString());
+                    string makk = dataGridView1.SelectedRows[0].Cells["MAKK"].Value.ToString();
 
                     // Hiển thị hộp thoại xác nhận
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin kiểm kê này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -273,12 +273,12 @@ namespace BTL_OOP_N17
                 string ngaykk = dtKK.Value.ToString("yyyy-MM-dd");
 
                 // Cập nhật dữ liệu trong DataGridView
-                DataGridViewRow selectedRow = dgvThongTinKK.SelectedRows[0];
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedRow.Cells["MAGV"].Value = magv;
                 selectedRow.Cells["MAKK"].Value = makk;
                 selectedRow.Cells["MAPTN"].Value = maptn;
                 selectedRow.Cells["NGAYKK"].Value = ngaykk;
-                selectedRow.Cells["MOTA"].Value = mota;
+                selectedRow.Cells["MOTAKK"].Value = mota;
 
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
