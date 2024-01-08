@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhLyTB));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhLyTB));
             this.gbDanhsachTL = new Guna.UI.WinForms.GunaGroupBox();
-            this.btn_Find = new Guna.UI.WinForms.GunaButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvTSTL = new Guna.UI.WinForms.GunaDataGridView();
+            this.btn_Find = new Guna.UI.WinForms.GunaButton();
             this.btnDong = new Guna.UI.WinForms.GunaButton();
             this.btnLoad = new Guna.UI.WinForms.GunaButton();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
@@ -74,36 +74,10 @@
             this.gbDanhsachTL.Location = new System.Drawing.Point(11, 139);
             this.gbDanhsachTL.Margin = new System.Windows.Forms.Padding(2);
             this.gbDanhsachTL.Name = "gbDanhsachTL";
-            this.gbDanhsachTL.Size = new System.Drawing.Size(868, 272);
+            this.gbDanhsachTL.Size = new System.Drawing.Size(805, 272);
             this.gbDanhsachTL.TabIndex = 10;
             this.gbDanhsachTL.Text = "Danh sách các yêu cầu thanh lí ";
             this.gbDanhsachTL.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // btn_Find
-            // 
-            this.btn_Find.AnimationHoverSpeed = 0.07F;
-            this.btn_Find.AnimationSpeed = 0.03F;
-            this.btn_Find.BaseColor = System.Drawing.SystemColors.Menu;
-            this.btn_Find.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Find.BorderSize = 1;
-            this.btn_Find.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Find.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Find.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Find.ForeColor = System.Drawing.Color.Black;
-            this.btn_Find.Image = ((System.Drawing.Image)(resources.GetObject("btn_Find.Image")));
-            this.btn_Find.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Find.Location = new System.Drawing.Point(82, 103);
-            this.btn_Find.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Find.Name = "btn_Find";
-            this.btn_Find.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Find.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Find.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Find.OnHoverImage = null;
-            this.btn_Find.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Find.Size = new System.Drawing.Size(103, 32);
-            this.btn_Find.TabIndex = 13;
-            this.btn_Find.Text = "Tìm kiếm";
-            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
             // 
             // dataGridView1
             // 
@@ -114,7 +88,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(658, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(746, 193);
             this.dataGridView1.TabIndex = 12;
             // 
             // guna2DataGridView1
@@ -229,6 +203,32 @@
             this.dgvTSTL.ThemeStyle.RowsStyle.Height = 24;
             this.dgvTSTL.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTSTL.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // btn_Find
+            // 
+            this.btn_Find.AnimationHoverSpeed = 0.07F;
+            this.btn_Find.AnimationSpeed = 0.03F;
+            this.btn_Find.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btn_Find.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Find.BorderSize = 1;
+            this.btn_Find.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Find.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Find.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Find.ForeColor = System.Drawing.Color.Black;
+            this.btn_Find.Image = ((System.Drawing.Image)(resources.GetObject("btn_Find.Image")));
+            this.btn_Find.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Find.Location = new System.Drawing.Point(82, 103);
+            this.btn_Find.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Find.Name = "btn_Find";
+            this.btn_Find.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Find.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Find.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Find.OnHoverImage = null;
+            this.btn_Find.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Find.Size = new System.Drawing.Size(103, 32);
+            this.btn_Find.TabIndex = 13;
+            this.btn_Find.Text = "Tìm kiếm";
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_Click);
             // 
             // btnDong
             // 
