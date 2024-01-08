@@ -56,14 +56,14 @@
             // 
             // dtKK
             // 
-            this.dtKK.Location = new System.Drawing.Point(363, 66);
+            this.dtKK.Location = new System.Drawing.Point(667, 29);
             this.dtKK.Name = "dtKK";
             this.dtKK.Size = new System.Drawing.Size(200, 20);
             this.dtKK.TabIndex = 54;
             // 
             // txtMOTA
             // 
-            this.txtMOTA.Location = new System.Drawing.Point(617, 29);
+            this.txtMOTA.Location = new System.Drawing.Point(363, 67);
             this.txtMOTA.Name = "txtMOTA";
             this.txtMOTA.Size = new System.Drawing.Size(116, 20);
             this.txtMOTA.TabIndex = 53;
@@ -72,7 +72,7 @@
             // 
             this.txtMAPTN.Location = new System.Drawing.Point(362, 29);
             this.txtMAPTN.Name = "txtMAPTN";
-            this.txtMAPTN.Size = new System.Drawing.Size(100, 20);
+            this.txtMAPTN.Size = new System.Drawing.Size(117, 20);
             this.txtMAPTN.TabIndex = 52;
             // 
             // txtMAKK
@@ -86,7 +86,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(524, 29);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(274, 66);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(86, 19);
             this.guna2HtmlLabel5.TabIndex = 49;
@@ -96,7 +96,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(274, 67);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(564, 28);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(82, 19);
             this.guna2HtmlLabel4.TabIndex = 48;

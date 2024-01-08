@@ -75,7 +75,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(22, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(677, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(740, 182);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnDong
@@ -151,6 +151,7 @@
             this.btnXoa.Size = new System.Drawing.Size(83, 28);
             this.btnXoa.TabIndex = 44;
             this.btnXoa.Text = "Xóa bỏ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -200,6 +201,7 @@
             this.btnThem.Size = new System.Drawing.Size(98, 28);
             this.btnThem.TabIndex = 42;
             this.btnThem.Text = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // btnFind
             // 

@@ -179,6 +179,10 @@ namespace BTL_OOP_N17
             f.ShowDialog();
         }
 
-        
+        private void sửaChữaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuaChuaTS s = new SuaChuaTS();
+            s.ShowDialog();
+        }
     }
 }

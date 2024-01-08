@@ -179,5 +179,11 @@ namespace BTL_OOP_N17
             MuonTS f = new MuonTS();
             f.ShowDialog();
         }
+
+        private void sửaChữaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuaChuaTS f = new SuaChuaTS();
+            f.ShowDialog();
+        }
     }
 }

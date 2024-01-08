@@ -136,7 +136,7 @@ namespace BTL_OOP_N17
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO THANHLYTS (MAKK, MAGV, MAPTN, NGAYKK, MOTAKK) VALUES (@makk,@magv,@maptn,@ngaykk, @mota)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO KIEMKE (MAKK, MAGV, MAPTN, NGAYKK, MOTAKK) VALUES (@makk,@magv,@maptn,@ngaykk, @mota)", con))
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@makk", makk);
@@ -180,12 +180,12 @@ namespace BTL_OOP_N17
                 }
             }
         }
-        public void DeleteTL(string makk)
+        public void DeleteKK(string makk)
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM KIEMKE WHERE MAKK = @makk", con))
             {
-                cmd.Parameters.AddWithValue("@matl", makk);
+                cmd.Parameters.AddWithValue("@makk", makk);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -201,7 +201,7 @@ namespace BTL_OOP_N17
                 // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
                 if (dgvThongTinKK.SelectedRows.Count > 0)
                 {
-                    // Lấy mã giáo viên từ hàng được chọn
+
                     string makk = (dgvThongTinKK.SelectedRows[0].Cells["MAKK"].Value.ToString());
 
                     // Hiển thị hộp thoại xác nhận
@@ -210,8 +210,8 @@ namespace BTL_OOP_N17
                     // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa giáo viên
-                        DeleteTL(makk);
+                        
+                        DeleteKK(makk);
 
                         // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();

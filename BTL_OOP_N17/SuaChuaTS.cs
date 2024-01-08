@@ -89,7 +89,7 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"NGAYSC LIKE '%{ngaysc}%'";
+                query += $"MAPTN LIKE '%{ngaysc}%'";
                 isFirstCondition = false;
             }
 
@@ -104,7 +104,7 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"CHUCVUGV LIKE '%{ngaysc}%'";
+                query += $"NGAYSC LIKE '%{ngaysc}%'";
             }
 
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
@@ -130,7 +130,7 @@ namespace BTL_OOP_N17
 
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO THANHLYTS (MAGV, MASC, TRANGTHAISC, NGAYSC, MAPTN) VALUES (@magv, @masc, @ttsc, @ngaysc, @maptn)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO SUACHUATS (MAGV, MASC, TRANGTHAISC, NGAYSC, MAPTN) VALUES (@magv, @masc, @ttsc, @ngaysc, @maptn)", con))
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@masc", masc);
@@ -174,7 +174,7 @@ namespace BTL_OOP_N17
                 }
             }
         }
-        public void DeleteTL(string masc)
+        public void DeleteSC(string masc)
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM SUACHUATS WHERE MASC = @masc", con))
@@ -212,35 +212,56 @@ namespace BTL_OOP_N17
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+       
+
+      
+        private void ClearTextBoxes()
+        {
+
+            txtMAGV.Text = "";
+            txtMSC.Text = "";
+            txtTTSC.Text = "";
+            txtMAPTN.Text = "";
+            dtSC.Format = DateTimePickerFormat.Custom; ;
+        }
+
+     
+
+     
+        private void btnDong_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnFind_Click_1(object sender, EventArgs e)
+        {
+
+            string magv = txtMAGV.Text;
+            string masc = txtMSC.Text;
+            string maptn = txtMAPTN.Text;
+            string ttsc = txtTTSC.Text;
+            string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ttsc, ngaysc);
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             try
             {
-
-                if (dataGridView1.SelectedRows.Count > 0)
-                {
-
-                    string masc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
-
-
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sửa chữa này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.Yes)
-                    {
-
-                        DeleteTL(masc);
+                string magv = txtMAGV.Text;
+                string masc = txtMSC.Text;
+                string ttsc = txtTTSC.Text;
+                string maptn = txtMAPTN.Text;
+                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
 
 
-                        InitializeDataGridView();
 
-                        MessageBox.Show("Đã xóa thành công!");
-                    }
+                ThemSCmoi(magv, masc, maptn, ttsc, ngaysc);
 
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng chọn một thông tin sửa chữa để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+                InitializeDataGridView();
+
+                MessageBox.Show("Đã thêm thông tin mới thành công!");
             }
             catch (Exception ex)
             {
@@ -248,7 +269,7 @@ namespace BTL_OOP_N17
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -277,28 +298,48 @@ namespace BTL_OOP_N17
 
             }
         }
-        private void ClearTextBoxes()
-        {
 
-            txtMAGV.Text = "";
-            txtMSC.Text = "";
-            txtTTSC.Text = "";
-            txtMAPTN.Text = "";
-            dtSC.Format = DateTimePickerFormat.Custom; ;
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+
+                    string masc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
+
+
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sửa chữa này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+
+                        DeleteSC(masc);
+
+
+                        InitializeDataGridView();
+
+                        MessageBox.Show("Đã xóa thành công!");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một thông tin sửa chữa để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void btnLoad_Click_1(object sender, EventArgs e)
         {
-            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
             InitializeDataGridView();
             // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
-        }
-
-     
-        private void btnDong_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

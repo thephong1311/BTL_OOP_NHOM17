@@ -99,7 +99,7 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"DIACHIGV LIKE '%{matl}%'";
+                query += $"MATL LIKE '%{matl}%'";
                 isFirstCondition = false;
             }
 
@@ -107,14 +107,14 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"SDTGV LIKE '%{maptn}%'";
+                query += $"MAPTN LIKE '%{maptn}%'";
             }
 
             if (!string.IsNullOrEmpty(ngaytl))
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"CHUCVUGV LIKE '%{ngaytl}%'";
+                query += $"NGAYTL LIKE '%{ngaytl}%'";
             }
 
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
@@ -136,10 +136,11 @@ namespace BTL_OOP_N17
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE THANHLYTS SET MAPTN = @MAGV , TENTL = @TENTL , MAPTN = @MAPTN , NGAYTL = @NGAYTL WHERE MATL = @MATL", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE THANHLYTS SET MAGV = @MAGV , TENTL = @TENTL , MAPTN = @MAPTN , NGAYTL = @NGAYTL WHERE MATL = @MATL", con))
                 {
                     cmd.Parameters.AddWithValue("@MAPTN", maptn);
-                    cmd.Parameters.AddWithValue("@TenTL", tentl);
+                    cmd.Parameters.AddWithValue("@TENTL", tentl);
+                    cmd.Parameters.AddWithValue("@MATL", matl);
                     cmd.Parameters.AddWithValue("@MAGV", magv);
                     cmd.Parameters.AddWithValue("@NGAYTL", ngaytl);
 
@@ -267,7 +268,7 @@ namespace BTL_OOP_N17
                     // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa giáo viên
+                       
                         DeleteTL(matl);
 
                         // Làm mới dữ liệu trong DataGridView sau khi xóa

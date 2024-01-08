@@ -138,7 +138,7 @@ namespace BTL_OOP_N17
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO THANHLYTS (MAPHIEULC, NOILCDI, NOILCDEN, MAGV, LYDOLC, NGAYLC) VALUES (@malc, @, @lcdi, @lcden, @magv, @lydo, @ngaylc)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO PHIEULCTS (MAPHIEULC, NOILCDI, NOILCDEN, MAGV, LYDOLC, NGAYLC) VALUES (@malc, @lcdi, @lcden, @magv, @lydo, @ngaylc)", con))
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@lcdi", lcdi);
@@ -183,10 +183,10 @@ namespace BTL_OOP_N17
                 }
             }
         }
-        public void DeleteTL(string malc)
+        public void DeleteLC(string malc)
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
-            using (SqlCommand cmd = new SqlCommand("DELETE FROM THANHLYTS WHERE MAPHIEULC = @malc", con))
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM PHIEULCTS WHERE MAPHIEULC = @malc", con))
             {
                 cmd.Parameters.AddWithValue("@malc", malc);
 
@@ -195,7 +195,8 @@ namespace BTL_OOP_N17
                 con.Close();
             }
         }
-        private void btnThem_Click(object sender, EventArgs e)
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -220,16 +221,16 @@ namespace BTL_OOP_N17
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
 
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
 
-                    string malc = dataGridView1.SelectedRows[0].Cells["MATL"].Value.ToString();
+                    string malc = dataGridView1.SelectedRows[0].Cells["MAPHIEULC"].Value.ToString();
 
                     // Hiển thị hộp thoại xác nhận
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa luân chuyển này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -238,7 +239,7 @@ namespace BTL_OOP_N17
                     if (result == DialogResult.Yes)
                     {
                         // Gọi hàm DeleteGV để xóa giáo viên
-                        DeleteTL(malc);
+                        DeleteLC(malc);
 
                         // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
@@ -257,7 +258,6 @@ namespace BTL_OOP_N17
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -313,6 +313,8 @@ namespace BTL_OOP_N17
         {
             this.Close();
         }
+
+       
     }
 }
    
