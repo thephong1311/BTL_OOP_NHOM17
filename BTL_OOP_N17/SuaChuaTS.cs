@@ -89,7 +89,7 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"NGAYSC LIKE '%{ngaysc}%'";
+                query += $"MAPTN LIKE '%{ngaysc}%'";
                 isFirstCondition = false;
             }
 
@@ -104,7 +104,7 @@ namespace BTL_OOP_N17
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"CHUCVUGV LIKE '%{ngaysc}%'";
+                query += $"NGAYSC LIKE '%{ngaysc}%'";
             }
 
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
@@ -130,7 +130,7 @@ namespace BTL_OOP_N17
 
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO THANHLYTS (MAGV, MASC, TRANGTHAISC, NGAYSC, MAPTN) VALUES (@magv, @masc, @ttsc, @ngaysc, @maptn)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO SUACHUATS (MAGV, MASC, TRANGTHAISC, NGAYSC, MAPTN) VALUES (@magv, @masc, @ttsc, @ngaysc, @maptn)", con))
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@masc", masc);
@@ -174,7 +174,7 @@ namespace BTL_OOP_N17
                 }
             }
         }
-        public void DeleteTL(string masc)
+        public void DeleteSC(string masc)
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM SUACHUATS WHERE MASC = @masc", con))
@@ -228,7 +228,7 @@ namespace BTL_OOP_N17
                     if (result == DialogResult.Yes)
                     {
 
-                        DeleteTL(masc);
+                        DeleteSC(masc);
 
 
                         InitializeDataGridView();
