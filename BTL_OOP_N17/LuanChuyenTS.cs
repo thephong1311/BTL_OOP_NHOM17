@@ -51,7 +51,7 @@ namespace BTL_OOP_N17
                 string lcdi = selectedRow.Cells["NOILCDI"].Value.ToString();
                 string lcden = selectedRow.Cells["NOILCDEN"].Value.ToString();
                 string lydo = selectedRow.Cells["LYDOLC"].Value.ToString();
-                string ngaylc = selectedRow.Cells["NGAYTL"].Value.ToString();
+                string ngaylc = selectedRow.Cells["NGAYLC"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
                 ShowInfo(malc, lcdi, lcden, magv, ngaylc, lydo);
