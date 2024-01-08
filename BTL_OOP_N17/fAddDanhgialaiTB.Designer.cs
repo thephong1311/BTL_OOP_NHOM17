@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+          //  this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -41,13 +41,13 @@
             this.txtMaTS = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+        //    this.label2 = new System.Windows.Forms.Label();
+           this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+          //  this.label3 = new System.Windows.Forms.Label();
+         //   this.label5 = new System.Windows.Forms.Label();
+         //   this.label6 = new System.Windows.Forms.Label();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+           this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -80,7 +80,7 @@
             this.cbbPTN = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+         //   this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -226,11 +226,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.groupBox2);
+         /*   this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Location = new System.Drawing.Point(496, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(486, 306);
             this.panel2.TabIndex = 1;
+         */
             // 
             // groupBox2
             // 
@@ -655,7 +656,7 @@
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+           // this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fAddDanhgialaiTB";
             this.Text = "fAddDanhgialaiTB";
@@ -672,7 +673,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-       private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+    //   private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -686,7 +687,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
+     //   private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
