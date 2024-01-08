@@ -85,7 +85,7 @@ namespace BTL_OOP_N17
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Cập nhật thông tin giáo viên thành công!");
+                        MessageBox.Show("Cập nhật thông tin thành công!");
                         dataGridView1.DataSource = findMuonTS();
                     }
                     else

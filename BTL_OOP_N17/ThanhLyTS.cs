@@ -335,12 +335,18 @@ namespace BTL_OOP_N17
             DateTime_NgayTL.Format = DateTimePickerFormat.Custom; ;
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+
+        private void btnLoad_Click_1(object sender, EventArgs e)
         {
             // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
             InitializeDataGridView();
             // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

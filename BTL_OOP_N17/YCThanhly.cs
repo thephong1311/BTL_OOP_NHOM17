@@ -47,7 +47,14 @@ namespace BTL_OOP_N17
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = findThanhly();
+            if (!string.IsNullOrEmpty(txtFind.Text))
+            {
+                dataGridView1.DataSource = findThanhly();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập mã PTN để tìm kiếm");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

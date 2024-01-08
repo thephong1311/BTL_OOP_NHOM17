@@ -294,6 +294,12 @@
     <Compile Include="ReportThanhLy.Designer.cs">
       <DependentUpon>ReportThanhLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuaChuaTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaChuaTS.Designer.cs">
+      <DependentUpon>SuaChuaTS.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThanhLyTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -516,6 +522,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportThanhLy.resx">
       <DependentUpon>ReportThanhLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaChuaTS.resx">
+      <DependentUpon>SuaChuaTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhLyTS.resx">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>
