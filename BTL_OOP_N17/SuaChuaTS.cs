@@ -212,7 +212,94 @@ namespace BTL_OOP_N17
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+       
+
+      
+        private void ClearTextBoxes()
+        {
+
+            txtMAGV.Text = "";
+            txtMSC.Text = "";
+            txtTTSC.Text = "";
+            txtMAPTN.Text = "";
+            dtSC.Format = DateTimePickerFormat.Custom; ;
+        }
+
+     
+
+     
+        private void btnDong_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnFind_Click_1(object sender, EventArgs e)
+        {
+
+            string magv = txtMAGV.Text;
+            string masc = txtMSC.Text;
+            string maptn = txtMAPTN.Text;
+            string ttsc = txtTTSC.Text;
+            string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ttsc, ngaysc);
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string magv = txtMAGV.Text;
+                string masc = txtMSC.Text;
+                string ttsc = txtTTSC.Text;
+                string maptn = txtMAPTN.Text;
+                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+
+
+
+                ThemSCmoi(magv, masc, maptn, ttsc, ngaysc);
+
+                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+                InitializeDataGridView();
+
+                MessageBox.Show("Đã thêm thông tin mới thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Kiểm tra xem người dùng đã đồng ý sửa hay không
+            if (result == DialogResult.Yes)
+            {
+                // Lấy dữ liệu từ TextBox
+                string magv = txtMAGV.Text;
+                string masc = txtMSC.Text;
+                string ttsc = txtTTSC.Text;
+                string maptn = txtMAPTN.Text;
+                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+                // Cập nhật dữ liệu trong DataGridView
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                selectedRow.Cells["MAGV"].Value = magv;
+                selectedRow.Cells["MASC"].Value = masc;
+                selectedRow.Cells["MAPTN"].Value = maptn;
+                selectedRow.Cells["NGAYSC"].Value = ngaysc;
+                selectedRow.Cells["TRANGTHAISC"].Value = ttsc;
+
+
+                ShowInfo(magv, masc, maptn, ttsc, ngaysc);
+
+                // Đặt lại TextBox sau khi cập nhật
+                ClearTextBoxes();
+
+            }
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -248,57 +335,11 @@ namespace BTL_OOP_N17
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnLoad_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Kiểm tra xem người dùng đã đồng ý sửa hay không
-            if (result == DialogResult.Yes)
-            {
-                // Lấy dữ liệu từ TextBox
-                string magv = txtMAGV.Text;
-                string masc = txtMSC.Text;
-                string ttsc = txtTTSC.Text;
-                string maptn = txtMAPTN.Text;
-                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-                // Cập nhật dữ liệu trong DataGridView
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                selectedRow.Cells["MAGV"].Value = magv;
-                selectedRow.Cells["MASC"].Value = masc;
-                selectedRow.Cells["MAPTN"].Value = maptn;
-                selectedRow.Cells["NGAYSC"].Value = ngaysc;
-                selectedRow.Cells["TRANGTHAISC"].Value = ttsc;
-
-
-                ShowInfo(magv, masc, maptn, ttsc, ngaysc);
-
-                // Đặt lại TextBox sau khi cập nhật
-                ClearTextBoxes();
-
-            }
-        }
-        private void ClearTextBoxes()
-        {
-
-            txtMAGV.Text = "";
-            txtMSC.Text = "";
-            txtTTSC.Text = "";
-            txtMAPTN.Text = "";
-            dtSC.Format = DateTimePickerFormat.Custom; ;
-        }
-
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
             InitializeDataGridView();
             // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
-        }
-
-     
-        private void btnDong_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -184,6 +184,7 @@
             this.btnFind.Size = new System.Drawing.Size(98, 28);
             this.btnFind.TabIndex = 86;
             this.btnFind.Text = "Tìm kiếm";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click_1);
             // 
             // btnDong
             // 
@@ -233,6 +234,7 @@
             this.btnLoad.Size = new System.Drawing.Size(72, 28);
             this.btnLoad.TabIndex = 84;
             this.btnLoad.Text = "Load";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click_1);
             // 
             // btnXoa
             // 
@@ -257,6 +259,7 @@
             this.btnXoa.Size = new System.Drawing.Size(83, 28);
             this.btnXoa.TabIndex = 83;
             this.btnXoa.Text = "Xóa bỏ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -281,6 +284,7 @@
             this.btnSua.Size = new System.Drawing.Size(105, 29);
             this.btnSua.TabIndex = 82;
             this.btnSua.Text = "Chỉnh sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnThem
             // 
@@ -305,6 +309,7 @@
             this.btnThem.Size = new System.Drawing.Size(98, 28);
             this.btnThem.TabIndex = 81;
             this.btnThem.Text = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // SuaChuaTS
             // 

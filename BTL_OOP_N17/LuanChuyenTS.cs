@@ -195,7 +195,8 @@ namespace BTL_OOP_N17
                 con.Close();
             }
         }
-        private void btnThem_Click(object sender, EventArgs e)
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -220,9 +221,9 @@ namespace BTL_OOP_N17
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
 
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
@@ -257,7 +258,6 @@ namespace BTL_OOP_N17
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -313,6 +313,8 @@ namespace BTL_OOP_N17
         {
             this.Close();
         }
+
+       
     }
 }
    
