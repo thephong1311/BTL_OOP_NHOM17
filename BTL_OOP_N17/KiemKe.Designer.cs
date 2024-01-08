@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KiemKe));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtKK = new System.Windows.Forms.DateTimePicker();
             this.txtMOTA = new System.Windows.Forms.TextBox();
             this.txtMAPTN = new System.Windows.Forms.TextBox();
@@ -48,10 +45,10 @@
             this.btnSua = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.gbTTKiemKe = new Guna.UI.WinForms.GunaGroupBox();
-            this.dgvThongTinKK = new Guna.UI.WinForms.GunaDataGridView();
             this.txtMAGV = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gbTTKiemKe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtKK
@@ -287,76 +284,16 @@
             this.gbTTKiemKe.BackColor = System.Drawing.Color.Transparent;
             this.gbTTKiemKe.BaseColor = System.Drawing.Color.White;
             this.gbTTKiemKe.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gbTTKiemKe.Controls.Add(this.dgvThongTinKK);
+            this.gbTTKiemKe.Controls.Add(this.dataGridView1);
             this.gbTTKiemKe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTTKiemKe.LineColor = System.Drawing.Color.Gainsboro;
             this.gbTTKiemKe.Location = new System.Drawing.Point(-1, 156);
             this.gbTTKiemKe.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTKiemKe.Name = "gbTTKiemKe";
-            this.gbTTKiemKe.Size = new System.Drawing.Size(868, 195);
+            this.gbTTKiemKe.Size = new System.Drawing.Size(714, 219);
             this.gbTTKiemKe.TabIndex = 38;
             this.gbTTKiemKe.Text = "Thông tin kiểm kê";
             this.gbTTKiemKe.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // dgvThongTinKK
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvThongTinKK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvThongTinKK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvThongTinKK.BackgroundColor = System.Drawing.Color.White;
-            this.dgvThongTinKK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvThongTinKK.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvThongTinKK.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvThongTinKK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvThongTinKK.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvThongTinKK.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvThongTinKK.EnableHeadersVisualStyles = false;
-            this.dgvThongTinKK.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvThongTinKK.Location = new System.Drawing.Point(24, 50);
-            this.dgvThongTinKK.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvThongTinKK.Name = "dgvThongTinKK";
-            this.dgvThongTinKK.RowHeadersVisible = false;
-            this.dgvThongTinKK.RowHeadersWidth = 51;
-            this.dgvThongTinKK.RowTemplate.Height = 24;
-            this.dgvThongTinKK.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThongTinKK.Size = new System.Drawing.Size(842, 126);
-            this.dgvThongTinKK.TabIndex = 13;
-            this.dgvThongTinKK.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgvThongTinKK.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvThongTinKK.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvThongTinKK.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvThongTinKK.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvThongTinKK.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvThongTinKK.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvThongTinKK.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvThongTinKK.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dgvThongTinKK.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvThongTinKK.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvThongTinKK.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvThongTinKK.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvThongTinKK.ThemeStyle.HeaderStyle.Height = 4;
-            this.dgvThongTinKK.ThemeStyle.ReadOnly = false;
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.Height = 24;
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvThongTinKK.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // txtMAGV
             // 
@@ -364,6 +301,14 @@
             this.txtMAGV.Name = "txtMAGV";
             this.txtMAGV.Size = new System.Drawing.Size(100, 20);
             this.txtMAGV.TabIndex = 56;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(51, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(598, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
             // KiemKe
             // 
@@ -392,7 +337,7 @@
             this.Text = "Kiểm kê";
             this.Load += new System.EventHandler(this.KiemKe_Load);
             this.gbTTKiemKe.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinKK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,7 +360,7 @@
         private Guna.UI.WinForms.GunaButton btnSua;
         private Guna.UI.WinForms.GunaButton btnThem;
         private Guna.UI.WinForms.GunaGroupBox gbTTKiemKe;
-        private Guna.UI.WinForms.GunaDataGridView dgvThongTinKK;
         private System.Windows.Forms.TextBox txtMAGV;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

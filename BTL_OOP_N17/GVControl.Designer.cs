@@ -204,6 +204,7 @@
             this.sửaChữaToolStripMenuItem.Name = "sửaChữaToolStripMenuItem";
             this.sửaChữaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sửaChữaToolStripMenuItem.Text = "Sửa chữa";
+            this.sửaChữaToolStripMenuItem.Click += new System.EventHandler(this.sửaChữaToolStripMenuItem_Click_1);
             // 
             // mượnThiếtBịToolStripMenuItem
             // 

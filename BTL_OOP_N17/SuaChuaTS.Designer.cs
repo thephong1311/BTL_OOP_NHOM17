@@ -31,12 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SuaChuaTS));
             this.dtSC = new System.Windows.Forms.DateTimePicker();
             this.txtMAGV = new System.Windows.Forms.TextBox();
-            this.txtTTSC = new System.Windows.Forms.TextBox();
             this.txtMAPTN = new System.Windows.Forms.TextBox();
             this.txtMSC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
@@ -53,7 +51,7 @@
             // 
             // dtSC
             // 
-            this.dtSC.Location = new System.Drawing.Point(557, 48);
+            this.dtSC.Location = new System.Drawing.Point(328, 45);
             this.dtSC.Name = "dtSC";
             this.dtSC.Size = new System.Drawing.Size(200, 20);
             this.dtSC.TabIndex = 96;
@@ -64,13 +62,6 @@
             this.txtMAGV.Name = "txtMAGV";
             this.txtMAGV.Size = new System.Drawing.Size(113, 20);
             this.txtMAGV.TabIndex = 95;
-            // 
-            // txtTTSC
-            // 
-            this.txtTTSC.Location = new System.Drawing.Point(328, 49);
-            this.txtTTSC.Name = "txtTTSC";
-            this.txtTTSC.Size = new System.Drawing.Size(113, 20);
-            this.txtTTSC.TabIndex = 94;
             // 
             // txtMAPTN
             // 
@@ -90,7 +81,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(478, 49);
+            this.label5.Location = new System.Drawing.Point(242, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 17);
             this.label5.TabIndex = 91;
@@ -105,16 +96,6 @@
             this.label4.Size = new System.Drawing.Size(84, 17);
             this.label4.TabIndex = 90;
             this.label4.Text = "Mã giáo viên";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(237, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "Trạng thái SC";
             // 
             // label2
             // 
@@ -146,7 +127,7 @@
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Location = new System.Drawing.Point(6, 178);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(741, 245);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(612, 245);
             this.gunaGroupBox1.TabIndex = 80;
             this.gunaGroupBox1.Text = "Thông tin chi tiết";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -158,7 +139,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(22, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(677, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(567, 182);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnFind
@@ -318,12 +299,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dtSC);
             this.Controls.Add(this.txtMAGV);
-            this.Controls.Add(this.txtTTSC);
             this.Controls.Add(this.txtMAPTN);
             this.Controls.Add(this.txtMSC);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFind);
@@ -346,12 +325,10 @@
 
         private System.Windows.Forms.DateTimePicker dtSC;
         private System.Windows.Forms.TextBox txtMAGV;
-        private System.Windows.Forms.TextBox txtTTSC;
         private System.Windows.Forms.TextBox txtMAPTN;
         private System.Windows.Forms.TextBox txtMSC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaButton btnFind;

@@ -281,7 +281,7 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["MASC"].Value = masc;
                 selectedRow.Cells["MAPTN"].Value = maptn;
                 selectedRow.Cells["NGAYSC"].Value = ngaysc;
-
+                
 
 
                 ShowInfo(magv, masc, maptn, ngaysc);
