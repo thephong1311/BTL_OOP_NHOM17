@@ -51,7 +51,7 @@ namespace BTL_OOP_N17
             using (SqlCommand command = new SqlCommand(query, con))
             {
                 // Thêm tham số và đặt giá trị
-                command.Parameters.AddWithValue("@MaPM", txt_TimKiem.Text);
+                command.Parameters.AddWithValue("@MAPM", txt_TimKiem.Text);
 
                 // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
@@ -68,7 +68,7 @@ namespace BTL_OOP_N17
             using (SqlCommand command = new SqlCommand(query, con))
             {
                 // Thêm tham số và đặt giá trị
-                command.Parameters.AddWithValue("@MaPM", txt_TimKiem.Text);
+                command.Parameters.AddWithValue("@MAPM", txt_TimKiem.Text);
 
                 // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
