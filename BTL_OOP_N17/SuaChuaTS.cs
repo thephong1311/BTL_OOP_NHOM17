@@ -192,7 +192,7 @@ namespace BTL_OOP_N17
 
 
 
-                ThemSCmoi(magv, masc, maptn ngaysc);
+                ThemSCmoi(magv, masc, maptn ,ngaysc);
 
                 // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
                 InitializeDataGridView();
