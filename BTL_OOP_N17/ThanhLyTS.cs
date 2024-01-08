@@ -175,7 +175,7 @@ namespace BTL_OOP_N17
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@tentl", tentl);
-                    cmd.Parameters.AddWithValue("@maptn", maptn);
+                    cmd.Parameters.AddWithValue("@matl", matl);
                     cmd.Parameters.AddWithValue("@ngaytl", ngaytl);
                     cmd.Parameters.AddWithValue("@maptn", maptn);
 
