@@ -31,12 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-=======
             this.cbbTinhtrang = new System.Windows.Forms.ComboBox();
             this.cbbLoaiTS = new System.Windows.Forms.ComboBox();
             this.txtTenTS = new System.Windows.Forms.TextBox();
@@ -44,10 +42,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-<<<<<<< HEAD
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,7 +51,6 @@
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-=======
             this.txtCN = new System.Windows.Forms.TextBox();
             this.txtTSKT = new System.Windows.Forms.TextBox();
             this.txtTGBH = new System.Windows.Forms.TextBox();
@@ -89,7 +84,6 @@
             this.btnCapnhat = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,14 +101,12 @@
             // 
             // groupBox1
             // 
-<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.domainUpDown1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.comboBox1);
-=======
             this.groupBox1.Controls.Add(this.cbbTinhtrang);
             this.groupBox1.Controls.Add(this.cbbLoaiTS);
             this.groupBox1.Controls.Add(this.txtTenTS);
@@ -122,7 +114,6 @@
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label2);
@@ -137,7 +128,6 @@
             // 
             // cbbTinhtrang
             // 
-<<<<<<< HEAD
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(149, 130);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -152,7 +142,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(274, 30);
             this.textBox1.TabIndex = 20;
-=======
             this.cbbTinhtrang.FormattingEnabled = true;
             this.cbbTinhtrang.Items.AddRange(new object[] {
             "Đã duyệt",
@@ -161,18 +150,15 @@
             this.cbbTinhtrang.Name = "cbbTinhtrang";
             this.cbbTinhtrang.Size = new System.Drawing.Size(257, 31);
             this.cbbTinhtrang.TabIndex = 7;
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             // 
             // cbbLoaiTS
             // 
-<<<<<<< HEAD
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(149, 78);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(274, 31);
             this.comboBox1.TabIndex = 22;
-=======
             this.cbbLoaiTS.FormattingEnabled = true;
             this.cbbLoaiTS.Items.AddRange(new object[] {
             "L001"});
@@ -224,7 +210,6 @@
             this.label2.Size = new System.Drawing.Size(95, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên thiết bị";
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             // 
             // label1
             // 
@@ -232,11 +217,9 @@
             this.label1.Location = new System.Drawing.Point(24, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-<<<<<<< HEAD
             this.label1.Size = new System.Drawing.Size(106, 23);
             this.label1.TabIndex = 16;
             this.label1.Text = "Mã đánh giá";
-=======
             this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã thiết bị";
@@ -270,7 +253,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Xuất xứ - Điều chỉnh";
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             // 
             // dateTimePicker1
             // 
@@ -281,7 +263,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(258, 27);
             this.dateTimePicker1.TabIndex = 21;
             // 
-<<<<<<< HEAD
             // label2
             // 
             this.label2.AutoSize = true;
@@ -291,7 +272,6 @@
             this.label2.Size = new System.Drawing.Size(122, 23);
             this.label2.TabIndex = 17;
             this.label2.Text = "Ngày đánh giá";
-=======
             // txtCN
             // 
             this.txtCN.Location = new System.Drawing.Point(208, 253);
@@ -319,7 +299,6 @@
             this.txtNamSX.Name = "txtNamSX";
             this.txtNamSX.Size = new System.Drawing.Size(257, 30);
             this.txtNamSX.TabIndex = 7;
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             // 
             // label3
             // 
@@ -327,11 +306,9 @@
             this.label3.Location = new System.Drawing.Point(447, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(144, 23);
             this.label3.TabIndex = 18;
             this.label3.Text = "Lý do đánh giá lại";
-=======
             this.label3.Size = new System.Drawing.Size(93, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Chức năng";
@@ -352,7 +329,6 @@
             this.label4.Size = new System.Drawing.Size(148, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Thông số kỹ thuật";
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             // 
             // label5
             // 
@@ -394,7 +370,6 @@
             // 
             // dataGridView1
             // 
-<<<<<<< HEAD
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 30);
@@ -403,7 +378,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(910, 222);
             this.dataGridView1.TabIndex = 0;
-=======
             this.panel3.Controls.Add(this.groupBox3);
             this.panel3.Location = new System.Drawing.Point(12, 237);
             this.panel3.Name = "panel3";
@@ -668,15 +642,12 @@
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseVisualStyleBackColor = true;
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             // 
             // fAddDanhgialaiTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(985, 472);
-=======
             this.ClientSize = new System.Drawing.Size(985, 572);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox4);
@@ -685,7 +656,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
             this.Controls.Add(this.panel1);
             this.Name = "fAddDanhgialaiTB";
             this.Text = "fAddDanhgialaiTB";
@@ -702,7 +672,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-<<<<<<< HEAD
        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox1;
@@ -716,15 +685,8 @@
         private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-=======
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
@@ -737,7 +699,6 @@
         private System.Windows.Forms.TextBox txtMaTS;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtCN;
         private System.Windows.Forms.TextBox txtTSKT;
         private System.Windows.Forms.TextBox txtTGBH;
@@ -757,10 +718,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnDong;
-       private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Button btnCapnhat;
         private System.Windows.Forms.ComboBox cbbDVT;
         private System.Windows.Forms.Button btnThem;
->>>>>>> f7a8bf9a7cea36eb2a092413ac530c9d194e2b4e
     }
 }
