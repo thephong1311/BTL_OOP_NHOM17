@@ -189,6 +189,30 @@
     <Compile Include="ChartGV.Designer.cs">
       <DependentUpon>ChartGV.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChartMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMua.Designer.cs">
+      <DependentUpon>ChartMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartSoTienTrongPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartSoTienTrongPTN.Designer.cs">
+      <DependentUpon>ChartSoTienTrongPTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartThongkeMuaTheoTGian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartThongkeMuaTheoTGian.Designer.cs">
+      <DependentUpon>ChartThongkeMuaTheoTGian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartTKMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartTKMuon.Designer.cs">
+      <DependentUpon>ChartTKMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhgiaTB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -469,6 +493,18 @@
     </Compile>
     <EmbeddedResource Include="ChartGV.resx">
       <DependentUpon>ChartGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartMua.resx">
+      <DependentUpon>ChartMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartSoTienTrongPTN.resx">
+      <DependentUpon>ChartSoTienTrongPTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartThongkeMuaTheoTGian.resx">
+      <DependentUpon>ChartThongkeMuaTheoTGian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTKMuon.resx">
+      <DependentUpon>ChartTKMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhgiaTB.resx">
       <DependentUpon>DanhgiaTB.cs</DependentUpon>
