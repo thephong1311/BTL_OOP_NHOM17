@@ -17,10 +17,13 @@ namespace BTL_OOP_N17
         public ChartThongkeMuaTheoTGian()
         {
             InitializeComponent();
+            chartTKMuatheoTG.Series.Add("Số Tài sản YC");
         }
       
         private void btnTK_Click(object sender, EventArgs e)
         {
+            chartTKMuatheoTG.Series[0].Points.Clear();
+            chartTKMuatheoTG.DataBind();
             try
             {
                 string sql = ("select YC.MAPTN, COUNT(TENTSYC) AS SOYC FROM YEUCAUMUATS YC JOIN CHITIET_YCTS CTYC ON YC.MAYC = CTYC.MAYC WHERE NGAYLAPYC BETWEEN '" + dateTimePicker1.Text + "'AND '" + dateTimePicker2.Text + "' GROUP BY YC.MAPTN ");
@@ -33,7 +36,6 @@ namespace BTL_OOP_N17
                         {
                             while (reader.Read())
                             {
-                                chartTKMuatheoTG.Series.Add("Số Tài sản YC");
                                 chartTKMuatheoTG.Series["Số Tài sản YC"].Points.AddXY(Convert.ToString(reader[0]), int.Parse(reader[1].ToString()));
                             }
                         }
