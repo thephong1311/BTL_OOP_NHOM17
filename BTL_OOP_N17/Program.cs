@@ -18,7 +18,7 @@ namespace BTL_OOP_N17
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());
 
-           // Application.Run(new ChartThongkeMuaTheoTGian());
+            //Application.Run(new ChartTKMuon());
 
         }
     }
