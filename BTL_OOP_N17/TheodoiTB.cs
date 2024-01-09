@@ -113,7 +113,7 @@ namespace BTL_OOP_N17
 
         private void btnThemYCmuon_Click(object sender, EventArgs e)
         {
-            YCmua f = new YCmua();
+            ThemMuonTS f = new ThemMuonTS();
             f.ShowDialog();
         }
 
