@@ -169,5 +169,40 @@ namespace BTL_OOP_N17
         {
             OpenChildForm(new SuaChuaTS());
         }
+
+        private void thốngKêToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thốngKêSốTiềnTrongPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartMua());
+        }
+
+        private void thốngKêCácYêuCầuMuaTheoThờiGianToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartThongkeMuaTheoTGian());
+        }
+
+        private void thốngKêThiếtBịTạiPTNToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoluongTBcotaiPTN());
+        }
+
+        private void thốngKêSốTiềnTrongPTNToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoTienTrongPTN());
+        }
+
+        private void thốngKêSốLượngTBTạiPTNToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartTKMuon());
+        }
     }
 }
