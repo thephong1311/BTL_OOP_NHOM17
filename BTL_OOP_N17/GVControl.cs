@@ -178,6 +178,11 @@ namespace BTL_OOP_N17
         {
             OpenChildForm(new ChartTKMuon());
         }
+
+        private void danhMụcPhòngThíNghiệmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QLTTPTN());
+        }
     }
     
 }

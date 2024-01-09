@@ -225,6 +225,7 @@
             this.danhMụcPhòngThíNghiệmToolStripMenuItem.Name = "danhMụcPhòngThíNghiệmToolStripMenuItem";
             this.danhMụcPhòngThíNghiệmToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this.danhMụcPhòngThíNghiệmToolStripMenuItem.Text = "Danh mục phòng thí nghiệm";
+            this.danhMụcPhòngThíNghiệmToolStripMenuItem.Click += new System.EventHandler(this.danhMụcPhòngThíNghiệmToolStripMenuItem_Click);
             // 
             // danhMụcNhàCungCấpToolStripMenuItem
             // 
