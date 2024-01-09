@@ -56,7 +56,7 @@
             this.chartTKMuaTS.Text = "chartTKMuaTS";
             title1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
-            title1.Text = "THỐNG KÊ MUA YÊU CẦU MUA THEO THỜI GIAN ";
+            title1.Text = "THỐNG KÊ MUA YÊU CẦU MUA TẠI PHÒNG THÍ NGHIỆM";
             this.chartTKMuaTS.Titles.Add(title1);
             // 
             // dataGridView1
