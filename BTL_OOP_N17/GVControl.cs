@@ -36,96 +36,6 @@ namespace BTL_OOP_N17
 
      
 
-        private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThongtintaikhoanAdmin());
-        }
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Bạn muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
-
-        private void yêuCầuMuaThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            YCmua f = new YCmua();
-            f.ShowDialog();
-        }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-        private void danhMụcPhòngThíNghiệmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            QLTTPTN f = new QLTTPTN();
-            f.ShowDialog();
-        }
-
-        private void danhMụcNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Nhacungcap f = new Nhacungcap();
-            f.ShowDialog();
-        }
-
-        private void theoDõiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TheodoiTB f = new TheodoiTB();
-            f.ShowDialog();
-        }
-
-        private void danhMụcThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fDanhmucthietbi f = new fDanhmucthietbi();
-            f.ShowDialog();
-        }
-
-        private void yêuCầuMuaThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            YCmua f = new YCmua();
-            f.ShowDialog();
-        }
-
-        private void đánhGiáLạiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fDanhgialaiTB f = new fDanhgialaiTB();
-            f.ShowDialog();
-        }
-
-        private void mượnThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void thanhLýThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ThanhLyTB f = new ThanhLyTB();
-            f.ShowDialog();
-        }
-
-        private void luânChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LuanChuyenTS f = new LuanChuyenTS();
-            f.ShowDialog();
-        }
-
-        private void kiểmKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            KiemKe f = new KiemKe();
-            f.ShowDialog();
-        }
-
-        private void thiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -176,16 +86,98 @@ namespace BTL_OOP_N17
 
         private void mượnThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            MuonTS f = new MuonTS();
-            f.ShowDialog();
+            OpenChildForm(new MuonTS());
         }
 
       
 
         private void sửaChữaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            SuaChuaTS f = new SuaChuaTS();
-            f.ShowDialog();
+            OpenChildForm(new SuaChuaTS());
+        }
+
+        private void thôngTinTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThongtintaikhoanAdmin());
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new DoiMK());
+        }
+
+        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void theoDõiThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new TheodoiTB());
+        }
+
+        private void danhMụcThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new fDanhmucthietbi());
+        }
+
+        private void yêuCầuMuaThiếtBịToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            OpenChildForm(new fDanhmucthietbi());
+        }
+
+        private void đánhGiáLạiThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThanhLyTB());
+        }
+
+        private void thanhLýThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new ThanhLyTB());
+        }
+
+        private void luânChuyểnToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new LuanChuyenTS());
+        }
+
+        private void kiểmKêToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new KiemKe());
+        }
+
+        private void danhMụcNhàCungCấpToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new Nhacungcap());
+        }
+
+       
+
+        private void thốngKêYêuCầuMuaTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartMua());
+        }
+
+        private void thốngKêYêuCầuMuaTheoThờiGianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartThongkeMuaTheoTGian());
+        }
+
+        private void thốngKêSốLượngThiếtBịTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoluongTBcotaiPTN());
+        }
+
+        private void thốngKêSốTiềnTrongPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoTienTrongPTN());
+        }
+
+        private void thốngKêMượnThiếtBịTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartTKMuon());
         }
     }
+    
 }
