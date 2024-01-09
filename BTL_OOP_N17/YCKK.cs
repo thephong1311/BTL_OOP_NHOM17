@@ -59,7 +59,7 @@ namespace BTL_OOP_N17
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtFind.Text = "";
-            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = infoYCKKGridView();
         }
     }
 }
