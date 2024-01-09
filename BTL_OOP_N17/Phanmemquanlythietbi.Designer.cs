@@ -51,11 +51,11 @@
             this.danhMụcNhàCungCấpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yêuCầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel_Body = new System.Windows.Forms.Panel();
             this.thốngKêCácYêuCầuMuaTheoThờiGianToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêThiếtBịTạiPTNToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêSốTiềnTrongPTNToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêSốLượngTBTạiPTNToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_Body = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -256,14 +256,6 @@
             this.thốngKêToolStripMenuItem.Text = "Thống kê yêu cầu mua TB của các PTN ";
             this.thốngKêToolStripMenuItem.Click += new System.EventHandler(this.thốngKêToolStripMenuItem_Click);
             // 
-            // panel_Body
-            // 
-            this.panel_Body.Location = new System.Drawing.Point(24, 38);
-            this.panel_Body.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(1444, 603);
-            this.panel_Body.TabIndex = 1;
-            // 
             // thốngKêCácYêuCầuMuaTheoThờiGianToolStripMenuItem1
             // 
             this.thốngKêCácYêuCầuMuaTheoThờiGianToolStripMenuItem1.Name = "thốngKêCácYêuCầuMuaTheoThờiGianToolStripMenuItem1";
@@ -292,11 +284,19 @@
             this.thốngKêSốLượngTBTạiPTNToolStripMenuItem1.Text = "Thống kê mượn thiết bị tại PTN";
             this.thốngKêSốLượngTBTạiPTNToolStripMenuItem1.Click += new System.EventHandler(this.thốngKêSốLượngTBTạiPTNToolStripMenuItem1_Click);
             // 
+            // panel_Body
+            // 
+            this.panel_Body.Location = new System.Drawing.Point(24, 38);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(1659, 651);
+            this.panel_Body.TabIndex = 1;
+            // 
             // fDevicemanage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1480, 652);
+            this.ClientSize = new System.Drawing.Size(1695, 742);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

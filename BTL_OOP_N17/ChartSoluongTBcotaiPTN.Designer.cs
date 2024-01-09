@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chartSLTBtaiPTN = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -41,12 +42,12 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 26);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 21);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(360, 285);
             this.dataGridView1.TabIndex = 0;
             // 
             // chartSLTBtaiPTN
@@ -55,25 +56,28 @@
             this.chartSLTBtaiPTN.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartSLTBtaiPTN.Legends.Add(legend1);
-            this.chartSLTBtaiPTN.Location = new System.Drawing.Point(521, 26);
-            this.chartSLTBtaiPTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartSLTBtaiPTN.Location = new System.Drawing.Point(391, 21);
+            this.chartSLTBtaiPTN.Margin = new System.Windows.Forms.Padding(2);
             this.chartSLTBtaiPTN.Name = "chartSLTBtaiPTN";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "sots";
+            series1.Name = "số lượng tài sản";
             this.chartSLTBtaiPTN.Series.Add(series1);
-            this.chartSLTBtaiPTN.Size = new System.Drawing.Size(461, 351);
+            this.chartSLTBtaiPTN.Size = new System.Drawing.Size(346, 285);
             this.chartSLTBtaiPTN.TabIndex = 1;
             this.chartSLTBtaiPTN.Text = "Chart thống kê số lượng thiết bị có tại PTN";
+            title1.Name = "Title1";
+            title1.Text = "THỐNG KÊ SỐ LƯỢNG TÀI SẢN CÓ TẠI PTN";
+            this.chartSLTBtaiPTN.Titles.Add(title1);
             // 
             // ChartSoluongTBcotaiPTN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 497);
+            this.ClientSize = new System.Drawing.Size(746, 404);
             this.Controls.Add(this.chartSLTBtaiPTN);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChartSoluongTBcotaiPTN";
             this.Text = "ChartGV";
             this.Load += new System.EventHandler(this.ChartSoluongTBcotaiPTN_Load);

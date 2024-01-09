@@ -23,7 +23,7 @@ namespace BTL_OOP_N17
         {
             try
             {
-                string sql = "select MAPTN, COUNT(MATS) AS COTS FROM TAISAN GROUP BY MAPTN";
+                string sql = "select MAPTN, COUNT(MATS) AS SOLUONGTS FROM TAISAN GROUP BY MAPTN";
                 using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
                     connection.Open();
@@ -41,7 +41,7 @@ namespace BTL_OOP_N17
                             // Thêm dữ liệu vào biểu đồ
                             foreach (DataRow row in dataTable.Rows)
                             {
-                                chartSLTBtaiPTN.Series["sots"].Points.AddXY(row["MAPTN"].ToString(), Convert.ToInt32(row["SOLUONGTS"]));
+                                chartSLTBtaiPTN.Series["số lượng tài sản"].Points.AddXY(row["MAPTN"].ToString(), Convert.ToInt32(row["SOLUONGTS"]));
                             }
                         }
                     }
