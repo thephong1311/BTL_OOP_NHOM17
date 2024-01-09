@@ -20,7 +20,7 @@ namespace BTL_OOP_N17
         {
             InitializeComponent();
             daduyetGridView1.DataSource = infoDaDuyetGridView();
-            chuaduyetGridView3.DataSource = infoDaDuyetGridView();
+            chuaduyetGridView3.DataSource = infoChuaDuyetGridView();
             ctpmGridView2.DataSource = infoCTPM();
         }
         public DataTable infoCTPM()
@@ -120,7 +120,7 @@ namespace BTL_OOP_N17
         private void InitializeDataGridView()
         {
             daduyetGridView1.DataSource = infoDaDuyetGridView();
-            chuaduyetGridView3.DataSource = infoDaDuyetGridView();
+            chuaduyetGridView3.DataSource = infoChuaDuyetGridView();
             ctpmGridView2.DataSource = infoCTPM();
         }
         private void btn_Delete_Click(object sender, EventArgs e)

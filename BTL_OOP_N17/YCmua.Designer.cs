@@ -49,6 +49,8 @@
             this.txtMota = new System.Windows.Forms.TextBox();
             this.txtMaGV = new System.Windows.Forms.TextBox();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
+            this.btnCapnhat = new Guna.UI.WinForms.GunaButton();
+            this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.xemCacYCMua1 = new BTL_OOP_N17.XemCacYCMua();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGTHINGHIEMBindingSource)).BeginInit();
             this.gpbThongtinchitiet.SuspendLayout();
@@ -210,7 +212,7 @@
             // 
             this.gpbThongtinchitiet.Controls.Add(this.dgvThongtinchitiet);
             this.gpbThongtinchitiet.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpbThongtinchitiet.Location = new System.Drawing.Point(12, 172);
+            this.gpbThongtinchitiet.Location = new System.Drawing.Point(36, 238);
             this.gpbThongtinchitiet.Name = "gpbThongtinchitiet";
             this.gpbThongtinchitiet.Size = new System.Drawing.Size(905, 278);
             this.gpbThongtinchitiet.TabIndex = 13;
@@ -220,7 +222,7 @@
             // dgvThongtinchitiet
             // 
             this.dgvThongtinchitiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongtinchitiet.Location = new System.Drawing.Point(8, 22);
+            this.dgvThongtinchitiet.Location = new System.Drawing.Point(14, 22);
             this.dgvThongtinchitiet.Name = "dgvThongtinchitiet";
             this.dgvThongtinchitiet.RowHeadersWidth = 51;
             this.dgvThongtinchitiet.RowTemplate.Height = 24;
@@ -240,14 +242,14 @@
             this.btnClear.ForeColor = System.Drawing.Color.Black;
             this.btnClear.Image = global::BTL_OOP_N17.Properties.Resources.exchange;
             this.btnClear.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClear.Location = new System.Drawing.Point(745, 456);
+            this.btnClear.Location = new System.Drawing.Point(459, 187);
             this.btnClear.Name = "btnClear";
             this.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnClear.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnClear.OnHoverForeColor = System.Drawing.Color.White;
             this.btnClear.OnHoverImage = null;
             this.btnClear.OnPressedColor = System.Drawing.Color.Black;
-            this.btnClear.Size = new System.Drawing.Size(103, 55);
+            this.btnClear.Size = new System.Drawing.Size(103, 40);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "Clear";
             this.btnClear.Click += new System.EventHandler(this.btnDong_Click);
@@ -265,7 +267,7 @@
             this.btnXemlai.ForeColor = System.Drawing.Color.Black;
             this.btnXemlai.Image = ((System.Drawing.Image)(resources.GetObject("btnXemlai.Image")));
             this.btnXemlai.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXemlai.Location = new System.Drawing.Point(441, 456);
+            this.btnXemlai.Location = new System.Drawing.Point(466, 537);
             this.btnXemlai.Name = "btnXemlai";
             this.btnXemlai.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnXemlai.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -290,16 +292,16 @@
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(250, 456);
+            this.btnLuu.Location = new System.Drawing.Point(50, 187);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnLuu.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLuu.OnHoverImage = null;
             this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLuu.Size = new System.Drawing.Size(113, 55);
+            this.btnLuu.Size = new System.Drawing.Size(138, 40);
             this.btnLuu.TabIndex = 16;
-            this.btnLuu.Text = "Lưu lại";
+            this.btnLuu.Text = "Thêm mới ";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtMota
@@ -331,7 +333,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(36, 456);
+            this.btnThem.Location = new System.Drawing.Point(201, 537);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -343,9 +345,59 @@
             this.btnThem.Text = "Thêm TTCT";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnCapnhat
+            // 
+            this.btnCapnhat.AnimationHoverSpeed = 0.07F;
+            this.btnCapnhat.AnimationSpeed = 0.03F;
+            this.btnCapnhat.BaseColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCapnhat.BorderColor = System.Drawing.Color.Black;
+            this.btnCapnhat.BorderSize = 1;
+            this.btnCapnhat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCapnhat.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCapnhat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapnhat.ForeColor = System.Drawing.Color.Black;
+            this.btnCapnhat.Image = global::BTL_OOP_N17.Properties.Resources.diskette;
+            this.btnCapnhat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCapnhat.Location = new System.Drawing.Point(242, 187);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCapnhat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCapnhat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCapnhat.OnHoverImage = null;
+            this.btnCapnhat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCapnhat.Size = new System.Drawing.Size(138, 40);
+            this.btnCapnhat.TabIndex = 20;
+            this.btnCapnhat.Text = "Cập nhật ";
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AnimationHoverSpeed = 0.07F;
+            this.btnXoa.AnimationSpeed = 0.03F;
+            this.btnXoa.BaseColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnXoa.BorderColor = System.Drawing.Color.Black;
+            this.btnXoa.BorderSize = 1;
+            this.btnXoa.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXoa.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
+            this.btnXoa.Image = global::BTL_OOP_N17.Properties.Resources.delete;
+            this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXoa.Location = new System.Drawing.Point(651, 187);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXoa.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXoa.OnHoverImage = null;
+            this.btnXoa.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXoa.Size = new System.Drawing.Size(103, 40);
+            this.btnXoa.TabIndex = 21;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // xemCacYCMua1
             // 
-            this.xemCacYCMua1.Location = new System.Drawing.Point(18, 193);
+            this.xemCacYCMua1.Location = new System.Drawing.Point(36, 233);
             this.xemCacYCMua1.Name = "xemCacYCMua1";
             this.xemCacYCMua1.Size = new System.Drawing.Size(893, 189);
             this.xemCacYCMua1.TabIndex = 1;
@@ -354,8 +406,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 538);
+            this.ClientSize = new System.Drawing.Size(929, 604);
             this.Controls.Add(this.xemCacYCMua1);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnCapnhat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtMaGV);
             this.Controls.Add(this.txtMota);
@@ -406,5 +460,7 @@
         private System.Windows.Forms.TextBox txtMaGV;
         private XemCacYCMua xemCacYCMua1;
         private Guna.UI.WinForms.GunaButton btnThem;
+        private Guna.UI.WinForms.GunaButton btnCapnhat;
+        private Guna.UI.WinForms.GunaButton btnXoa;
     }
 }
