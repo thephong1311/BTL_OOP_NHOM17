@@ -32,18 +32,21 @@ namespace BTL_OOP_N17
                     {
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-
                             DataTable dataTable = new DataTable();
                             dataTable.Load(reader);
 
-                            
                             dataGridView1.DataSource = dataTable;
 
-                           
-                            while (reader.Read())
+                            // Clear existing series in the chart
+                            chartTKMuaTS.Series.Clear();
+
+                            // Add a new series to the chart
+                            chartTKMuaTS.Series.Add("Số yêu cầu mua");
+
+                            // Use the data from the DataTable to populate the chart
+                            foreach (DataRow row in dataTable.Rows)
                             {
-                                chartTKMuaTS.Series.Add("Số yêu cầu mua");
-                                chartTKMuaTS.Series["Số yêu cầu mua"].Points.AddXY(Convert.ToString(reader[0]), int.Parse(reader[1].ToString()));
+                                chartTKMuaTS.Series["Số yêu cầu mua"].Points.AddXY(Convert.ToString(row["MAPTN"]), Convert.ToInt32(row["SOYC"]));
                             }
                         }
                     }
