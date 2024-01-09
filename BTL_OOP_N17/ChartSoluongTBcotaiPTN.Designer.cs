@@ -60,7 +60,7 @@
             this.chartSLTBtaiPTN.Name = "chartSLTBtaiPTN";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "sots";
             this.chartSLTBtaiPTN.Series.Add(series1);
             this.chartSLTBtaiPTN.Size = new System.Drawing.Size(461, 351);
             this.chartSLTBtaiPTN.TabIndex = 1;
