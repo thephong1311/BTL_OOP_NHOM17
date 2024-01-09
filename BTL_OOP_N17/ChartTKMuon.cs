@@ -17,6 +17,7 @@ namespace BTL_OOP_N17
         public ChartTKMuon()
         {
             InitializeComponent();
+            chartTKMuonTS.Series.Add("Số yêu cầu mượn");
         }
 
         private void ChartTKMuon_Load(object sender, EventArgs e)
@@ -33,9 +34,6 @@ namespace BTL_OOP_N17
                         {
                             while (reader.Read())
                             {
-                                chartTKMuonTS.Series.Add("Số yêu cầu mượn");
-                                chartTKMuonTS.Series["Số yêu cầu mượn"].XValueMember = "Phòng thí nghiệm";
-                                chartTKMuonTS.Series["Số yêu cầu mượn"].YValueMembers = "Số lượng";
                                 chartTKMuonTS.Series["Số yêu cầu mượn"].Points.AddXY(Convert.ToString(reader[0]), int.Parse(reader[1].ToString()));
                             }
                         }
