@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_OOP_N17
 {
-    public partial class GVControl : Form
+    public partial class SuperAdControl : Form
     {
-        public GVControl()
+        public SuperAdControl()
         {
             InitializeComponent();
         }
@@ -34,36 +34,12 @@ namespace BTL_OOP_N17
             childForm.Show();
         }
 
-     
-
-
-    
-
-
-
-
-
-
-
-
-        private void mượnThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new MuonTS());
-        }
-
-      
-
-        private void sửaChữaToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new SuaChuaTS());
-        }
-
         private void thôngTinTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThongtintaikhoanAdmin());
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new DoiMK());
         }
@@ -74,47 +50,85 @@ namespace BTL_OOP_N17
             this.Close();
         }
 
-        private void theoDõiThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void thiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new TheodoiTB());
+           
         }
 
-        private void danhMụcThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void danhMụcThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new fDanhmucthietbi());
         }
 
-        private void yêuCầuMuaThiếtBịToolStripMenuItem_Click_2(object sender, EventArgs e)
+        private void yêuCầuMuaThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new YCmua());
         }
 
-        private void đánhGiáLạiThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void đánhGiáLạiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fDanhgialaiTB());
+        }
+
+        private void thanhLýThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ThanhLyTB());
         }
 
-        private void thanhLýThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            OpenChildForm(new ThanhLyTB());
-        }
-
-        private void luânChuyểnToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void luânChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new LuanChuyenTS());
         }
 
-        private void kiểmKêToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void kiểmKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new KiemKe());
         }
 
-        private void danhMụcNhàCungCấpToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void sửaChữaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new SuaChuaTS());
+        }
+
+        private void mượnThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MuonTS());
+        }
+
+        private void danhMụcPhòngThíNghiệmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new QLTTPTN());
+        }
+
+        private void danhMụcNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Nhacungcap());
         }
 
-       
+        private void danhMụcĐơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DVT());
+        }
+
+        private void danhMụcLoạiTàiSảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new LOAITS());
+        }
+
+        private void danhMụcTrạngTháiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TRANGTHAI());
+        }
+
+        private void danhMujToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ACCOUNT());
+        }
+
+        private void theoDõiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TheodoiTB());
+        }
 
         private void thốngKêYêuCầuMuaTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -141,30 +155,9 @@ namespace BTL_OOP_N17
             OpenChildForm(new ChartTKMuon());
         }
 
-        private void danhMụcPhòngThíNghiệmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new QLTTPTN());
-        }
-
-        private void danhMụcĐơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new DVT());
-        }
-
-        private void danhMụcLoạiTàiSảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new LOAITS());
-        }
-
         private void thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ChartSoLuongGVtaiPTN());
         }
-
-        private void danhMụcTrạngTháiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new TRANGTHAI());
-        }
     }
-    
 }

@@ -20,11 +20,6 @@ namespace BTL_OOP_N17
             InitializeComponent();
             dataGridView1.DataSource = infoDMTBGridView();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
         public DataTable infoDMTBGridView()
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * from TAISAN", con);
@@ -36,11 +31,6 @@ namespace BTL_OOP_N17
         private void InitializeDataGridView()
         {
             dataGridView1.DataSource = infoDMTBGridView();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
 
