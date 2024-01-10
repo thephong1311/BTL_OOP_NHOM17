@@ -29,7 +29,7 @@ namespace BTL_OOP_N17
         }
         public DataTable findThanhly()
         {
-            string query = "SELECT * FROM THANHLYTS WHERE DVMUON = @MaPTN";
+            string query = "SELECT * FROM THANHLYTS WHERE MAPTN = @MaPTN";
 
             using (SqlCommand command = new SqlCommand(query, con))
             {

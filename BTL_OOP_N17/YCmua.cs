@@ -288,6 +288,35 @@ namespace BTL_OOP_N17
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public DataTable findCTYCmua()
+        {
+            string query = "SELECT * FROM CHITIET_YCTS  WHERE MAYC= @MaYC";
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                // Thêm tham số và đặt giá trị
+                command.Parameters.AddWithValue("@MaYC", txtMaYC.Text);
+
+                // Thực hiện truy vấn
+                SqlDataAdapter find = new SqlDataAdapter(command);
+                DataTable dt_find = new DataTable();
+                find.Fill(dt_find);
+
+                return dt_find;
+            }
+        }
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(txtMaYC.Text))
+            {
+                dgvThongtinchitiet.DataSource = findCTYCmua();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập mã yêu cầu muốn tìm kiếm chi tiết");
+            }
+
+        }
     }
 }
 

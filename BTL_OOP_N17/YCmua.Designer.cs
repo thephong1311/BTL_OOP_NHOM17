@@ -52,6 +52,7 @@
             this.btnCapnhat = new Guna.UI.WinForms.GunaButton();
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.xemCacYCMua1 = new BTL_OOP_N17.XemCacYCMua();
+            this.btnFind = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGTHINGHIEMBindingSource)).BeginInit();
             this.gpbThongtinchitiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinchitiet)).BeginInit();
@@ -242,7 +243,7 @@
             this.btnClear.ForeColor = System.Drawing.Color.Black;
             this.btnClear.Image = global::BTL_OOP_N17.Properties.Resources.exchange;
             this.btnClear.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnClear.Location = new System.Drawing.Point(459, 187);
+            this.btnClear.Location = new System.Drawing.Point(422, 187);
             this.btnClear.Name = "btnClear";
             this.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnClear.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -358,7 +359,7 @@
             this.btnCapnhat.ForeColor = System.Drawing.Color.Black;
             this.btnCapnhat.Image = global::BTL_OOP_N17.Properties.Resources.diskette;
             this.btnCapnhat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCapnhat.Location = new System.Drawing.Point(242, 187);
+            this.btnCapnhat.Location = new System.Drawing.Point(227, 187);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnCapnhat.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -383,7 +384,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
             this.btnXoa.Image = global::BTL_OOP_N17.Properties.Resources.delete;
             this.btnXoa.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXoa.Location = new System.Drawing.Point(651, 187);
+            this.btnXoa.Location = new System.Drawing.Point(602, 187);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnXoa.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -402,11 +403,37 @@
             this.xemCacYCMua1.Size = new System.Drawing.Size(893, 189);
             this.xemCacYCMua1.TabIndex = 1;
             // 
+            // btnFind
+            // 
+            this.btnFind.AnimationHoverSpeed = 0.07F;
+            this.btnFind.AnimationSpeed = 0.03F;
+            this.btnFind.BaseColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFind.BorderColor = System.Drawing.Color.Black;
+            this.btnFind.BorderSize = 1;
+            this.btnFind.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFind.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFind.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.Black;
+            this.btnFind.Image = global::BTL_OOP_N17.Properties.Resources.search_interface_symbol;
+            this.btnFind.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFind.Location = new System.Drawing.Point(769, 187);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFind.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFind.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFind.OnHoverImage = null;
+            this.btnFind.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFind.Size = new System.Drawing.Size(129, 40);
+            this.btnFind.TabIndex = 22;
+            this.btnFind.Text = "Tìm kiếm ";
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
             // YCmua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 604);
+            this.ClientSize = new System.Drawing.Size(929, 629);
+            this.Controls.Add(this.btnFind);
             this.Controls.Add(this.xemCacYCMua1);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapnhat);
@@ -462,5 +489,6 @@
         private Guna.UI.WinForms.GunaButton btnThem;
         private Guna.UI.WinForms.GunaButton btnCapnhat;
         private Guna.UI.WinForms.GunaButton btnXoa;
+        private Guna.UI.WinForms.GunaButton btnFind;
     }
 }
