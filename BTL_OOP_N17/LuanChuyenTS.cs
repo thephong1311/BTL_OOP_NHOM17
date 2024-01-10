@@ -73,7 +73,7 @@ namespace BTL_OOP_N17
     {
         try
         {
-            using (SqlCommand cmd = new SqlCommand("UPDATE PHIEULCTS SET MAGV = @MAGV , MAPHIEULC = @MAPHIEULC , NOILCDI = @NOILCDI , NOILCDEN = @NOILCDEN, NGAYLC = @NGAYLC, LYDOLC = @LYDOLC WHERE MAPHIEULC = @MAPHIEULC", con))
+            using (SqlCommand cmd = new SqlCommand("UPDATE PHIEULCTS SET MAGV = @MAGV , NOILCDI = @NOILCDI , NOILCDEN = @NOILCDEN, NGAYLC = @NGAYLC, LYDOLC = @LYDOLC WHERE MAPHIEULC = @MAPHIEULC", con))
             {
                 cmd.Parameters.AddWithValue("@MAGV", magv);
                 cmd.Parameters.AddWithValue("@MAPHIEULC", malc);
@@ -295,13 +295,25 @@ namespace BTL_OOP_N17
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy giá trị của cột MAPHIEULC từ hàng đã chọn
+                string selectedMaPhieuLC = dataGridView1.SelectedRows[0].Cells["MAPHIEULC"].Value.ToString();
+
+                // Kiểm tra nếu người dùng chọn sửa MAPHIEULC
+                if (txtMP.Text != selectedMaPhieuLC)
+                {
+                    MessageBox.Show("Không được sửa giá trị MAPHIEULC.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng quá trình sửa nếu MAPHIEULC được chọn
+                }
+            }
+
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Kiểm tra xem người dùng đã đồng ý sửa hay không
             if (result == DialogResult.Yes)
             {
                 // Lấy dữ liệu từ TextBox
-
                 string magv = txtMaGV.Text;
                 string malc = txtMP.Text;
                 string lcdi = txtLCdi.Text;
@@ -315,14 +327,14 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["NOILCDI"].Value = lcdi;
                 selectedRow.Cells["NOILCDEN"].Value = lcden;
                 selectedRow.Cells["NGAYLC"].Value = ngaylc;
-                selectedRow.Cells["MAPHIEULC"].Value = malc;
+                // selectedRow.Cells["MAPHIEULC"].Value = malc; // Không cập nhật giá trị MAPHIEULC
                 selectedRow.Cells["LYDOLC"].Value = lydo;
-                UpdateInfo(magv, malc, lcdi, lcden, lydo, ngaylc);
+
                 // Hiển thị thông tin trong GroupBox (nếu cần)
-                ShowInfo(malc, lcdi, lcden, magv, ngaylc, lydo);
+                ShowInfo(magv, malc, lcdi, lcden, ngaylc, lydo);
+                UpdateInfo(magv, malc, lcdi, lcden, lydo, ngaylc);
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
-
             }
         }
         private void ClearTextBoxes()
