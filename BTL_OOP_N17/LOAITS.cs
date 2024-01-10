@@ -60,8 +60,8 @@ namespace BTL_OOP_N17
                 catch (SqlException ex)
                 {
 
-                    // Xử lý lỗi SQL
-                    if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                  
+                    if (ex.Number == 2627) 
                     {
                         MessageBox.Show($"Mã '{txtMaLTS.Text}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -84,7 +84,7 @@ namespace BTL_OOP_N17
       
         public void DeleteGV(string malts)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+          
             using (SqlCommand cmd = new SqlCommand("DELETE FROM LOAITS WHERE MALOAITS = @malts", con))
             {
                 cmd.Parameters.AddWithValue("@malts", malts);
@@ -103,27 +103,27 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+               
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    // Lấy mã giáo viên từ hàng được chọn
+                   
                     string madvt = dataGridView1.SelectedRows[0].Cells["MALOAITS"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
+                   
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin loại tài sản này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                   
                     if (result == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa giáo viên
+                       
                         DeleteGV(madvt);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                      
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa loại tài sản thành công!");
                     }
-                    // Nếu người dùng chọn No, không thực hiện xóa
+                   
                 }
                 else
                 {
@@ -155,10 +155,10 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
+               
                 command.Parameters.AddWithValue("@malts", txtFind.Text);
 
-                // Thực hiện truy vấn
+               
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
@@ -177,7 +177,7 @@ namespace BTL_OOP_N17
             {
                 try
                 {
-                    // Kiểm tra nếu người dùng muốn sửa mã loại tài sản
+                   
                     if (txtMaLTS.Text != dataGridView1.SelectedRows[0].Cells["MALOAITS"].Value.ToString())
                     {
                         MessageBox.Show("Không được sửa mã loại tài sản.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

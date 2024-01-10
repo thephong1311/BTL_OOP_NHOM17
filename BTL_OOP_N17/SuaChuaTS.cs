@@ -34,10 +34,10 @@ namespace BTL_OOP_N17
         }
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            // Kiểm tra xem có hàng được chọn hay không
+           
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy dữ liệu từ hàng được chọn
+               
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string magv = selectedRow.Cells["MAGV"].Value.ToString();
                 string masc = selectedRow.Cells["MASC"].Value.ToString();
@@ -45,7 +45,7 @@ namespace BTL_OOP_N17
 
                 string ngaysc = selectedRow.Cells["NGAYSC"].Value.ToString();
 
-                // Hiển thị thông tin trong GroupBox
+               
                 ShowInfo(magv, masc, maptn, ngaysc);
             }
         }
@@ -107,7 +107,7 @@ namespace BTL_OOP_N17
                 {
                     using (SqlCommand cmd = new SqlCommand("UPDATE SUACHUATS SET MAGV = @magv , MAPTN = @mptn, NGAYSC= @ngaysc WHERE MASC = @masc", con))
                     {
-                       // cmd.Parameters.AddWithValue("@masc", masc);
+                      
                         cmd.Parameters.AddWithValue("@magv", magv);
                         cmd.Parameters.AddWithValue("@mptn", maptn);
                         cmd.Parameters.AddWithValue("@masc", masc);
@@ -129,7 +129,7 @@ namespace BTL_OOP_N17
                 }
                 catch (SqlException ex)
                 {
-                    // Xử lý lỗi SQL
+                  
                     MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -171,8 +171,8 @@ namespace BTL_OOP_N17
                 }
                 catch (SqlException ex)
                 {
-                    // Xử lý lỗi SQL
-                    if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                   
+                    if (ex.Number == 2627)  
                     {
                         MessageBox.Show($"Mã '{masc}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -183,12 +183,12 @@ namespace BTL_OOP_N17
                 }
                 catch (Exception ex)
                 {
-                    // Xử lý lỗi khác (nếu có)
+                   
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
-                    // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+                  
                     if (con.State == ConnectionState.Open)
                     {
                         con.Close();
@@ -197,7 +197,7 @@ namespace BTL_OOP_N17
             }
             public void DeleteSC(string masc)
             {
-                // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+               
                 using (SqlCommand cmd = new SqlCommand("DELETE FROM SUACHUATS WHERE MASC = @masc", con))
                 {
                     cmd.Parameters.AddWithValue("@masc", masc);
@@ -258,7 +258,7 @@ namespace BTL_OOP_N17
 
                     ThemSCmoi(magv, masc, maptn, ngaysc);
 
-                    // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+                  
                     InitializeDataGridView();
 
                     MessageBox.Show("Đã thêm thông tin mới thành công!");
@@ -270,44 +270,43 @@ namespace BTL_OOP_N17
             }
 
             private void btnSua_Click_1(object sender, EventArgs e)
-        { // Kiểm tra xem người dùng đã chọn hàng để sửa hay không
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                // Lấy giá trị của cột MASC từ hàng đã chọn
-                string selectedMasc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
 
-                // Kiểm tra nếu người dùng chọn sửa MASC
-                if (txtMSC.Text != selectedMasc)
+            {
                 {
-                    MessageBox.Show("Không được sửa giá trị MASC.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Dừng quá trình sửa nếu MASC được chọn
+               
+                    string selectedMasc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
+
+               
+                    if (txtMSC.Text != selectedMasc)
+                    {
+                        MessageBox.Show("Không được sửa giá trị MASC.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; 
+                    }
+                }
+
+                DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+           
+                if (result == DialogResult.Yes)
+                {
+               
+                    string magv = txtMAGV.Text;
+                    string masc = txtMSC.Text;
+                    string maptn = txtMAPTN.Text;
+                    string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+
+              
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    selectedRow.Cells["MAGV"].Value = magv;
+                    selectedRow.Cells["MAPTN"].Value = maptn;
+                    selectedRow.Cells["NGAYSC"].Value = ngaysc;
+
+                    ShowInfo(magv, masc, maptn, ngaysc);
+                    UpdateInfo(magv, maptn, ngaysc, masc);
+              
+                    ClearTextBoxes();
                 }
             }
-
-            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Kiểm tra xem người dùng đã đồng ý sửa hay không
-            if (result == DialogResult.Yes)
-            {
-                // Lấy dữ liệu từ TextBox
-                string magv = txtMAGV.Text;
-                string masc = txtMSC.Text;
-                string maptn = txtMAPTN.Text;
-                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-
-                // Cập nhật dữ liệu trong DataGridView
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                selectedRow.Cells["MAGV"].Value = magv;
-                // selectedRow.Cells["MASC"].Value = masc; // Không cập nhật giá trị MASC
-                selectedRow.Cells["MAPTN"].Value = maptn;
-                selectedRow.Cells["NGAYSC"].Value = ngaysc;
-
-                ShowInfo(magv, masc, maptn, ngaysc);
-                UpdateInfo(magv, maptn, ngaysc, masc);
-                // Đặt lại TextBox sau khi cập nhật
-                ClearTextBoxes();
-            }
-        }
 
             private void btnXoa_Click_1(object sender, EventArgs e)
             {
@@ -348,7 +347,7 @@ namespace BTL_OOP_N17
             private void btnLoad_Click_1(object sender, EventArgs e)
             {
                 InitializeDataGridView();
-                // Xóa nội dung trong các ô TextBox
+              
                 ClearTextBoxes();
             }
 

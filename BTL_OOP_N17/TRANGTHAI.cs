@@ -36,15 +36,14 @@ namespace BTL_OOP_N17
         }
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            // Kiểm tra xem có hàng được chọn hay không
+         
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy dữ liệu từ hàng được chọn
+               
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string matt = selectedRow.Cells["MATT"].Value.ToString();
                 string tentt = selectedRow.Cells["TENTT"].Value.ToString();
 
-                // Hiển thị thông tin trong GroupBox
                 DisplayInfo(matt, tentt);
             }
         }
@@ -63,7 +62,7 @@ namespace BTL_OOP_N17
 
         public DataTable SearchTT(string matt, string tentt)
         {
-            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
+           
             string query = "SELECT * FROM TRANGTHAI WHERE ";
             bool isFirstCondition = true;
 
@@ -128,8 +127,7 @@ namespace BTL_OOP_N17
 
         public void ThemTTmoi(string matt, string tentt)
         {
-            // Thêm một tài khoản mới vào cơ sở dữ liệu
-            // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
+           
             try
             {
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO TRANGTHAI(MATT, TENTT) VALUES (@matt, @tentt)", con))
@@ -149,8 +147,8 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
-                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+               
+                if (ex.Number == 2627)  
                 {
                     MessageBox.Show($"Mã '{matt}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -161,12 +159,12 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+               
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+               
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
@@ -175,7 +173,6 @@ namespace BTL_OOP_N17
         }
         public void DeleteTT(string matt)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM TRANGTHAI WHERE MATT = @matt", con))
             {
                 cmd.Parameters.AddWithValue("@matt", matt);
@@ -200,12 +197,8 @@ namespace BTL_OOP_N17
             {
                 string matt = txtMTT.Text;
                 string tentt = txtTTT.Text;
-
-
                 ThemTTmoi(matt, tentt);
-                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
                 InitializeDataGridView();
-
                 MessageBox.Show("Đã thêm trạng thái mới thành công!");
             }
             catch (Exception ex)
@@ -218,23 +211,20 @@ namespace BTL_OOP_N17
         {
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Kiểm tra xem người dùng đã đồng ý sửa hay không
             if (result == DialogResult.Yes)
             {
-                // Lấy dữ liệu từ TextBox
+               
                 string matt = txtMTT.Text;
                 string tentt = txtTTT.Text;
 
-
-                // Cập nhật dữ liệu trong DataGridView
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedRow.Cells["MATT"].Value = matt;
                 selectedRow.Cells["TENTT"].Value = tentt;
 
-                // Hiển thị thông tin trong GroupBox (nếu cần)
+              
                 DisplayInfo(matt, tentt);
                 UpdateInfoTT(matt, tentt);
-                // Đặt lại TextBox sau khi cập nhật
+              
                 ClearTextBoxes();
             }
         }

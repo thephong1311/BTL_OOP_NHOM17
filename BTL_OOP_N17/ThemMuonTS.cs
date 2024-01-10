@@ -73,7 +73,7 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+                
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -117,8 +117,8 @@ namespace BTL_OOP_N17
             }
              catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
-                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+               
+                if (ex.Number == 2627)  
                 {
                     MessageBox.Show($"Mã '{txtMaMTS.Text}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -129,7 +129,7 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+               
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -173,12 +173,12 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
+               
                 MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+               
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -219,12 +219,12 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
+              
                 MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+               
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

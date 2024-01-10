@@ -50,10 +50,8 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
+               
                 command.Parameters.AddWithValue("@MAPM", txt_TimKiem.Text);
-
-                // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
@@ -67,10 +65,8 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
+                
                 command.Parameters.AddWithValue("@MAPM", txt_TimKiem.Text);
-
-                // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
@@ -95,7 +91,7 @@ namespace BTL_OOP_N17
         }
         public void DeletePhieuMuon(string mapm)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+            
             using (SqlCommand cmd = new SqlCommand("DELETE FROM PHIEUMUONTS WHERE MAPM = @mapm", con))
             {
                 cmd.Parameters.AddWithValue("@mapm", mapm);
@@ -107,7 +103,7 @@ namespace BTL_OOP_N17
         }
         public void DeleteCTPM(string mapm)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+            
             using (SqlCommand cmd = new SqlCommand("DELETE FROM CHITIET_PM WHERE MAPM = @mapm", con))
             {
                 cmd.Parameters.AddWithValue("@mapm", mapm);
@@ -127,65 +123,50 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+                
                 if (daduyetGridView1.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                    
                     string mapm1 = daduyetGridView1.SelectedRows[0].Cells["MAPM"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
+                   
                     DialogResult result1 = MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu mượn này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                    
                     if (result1 == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
+                       
                         DeletePhieuMuon(mapm1);
-
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa phiếu mượn thành công!");
                     }
-                    // Nếu người dùng chọn No, không thực hiện xóa
+                  
                 }
                 if (chuaduyetGridView3.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                   
                     string mapm2 = chuaduyetGridView3.SelectedRows[0].Cells["MAPM"].Value.ToString();
-
-                    // Hiển thị hộp thoại xác nhận
                     DialogResult result2 = MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu mượn thiết bị này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result2 == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
+                        
                         DeletePhieuMuon(mapm2);
-
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
-
                         MessageBox.Show("Đã xóa phiếu mượn thiết bị thành công!");
                     }
                 }
                 if (ctpmGridView2.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                    
                     string mapm3 = ctpmGridView2.SelectedRows[0].Cells["MAPM"].Value.ToString();
-
-                    // Hiển thị hộp thoại xác nhận
-                    DialogResult result3 = MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu mượn thiết bị này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                    DialogResult result3 = MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu mượn thiết bị này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question); 
                     if (result3 == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
+                       
                         DeleteCTPM(mapm3);
-
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
-
                         MessageBox.Show("Đã xóa phiếu mượn thiết bị thành công!");
                     }
                 }
@@ -211,10 +192,8 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
+              
                 command.Parameters.AddWithValue("@MaPM", txtFindCT.Text);
-
-                // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
@@ -237,9 +216,8 @@ namespace BTL_OOP_N17
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+           
             InitializeDataGridView();
-            // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
         }
         private void ClearTextBoxes()

@@ -39,39 +39,35 @@ namespace BTL_OOP_N17
 
         private void QLTTPTN_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLTS2DataSet.PTN' table. You can move, or remove it, as needed.
+           
             InitializeDataGridView();
             dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
         }
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            // Kiểm tra xem có hàng được chọn hay không
+           
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy dữ liệu từ hàng được chọn
+               
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string maptn = selectedRow.Cells["MAPTN"].Value.ToString();
                 string userptn = selectedRow.Cells["TENPTN"].Value.ToString();
-                //string sophong = selectedRow.Cells["SOPHONG"].Value.ToString();
-                //string dientich = selectedRow.Cells["DIENTICH"].Value.ToString();
                 string vitri = selectedRow.Cells["VITRI"].Value.ToString();
-                //string trangthaiptn = selectedRow.Cells["TRANGTHAIPTN"].Value.ToString();
-
-                // Hiển thị thông tin trong GroupBox
+               
                 DisplayPTNInfo(maptn, userptn, vitri);
             }
         }
         private void DisplayPTNInfo(string maptn, string userptn, string vitri)
         {
-            // Hiển thị thông tin giáo viên trong GroupBox
+           
             txtMaPTN.Text = maptn;
             txtTenPTN.Text = userptn;
             txtVitri.Text = vitri;
-            // ...Thêm các thuộc tính khác tương ứng
+           
         }
         public DataTable SearchQLTTPTN(string maptn, string userptn, string vitri)
         {
-            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
+            
             string query = "SELECT * FROM PHONGTHINGHIEM WHERE ";
             bool isFirstCondition = true;
 
@@ -137,14 +133,13 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
+               
                 MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void ThemPTNmoi(string maptn, string userptn, string vitri)
         {
-            // Thêm một tài khoản mới vào cơ sở dữ liệu
-            // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
+           
             try
             {
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO PHONGTHINGHIEM (MaGV, TENGV, DIACHIGV, SDTGV, CHUCVUGV) VALUES (@magv, @username, @dc, @sdt, @chucvu)", con))
@@ -163,8 +158,8 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
-                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+               
+                if (ex.Number == 2627)  
                 {
                     MessageBox.Show($"Mã '{maptn}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -175,12 +170,12 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+             
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+                
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
@@ -190,7 +185,7 @@ namespace BTL_OOP_N17
         }
         public void DeletePTN(string maptn)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+         
             using (SqlCommand cmd = new SqlCommand("DELETE FROM PHONGTHINGHIEM WHERE MAPTN = @maptn", con))
             {
                 cmd.Parameters.AddWithValue("@maptn", maptn);
@@ -209,9 +204,9 @@ namespace BTL_OOP_N17
                 string userptn = txtTenPTN.Text;
                 string vitri = txtVitri.Text;
 
-                // Gọi phương thức ThemPTNmoi để thêm phòng thí nghiệm mới vào cơ sở dữ liệu
+                
                 ThemPTNmoi(maptn, userptn, vitri);
-                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+               
                 InitializeDataGridView();
 
                 MessageBox.Show("Đã thêm phòng thí nghiệm mới thành công!");
@@ -226,27 +221,27 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+                
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    // Lấy mã PTN từ hàng được chọn
+                   
                     string maptn = dataGridView1.SelectedRows[0].Cells["MAPTN"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
+                   
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa phòng thí nghiệm này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                   
                     if (result == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa PTN
+                        
                         DeletePTN(maptn);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                       
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa phòng thí nghiệm thành công!");
                     }
-                    // Nếu người dùng chọn No, không thực hiện xóa
+                   
                 }
                 else
                 {
@@ -263,56 +258,56 @@ namespace BTL_OOP_N17
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy giá trị của cột MAKK từ hàng đã chọn
+                
                 string selectedMaPTN = dataGridView1.SelectedRows[0].Cells["MAPTN"].Value.ToString();
 
-                // Kiểm tra nếu người dùng chọn sửa MAKK
+              
                 if (txtMaPTN.Text != selectedMaPTN)
                 {
                     MessageBox.Show("Không được sửa giá trị MAPTN.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Dừng quá trình sửa nếu MAKK được chọn
+                    return; 
                 }
             }
-            // Hiển thị hộp thoại xác nhận sửa
+           
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Kiểm tra xem người dùng đã đồng ý sửa hay không
+          
             if (result == DialogResult.Yes)
             {
-                // Lấy dữ liệu từ TextBox
+               
                 string maptn = txtMaPTN.Text;
                 string userptn = txtTenPTN.Text;
                 string vitri = txtVitri.Text;
 
 
-                // Cập nhật dữ liệu trong DataGridView
+               
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedRow.Cells["MAPTN"].Value = maptn;
                 selectedRow.Cells["TENPTN"].Value = userptn;
                 selectedRow.Cells["VITRI"].Value = vitri;
 
-                // Hiển thị thông tin trong GroupBox (nếu cần)
+               
                 DisplayPTNInfo(maptn, userptn, vitri);
                 UpdateInfoPTN(maptn, userptn, vitri);
 
-                // Đặt lại TextBox sau khi cập nhật
+              
                 ClearTextBoxes();
             }
         }
         private void ClearTextBoxes()
         {
-            // Xóa nội dung trong TextBox
+           
             txtMaPTN.Text = "";
             txtTenPTN.Text = "";
             txtVitri.Text = "";
-            // ...Xóa các TextBox khác tương ứng
+           
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+            
             InitializeDataGridView();
-            // Xóa nội dung trong các ô TextBox
+           
             ClearTextBoxes();
         }
 

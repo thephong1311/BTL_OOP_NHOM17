@@ -41,10 +41,10 @@ namespace BTL_OOP_N17
         }
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            // Kiểm tra xem có hàng được chọn hay không
+           
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy dữ liệu từ hàng được chọn
+               
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string magv = selectedRow.Cells["MAGV"].Value.ToString();
                 string malc = selectedRow.Cells["MAPHIEULC"].Value.ToString();
@@ -53,7 +53,7 @@ namespace BTL_OOP_N17
                 string lydo = selectedRow.Cells["LYDOLC"].Value.ToString();
                 string ngaylc = selectedRow.Cells["NGAYLC"].Value.ToString();
 
-                // Hiển thị thông tin trong GroupBox
+               
                 ShowInfo(malc, lcdi, lcden, magv, ngaylc, lydo);
             }
         }
@@ -66,7 +66,7 @@ namespace BTL_OOP_N17
             txtMaGV.Text = magv;
             dt_NgayLC.Value = DateTime.Parse(ngaylc);
             txtLydo.Text = lydo;
-            // ...Thêm các thuộc tính khác tương ứng
+           
         }
     
     public void UpdateInfo(string magv, string malc, string lcdi, string lcden, string lydo, string ngaylc)
@@ -98,7 +98,7 @@ namespace BTL_OOP_N17
         }
         catch (SqlException ex)
         {
-            // Xử lý lỗi SQL
+           
             MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
@@ -106,7 +106,7 @@ namespace BTL_OOP_N17
 
     public DataTable SearchLCTS(string malc, string lcdi, string lcden, string magv, string lydo, string ngaylc)
         {
-            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
+           
             string query = "SELECT * FROM PHIEULCTS WHERE ";
             bool isFirstCondition = true;
 
@@ -169,8 +169,8 @@ namespace BTL_OOP_N17
         }
         public void ThemLCmoi(string malc, string lcdi, string lcden, string magv, string lydo, string ngaylc)
         {
-            // Thêm một tài khoản mới vào cơ sở dữ liệu
-            // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
+            
+           
             try
             {
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO PHIEULCTS (MAPHIEULC, NOILCDI, NOILCDEN, MAGV, LYDOLC, NGAYLC) VALUES (@malc, @lcdi, @lcden, @magv, @lydo, @ngaylc)", con))
@@ -194,8 +194,8 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
-                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                
+                if (ex.Number == 2627) 
                 {
                     MessageBox.Show($"Mã '{malc}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -206,12 +206,12 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+                
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+               
                 if (con.State == ConnectionState.Open)
                 {
                     con.Close();
@@ -220,7 +220,7 @@ namespace BTL_OOP_N17
         }
         public void DeleteLC(string malc)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+           
             using (SqlCommand cmd = new SqlCommand("DELETE FROM PHIEULCTS WHERE MAPHIEULC = @malc", con))
             {
                 cmd.Parameters.AddWithValue("@malc", malc);
@@ -261,27 +261,27 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
+               
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
 
                     string malc = dataGridView1.SelectedRows[0].Cells["MAPHIEULC"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
+                   
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa luân chuyển này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                   
                     if (result == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa giáo viên
+                       
                         DeleteLC(malc);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                       
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa thông tin luân chuyển thành công!");
                     }
-                    // Nếu người dùng chọn No, không thực hiện xóa
+                    
                 }
                 else
                 {
@@ -297,23 +297,23 @@ namespace BTL_OOP_N17
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy giá trị của cột MAPHIEULC từ hàng đã chọn
+               
                 string selectedMaPhieuLC = dataGridView1.SelectedRows[0].Cells["MAPHIEULC"].Value.ToString();
 
-                // Kiểm tra nếu người dùng chọn sửa MAPHIEULC
+               
                 if (txtMP.Text != selectedMaPhieuLC)
                 {
                     MessageBox.Show("Không được sửa giá trị MAPHIEULC.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Dừng quá trình sửa nếu MAPHIEULC được chọn
+                    return;
                 }
             }
 
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Kiểm tra xem người dùng đã đồng ý sửa hay không
+           
             if (result == DialogResult.Yes)
             {
-                // Lấy dữ liệu từ TextBox
+                
                 string magv = txtMaGV.Text;
                 string malc = txtMP.Text;
                 string lcdi = txtLCdi.Text;
@@ -321,19 +321,17 @@ namespace BTL_OOP_N17
                 string lydo = txtLydo.Text;
                 string ngaylc = dt_NgayLC.Value.ToString("yyyy-MM-dd");
 
-                // Cập nhật dữ liệu trong DataGridView
+                
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedRow.Cells["MAGV"].Value = magv;
                 selectedRow.Cells["NOILCDI"].Value = lcdi;
                 selectedRow.Cells["NOILCDEN"].Value = lcden;
                 selectedRow.Cells["NGAYLC"].Value = ngaylc;
-                // selectedRow.Cells["MAPHIEULC"].Value = malc; // Không cập nhật giá trị MAPHIEULC
                 selectedRow.Cells["LYDOLC"].Value = lydo;
 
-                // Hiển thị thông tin trong GroupBox (nếu cần)
+               
                 ShowInfo(magv, malc, lcdi, lcden, ngaylc, lydo);
                 UpdateInfo(magv, malc, lcdi, lcden, lydo, ngaylc);
-                // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
             }
         }
@@ -350,9 +348,9 @@ namespace BTL_OOP_N17
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+            
             InitializeDataGridView();
-            // Xóa nội dung trong các ô TextBox
+            
             ClearTextBoxes();
         }
 

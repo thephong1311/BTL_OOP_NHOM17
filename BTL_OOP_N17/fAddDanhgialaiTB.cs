@@ -37,12 +37,9 @@ namespace BTL_OOP_N17
             {
                 if (row.Cells["DaThayDoi"].Value != null && (bool)row.Cells["DaThayDoi"].Value)
                 {
-                    // Kiểm tra giá trị của cột decimal trước khi thực hiện lưu vào CSDL
                     decimal ng_truocdc;
                     if (decimal.TryParse(row.Cells["NG_TRUOCDC"].Value.ToString(), out ng_truocdc))
                     {
-                        // Giá trị có thể chuyển đổi thành decimal, tiếp tục thực hiện cập nhật vào CSDL
-                        // Thực hiện truy vấn SQL để cập nhật dữ liệu trong bảng trong CSDL
                         string query = $"UPDATE CHITIET_DGTS SET " +
                                        $"MATS = '{row.Cells["MATS"].Value}', " +
                                        $"NG_TRUOCDC = {ng_truocdc}, " +
@@ -66,12 +63,10 @@ namespace BTL_OOP_N17
                             con.Close();
                         }
 
-                        // Đặt cờ "DaThayDoi" về false sau khi đã cập nhật
                         row.Cells["DaThayDoi"].Value = false;
                     }
                     else
                     {
-                        // Hiển thị thông báo lỗi nếu giá trị không hợp lệ
                         MessageBox.Show($"Giá trị của NG_TRUOCDC không hợp lệ: {row.Cells["NG_TRUOCDC"].Value}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -90,12 +85,10 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
                 MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -148,7 +141,6 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -157,10 +149,8 @@ namespace BTL_OOP_N17
 
         private void ThemDLCT()
         {
-            // Tạo một dòng mới từ DataTable và BindingSource
             DataRow newRow = dataTable.NewRow();
 
-            // Đặt giá trị cho các ô trong dòng mới
             newRow["MADGLTS"] = "MADGLTS_Value";
             newRow["MATS"] = "MATS_Value";
             newRow["NG_TRUOCDC"] = Convert.ToDecimal("NG_TRUOCDC_Value");
@@ -170,14 +160,13 @@ namespace BTL_OOP_N17
             newRow["NAM_DANHGIA"] = "NAM_DANHGIA_Value";
             newRow["TG_SD"] = "TG_SD_Value";
             newRow["NG_SAUDC"] = Convert.ToDecimal("NG_SAUDC_Value");
-            newRow["SOKHLUYKE_DATRICH"] = Convert.ToDecimal("SOKHLUYKE_DATRICH_Value"); // Chuyển đổi chuỗi thành kiểu decimal
-            newRow["GTCL_TS"] = Convert.ToDecimal("GTCL_TS_Value"); // Chuyển đổi chuỗi thành kiểu decimal
+            newRow["SOKHLUYKE_DATRICH"] = Convert.ToDecimal("SOKHLUYKE_DATRICH_Value"); 
+            newRow["GTCL_TS"] = Convert.ToDecimal("GTCL_TS_Value"); 
 
 
-            // Thêm dòng mới vào DataTable
             dataTable.Rows.Add(newRow);
 
-            // Lấy giá trị từ dòng mới
+           
             string madglts = newRow["MADGLTS"].ToString();
             string mats = newRow["MATS"].ToString();
             decimal ng_truocdc = (decimal)newRow["NG_TRUOCDC"];
@@ -189,7 +178,7 @@ namespace BTL_OOP_N17
             decimal ng_saudc = (decimal)newRow["NG_SAUDC"];
             decimal sokhlk = (decimal)newRow["SOKHLUYKE_DATRICH"];
             decimal gtcl = (decimal)newRow["GTCL_TS"];
-            // Thực hiện truy vấn SQL để thêm dữ liệu vào bảng trong CSDL
+            
             string query = "INSERT INTO CHITIET_DGTS (MADGLTS,MATS,NG_TRUOCDC,TG_KH,MUCKH_TBNAM,NAM_DUAVAOSD,NAM_DANHGIA,TG_SD,NG_SAUDC,SOKHLUYKE_DATRICH,GTCL_TS) " +
                            $"VALUES ('{madglts}', '{mats}', '{ng_truocdc}', '{tg_kh}', '{muckh_tbnam}', '{namsd}', '{namdg}', '{tgsd}','{ng_saudc}','{sokhlk}','{gtcl}')";
 
@@ -203,7 +192,6 @@ namespace BTL_OOP_N17
                 con.Close();
             }
 
-            // Cập nhật dữ liệu trong DataGridView
             dataGridView1.DataSource = bindingSource.DataSource;
 
             MessageBox.Show("Dữ liệu đã được lưu vào CSDL.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -218,12 +206,12 @@ namespace BTL_OOP_N17
             }
             catch (SqlException ex)
             {
-                // Xử lý lỗi SQL
+                
                 MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+               
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -277,7 +265,7 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi khác (nếu có)
+                
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
