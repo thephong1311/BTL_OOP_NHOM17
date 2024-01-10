@@ -313,11 +313,13 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["SDTGV"].Value = sdt;
                 selectedRow.Cells["CHUCVUGV"].Value = chucvu;
 
+                UpdateInfoGV(magv, username, diachi, sdt, chucvu);
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 DisplayStudentInfo(magv, username, diachi, sdt, chucvu);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
+
             }
         }
 
