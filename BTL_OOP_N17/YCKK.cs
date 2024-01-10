@@ -29,7 +29,7 @@ namespace BTL_OOP_N17
         }
         public DataTable findYCKK()
         {
-            string query = "SELECT * FROM KIEMKE WHERE DVMUON = @MaPTN";
+            string query = "SELECT * FROM KIEMKE WHERE MAPTN = @MaPTN";
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
