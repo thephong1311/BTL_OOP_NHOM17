@@ -37,11 +37,7 @@ namespace BTL_OOP_N17
      
 
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new DoiMK());
-        }
-
+    
 
 
 
@@ -90,7 +86,7 @@ namespace BTL_OOP_N17
 
         private void yêuCầuMuaThiếtBịToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
-            OpenChildForm(new fDanhmucthietbi());
+            OpenChildForm(new YCmua());
         }
 
         private void đánhGiáLạiThiếtBịToolStripMenuItem_Click_1(object sender, EventArgs e)

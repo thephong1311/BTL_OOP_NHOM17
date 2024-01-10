@@ -357,6 +357,12 @@
     <Compile Include="SuaChuaTS.Designer.cs">
       <DependentUpon>SuaChuaTS.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuperAdControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuperAdControl.Designer.cs">
+      <DependentUpon>SuperAdControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThanhLyTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -549,6 +555,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuaChuaTS.resx">
       <DependentUpon>SuaChuaTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperAdControl.resx">
+      <DependentUpon>SuperAdControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhLyTS.resx">
       <DependentUpon>ThanhLyTS.cs</DependentUpon>
