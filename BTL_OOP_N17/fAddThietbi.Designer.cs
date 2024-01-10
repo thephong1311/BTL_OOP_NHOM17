@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAddThietbi));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtTinhtrang = new System.Windows.Forms.TextBox();
@@ -78,6 +79,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnDong = new Guna.UI.WinForms.GunaButton();
             this.btnLuu = new Guna.UI.WinForms.GunaButton();
+            this.btnCapnhat = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -604,9 +606,9 @@
             this.btnDong.FocusedColor = System.Drawing.Color.Empty;
             this.btnDong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.ForeColor = System.Drawing.Color.Black;
-            this.btnDong.Image = null;
+            this.btnDong.Image = ((System.Drawing.Image)(resources.GetObject("btnDong.Image")));
             this.btnDong.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDong.Location = new System.Drawing.Point(408, 465);
+            this.btnDong.Location = new System.Drawing.Point(526, 465);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDong.Name = "btnDong";
             this.btnDong.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -614,7 +616,7 @@
             this.btnDong.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDong.OnHoverImage = null;
             this.btnDong.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDong.Size = new System.Drawing.Size(117, 23);
+            this.btnDong.Size = new System.Drawing.Size(139, 23);
             this.btnDong.TabIndex = 28;
             this.btnDong.Text = "Đóng lại ";
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
@@ -629,9 +631,9 @@
             this.btnLuu.FocusedColor = System.Drawing.Color.Empty;
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Image = global::BTL_OOP_N17.Properties.Resources.diskette__2_;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLuu.Location = new System.Drawing.Point(268, 465);
+            this.btnLuu.Location = new System.Drawing.Point(358, 465);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -639,16 +641,42 @@
             this.btnLuu.OnHoverForeColor = System.Drawing.Color.White;
             this.btnLuu.OnHoverImage = null;
             this.btnLuu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLuu.Size = new System.Drawing.Size(79, 23);
+            this.btnLuu.Size = new System.Drawing.Size(112, 23);
             this.btnLuu.TabIndex = 29;
-            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Text = "Thêm ";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnCapnhat
+            // 
+            this.btnCapnhat.AnimationHoverSpeed = 0.07F;
+            this.btnCapnhat.AnimationSpeed = 0.03F;
+            this.btnCapnhat.BaseColor = System.Drawing.SystemColors.Menu;
+            this.btnCapnhat.BorderColor = System.Drawing.Color.Black;
+            this.btnCapnhat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCapnhat.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCapnhat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapnhat.ForeColor = System.Drawing.Color.Black;
+            this.btnCapnhat.Image = global::BTL_OOP_N17.Properties.Resources.diskette;
+            this.btnCapnhat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCapnhat.Location = new System.Drawing.Point(185, 465);
+            this.btnCapnhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCapnhat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCapnhat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCapnhat.OnHoverImage = null;
+            this.btnCapnhat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCapnhat.Size = new System.Drawing.Size(131, 23);
+            this.btnCapnhat.TabIndex = 30;
+            this.btnCapnhat.Text = "Cập nhật";
+            this.btnCapnhat.Click += new System.EventHandler(this.btnCapnhat_Click);
             // 
             // fAddThietbi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 499);
+            this.Controls.Add(this.btnCapnhat);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.panel9);
@@ -726,5 +754,6 @@
         private Guna.UI.WinForms.GunaButton btnLuu;
         private System.Windows.Forms.TextBox txtTinhtrang;
         private System.Windows.Forms.Label label4;
+        private Guna.UI.WinForms.GunaButton btnCapnhat;
     }
 }
