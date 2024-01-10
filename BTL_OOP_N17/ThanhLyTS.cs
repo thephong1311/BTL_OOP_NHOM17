@@ -69,12 +69,7 @@ namespace BTL_OOP_N17
             DateTime_NgayTL.Value = DateTime.Parse(ngaytl);
             // ...Thêm các thuộc tính khác tương ứng
         }
-        private void ThanhLyTS_Load()
-        {
-            InitializeDataGridView();
-            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
-
-        }
+      
         public DataTable SearchTLTS(string magv, string tentl, string matl, string maptn, string ngaytl)
         {
             // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
@@ -348,6 +343,12 @@ namespace BTL_OOP_N17
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ThanhLyTB_Load(object sender, EventArgs e)
+        {
+            InitializeDataGridView();
+            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
         }
     }
 }

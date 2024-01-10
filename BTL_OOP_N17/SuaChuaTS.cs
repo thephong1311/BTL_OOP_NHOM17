@@ -59,12 +59,7 @@ namespace BTL_OOP_N17
             dtSC.Value = DateTime.Parse(ngaysc);
 
         }
-        private void SuaChuaTS_Load()
-        {
-            InitializeDataGridView();
-            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
-
-        }
+      
         public DataTable SearchSCTS(string magv, string masc, string maptn, string ngaysc)
         {
 
@@ -333,6 +328,12 @@ namespace BTL_OOP_N17
             InitializeDataGridView();
             // Xóa nội dung trong các ô TextBox
             ClearTextBoxes();
+        }
+
+        private void SuaChuaTS_Load(object sender, EventArgs e)
+        {
+            InitializeDataGridView();
+            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
         }
     }
 }

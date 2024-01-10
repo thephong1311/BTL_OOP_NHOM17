@@ -469,6 +469,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThanhLyTB";
             this.Text = "Thanh lý thiết bị";
+            this.Load += new System.EventHandler(this.ThanhLyTB_Load);
             this.gbDanhsachTL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
