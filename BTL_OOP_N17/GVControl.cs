@@ -150,14 +150,15 @@ namespace BTL_OOP_N17
             OpenChildForm(new QLTTPTN());
         }
 
-        private void GVControl_Load(object sender, EventArgs e)
+        private void danhMụcĐơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new DVT());
         }
 
-        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        private void danhMụcLoạiTàiSảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new LOAITS());
         }
-    }  
+    }
+    
 }

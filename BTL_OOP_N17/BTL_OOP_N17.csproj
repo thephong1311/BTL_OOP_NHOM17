@@ -226,6 +226,12 @@
     <Compile Include="DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="DVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DVT.Designer.cs">
+      <DependentUpon>DVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddDanhgialaiTB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,12 @@
     <Compile Include="GVControl.Designer.cs">
       <DependentUpon>GVControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="LOAITS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOAITS.Designer.cs">
+      <DependentUpon>LOAITS.cs</DependentUpon>
+    </Compile>
     <Compile Include="LuanChuyenTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,12 +327,6 @@
     </Compile>
     <Compile Include="KiemKe.Designer.cs">
       <DependentUpon>KiemKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LapDSThietBi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LapDSThietBi.Designer.cs">
-      <DependentUpon>LapDSThietBi.cs</DependentUpon>
     </Compile>
     <Compile Include="QLTS2DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -375,12 +381,6 @@
     <Compile Include="ThongtintaikhoanAdmin.Designer.cs">
       <DependentUpon>ThongtintaikhoanAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="TonghopYCmua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TonghopYCmua.Designer.cs">
-      <DependentUpon>TonghopYCmua.cs</DependentUpon>
-    </Compile>
     <Compile Include="XemCacYCMua.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -398,12 +398,6 @@
     </Compile>
     <Compile Include="XemCacYCsuachua.Designer.cs">
       <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XemPTN.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XemPTN.Designer.cs">
-      <DependentUpon>XemPTN.cs</DependentUpon>
     </Compile>
     <Compile Include="YCKK.cs">
       <SubType>UserControl</SubType>
@@ -423,12 +417,6 @@
     <Compile Include="QLTTGV.Designer.cs">
       <DependentUpon>QLTTGV.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InfoUser.Designer.cs">
-      <DependentUpon>InfoUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Phanmemquanlythietbi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,12 +425,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TiepNhanTaiSan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TiepNhanTaiSan.Designer.cs">
-      <DependentUpon>TiepNhanTaiSan.cs</DependentUpon>
-    </Compile>
     <Compile Include="YCThanhly.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -469,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DVT.resx">
+      <DependentUpon>DVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddDanhgialaiTB.resx">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
@@ -503,6 +488,9 @@
     <EmbeddedResource Include="GVControl.resx">
       <DependentUpon>GVControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LOAITS.resx">
+      <DependentUpon>LOAITS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LuanChuyenTS.resx">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,14 +500,8 @@
     <EmbeddedResource Include="Nhacungcap.resx">
       <DependentUpon>Nhacungcap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoUser.resx">
-      <DependentUpon>InfoUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="KiemKe.resx">
       <DependentUpon>KiemKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LapDSThietBi.resx">
-      <DependentUpon>LapDSThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phanmemquanlythietbi.resx">
       <DependentUpon>Phanmemquanlythietbi.cs</DependentUpon>
@@ -562,9 +544,6 @@
     <EmbeddedResource Include="ThongtintaikhoanAdmin.resx">
       <DependentUpon>ThongtintaikhoanAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TonghopYCmua.resx">
-      <DependentUpon>TonghopYCmua.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="XemCacYCMua.resx">
       <DependentUpon>XemCacYCMua.cs</DependentUpon>
     </EmbeddedResource>
@@ -574,17 +553,11 @@
     <EmbeddedResource Include="XemCacYCsuachua.resx">
       <DependentUpon>XemCacYCsuachua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XemPTN.resx">
-      <DependentUpon>XemPTN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="YCKK.resx">
       <DependentUpon>YCKK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCmua.resx">
       <DependentUpon>YCmua.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TiepNhanTaiSan.resx">
-      <DependentUpon>TiepNhanTaiSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YCThanhly.resx">
       <DependentUpon>YCThanhly.cs</DependentUpon>
