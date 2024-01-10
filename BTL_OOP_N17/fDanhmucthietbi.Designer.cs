@@ -234,7 +234,7 @@
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
+            this.gunaButton1.Image = global::BTL_OOP_N17.Properties.Resources.search_interface_symbol;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.Location = new System.Drawing.Point(55, 163);
             this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

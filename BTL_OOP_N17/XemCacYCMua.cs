@@ -30,10 +30,20 @@ namespace BTL_OOP_N17
         }
         public DataTable findYCmua()
         {
-            SqlDataAdapter find = new SqlDataAdapter("SELECT * from YEUCAUMUATS WHERE MAPTN = " + txtFind.Text, con);
-            DataTable dt_find = new DataTable();
-            find.Fill(dt_find);
-            return dt_find; 
+            string query = "SELECT * FROM YEUCAUMUATS  WHERE MAPTN = @MaPTN";
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                // Thêm tham số và đặt giá trị
+                command.Parameters.AddWithValue("@MaPTN", txtFind.Text);
+
+                // Thực hiện truy vấn
+                SqlDataAdapter find = new SqlDataAdapter(command);
+                DataTable dt_find = new DataTable();
+                find.Fill(dt_find);
+
+                return dt_find;
+            }
         }
         private void btnFind_Click(object sender, EventArgs e)
         {

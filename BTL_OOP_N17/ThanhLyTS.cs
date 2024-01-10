@@ -286,14 +286,25 @@ namespace BTL_OOP_N17
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            // Hiển thị hộp thoại xác nhận sửa
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy giá trị của cột MATL từ hàng đã chọn
+                string selectedMatl = dataGridView1.SelectedRows[0].Cells["MATL"].Value.ToString();
+
+                // Kiểm tra nếu người dùng chọn sửa MATL
+                if (txt_MaTL.Text != selectedMatl)
+                {
+                    MessageBox.Show("Không được sửa giá trị MATL.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng quá trình sửa nếu MATL được chọn
+                }
+            }
+
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Kiểm tra xem người dùng đã đồng ý sửa hay không
             if (result == DialogResult.Yes)
             {
                 // Lấy dữ liệu từ TextBox
-
                 string magv = txt_MaGV.Text;
                 string matl = txt_MaTL.Text;
                 string tentl = txt_TenTL.Text;
@@ -303,19 +314,16 @@ namespace BTL_OOP_N17
                 // Cập nhật dữ liệu trong DataGridView
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 selectedRow.Cells["MAGV"].Value = magv;
+                // selectedRow.Cells["MATL"].Value = matl; // Không cập nhật giá trị MATL
                 selectedRow.Cells["TENTL"].Value = tentl;
                 selectedRow.Cells["MAPTN"].Value = maptn;
                 selectedRow.Cells["NGAYTL"].Value = ngaytl;
-                selectedRow.Cells["MATL"].Value = matl;
-
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 ShowInfo(magv, matl, tentl, maptn, ngaytl);
                 UpdateInfo(magv, tentl, matl, maptn, ngaytl);
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
-
-
             }
 
 

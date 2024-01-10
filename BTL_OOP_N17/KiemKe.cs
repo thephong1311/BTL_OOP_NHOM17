@@ -77,7 +77,7 @@ namespace BTL_OOP_N17
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE KIEMKE SET  MAKK = @MAKK, MAGV = @MAGV, MAPTN = @MAPTN, " +
+                using (SqlCommand cmd = new SqlCommand("UPDATE KIEMKE SET  MAGV = @MAGV, MAPTN = @MAPTN, " +
                     "NGAYKK = @NGAYKK, MOTAKK = @MOTAKK WHERE MAKK = @MAKK", con))
                 {
                     cmd.Parameters.AddWithValue("@MAGV", magv);
@@ -294,13 +294,25 @@ namespace BTL_OOP_N17
         private void btnSua_Click(object sender, EventArgs e)
         {
             // Hiển thị hộp thoại xác nhận sửa
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy giá trị của cột MAKK từ hàng đã chọn
+                string selectedMaKK = dataGridView1.SelectedRows[0].Cells["MAKK"].Value.ToString();
+
+                // Kiểm tra nếu người dùng chọn sửa MAKK
+                if (txtMAKK.Text != selectedMaKK)
+                {
+                    MessageBox.Show("Không được sửa giá trị MAKK.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng quá trình sửa nếu MAKK được chọn
+                }
+            }
+
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Kiểm tra xem người dùng đã đồng ý sửa hay không
             if (result == DialogResult.Yes)
             {
                 // Lấy dữ liệu từ TextBox
-
                 string magv = txtMAGV.Text;
                 string makk = txtMAKK.Text;
                 string maptn = txtMAPTN.Text;
@@ -315,16 +327,14 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["NGAYKK"].Value = ngaykk;
                 selectedRow.Cells["MOTAKK"].Value = mota;
 
-
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 ShowInfo(makk, magv, maptn, ngaykk, mota);
                 UpdateInfo(makk, magv, maptn, ngaykk, mota);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
-
             }
-           
+
 
         }
         private void ClearTextBoxes()

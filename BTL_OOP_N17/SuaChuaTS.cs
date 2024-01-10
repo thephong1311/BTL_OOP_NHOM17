@@ -100,17 +100,17 @@ namespace BTL_OOP_N17
             adapter.Fill(dataTable);
             return dataTable;
         }
-        public void UpdateInfo(string magv, string masc, string maptn, string ngaysc)
+        public void UpdateInfo(string magv, string maptn, string ngaysc, string masc)
         {
             {
                 try
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE SUACHUATS SET MAGV = @magv , MASC =@masc, MAPTN = @mptn, NGAYSC= @ngaysc WHERE MASC = @masc", con))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE SUACHUATS SET MAGV = @magv , MAPTN = @mptn, NGAYSC= @ngaysc WHERE MASC = @masc", con))
                     {
-                        cmd.Parameters.AddWithValue("@masc", masc);
+                       // cmd.Parameters.AddWithValue("@masc", masc);
                         cmd.Parameters.AddWithValue("@magv", magv);
                         cmd.Parameters.AddWithValue("@mptn", maptn);
-
+                        cmd.Parameters.AddWithValue("@masc", masc);
                         cmd.Parameters.AddWithValue("@ngaysc", ngaysc);
 
                         con.Open();
@@ -270,34 +270,44 @@ namespace BTL_OOP_N17
             }
 
             private void btnSua_Click_1(object sender, EventArgs e)
+        { // Kiểm tra xem người dùng đã chọn hàng để sửa hay không
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // Lấy giá trị của cột MASC từ hàng đã chọn
+                string selectedMasc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
 
-                // Kiểm tra xem người dùng đã đồng ý sửa hay không
-                if (result == DialogResult.Yes)
+                // Kiểm tra nếu người dùng chọn sửa MASC
+                if (txtMSC.Text != selectedMasc)
                 {
-                    // Lấy dữ liệu từ TextBox
-                    string magv = txtMAGV.Text;
-                    string masc = txtMSC.Text;
-
-                    string maptn = txtMAPTN.Text;
-                    string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-                    // Cập nhật dữ liệu trong DataGridView
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    selectedRow.Cells["MAGV"].Value = magv;
-                    selectedRow.Cells["MASC"].Value = masc;
-                    selectedRow.Cells["MAPTN"].Value = maptn;
-                    selectedRow.Cells["NGAYSC"].Value = ngaysc;
-
-
-
-                    ShowInfo(magv, masc, maptn, ngaysc);
-                    UpdateInfo(magv, masc, maptn, ngaysc);
-                    // Đặt lại TextBox sau khi cập nhật
-                    ClearTextBoxes();
-
+                    MessageBox.Show("Không được sửa giá trị MASC.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng quá trình sửa nếu MASC được chọn
                 }
             }
+
+            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Kiểm tra xem người dùng đã đồng ý sửa hay không
+            if (result == DialogResult.Yes)
+            {
+                // Lấy dữ liệu từ TextBox
+                string magv = txtMAGV.Text;
+                string masc = txtMSC.Text;
+                string maptn = txtMAPTN.Text;
+                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+
+                // Cập nhật dữ liệu trong DataGridView
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                selectedRow.Cells["MAGV"].Value = magv;
+                // selectedRow.Cells["MASC"].Value = masc; // Không cập nhật giá trị MASC
+                selectedRow.Cells["MAPTN"].Value = maptn;
+                selectedRow.Cells["NGAYSC"].Value = ngaysc;
+
+                ShowInfo(magv, masc, maptn, ngaysc);
+                UpdateInfo(magv, maptn, ngaysc, masc);
+                // Đặt lại TextBox sau khi cập nhật
+                ClearTextBoxes();
+            }
+        }
 
             private void btnXoa_Click_1(object sender, EventArgs e)
             {
