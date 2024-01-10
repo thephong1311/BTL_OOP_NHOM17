@@ -59,6 +59,7 @@
             this.thốngKêSốLượngTBTạiPTNToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_Body = new System.Windows.Forms.Panel();
             this.thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhMụcTrạngTháiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -127,7 +128,8 @@
             this.danhMụcPhòngThíNghiệmToolStripMenuItem,
             this.danhMụcNhàCungCấpToolStripMenuItem,
             this.danhMụcĐơnVịTínhToolStripMenuItem,
-            this.danhMụcLoạiTàiSảnToolStripMenuItem});
+            this.danhMụcLoạiTàiSảnToolStripMenuItem,
+            this.danhMụcTrạngTháiToolStripMenuItem});
             this.thôngTinTàiKhoảnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
             this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(82, 21);
@@ -319,6 +321,13 @@
             this.thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem.Text = "Thống kê số lượng giáo viên tại PTN";
             this.thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem.Click += new System.EventHandler(this.thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem_Click);
             // 
+            // danhMụcTrạngTháiToolStripMenuItem
+            // 
+            this.danhMụcTrạngTháiToolStripMenuItem.Name = "danhMụcTrạngTháiToolStripMenuItem";
+            this.danhMụcTrạngTháiToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.danhMụcTrạngTháiToolStripMenuItem.Text = "Danh mục trạng thái";
+            this.danhMụcTrạngTháiToolStripMenuItem.Click += new System.EventHandler(this.danhMụcTrạngTháiToolStripMenuItem_Click);
+            // 
             // fDevicemanage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,5 +379,6 @@
         private System.Windows.Forms.ToolStripMenuItem danhMụcĐơnVịTínhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhMụcLoạiTàiSảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem danhMụcTrạngTháiToolStripMenuItem;
     }
 }
