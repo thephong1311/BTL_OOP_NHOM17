@@ -159,6 +159,11 @@ namespace BTL_OOP_N17
         {
             OpenChildForm(new LOAITS());
         }
+
+        private void thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoLuongGVtaiPTN());
+        }
     }
     
 }

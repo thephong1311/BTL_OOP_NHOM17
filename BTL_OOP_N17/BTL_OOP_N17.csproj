@@ -183,6 +183,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChartSoLuongGVtaiPTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartSoLuongGVtaiPTN.Designer.cs">
+      <DependentUpon>ChartSoLuongGVtaiPTN.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChartSoluongTBcotaiPTN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,6 +443,9 @@
     <Compile Include="YCThanhly.Designer.cs">
       <DependentUpon>YCThanhly.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChartSoLuongGVtaiPTN.resx">
+      <DependentUpon>ChartSoLuongGVtaiPTN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartSoluongTBcotaiPTN.resx">
       <DependentUpon>ChartSoluongTBcotaiPTN.cs</DependentUpon>
     </EmbeddedResource>
