@@ -81,43 +81,7 @@ namespace BTL_OOP_N17
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtMaLTS.Text) && !string.IsNullOrEmpty(txtTenLTS.Text))
-            {
-                try
-                {
-                    string sqlInsert = "UPDATE DVT SET MALOAITS=@malts,TENLOAITS=@tenlts WHERE MALOAITS=@malts";
-                    using (SqlCommand cmd = new SqlCommand(sqlInsert, con))
-                    {
-                        cmd.Parameters.AddWithValue("@malts", txtMaLTS.Text);
-                        cmd.Parameters.AddWithValue("@tenlts", txtTenLTS.Text);
-                        con.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Cập nhập loại tài sản thành công!");
-                            InitializeDataGridView();
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Cập nhật loại tài sản thất bại. Hãy kiếm tra lại thông tin !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        con.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Hãy nhập đủ thông tin !");
-            }
-        }
+      
         public void DeleteGV(string malts)
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
@@ -205,6 +169,50 @@ namespace BTL_OOP_N17
         private void btnFind_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = findLTS();
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtMaLTS.Text) && !string.IsNullOrEmpty(txtTenLTS.Text))
+            {
+                try
+                {
+                    // Kiểm tra nếu người dùng muốn sửa mã loại tài sản
+                    if (txtMaLTS.Text != dataGridView1.SelectedRows[0].Cells["MALOAITS"].Value.ToString())
+                    {
+                        MessageBox.Show("Không được sửa mã loại tài sản.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string sqlUpdate = "UPDATE LOAITS SET TENLOAITS=@tenlts WHERE MALOAITS=@malts";
+                    using (SqlCommand cmd = new SqlCommand(sqlUpdate, con))
+                    {
+                        cmd.Parameters.AddWithValue("@malts", txtMaLTS.Text);
+                        cmd.Parameters.AddWithValue("@tenlts", txtTenLTS.Text);
+                        con.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Cập nhật loại tài sản thành công!");
+                            InitializeDataGridView();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật loại tài sản thất bại. Hãy kiểm tra lại thông tin !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        con.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập đủ thông tin !");
+            }
         }
     }
 }
