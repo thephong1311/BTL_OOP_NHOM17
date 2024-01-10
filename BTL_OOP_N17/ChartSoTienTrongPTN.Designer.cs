@@ -44,15 +44,16 @@
             this.chartMoneyinLab.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartMoneyinLab.Legends.Add(legend1);
-            this.chartMoneyinLab.Location = new System.Drawing.Point(42, 12);
+            this.chartMoneyinLab.Location = new System.Drawing.Point(12, 12);
             this.chartMoneyinLab.Name = "chartMoneyinLab";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "đồng";
             this.chartMoneyinLab.Series.Add(series1);
-            this.chartMoneyinLab.Size = new System.Drawing.Size(344, 320);
+            this.chartMoneyinLab.Size = new System.Drawing.Size(423, 361);
             this.chartMoneyinLab.TabIndex = 0;
             this.chartMoneyinLab.Text = "chartMoneyinLab";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "title1";
             title1.Text = "THỐNG KÊ SỐ TIỀN TRONG PHÒNG THÍ NGHIỆM";
             this.chartMoneyinLab.Titles.Add(title1);
@@ -60,7 +61,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(419, 76);
+            this.dataGridView1.Location = new System.Drawing.Point(471, 105);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 205);
             this.dataGridView1.TabIndex = 1;
@@ -69,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 450);
+            this.ClientSize = new System.Drawing.Size(723, 441);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.chartMoneyinLab);
             this.Name = "ChartSoTienTrongPTN";
