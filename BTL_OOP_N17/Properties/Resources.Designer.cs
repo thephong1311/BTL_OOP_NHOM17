@@ -73,6 +73,17 @@ namespace BTL_OOP_N17.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _81318607_scientists_research_in_laboratory_vector_illustration_chemical_lab_interior_with_female_researcher {
+            get {
+                object obj = ResourceManager.GetObject("81318607-scientists-research-in-laboratory-vector-illustration-chemical-lab-inter" +
+                        "ior-with-female-researcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);

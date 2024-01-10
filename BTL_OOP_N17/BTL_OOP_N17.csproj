@@ -333,18 +333,6 @@
     <Compile Include="QLTTPTN.Designer.cs">
       <DependentUpon>QLTTPTN.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportKiemKeTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportKiemKeTS.Designer.cs">
-      <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportThanhLy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportThanhLy.Designer.cs">
-      <DependentUpon>ReportThanhLy.cs</DependentUpon>
-    </Compile>
     <Compile Include="SuaChuaTS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,36 +437,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportLuanChuyenTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportLuanChuyenTS.Designer.cs">
-      <DependentUpon>ReportLuanChuyenTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportMuonTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportMuonTS.Designer.cs">
-      <DependentUpon>ReportMuonTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportSuaChuaTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportSuaChuaTS.Designer.cs">
-      <DependentUpon>ReportSuaChuaTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportTinhTrangTS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportTinhTrangTS.Designer.cs">
-      <DependentUpon>ReportTinhTrangTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportYCmua.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportYCmua.Designer.cs">
-      <DependentUpon>ReportYCmua.cs</DependentUpon>
-    </Compile>
     <Compile Include="TiepNhanTaiSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -583,12 +541,6 @@
     <EmbeddedResource Include="QLTTPTN.resx">
       <DependentUpon>QLTTPTN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportKiemKeTS.resx">
-      <DependentUpon>ReportKiemKeTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportThanhLy.resx">
-      <DependentUpon>ReportThanhLy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SuaChuaTS.resx">
       <DependentUpon>SuaChuaTS.cs</DependentUpon>
     </EmbeddedResource>
@@ -630,21 +582,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="YCmua.resx">
       <DependentUpon>YCmua.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportLuanChuyenTS.resx">
-      <DependentUpon>ReportLuanChuyenTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportMuonTS.resx">
-      <DependentUpon>ReportMuonTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportSuaChuaTS.resx">
-      <DependentUpon>ReportSuaChuaTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportTinhTrangTS.resx">
-      <DependentUpon>ReportTinhTrangTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportYCmua.resx">
-      <DependentUpon>ReportYCmua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanTaiSan.resx">
       <DependentUpon>TiepNhanTaiSan.cs</DependentUpon>
@@ -730,6 +667,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81318607-scientists-research-in-laboratory-vector-illustration-chemical-lab-interior-with-female-researcher.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
