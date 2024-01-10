@@ -31,14 +31,11 @@ namespace BTL_OOP_N17
                     {
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            // Tạo DataTable và đọc dữ liệu từ reader
                             DataTable dataTable = new DataTable();
                             dataTable.Load(reader);
 
-                            // Đặt DataTable làm nguồn dữ liệu cho dataGridView1
                             dataGridView1.DataSource = dataTable;
 
-                            // Thêm dữ liệu vào biểu đồ
                             foreach (DataRow row in dataTable.Rows)
                             {
                                 chartSLTBtaiPTN.Series["số lượng tài sản"].Points.AddXY(row["MAPTN"].ToString(), Convert.ToInt32(row["SOLUONGTS"]));

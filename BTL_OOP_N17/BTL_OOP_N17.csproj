@@ -250,24 +250,6 @@
     <Compile Include="fAddDanhgialaiTB.Designer.cs">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
     </Compile>
-    <Compile Include="fAddLuanChuyen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAddLuanChuyen.Designer.cs">
-      <DependentUpon>fAddLuanChuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fAddNhacungcap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAddNhacungcap.Designer.cs">
-      <DependentUpon>fAddNhacungcap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fAddPTN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAddPTN.Designer.cs">
-      <DependentUpon>fAddPTN.cs</DependentUpon>
-    </Compile>
     <Compile Include="fAddThietbi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,12 +261,6 @@
     </Compile>
     <Compile Include="fAddYCmua.Designer.cs">
       <DependentUpon>fAddYCmua.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fAddYeucausuachuaTB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fAddYeucausuachuaTB.Designer.cs">
-      <DependentUpon>fAddYeucausuachuaTB.cs</DependentUpon>
     </Compile>
     <Compile Include="fDanhgialaiTB.cs">
       <SubType>Form</SubType>
@@ -488,23 +464,11 @@
     <EmbeddedResource Include="fAddDanhgialaiTB.resx">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fAddLuanChuyen.resx">
-      <DependentUpon>fAddLuanChuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fAddNhacungcap.resx">
-      <DependentUpon>fAddNhacungcap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fAddPTN.resx">
-      <DependentUpon>fAddPTN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fAddThietbi.resx">
       <DependentUpon>fAddThietbi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fAddYCmua.resx">
       <DependentUpon>fAddYCmua.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fAddYeucausuachuaTB.resx">
-      <DependentUpon>fAddYeucausuachuaTB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDanhgialaiTB.resx">
       <DependentUpon>fDanhgialaiTB.cs</DependentUpon>

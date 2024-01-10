@@ -34,7 +34,6 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Lấy mật khẩu hiện tại từ cơ sở dữ liệu dựa trên tên tài khoản
                 string sqlSelect = $"SELECT MATKHAU FROM ACCOUNT WHERE TAIKHOAN = '{txtAccount.Text}'";
 
                 using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
@@ -43,23 +42,18 @@ namespace BTL_OOP_N17
 
                     using (SqlCommand command = new SqlCommand(sqlSelect, connection))
                     {
-                        // Thực hiện truy vấn để lấy mật khẩu hiện tại
                         object result = command.ExecuteScalar();
 
-                        if (result != null) // Kiểm tra xem tài khoản có tồn tại hay không
+                        if (result != null) 
                         {
                             string currentPassword = result.ToString();
-
-                            // So sánh mật khẩu hiện tại với mật khẩu cũ được nhập
                             if (currentPassword == txtOldPass.Text)
                             {
-                                // Chuẩn bị câu lệnh SQL UPDATE
                                 string sqlUpdate = $"UPDATE ACCOUNT SET MATKHAU = '{txtNewPass.Text}' WHERE TAIKHOAN = '{txtAccount.Text}'";
 
-                                // Thực thi câu lệnh SQL
                                 using (SqlCommand updateCommand = new SqlCommand(sqlUpdate, connection))
                                 {
-                                    int rowsAffected = updateCommand.ExecuteNonQuery();// trả về số dòng bị ảnh hưởng khi thực hiện update
+                                    int rowsAffected = updateCommand.ExecuteNonQuery();
 
                                     if (rowsAffected > 0)
                                     {
@@ -86,7 +80,7 @@ namespace BTL_OOP_N17
             }
             catch (Exception ex)
             {
-                // Xử lý ngoại lệ nếu cần
+              
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

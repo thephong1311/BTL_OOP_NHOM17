@@ -27,7 +27,7 @@ namespace BTL_OOP_N17
                 DialogResult result = MessageBox.Show("Thông tin chi tiết của phiếu yêu cầu mua của bạn chưa được cập nhập. Bạn có chắc muốn thoát?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.No)
                 {
-                    e.Cancel = true; // Chặn việc đóng form nếu người dùng chọn No
+                    e.Cancel = true;
                 }
             }
         }
@@ -78,8 +78,7 @@ namespace BTL_OOP_N17
                 }
                 catch (SqlException ex)
                 {
-                    // Xử lý lỗi SQL
-                    if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                    if (ex.Number == 2627)  
                     {
                         MessageBox.Show($"Mã '{txtMaYC.Text}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -90,7 +89,6 @@ namespace BTL_OOP_N17
                 }
                 catch (Exception ex)
                 {
-                    // Xử lý lỗi khác (nếu có)
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

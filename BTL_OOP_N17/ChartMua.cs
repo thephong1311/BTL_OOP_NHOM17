@@ -37,13 +37,10 @@ namespace BTL_OOP_N17
 
                             dataGridView1.DataSource = dataTable;
 
-                            // Clear existing series in the chart
                             chartTKMuaTS.Series.Clear();
 
-                            // Add a new series to the chart
                             chartTKMuaTS.Series.Add("Số yêu cầu mua");
 
-                            // Use the data from the DataTable to populate the chart
                             foreach (DataRow row in dataTable.Rows)
                             {
                                 chartTKMuaTS.Series["Số yêu cầu mua"].Points.AddXY(Convert.ToString(row["MAPTN"]), Convert.ToInt32(row["SOYC"]));

@@ -49,7 +49,6 @@ namespace BTL_OOP_N17
         }
         public void DeleteDGTS(string mats)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM DANHGIATS WHERE MADGKTS = @madglts", con))
             {
                 cmd.Parameters.AddWithValue("@madglts", mats);
@@ -61,7 +60,6 @@ namespace BTL_OOP_N17
         }
         public void DeleteCTDGTS(string mats)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM CHITIET_DGTS WHERE MADGKTS = @madglts", con))
             {
                 cmd.Parameters.AddWithValue("@madglts", mats);
@@ -81,27 +79,20 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
                     string mats = dataGridView1.SelectedRows[0].Cells["MADGLTS"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
                         DeleteDGTS(mats);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa thành công!");
                     }
-                    // Nếu người dùng chọn No, không thực hiện xóa
                 }
                 else
                 {
@@ -109,24 +100,18 @@ namespace BTL_OOP_N17
                 }
                 if (dataGridView2.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
                     string mats = dataGridView2.SelectedRows[0].Cells["MADGLTS"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
                     DialogResult result1 = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result1 == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
                         DeleteCTDGTS(mats);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa thành công!");
                     }
-                    // Nếu người dùng chọn No, không thực hiện xóa
                 }
                 else
                 {
@@ -152,10 +137,8 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
                 command.Parameters.AddWithValue("@MADGLTS", txtFind.Text);
 
-                // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
@@ -169,10 +152,8 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
                 command.Parameters.AddWithValue("@MADGLTS", txtFind.Text);
 
-                // Thực hiện truy vấn
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
