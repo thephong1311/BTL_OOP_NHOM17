@@ -119,13 +119,13 @@ namespace BTL_OOP_N17
 
         private void btnThemSC_Click(object sender, EventArgs e)
         {
-            fAddYeucausuachuaTB f = new fAddYeucausuachuaTB();
+            SuaChuaTS f = new SuaChuaTS();
             f.ShowDialog();
         }
 
         private void btnThemLC_Click(object sender, EventArgs e)
         {
-            fAddLuanChuyen f= new fAddLuanChuyen();
+            LuanChuyenTS f= new LuanChuyenTS();
             f.ShowDialog();
         }
     }
