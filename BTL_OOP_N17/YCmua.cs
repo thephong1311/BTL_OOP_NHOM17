@@ -80,6 +80,7 @@ namespace BTL_OOP_N17
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Cập nhật thông tin thành công! Hãy thêm thông tin chi tiết");
+                            ClearTextBoxes();
                             tt = true;
                         }
                         else
@@ -165,6 +166,7 @@ namespace BTL_OOP_N17
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Cập nhật thông tin thành công! Hãy thêm thông tin chi tiết");
+                                ClearTextBoxes();
                                 tt = true;
                             }
                             else
@@ -317,6 +319,15 @@ namespace BTL_OOP_N17
             }
 
         }
+        private void ClearTextBoxes()
+        {
+            txtMaYC.Text = string.Empty;
+            txtMaGV.Text = string.Empty;
+            txtMota.Text = string.Empty;
+            txtTrangthai.Text = string.Empty;
+            cbbPTN.Text = string.Empty;
+        }
+
     }
 }
 
