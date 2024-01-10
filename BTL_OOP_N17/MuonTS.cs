@@ -1,4 +1,5 @@
 ﻿using BTL_OOP_N17.DAO;
+using DevExpress.XtraPrinting.Native;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -137,6 +138,7 @@ namespace BTL_OOP_N17
                     {
                        
                         DeletePhieuMuon(mapm1);
+                        DeleteCTPM(mapm1);
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa phiếu mượn thành công!");
@@ -153,6 +155,7 @@ namespace BTL_OOP_N17
                     {
                         
                         DeletePhieuMuon(mapm2);
+                        DeleteCTPM(mapm2);
                         InitializeDataGridView();
                         MessageBox.Show("Đã xóa phiếu mượn thiết bị thành công!");
                     }
