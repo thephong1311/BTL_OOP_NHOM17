@@ -29,7 +29,7 @@ namespace BTL_OOP_N17
         {
             try
             {
-                //Kết nối đến csdl
+               
                 using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
                     connection.Open();

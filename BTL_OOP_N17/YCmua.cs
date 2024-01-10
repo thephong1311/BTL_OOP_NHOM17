@@ -32,7 +32,7 @@ namespace BTL_OOP_N17
 
         private void YCmua_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLTS2DataSet1.PHONGTHINGHIEM' table. You can move, or remove it, as needed.
+          
 
 
         }
@@ -92,8 +92,8 @@ namespace BTL_OOP_N17
                 }
                 catch (SqlException ex)
                 {
-                    // Xử lý lỗi SQL
-                    if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                  
+                    if (ex.Number == 2627) 
                     {
                         MessageBox.Show($"Mã '{txtMaYC.Text}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -104,7 +104,7 @@ namespace BTL_OOP_N17
                 }
                 catch (Exception ex)
                 {
-                    // Xử lý lỗi khác (nếu có)
+                  
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -137,20 +137,20 @@ namespace BTL_OOP_N17
             {
                 try
                 {
-                    // Kiểm tra xem bản ghi đã tồn tại hay chưa
+                  
                     bool recordExists = false;
                     using (SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM YEUCAUMUATS WHERE MAYC = @mayc", con))
                     {
                         checkCmd.Parameters.AddWithValue("@mayc", txtMaYC.Text);
                         con.Open();
-                        int recordCount = (int)checkCmd.ExecuteScalar(); //trả về giá trị của cột đầu tiên của hàng đầu tiên 
-                        recordExists = recordCount > 0; // nếu số lượng bản ghi lớn hơn 0 đúng thì recordExists = true
+                        int recordCount = (int)checkCmd.ExecuteScalar();
+                        recordExists = recordCount > 0; 
                         con.Close();
                     }
 
                     if (recordExists)
                     {
-                        // Nếu bản ghi đã tồn tại, thực hiện câu lệnh UPDATE
+                        
                         using (SqlCommand updateCmd = new SqlCommand("UPDATE YEUCAUMUATS SET MAGV = @magv, MAPTN = @maptn, NGAYLAPYC = @ngaylapyc, NOIDUNGYC = @ndyc, TRANGTHAIYC = @ttyc WHERE MAYC = @mayc", con))
                         {
                             updateCmd.Parameters.AddWithValue("@mayc", txtMaYC.Text);
@@ -183,8 +183,8 @@ namespace BTL_OOP_N17
                 }
                 catch (SqlException ex)
                 {
-                    // Xử lý lỗi SQL
-                    if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                   
+                    if (ex.Number == 2627)  
                     {
                         MessageBox.Show($"Mã '{txtMaYC.Text}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -195,7 +195,7 @@ namespace BTL_OOP_N17
                 }
                 catch (Exception ex)
                 {
-                    // Xử lý lỗi khác (nếu có)
+                   
                     MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -207,7 +207,7 @@ namespace BTL_OOP_N17
         }
         public void DeleteCTYCMUA(string mayc)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+          
             using (SqlCommand cmd = new SqlCommand("DELETE FROM CHITIET_YCTS WHERE MAYC = @mayc", con))
             {
                 cmd.Parameters.AddWithValue("@mayc", mayc);
@@ -219,7 +219,7 @@ namespace BTL_OOP_N17
         }
         public void DeleteYCMUA(string mayc)
         {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+           
             using (SqlCommand cmd = new SqlCommand("DELETE FROM YEUCAUMUATS WHERE MAYC = @mayc", con))
             {
                 cmd.Parameters.AddWithValue("@mayc", mayc);
@@ -239,22 +239,20 @@ namespace BTL_OOP_N17
         {
             try
             {
-                // Kiểm tra xem người dùng đã chọn một hàng trong DataGridView chưa
                 if (dgvThongtinchitiet.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                   
                     string mapm1 = dgvThongtinchitiet.SelectedRows[0].Cells["MAYC"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
+                  
                     DialogResult result1 = MessageBox.Show("Bạn có chắc chắn muốn xóa chi tiết phiếu yêu cầu mua này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
                     if (result1 == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
+                      
                         DeleteCTYCMUA(mapm1);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                       
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa chi tiết phiếu yêu cầu thành công!");
@@ -262,19 +260,19 @@ namespace BTL_OOP_N17
                 }
                 if (xemCacYCMua1.dataGridView1.SelectedRows.Count > 0)
                 {
-                    // Lấy mã danh mục thiết bị từ hàng được chọn
+                    
                     string mapm2 = xemCacYCMua1.dataGridView1.SelectedRows[0].Cells["MAYC"].Value.ToString();
 
-                    // Hiển thị hộp thoại xác nhận
+                   
                     DialogResult result1 = MessageBox.Show("Bạn có chắc chắn muốn xóa chi tiết yêu cầu mua này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    // Kiểm tra xem người dùng đã nhấn nút Yes hay không
+                   
                     if (result1 == DialogResult.Yes)
                     {
-                        // Gọi hàm DeleteGV để xóa DMTB
+                        
                         DeleteYCMUA(mapm2);
 
-                        // Làm mới dữ liệu trong DataGridView sau khi xóa
+                       
                         InitializeDataGridView();
 
                         MessageBox.Show("Đã xóa phiếu yêu cầu thành công!");
@@ -296,10 +294,10 @@ namespace BTL_OOP_N17
 
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                // Thêm tham số và đặt giá trị
+            
                 command.Parameters.AddWithValue("@MaYC", txtMaYC.Text);
 
-                // Thực hiện truy vấn
+               
                 SqlDataAdapter find = new SqlDataAdapter(command);
                 DataTable dt_find = new DataTable();
                 find.Fill(dt_find);
