@@ -226,6 +226,12 @@
     <Compile Include="DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="DVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DVT.Designer.cs">
+      <DependentUpon>DVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddDanhgialaiTB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +297,12 @@
     </Compile>
     <Compile Include="GVControl.Designer.cs">
       <DependentUpon>GVControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOAITS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOAITS.Designer.cs">
+      <DependentUpon>LOAITS.cs</DependentUpon>
     </Compile>
     <Compile Include="LuanChuyenTS.cs">
       <SubType>Form</SubType>
@@ -512,6 +524,9 @@
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DVT.resx">
+      <DependentUpon>DVT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fAddDanhgialaiTB.resx">
       <DependentUpon>fAddDanhgialaiTB.cs</DependentUpon>
     </EmbeddedResource>
@@ -544,6 +559,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GVControl.resx">
       <DependentUpon>GVControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOAITS.resx">
+      <DependentUpon>LOAITS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LuanChuyenTS.resx">
       <DependentUpon>LuanChuyenTS.cs</DependentUpon>

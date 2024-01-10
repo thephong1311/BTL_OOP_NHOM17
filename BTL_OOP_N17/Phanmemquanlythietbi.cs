@@ -204,5 +204,15 @@ namespace BTL_OOP_N17
         {
             OpenChildForm(new ChartTKMuon());
         }
+
+        private void danhMụcĐơnVịTínhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DVT());
+        }
+
+        private void danhMụcLoạiTàiSảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new LOAITS());
+        }
     }
 }
