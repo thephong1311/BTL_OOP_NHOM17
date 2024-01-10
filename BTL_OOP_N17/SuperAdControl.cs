@@ -122,12 +122,42 @@ namespace BTL_OOP_N17
 
         private void danhMujToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            OpenChildForm(new ACCOUNT());
         }
 
         private void theoDõiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new TheodoiTB());
+        }
+
+        private void thốngKêYêuCầuMuaTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartMua());
+        }
+
+        private void thốngKêYêuCầuMuaTheoThờiGianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartThongkeMuaTheoTGian());
+        }
+
+        private void thốngKêSốLượngThiếtBịTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoluongTBcotaiPTN());
+        }
+
+        private void thốngKêSốTiềnTrongPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoTienTrongPTN());
+        }
+
+        private void thốngKêMượnThiếtBịTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartTKMuon());
+        }
+
+        private void thốngKêSốLượngGiáoViênTạiPTNToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ChartSoLuongGVtaiPTN());
         }
     }
 }
