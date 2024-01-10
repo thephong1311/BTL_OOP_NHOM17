@@ -64,7 +64,7 @@ namespace BTL_OOP_N17
                 string mptn = selectedRow.Cells["MAPTN"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
-                DisplayStudentInfo(magv, username, diachi, sdt, chucvu,mptn);
+                DisplayStudentInfo(magv, username, diachi, sdt, chucvu, mptn);
             }
         }
 
@@ -124,7 +124,7 @@ namespace BTL_OOP_N17
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
-            return dataTable;   
+            return dataTable;
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -237,11 +237,11 @@ namespace BTL_OOP_N17
         {
             try
             {
-            string magv = txtMaGV.Text;
-            string username = txtTenGV.Text;
-            string diachi = txtDiaChi.Text;
-            string sdt = txtSDTGV.Text;
-            string chucvu = txtChucvu.Text;
+                string magv = txtMaGV.Text;
+                string username = txtTenGV.Text;
+                string diachi = txtDiaChi.Text;
+                string sdt = txtSDTGV.Text;
+                string chucvu = txtChucvu.Text;
                 string mptn = txtMPTN.Text;
 
                 // Gọi phương thức ThemGVmoi để thêm giáo viên mới vào cơ sở dữ liệu
@@ -298,6 +298,18 @@ namespace BTL_OOP_N17
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy giá trị của cột MAKK từ hàng đã chọn
+                string selectedMaGV = dataGridView1.SelectedRows[0].Cells["MAGV"].Value.ToString();
+
+                // Kiểm tra nếu người dùng chọn sửa MAKK
+                if (txtMaGV.Text != selectedMaGV)
+                {
+                    MessageBox.Show("Không được sửa giá trị MAGV.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng quá trình sửa nếu MAKK được chọn
+                }
+            }
             // Hiển thị hộp thoại xác nhận sửa
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -321,14 +333,12 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["CHUCVUGV"].Value = chucvu;
                 selectedRow.Cells["MAPTN"].Value = mptn;
 
-                UpdateInfoGV(magv, username, diachi, sdt, chucvu);
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 DisplayStudentInfo(magv, username, diachi, sdt, chucvu, mptn);
                 UpdateInfoGV(magv, username, diachi, sdt, chucvu, mptn);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
-
             }
         }
 
@@ -345,11 +355,11 @@ namespace BTL_OOP_N17
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
-        {  
-                // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
-                InitializeDataGridView();
-                // Xóa nội dung trong các ô TextBox
-                ClearTextBoxes();
+        {
+            // Gọi lại hàm InitializeDataGridView để tải lại dữ liệu ban đầu
+            InitializeDataGridView();
+            // Xóa nội dung trong các ô TextBox
+            ClearTextBoxes();
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -358,4 +368,3 @@ namespace BTL_OOP_N17
         }
     }
 }
-
