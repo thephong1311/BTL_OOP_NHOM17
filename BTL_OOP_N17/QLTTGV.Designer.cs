@@ -311,7 +311,7 @@
             this.txtMaGV.Name = "txtMaGV";
             this.txtMaGV.Size = new System.Drawing.Size(291, 29);
             this.txtMaGV.TabIndex = 3;
-            this.txtMaGV.TextChanged += new System.EventHandler(this.txtMaGV_TextChanged);
+            //this.txtMaGV.TextChanged += new System.EventHandler(this.txtMaGV_TextChanged);
             // 
             // label3
             // 
