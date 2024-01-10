@@ -36,7 +36,7 @@ namespace BTL_OOP_N17
         {
             try
             {
-                connection.Open();
+                
                 if (!string.IsNullOrEmpty(txtMaTS.Text) && !string.IsNullOrEmpty(txtDungtich.Text) && !string.IsNullOrEmpty(txtSoluongMuon.Text) && !string.IsNullOrEmpty(txtTgianMuon.Text) && !string.IsNullOrEmpty(txtSLMuonTT.Text))
                 {
                     string sqlInsert_Chitiet = "INSERT INTO CHITIET_MUON(MAPM,MATS,DUNGTICH,SOLUONG_MUON,THOIGIANSD,SOLUONG_MUONTT) VALUES (@mapm,@mats,@dungtich,@slmuon,@tgian,@slmuontt)";
@@ -48,8 +48,9 @@ namespace BTL_OOP_N17
                         cmd.Parameters.AddWithValue("@slmuon", txtSoluongMuon.Text);
                         cmd.Parameters.AddWithValue("@tgian", txtTgianMuon.Text);
                         cmd.Parameters.AddWithValue("@slmuontt", txtSLMuonTT.Text);
+                        connection.Open();
                         int rowsAffected = cmd.ExecuteNonQuery();
-
+                        connection.Close();
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Cập nhật thông tin thành công!");
@@ -82,7 +83,7 @@ namespace BTL_OOP_N17
         {
             try
             {
-                connection.Open();
+               
                 if (!string.IsNullOrEmpty(txtMaMTS.Text) && !string.IsNullOrEmpty(txtMAGV.Text) && !string.IsNullOrEmpty(txtNguoimuon.Text) && !string.IsNullOrEmpty(txtMaPTN.Text) && !string.IsNullOrEmpty(txtEmail.Text)
                     && !string.IsNullOrEmpty(txtSDT.Text)&&!string.IsNullOrEmpty(cbbTrangthai.Text))
                 {
@@ -97,8 +98,9 @@ namespace BTL_OOP_N17
                         cmd.Parameters.AddWithValue("@sdt", txtSDT.Text);
                         cmd.Parameters.AddWithValue("@ngaymuon", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
                         cmd.Parameters.AddWithValue("@trangthai", cbbTrangthai.Text);
+                        connection.Open();
                         int rowsAffected = cmd.ExecuteNonQuery();
-
+                        connection.Close();
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Thêm mới phiếu mượn tài sản thành công!");
@@ -189,7 +191,7 @@ namespace BTL_OOP_N17
             {
                 if (!string.IsNullOrEmpty(txtMaTS.Text) && !string.IsNullOrEmpty(txtDungtich.Text) && !string.IsNullOrEmpty(txtSoluongMuon.Text) && !string.IsNullOrEmpty(txtTgianMuon.Text) && !string.IsNullOrEmpty(txtSLMuonTT.Text))
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE CHITIET_MUON SET MAPM=@mapm,MATS=@mats,DUNGTICH=@dungtich,SOLUON_MUON=@slmuon,THOIGIANSD=@tgian,SOLUONG_MUONTT=@slmuontt WHERE MAPM = @mapm", connection))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE CHITIET_MUON SET MAPM=@mapm,MATS=@mats,DUNGTICH=@dungtich,SOLUONG_MUON=@slmuon,THOIGIANSD=@tgian,SOLUONG_MUONTT=@slmuontt WHERE MAPM = @mapm", connection))
                     {
                         cmd.Parameters.AddWithValue("@mapm", txtMaMTS.Text);
                         cmd.Parameters.AddWithValue("@mats", txtMaTS.Text);
