@@ -22,30 +22,33 @@ namespace BTL_OOP_N17
         private void ChartSoTienTrongPTN_Load(object sender, EventArgs e)
         {
             try
-            { 
-             string sql = "select MAPTN, SUM([GIANHAP]*[SOLUONGTS]) AS THANHTIENTS FROM TAISAN GROUP BY MAPTN";
-            using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                string sql = "SELECT MAPTN, SUM(ISNULL([GIANHAP], 0) * ISNULL([SOLUONGTS], 0)) AS THANHTIENTS FROM TAISAN GROUP BY MAPTN";
+                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand(sql, connection))
                     {
-                        // Tạo DataTable và đọc dữ liệu từ reader
-                        DataTable dataTable = new DataTable();
-                        dataTable.Load(reader);
-
-                        // Đặt DataTable làm nguồn dữ liệu cho dataGridView1
-                        dataGridView1.DataSource = dataTable;
-
-                        // Thêm dữ liệu vào biểu đồ
-                        foreach (DataRow row in dataTable.Rows)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            chartMoneyinLab.Series["đồng"].Points.AddXY(row["MAPTN"].ToString(), Convert.ToInt32(row["THANHTIENTS"]));
+                            // Tạo DataTable và đọc dữ liệu từ reader
+                            DataTable dataTable = new DataTable();
+                            dataTable.Load(reader);
+
+                            // Đặt DataTable làm nguồn dữ liệu cho dataGridView1
+                            dataGridView1.DataSource = dataTable;
+
+                            // Thêm dữ liệu vào biểu đồ
+                            foreach (DataRow row in dataTable.Rows)
+                            {
+                                string maptn = row["MAPTN"].ToString();
+                                int thanhTienTS = row["THANHTIENTS"] != DBNull.Value ? Convert.ToInt32(row["THANHTIENTS"]) : 0;
+
+                                chartMoneyinLab.Series["đồng"].Points.AddXY(maptn, thanhTienTS);
+                            }
                         }
                     }
                 }
-            }
             }
             catch (Exception ex)
             {
@@ -53,4 +56,5 @@ namespace BTL_OOP_N17
             }
         }
     }
-}
+   }
+
