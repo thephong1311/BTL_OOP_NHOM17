@@ -42,11 +42,11 @@ namespace BTL_OOP_N17
                 string magv = selectedRow.Cells["MAGV"].Value.ToString();
                 string masc = selectedRow.Cells["MASC"].Value.ToString();
                 string maptn = selectedRow.Cells["MAPTN"].Value.ToString();
-              
+
                 string ngaysc = selectedRow.Cells["NGAYSC"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
-                ShowInfo(magv, masc, maptn,  ngaysc);
+                ShowInfo(magv, masc, maptn, ngaysc);
             }
         }
         private void ShowInfo(string magv, string masc, string maptn, string ngaysc)
@@ -55,11 +55,11 @@ namespace BTL_OOP_N17
             txtMAGV.Text = magv;
             txtMSC.Text = masc;
             txtMAPTN.Text = maptn;
-           
+
             dtSC.Value = DateTime.Parse(ngaysc);
 
         }
-      
+
         public DataTable SearchSCTS(string magv, string masc, string maptn, string ngaysc)
         {
 
@@ -100,240 +100,253 @@ namespace BTL_OOP_N17
             adapter.Fill(dataTable);
             return dataTable;
         }
-
-        private void btnFind_Click(object sender, EventArgs e)
+        public void UpdateInfo(string magv, string masc, string maptn, string ngaysc)
         {
-
-            string magv = txtMAGV.Text;
-            string masc = txtMSC.Text;
-            string maptn = txtMAPTN.Text;
-          
-            string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ngaysc);
-
-        }
-        public void ThemSCmoi(string magv, string masc, string maptn, string ngaysc)
-        {
-
-
-            try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO SUACHUATS (MAGV, MASC,  NGAYSC, MAPTN) VALUES (@magv, @masc, @ngaysc, @maptn)", con))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@magv", magv);
+                    using (SqlCommand cmd = new SqlCommand("UPDATE SUACHUATS SET MAGV = @magv , MASC =@masc, MAPTN = @mptn, NGAYSC= @ngaysc WHERE MASC = @masc", con))
+                    {
+                        cmd.Parameters.AddWithValue("@masc", masc);
+                        cmd.Parameters.AddWithValue("@magv", magv);
+                        cmd.Parameters.AddWithValue("@mptn", maptn);
+
+                        cmd.Parameters.AddWithValue("@ngaysc", ngaysc);
+
+                        con.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        con.Close();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Đã cập nhật thông tin sửa chữa thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có thông tin sửa chữa được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Xử lý lỗi SQL
+                    MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+            private void btnFind_Click(object sender, EventArgs e)
+            {
+
+                string magv = txtMAGV.Text;
+                string masc = txtMSC.Text;
+                string maptn = txtMAPTN.Text;
+
+                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+                dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ngaysc);
+
+            }
+            public void ThemSCmoi(string magv, string masc, string maptn, string ngaysc)
+            {
+
+
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO SUACHUATS (MAGV, MASC,  NGAYSC, MAPTN) VALUES (@magv, @masc, @ngaysc, @maptn)", con))
+                    {
+                        cmd.Parameters.AddWithValue("@magv", magv);
+                        cmd.Parameters.AddWithValue("@masc", masc);
+                        cmd.Parameters.AddWithValue("@maptn", maptn);
+
+                        cmd.Parameters.AddWithValue("@ngaysc", ngaysc);
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+
+
+                    }
+
+
+                    MessageBox.Show("Đã thêm tài khoản mới thành công!");
+                }
+                catch (SqlException ex)
+                {
+                    // Xử lý lỗi SQL
+                    if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                    {
+                        MessageBox.Show($"Mã '{masc}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi khác (nếu có)
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+                }
+            }
+            public void DeleteSC(string masc)
+            {
+                // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM SUACHUATS WHERE MASC = @masc", con))
+                {
                     cmd.Parameters.AddWithValue("@masc", masc);
-                    cmd.Parameters.AddWithValue("@maptn", maptn);
-                  
-                    cmd.Parameters.AddWithValue("@ngaysc", ngaysc);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
-
-
-                }
-
-
-                MessageBox.Show("Đã thêm tài khoản mới thành công!");
-            }
-            catch (SqlException ex)
-            {
-                // Xử lý lỗi SQL
-                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
-                {
-                    MessageBox.Show($"Mã '{masc}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                // Xử lý lỗi khác (nếu có)
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }
-        }
-        public void DeleteSC(string masc)
-        {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
-            using (SqlCommand cmd = new SqlCommand("DELETE FROM SUACHUATS WHERE MASC = @masc", con))
-            {
-                cmd.Parameters.AddWithValue("@masc", masc);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-        }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            try
+
+
+
+
+
+            private void ClearTextBoxes()
             {
+
+                txtMAGV.Text = "";
+                txtMSC.Text = "";
+
+                txtMAPTN.Text = "";
+                dtSC.Format = DateTimePickerFormat.Custom; ;
+            }
+
+
+
+
+            private void btnDong_Click_1(object sender, EventArgs e)
+            {
+                this.Close();
+            }
+
+            private void btnFind_Click_1(object sender, EventArgs e)
+            {
+
                 string magv = txtMAGV.Text;
                 string masc = txtMSC.Text;
-               
                 string maptn = txtMAPTN.Text;
+
                 string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-
-
-
-                ThemSCmoi(magv, masc, maptn ,ngaysc);
-
-                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
-                InitializeDataGridView();
-
-                MessageBox.Show("Đã thêm thông tin mới thành công!");
+                dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ngaysc);
             }
-            catch (Exception ex)
+
+
+            private void btnThem_Click_1(object sender, EventArgs e)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    string magv = txtMAGV.Text;
+                    string masc = txtMSC.Text;
+
+                    string maptn = txtMAPTN.Text;
+                    string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+
+
+
+                    ThemSCmoi(magv, masc, maptn, ngaysc);
+
+                    // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
+                    InitializeDataGridView();
+
+                    MessageBox.Show("Đã thêm thông tin mới thành công!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
 
-       
-
-      
-        private void ClearTextBoxes()
-        {
-
-            txtMAGV.Text = "";
-            txtMSC.Text = "";
-         
-            txtMAPTN.Text = "";
-            dtSC.Format = DateTimePickerFormat.Custom; ;
-        }
-
-     
-
-     
-        private void btnDong_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnFind_Click_1(object sender, EventArgs e)
-        {
-
-            string magv = txtMAGV.Text;
-            string masc = txtMSC.Text;
-            string maptn = txtMAPTN.Text;
-          
-            string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-            dataGridView1.DataSource = SearchSCTS(magv, masc, maptn, ngaysc);
-        }
-
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-            try
+            private void btnSua_Click_1(object sender, EventArgs e)
             {
-                string magv = txtMAGV.Text;
-                string masc = txtMSC.Text;
-               
-                string maptn = txtMAPTN.Text;
-                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+                DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Kiểm tra xem người dùng đã đồng ý sửa hay không
+                if (result == DialogResult.Yes)
+                {
+                    // Lấy dữ liệu từ TextBox
+                    string magv = txtMAGV.Text;
+                    string masc = txtMSC.Text;
+
+                    string maptn = txtMAPTN.Text;
+                    string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
+                    // Cập nhật dữ liệu trong DataGridView
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    selectedRow.Cells["MAGV"].Value = magv;
+                    selectedRow.Cells["MASC"].Value = masc;
+                    selectedRow.Cells["MAPTN"].Value = maptn;
+                    selectedRow.Cells["NGAYSC"].Value = ngaysc;
 
 
 
-                ThemSCmoi(magv, masc, maptn, ngaysc);
+                    ShowInfo(magv, masc, maptn, ngaysc);
+                    UpdateInfo(magv, masc, maptn, ngaysc);
+                    // Đặt lại TextBox sau khi cập nhật
+                    ClearTextBoxes();
 
-                // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
-                InitializeDataGridView();
-
-                MessageBox.Show("Đã thêm thông tin mới thành công!");
+                }
             }
-            catch (Exception ex)
+
+            private void btnXoa_Click_1(object sender, EventArgs e)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnSua_Click_1(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Kiểm tra xem người dùng đã đồng ý sửa hay không
-            if (result == DialogResult.Yes)
-            {
-                // Lấy dữ liệu từ TextBox
-                string magv = txtMAGV.Text;
-                string masc = txtMSC.Text;
-         
-                string maptn = txtMAPTN.Text;
-                string ngaysc = dtSC.Value.ToString("yyyy-MM-dd");
-                // Cập nhật dữ liệu trong DataGridView
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                selectedRow.Cells["MAGV"].Value = magv;
-                selectedRow.Cells["MASC"].Value = masc;
-                selectedRow.Cells["MAPTN"].Value = maptn;
-                selectedRow.Cells["NGAYSC"].Value = ngaysc;
-                
-
-
-                ShowInfo(magv, masc, maptn, ngaysc);
-
-                // Đặt lại TextBox sau khi cập nhật
-                ClearTextBoxes();
-
-            }
-        }
-
-        private void btnXoa_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (dataGridView1.SelectedRows.Count > 0)
+                try
                 {
 
-                    string masc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
-
-
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sửa chữa này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (result == DialogResult.Yes)
+                    if (dataGridView1.SelectedRows.Count > 0)
                     {
 
-                        DeleteSC(masc);
+                        string masc = dataGridView1.SelectedRows[0].Cells["MASC"].Value.ToString();
 
 
-                        InitializeDataGridView();
+                        DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông tin sửa chữa này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        MessageBox.Show("Đã xóa thành công!");
+                        if (result == DialogResult.Yes)
+                        {
+
+                            DeleteSC(masc);
+
+
+                            InitializeDataGridView();
+
+                            MessageBox.Show("Đã xóa thành công!");
+                        }
+
                     }
-
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn một thông tin sửa chữa để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Vui lòng chọn một thông tin sửa chữa để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+
+            private void btnLoad_Click_1(object sender, EventArgs e)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                InitializeDataGridView();
+                // Xóa nội dung trong các ô TextBox
+                ClearTextBoxes();
             }
-        }
 
-        private void btnLoad_Click_1(object sender, EventArgs e)
-        {
-            InitializeDataGridView();
-            // Xóa nội dung trong các ô TextBox
-            ClearTextBoxes();
-        }
-
-        private void SuaChuaTS_Load(object sender, EventArgs e)
-        {
-            InitializeDataGridView();
-            dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
+            private void SuaChuaTS_Load(object sender, EventArgs e)
+            {
+                InitializeDataGridView();
+                dataGridView1.SelectionChanged += DataGridView_SelectionChanged;
+            }
         }
     }
-}
+

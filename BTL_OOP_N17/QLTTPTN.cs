@@ -115,9 +115,10 @@ namespace BTL_OOP_N17
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE PHONGTHINGHIEM SET userptn = @userptn , vitri = @vt WHERE maptn = @maptn", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE PHONGTHINGHIEM SET TENPTN = @userptn , vitri = @vt WHERE maptn = @maptn", con))
                 {
                     cmd.Parameters.AddWithValue("@userptn", userptn);
+                    cmd.Parameters.AddWithValue("@maptn", maptn);
                     cmd.Parameters.AddWithValue("@vt", vitri);
 
                     con.Open();
@@ -280,6 +281,7 @@ namespace BTL_OOP_N17
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 DisplayPTNInfo(maptn, userptn, vitri);
+                UpdateInfoPTN(maptn, userptn, vitri);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();

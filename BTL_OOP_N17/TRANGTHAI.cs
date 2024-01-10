@@ -60,6 +60,7 @@ namespace BTL_OOP_N17
             txtTTT.Text = tentt;
 
         }
+
         public DataTable SearchTT(string matt, string tentt)
         {
             // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
@@ -85,6 +86,46 @@ namespace BTL_OOP_N17
             adapter.Fill(dataTable);
             return dataTable;
         }
+        public void UpdateInfoTT(string matt, string tentt)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("UPDATE TRANGTHAI SET TENTT = @tentt WHERE MATT = @matt", con))
+                {
+                    cmd.Parameters.AddWithValue("@tentt", tentt);
+                    cmd.Parameters.AddWithValue("@matt", matt);
+
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Đã cập nhật thông tin trạng thái thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có trạng thái nào được cập nhật. Có thể không tồn tại Mã trạng thái tương ứng hoặc Mã trạng thái không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
         public void ThemTTmoi(string matt, string tentt)
         {
             // Thêm một tài khoản mới vào cơ sở dữ liệu
@@ -192,7 +233,7 @@ namespace BTL_OOP_N17
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 DisplayInfo(matt, tentt);
-
+                UpdateInfoTT(matt, tentt);
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
             }

@@ -68,8 +68,43 @@ namespace BTL_OOP_N17
             txtLydo.Text = lydo;
             // ...Thêm các thuộc tính khác tương ứng
         }
+    
+    public void UpdateInfo(string magv, string malc, string lcdi, string lcden, string lydo, string ngaylc)
+    {
+        try
+        {
+            using (SqlCommand cmd = new SqlCommand("UPDATE PHIEULCTS SET MAGV = @MAGV , MAPHIEULC = @MAPHIEULC , NOILCDI = @NOILCDI , NOILCDEN = @NOILCDEN, NGAYLC = @NGAYLC, LYDOLC = @LYDOLC WHERE MAPHIEULC = @MAPHIEULC", con))
+            {
+                cmd.Parameters.AddWithValue("@MAGV", magv);
+                cmd.Parameters.AddWithValue("@MAPHIEULC", malc);
+                cmd.Parameters.AddWithValue("@NOILCDI", lcdi);
+                cmd.Parameters.AddWithValue("@NOILCDEN", lcden);
+                cmd.Parameters.AddWithValue("@NGAYLC", ngaylc);
+                cmd.Parameters.AddWithValue("@LYDOLC", lydo);
 
-        public DataTable SearchLCTS(string malc, string lcdi, string lcden, string magv, string lydo, string ngaylc)
+                    con.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                con.Close();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Đã cập nhật thông tin thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Không có thông tin luân chuyển được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+        }
+        catch (SqlException ex)
+        {
+            // Xử lý lỗi SQL
+            MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+
+    public DataTable SearchLCTS(string malc, string lcdi, string lcden, string magv, string lydo, string ngaylc)
         {
             // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
             string query = "SELECT * FROM PHIEULCTS WHERE ";
@@ -282,7 +317,7 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["NGAYLC"].Value = ngaylc;
                 selectedRow.Cells["MAPHIEULC"].Value = malc;
                 selectedRow.Cells["LYDOLC"].Value = lydo;
-
+                UpdateInfo(magv, malc, lcdi, lcden, lydo, ngaylc);
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 ShowInfo(malc, lcdi, lcden, magv, ngaylc, lydo);
                 // Đặt lại TextBox sau khi cập nhật
