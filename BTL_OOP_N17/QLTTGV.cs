@@ -61,13 +61,14 @@ namespace BTL_OOP_N17
                 string diachi = selectedRow.Cells["DIACHIGV"].Value.ToString();
                 string sdt = selectedRow.Cells["SDTGV"].Value.ToString();
                 string chucvu = selectedRow.Cells["CHUCVUGV"].Value.ToString();
+                string mptn = selectedRow.Cells["MAPTN"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
-                DisplayStudentInfo(magv, username, diachi, sdt, chucvu);
+                DisplayStudentInfo(magv, username, diachi, sdt, chucvu,mptn);
             }
         }
 
-        private void DisplayStudentInfo(string magv, string username, string diachi, string sdt, string chucvu)
+        private void DisplayStudentInfo(string magv, string username, string diachi, string sdt, string chucvu, string mptn)
         {
             // Hiển thị thông tin giáo viên trong GroupBox
             txtMaGV.Text = magv;
@@ -75,6 +76,7 @@ namespace BTL_OOP_N17
             txtDiaChi.Text = diachi;
             txtSDTGV.Text = sdt;
             txtChucvu.Text = chucvu;
+            txtMPTN.Text = mptn;
             // ...Thêm các thuộc tính khác tương ứng
         }
         public DataTable SearchQLTTGV(string magv, string username, string diachi, string sdt, string chucvu)
@@ -134,13 +136,15 @@ namespace BTL_OOP_N17
             string chucvu = txtChucvu.Text;
             dataGridView1.DataSource = SearchQLTTGV(magv, username, diachi, sdt, chucvu);
         }
-        public void UpdateInfoGV(string magv, string username, string diachi, string sdt, string chucvu)
+        public void UpdateInfoGV(string magv, string username, string diachi, string sdt, string chucvu, string mptn)
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE GIAOVIEN SET username = @username , diachi = @dc , sdt = @sdt , chucvu = @chucvu WHERE magv = @magv", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE GIAOVIEN SET TENGV = @username, MAPTN = @mptn , DIACHIGV = @dc , SDTGV = @sdt , CHUCVUGV = @chucvu, MAGV = @magv WHERE MAGV = @magv", con))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@magv", magv);
+                    cmd.Parameters.AddWithValue("@mptn", mptn);
                     cmd.Parameters.AddWithValue("@dc", diachi);
                     cmd.Parameters.AddWithValue("@sdt", sdt);
                     cmd.Parameters.AddWithValue("@chucvu", chucvu);
@@ -165,19 +169,20 @@ namespace BTL_OOP_N17
                 MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void ThemGVmoi(string magv, string username, string diachi, string sdt, string chucvu)
+        public void ThemGVmoi(string magv, string username, string diachi, string sdt, string chucvu, string mptn)
         {
             // Thêm một tài khoản mới vào cơ sở dữ liệu
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO GIAOVIEN (MaGV, TENGV, DIACHIGV, SDTGV, CHUCVUGV) VALUES (@magv, @username, @dc, @sdt, @chucvu)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO GIAOVIEN (MaGV, TENGV, DIACHIGV, SDTGV, CHUCVUGV, MAPTN) VALUES (@magv, @username, @dc, @sdt, @chucvu, @mptn)", con))
                 {
                     cmd.Parameters.AddWithValue("@magv", magv);
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@dc", diachi);
                     cmd.Parameters.AddWithValue("@sdt", sdt);
                     cmd.Parameters.AddWithValue("@chucvu", chucvu);
+                    cmd.Parameters.AddWithValue("@mptn", mptn);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -237,9 +242,10 @@ namespace BTL_OOP_N17
             string diachi = txtDiaChi.Text;
             string sdt = txtSDTGV.Text;
             string chucvu = txtChucvu.Text;
+                string mptn = txtMPTN.Text;
 
                 // Gọi phương thức ThemGVmoi để thêm giáo viên mới vào cơ sở dữ liệu
-                ThemGVmoi(magv, username, diachi, sdt, chucvu);
+                ThemGVmoi(magv, username, diachi, sdt, chucvu, mptn);
 
                 // Làm mới dữ liệu trong DataGridView bằng cách gọi lại phương thức InitializeDataGridView
                 InitializeDataGridView();
@@ -304,6 +310,7 @@ namespace BTL_OOP_N17
                 string diachi = txtDiaChi.Text;
                 string sdt = txtSDTGV.Text;
                 string chucvu = txtChucvu.Text;
+                string mptn = txtMPTN.Text;
 
                 // Cập nhật dữ liệu trong DataGridView
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
@@ -312,9 +319,11 @@ namespace BTL_OOP_N17
                 selectedRow.Cells["DIACHIGV"].Value = diachi;
                 selectedRow.Cells["SDTGV"].Value = sdt;
                 selectedRow.Cells["CHUCVUGV"].Value = chucvu;
+                selectedRow.Cells["MAPTN"].Value = mptn;
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
-                DisplayStudentInfo(magv, username, diachi, sdt, chucvu);
+                DisplayStudentInfo(magv, username, diachi, sdt, chucvu, mptn);
+                UpdateInfoGV(magv, username, diachi, sdt, chucvu, mptn);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
@@ -329,6 +338,7 @@ namespace BTL_OOP_N17
             txtDiaChi.Text = "";
             txtSDTGV.Text = "";
             txtChucvu.Text = "";
+            txtMPTN.Text = "";
             // ...Xóa các TextBox khác tương ứng
         }
 

@@ -1,4 +1,6 @@
 ﻿using BTL_OOP_N17.DAO;
+using DevExpress.XtraEditors.Mask.Design;
+using DevExpress.XtraPrinting.Native;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,6 +72,39 @@ namespace BTL_OOP_N17
             }
 
 
+        }
+        public void UpdateInfo(string makk,string magv,string maptn,string ngaykk,string mota)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("UPDATE KIEMKE SET  MAKK = @MAKK, MAGV = @MAGV, MAPTN = @MAPTN, " +
+                    "NGAYKK = @NGAYKK, MOTAKK = @MOTAKK WHERE MAKK = @MAKK", con))
+                {
+                    cmd.Parameters.AddWithValue("@MAGV", magv);
+                    cmd.Parameters.AddWithValue("@MAKK", makk);
+                    cmd.Parameters.AddWithValue("@MAPTN", maptn);
+                    cmd.Parameters.AddWithValue("@NGAYKK", ngaykk);
+                    cmd.Parameters.AddWithValue("@MOTAKK", mota);
+
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Đã cập nhật thông tin thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có thông tin kiểm kê được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public DataTable SearchKK(string makk, string magv, string maptn, string ngaykk, string mota)
         {
@@ -283,6 +318,7 @@ namespace BTL_OOP_N17
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 ShowInfo(makk, magv, maptn, ngaykk, mota);
+                UpdateInfo(makk, magv, maptn, ngaykk, mota);
 
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();

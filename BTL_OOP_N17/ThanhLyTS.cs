@@ -144,7 +144,7 @@ namespace BTL_OOP_N17
                     con.Close();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Đã cập nhật thông tin thanh lý thành công!");
+                        MessageBox.Show("Đã cập nhật thông tin th thành công!");
                     }
                     else
                     {
@@ -311,7 +311,7 @@ namespace BTL_OOP_N17
 
                 // Hiển thị thông tin trong GroupBox (nếu cần)
                 ShowInfo(magv, matl, tentl, maptn, ngaytl);
-
+                UpdateInfo(magv, tentl, matl, maptn, ngaytl);
                 // Đặt lại TextBox sau khi cập nhật
                 ClearTextBoxes();
 
