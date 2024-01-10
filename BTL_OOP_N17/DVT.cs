@@ -86,25 +86,39 @@ namespace BTL_OOP_N17
             {
                 try
                 {
-                    string sqlInsert = "UPDATE DVT SET MADVT=@madvt,TENDVT=@tendvt WHERE MADVT=@madvt";
-                    using (SqlCommand cmd = new SqlCommand(sqlInsert, con))
+                    // Lấy MADVT ban đầu từ hàng được chọn trong DataGridView
+                    string initialMADVT = dataGridView1.SelectedRows[0].Cells["MADVT"].Value.ToString();
+
+                    // Kiểm tra xem MADVT có thay đổi không
+                    if (txtMaDVT.Text == initialMADVT)
                     {
-                        cmd.Parameters.AddWithValue("@madvt", txtMaDVT.Text);
-                        cmd.Parameters.AddWithValue("@tendvt", txtTenDVT.Text);
-                        con.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        // MADVT không thay đổi, có thể tiếp tục cập nhật thông tin
+                        string sqlUpdate = "UPDATE DVT SET MADVT=@madvt,TENDVT=@tendvt WHERE MADVT=@initialMADVT";
+                        using (SqlCommand cmd = new SqlCommand(sqlUpdate, con))
                         {
-                            MessageBox.Show("Cập nhập đơn vị tính thành công!");
-                            InitializeDataGridView();
+                            cmd.Parameters.AddWithValue("@madvt", txtMaDVT.Text);
+                            cmd.Parameters.AddWithValue("@tendvt", txtTenDVT.Text);
+                            cmd.Parameters.AddWithValue("@initialMADVT", initialMADVT);
 
+                            con.Open();
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Cập nhật đơn vị tính thành công!");
+                                InitializeDataGridView();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Cập nhật đơn vị tính thất bại. Hãy kiểm tra lại thông tin !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            con.Close();
                         }
-                        else
-                        {
-                            MessageBox.Show("Cập nhật đơn vị tính thất bại. Hãy kiếm tra lại thông tin !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        con.Close();
+                    }
+                    else
+                    {
+                        // MADVT đã thay đổi, thông báo cho người dùng và không thực hiện cập nhật
+                        MessageBox.Show("Mã đơn vị tính không được phép thay đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)

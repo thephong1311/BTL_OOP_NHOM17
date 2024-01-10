@@ -220,6 +220,19 @@ namespace BTL_OOP_N17
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Lấy giá trị của cột MAKK từ hàng đã chọn
+                string selectedTK = dataGridView1.SelectedRows[0].Cells["TAIKHOAN"].Value.ToString();
+
+                // Kiểm tra nếu người dùng chọn sửa MAKK
+                if (txtTK.Text != selectedTK)
+                {
+                    MessageBox.Show("Không được sửa giá trị TAIKHOAN.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng quá trình sửa nếu MAKK được chọn
+                }
+            }
+            // Hiển thị hộp thoại xác nhận sửa
             DialogResult result = MessageBox.Show("Bạn có muốn sửa thông tin này không?", "Xác nhận sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
