@@ -26,7 +26,7 @@ namespace BTL_OOP_N17
         }
         public DataTable findMuonTS()
         {
-            SqlDataAdapter find = new SqlDataAdapter("SELECT * from CHITTIET_MUON WHERE MAPM="+txtMaMTS.Text, connection);
+            SqlDataAdapter find = new SqlDataAdapter("SELECT * from CHITIET_MUON WHERE MAPM="+txtMaMTS.Text, connection);
             DataTable dt_find = new DataTable();
             find.Fill(dt_find);
             return dt_find;
