@@ -29,7 +29,7 @@ namespace BTL_OOP_N17
                    !string.IsNullOrEmpty(txtTinhtrang.Text) && !string.IsNullOrEmpty(cbbMaPTN.Text) && !string.IsNullOrEmpty(cbbMaNCC.Text))
                 {
                     string insert = "INSERT INTO TAISAN(MATS,SOLUONGTS,MADVT,MALOAITS,MATT,TENTS,NUOCSX,NAMSX,THOIGIANBH," +
-                    "GIANHAP,THONGSOKYTHUAT,TG_TINHKH,NAMDUAVAO_SD,CHUCNANG,MAPTN,MANCC) VALUES " +
+                    "GIANHAP,NGAYNHAP,THONGSOKYTHUAT,TG_TINHKH,NAMDUAVAO_SD,CHUCNANG,MAPTN,MANCC) VALUES " +
                     "(@mats,@slts,@madvt,@maloaits,@matt,@tents,@nuocsx,@namsx,@tgianbh,@gianhap,@ngaynhap" +
                     ",@tskt,@tg_kh,@namsd,@cn,@maptn,@mancc)";
                 using (SqlCommand cmd = new SqlCommand(insert, con))
@@ -111,6 +111,7 @@ namespace BTL_OOP_N17
                             cmd1.Parameters.AddWithValue("@tg_kh", txtTgian.Text);
                             cmd1.Parameters.AddWithValue("@namsd", txtNamSD.Text);
                             cmd1.Parameters.AddWithValue("@cn", txtChucnang.Text);
+                            cmd1.Parameters.AddWithValue("@mancc", cbbMaNCC.Text);
                             cmd1.Parameters.AddWithValue("@maptn", cbbMaPTN.Text);
                             try
                             {
